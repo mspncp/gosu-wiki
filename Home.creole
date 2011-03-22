@@ -1,9 +1,6 @@
-#summary Entry point to all of Gosu's documentation.
-#labels Featured
-
 = Installation =
 
-Depending on your operating system, see GettingStartedOnOsx, GettingStartedOnWindows or GettingStartedOnLinux. (Before downloading the prebuilt Ruby versions, please note that they are also available via `gem install gosu`!)
+Depending on your operating system, see GettingStartedOnOsx, GettingStartedOnWindows or GettingStartedOnLinux.
 
 = Tutorial =
 
