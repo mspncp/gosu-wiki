@@ -1,5 +1,11 @@
 # Gosu Documentation Overview
 
+## Under Construction
+
+(Imagine an animated 'Under Construction' GIF here)
+
+This Wiki is in the process of being converted from Google Code's wiki format to Markdown. When it is finished, this home page shall be merged with the main README.txt in the project root.
+
 ## Installation
 
 Depending on your operating system, see [[GettingStartedOnOSX]], [[GettingStartedOnWindows]] or [[GettingStartedOnLinux]].
