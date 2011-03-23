@@ -84,7 +84,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Linux: Support other XKeySyms than Latin 1
     * Mac: Add dead keys to TextInput
     * Mac: Use Core Text instead of ATSUI
-  * Try wgois or http://appliedstochastics.com/articles/ruby\_jsw.html for Linux gamepad support
   * Polish/deployment
     * Make it possible to delete images while they are still referenced in the queue.
     * Make Gosu::Color more tolerant regarding its component values
@@ -103,7 +102,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Make the wrapper's menu bar on OS X more complete
     * Now that the Rakefile works, stop doing every task every time (use file dependencies)
     * Make it easier to find the examples from the Gem
-  * Make Mac/Gosu work with Rubinius
+  * Make Mac/Gosu work with Rubinius & MacRuby
   * Re-introduce Async support
   * Look at http://freeimage.sourceforge.net/requirements.html
   * Look at http://slick.cokeandcode.com/index.php?entry=entry080426-213044
@@ -143,7 +142,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Mention Gosu's respectable age somewhere :)
   * Link to benkos example & Chingu regarding states
   * Put RubyTutorial into rdoc
-  * Convert one wiki page to GitHub format
+  * Convert one wiki page to GitHub format (daily)
   * Add some first eye catchers to front page
   * Add "What now?" link list to front page
   * Emphasize difference between button\_down and button\_down? somewhere
