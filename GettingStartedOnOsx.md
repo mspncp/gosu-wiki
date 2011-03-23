@@ -1,4 +1,3 @@
-
 # Getting Started on OS X
 
 [ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!][IMG:forum] ][forum]
@@ -7,7 +6,7 @@
 
 [Boost][] is a collection of libraries that is used throughout Gosu. Many parts of Boost have been marked for inclusion in the next standard of C++, so it's definitely worth a look a its docs.
 
-_If you are using MacPorts_, you can, in theory, simply run `sudo port install boost`. In practice however, MacPorts' version of Boost is usually broken and/or outdated.
+_If you are using MacPorts_, you can, in theory, simply run `sudo port install boost`. In practice however, MacPorts' version of Boost is usually broken and/or outdated. I have no idea if Homebrew/brew is any better at this.
 
 For most tasks, the headers of the boost library will be enough, so the easiest way to install them would be:
 
@@ -76,14 +75,11 @@ If you edit the file through Xcode, the editing will be a bit more intuitive.
 
 ## Starting a new Gosu game (Ruby)
 
-Getting started with Ruby is a lot easier (surprise):
-
-* If you installed Gosu using RubyGems (`sudo gem install gosu`), you just need to `require 'rubygems'` before you `require 'gosu'`.
-* Otherwise you need to run your code in a way that `require 'gosu'` will work, i.e. by either copying the contents of the `lib` folder into the same directory or installing it in one of Ruby's default library paths.
+Getting started with Ruby is a lot easier (surprise). Just install the gem via `gem install gosu` on your operating system's command line.
 
 To test if everything works, you can use this Hello World script:
 
-	require 'rubygems' # Remove this line if you aren't using RubyGems
+	require 'rubygems' # only necessary in Ruby 1.8
 	require 'gosu'
 
 	class MyWindow < Gosu::Window
