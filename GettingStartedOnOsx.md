@@ -6,7 +6,7 @@
 
 [Boost][] is a collection of libraries that is used throughout Gosu. Many parts of Boost have been marked for inclusion in the next standard of C++, so it's definitely worth a look a its docs.
 
-_If you are using MacPorts_, you can, in theory, simply run `sudo port install boost`. In practice however, MacPorts' version of Boost is usually broken and/or outdated. I have no idea if Homebrew/brew is any better at this.
+_If you are using MacPorts_, you can, in theory, simply run `sudo port install boost`. In practice however, MacPorts' version of Boost is usually broken and/or outdated. _For [Homebrew][] users_, `brew install boost` should install the latest version without a hitch, but be aware that it may take several minutes to compile.
 
 For most tasks, the headers of the boost library will be enough, so the easiest way to install them would be:
 
@@ -96,6 +96,7 @@ That's it -- have fun!
 
 [boost]: http://www.boost.org/
 [forum]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
+[homebrew]: http://mxcl.github.com/homebrew/
 [IMG:forum]: http://www.libgosu.org/wiki_images/board_link.png
 [FIG:Xcode.files]: http://www.libgosu.org/wiki_images/xcode_files.png
 [FIG:Xcode.headers]: http://www.libgosu.org/wiki_images/xcode_header_paths.png
