@@ -1,17 +1,20 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-03-23)
+(Last update: 2011-03-24)
 
 ## Gosu 0.7.x
+  * Release 0.7.28
+  * Move GOSU\_VERSION into a Ruby file and out of SWIG
+  * Make Mac/Gosu work with Rubinius & MacRuby
+  * Release 0.7.29
+  * Start working on 0.8 interface…
+  * Reshuffle all tasks below this
   * Replace Bitmap* by OS functions on Windows
   * Replace Bitmap* by SDL\_image or DevIL
-  * Release 0.7.28
-  * Merge mathias' GLFW backend for Windows
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Try to get gl\_info for large images working
-  * Release 0.7.29
   * Throw exception for '' as a font name
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
@@ -102,7 +105,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Make the wrapper's menu bar on OS X more complete
     * Now that the Rakefile works, stop doing every task every time (use file dependencies)
     * Make it easier to find the examples from the Gem
-  * Make Mac/Gosu work with Rubinius & MacRuby
   * Re-introduce Async support
   * Look at http://freeimage.sourceforge.net/requirements.html
   * Look at http://slick.cokeandcode.com/index.php?entry=entry080426-213044
@@ -172,13 +174,12 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make sure that WindowMainLoop states that the whole order is just about perceived performance
   * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
   * Say "you can attach files after posting" below input box in board
-  * See if there is a way to auto-push\_to\_github on committing SVN
   * Fix download for all my LD games as soon as Mac wrapper is nicer :(
   * Point out that Font#text\_width is only relevant to Font#draw etc
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for clarification
   * Note: changing looping may restart song (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
-  * After GitHub switch, use this to upload files
+  * Link OpenGL tutorials
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
