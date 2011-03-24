@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.7.28 (first GitHub backed release)
+* 2011-03-12: Added Image::insert(Bitmap, x, y) / Image#insert(binary_string, x, y) (undocumented for now)
+* 2011-03-05: Fixed Color#==
+* 2011-03-05: Fixed Macro Z-Ordering (thanks mathias - towards a supported Macro...)
+* 2011-03-05: OS X 64-bit: Gosu now supports all file types supported by NSImage (even PSD & PDF)
+* 2011-02-26: Gosu's image loading is now unified under loadImageFile()
+* 2011-02-09: Fixed PNG transparency bug
+* 2011-02-07: Fixed kbBeginRange constant (C++), thanks shawn42! 
+
 ## 0.7.27
 * 2011-01-29: Linux: Switched from SDL_mixer to Audiere (supports 'speed' arguments now)
 * 2011-01-22: Windows: Switched from FMOD3 to Audiere
