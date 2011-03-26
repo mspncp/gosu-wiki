@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-03-24)
+(Last update: 2011-03-26)
 
 ## Gosu 0.7.x
   * Release 0.7.28
@@ -139,6 +139,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix music stopping after locking the screen for a long time
   * Fix too-many-Fingers-bug
   * Unify drawQuad's effective triangularization on iOS and desktop
+  * Try to compile FreeGemas for iOS
 ## Gosu CI/Usability
   * Document 64px minimum for reliable single-texture optimization
   * Mention Gosu's respectable age somewhere :)
