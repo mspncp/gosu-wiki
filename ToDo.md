@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-03-26)
+(Last update: 2011-03-27)
 
 ## Gosu 0.7.x
   * Release 0.7.28
@@ -125,6 +125,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Try to understand the benchmark on stackoverflow
   * Make MacUtility.hpp public
   * Fix attached example program
+  * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
 ## Gosu Touch
   * See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
