@@ -1,15 +1,13 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-03-27)
+(Last update: 2011-03-28)
 
 ## Gosu 0.7.x
-  * Release 0.7.28
-  * Move GOSU\_VERSION into a Ruby file and out of SWIG
   * Make Mac/Gosu work with Rubinius & MacRuby
   * Release 0.7.29
-  * Start working on 0.8 interface…
-  * Reshuffle all tasks below this
+  * Start working on 0.8 interface… Reshuffle all tasks below this
+  * Move GOSU\_VERSION into a Ruby file and out of SWIG
   * Replace Bitmap* by OS functions on Windows
   * Replace Bitmap* by SDL\_image or DevIL
   * Get GLFW working on OS X
