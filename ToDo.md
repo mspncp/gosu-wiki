@@ -1,9 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-03-28)
+(Last update: 2011-03-30)
 
 ## Gosu 0.7.x
+  * Test glfw on 64-bit Mac
+  * Print, then re-raise exceptions, in Gosu 0.7.xxxx (Window#draw/update)
   * Make Mac/Gosu work with Rubinius & MacRuby
   * Release 0.7.29
   * Start working on 0.8 interface… Reshuffle all tasks below this
