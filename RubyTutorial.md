@@ -1,6 +1,6 @@
 # Tutorial for a small game using Ruby/Gosu
 
-(http://www.libgosu.org/wiki_images/board_link.png)[http://www.libgosu.org/cgi-bin/mwf/forum.pl]
+[[board_link.png]][http://www.libgosu.org/cgi-bin/mwf/forum.pl]
 
 ## Translations
 
@@ -103,208 +103,195 @@ Here comes a simple player class:
         
         @vel_x *= 0.95
         @vel_y *= 0.95
-  end
+      end
 
-  def draw
-    @image.draw_rot(@x, @y, 1, @angle)
-  end
-end
-}}}
+      def draw
+        @image.draw_rot(@x, @y, 1, @angle)
+      end
+    end
 
 There are a couple of things to say about this:
 
-http://www.libgosu.org/wiki_images/angles2.png
+[[http://www.libgosu.org/wiki_images/angles2.png]]
 
-  * Player#accelerate makes use of the offset_x/offset_y functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would pass offset_x(30, 100) pixels horizontally and offset_y(30, 100) pixels vertically.
-  * When loading BMP files, Gosu replaces 0xff00ff (fuchsia; that really ugly pink) with transparent pixels.
-  * Note that draw_rot puts the *center* of the image at (x; y) - *not* the upper left corner as draw does!
+  * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would pass `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
+  * When loading BMP files, Gosu replaces `0xff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
+  * Note that `draw_rot` puts the *center* of the image at (x; y) - *not* the upper left corner as draw does! This can be controlled by the `center_x`/`center_y` arguments if you want.
   * The player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later.
-  * Also, see the RubyReference for all drawing methods and arguments.
+  * Also, see the (rdoc)[http://www.libgosu.org/rdoc] for all drawing methods and arguments.
 
-=== Integrating Player with the Window ===
+### Integrating Player with the Window
 
-{{{
-class GameWindow < Gosu::Window
-  def initialize
-    super(640, 480, false)
-    self.caption = "Gosu Tutorial Game"
+    class GameWindow < Gosu::Window
+      def initialize
+        super(640, 480, false)
+        self.caption = "Gosu Tutorial Game"
     
-    @background_image = Gosu::Image.new(self, "media/Space.png", true)
+        @background_image = Gosu::Image.new(self, "media/Space.png", true)
 
-    @player = Player.new(self)
-    @player.warp(320, 240)
-  end
+        @player = Player.new(self)
+        @player.warp(320, 240)
+      end
 
-  def update
-    if button_down? Gosu::Button::KbLeft or button_down? Gosu::Button::GpLeft then
-      @player.turn_left
-    end
-    if button_down? Gosu::Button::KbRight or button_down? Gosu::Button::GpRight then
-      @player.turn_right
-    end
-    if button_down? Gosu::Button::KbUp or button_down? Gosu::Button::GpButton0 then
-      @player.accelerate
-    end
-    @player.move
-  end
+      def update
+        if button_down? Gosu::Button::KbLeft or button_down? Gosu::Button::GpLeft then
+          @player.turn_left
+        end
+        if button_down? Gosu::Button::KbRight or button_down? Gosu::Button::GpRight then
+          @player.turn_right
+        end
+        if button_down? Gosu::Button::KbUp or button_down? Gosu::Button::GpButton0 then
+          @player.accelerate
+        end
+        @player.move
+      end
 
-  def draw
-    @player.draw
-    @background_image.draw(0, 0, 0);
-  end
+      def draw
+        @player.draw
+        @background_image.draw(0, 0, 0);
+      end
 
-  def button_down(id)
-    if id == Gosu::Button::KbEscape
-      close
+      def button_down(id)
+        if id == Gosu::Button::KbEscape
+          close
+        end
+      end
     end
-  end
-end
-}}}
 
 As you can see, we have introduced keyboard and gamepad input!
-Similar to update() and draw(), Gosu::Window provides two member functions button_down(id) and button_up(id) which can be overriden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see RubyReference).
+Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overriden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see (rdoc)[http://www.libgosu.org/rdoc]).
 While getting feedback on pushed buttons is suitable for one-time events such as UI interaction, jumping or typing, it is rather useless for actions that span several frames - for example, moving by holding buttons down. This is where the update() member function comes into play, which only calls the player's movement methods. If you run this lesson's code, you should be able to fly around!
 
-= 3, Simple animations =
+# 3. Simple animations
 
 First, we are going to get rid of the magic numbers for Z positions from now on by replacing them with the following constants:
 
-{{{
-module ZOrder
-  Background, Stars, Player, UI = *0..3
-end
-}}}
+    module ZOrder
+      Background, Stars, Player, UI = *0..3
+    end
 
 What is an animation? A sequence of images - so we'll use Ruby's built in Arrays to store them. (For a real game, there is no way around writing some classes that fit the game's individual needs, but we'll get away with this simple solution for now.)
 
 Let's introduce the stars which are the central object of this lesson. Stars appear out of nowhere at a random place on the screen and live their animated lives until the player collects them. The definition of the Star class is rather simple:
 
-{{{
-class Star
-  attr_reader :x, :y
+    class Star
+      attr_reader :x, :y
   
-  def initialize(animation)
-    @animation = animation
-    @color = Gosu::Color.new(0xff000000)
-    @color.red = rand(255 - 40) + 40
-    @color.green = rand(255 - 40) + 40
-    @color.blue = rand(255 - 40) + 40
-    @x = rand * 640
-    @y = rand * 480
-  end
+      def initialize(animation)
+        @animation = animation
+        @color = Gosu::Color.new(0xff000000)
+        @color.red = rand(255 - 40) + 40
+        @color.green = rand(255 - 40) + 40
+        @color.blue = rand(255 - 40) + 40
+        @x = rand * 640
+        @y = rand * 480
+      end
 
-  def draw  
-    img = @animation[Gosu::milliseconds / 100 % @animation.size];
-    img.draw(@x - img.width / 2.0, @y - img.height / 2.0,
-        ZOrder::Stars, 1, 1, @color, :additive)
-  end
-end
-}}}
+      def draw  
+        img = @animation[Gosu::milliseconds / 100 % @animation.size];
+        img.draw(@x - img.width / 2.0, @y - img.height / 2.0,
+            ZOrder::Stars, 1, 1, @color, :additive)
+      end
+    end
 
 Since we don't want each and every star to load the animation again, we can't do that in its constructor, but rather pass it in from somewhere else. (The Window will load the animation in about three paragraphs.)
 
-To show a different frame of the stars' animation every 100 milliseconds, the time returned by Gosu::milliseconds is divided by 100 and then modulo-ed down to the number of frames. This very image is then additively drawn, centered at the star's position and modulated by a random colour we generated in the constructor.
+To show a different frame of the stars' animation every 100 milliseconds, the time returned by `Gosu::milliseconds` is divided by 100 and then modulo-ed down to the number of frames. This very image is then additively drawn, centered at the star's position and modulated by a random colour we generated in the constructor.
 
 Now let's add easy code to the player to collect away stars from an array:
-{{{
-class Player
-…
-  def collect_stars(stars)
-    stars.reject! do |star|
-      Gosu::distance(@x, @y, star.x, star.y) < 35
+
+    class Player
+      ...
+      def collect_stars(stars)
+        stars.reject! do |star|
+          Gosu::distance(@x, @y, star.x, star.y) < 35
+        end
+      end
     end
-  end
-end
-}}}
 
 Now let's extend Window to load the animation, spawn new stars, have the player collect them and draw the remaining ones:
 
-{{{
-class Window < Gosu::Window
-  def initialize
-    super(640, 480, false)
-    self.caption = "Gosu Tutorial Game"
-    
-    @background_image = Gosu::Image.new(self, "media/Space.png", true)
-    
-    @player = Player.new(self)
-    @player.warp(320, 240)
-
-    @star_anim = Gosu::Image::load_tiles(self, "media/Star.png", 25, 25, false)
-    @stars = Array.new
-  end
-
-  def update
     ...
-    @player.move
-    @player.collect_stars(@stars)
+    class Window < Gosu::Window
+      def initialize
+        super(640, 480, false)
+        self.caption = "Gosu Tutorial Game"
     
-    if rand(100) < 4 and @stars.size < 25 then
-      @stars.push(Star.new(@star_anim))
-    end
-  end
+        @background_image = Gosu::Image.new(self, "media/Space.png", true)
+    
+        @player = Player.new(self)
+        @player.warp(320, 240)
 
-  def draw
-    @background_image.draw(0, 0, ZOrder::Background)
-    @player.draw
-    @stars.each { |star| star.draw }
-  end
-…
-}}}
+        @star_anim = Gosu::Image::load_tiles(self, "media/Star.png", 25, 25, false)
+        @stars = Array.new
+      end
+
+      def update
+        ...
+        @player.move
+        @player.collect_stars(@stars)
+    
+        if rand(100) < 4 and @stars.size < 25 then
+          @stars.push(Star.new(@star_anim))
+        end
+      end
+
+      def draw
+        @background_image.draw(0, 0, ZOrder::Background)
+        @player.draw
+        @stars.each { |star| star.draw }
+      end
+      ...
 
 Done! You can now collect stars.
 
-= 4. Text and sound =
+## 4. Text and sound
 
 Finally, we want to draw the current score using a bitmap font and play a 'beep' sound every time the player collects a star. The Window will handle the text part, loading a font 20 pixels high:
 
-{{{
-class Window < Gosu::Window
-  def initialize
-    …
-    @font = Gosu::Font.new(self, Gosu::default_font_name, 20)
-  end
+    class Window < Gosu::Window
+      def initialize
+        …
+        @font = Gosu::Font.new(self, Gosu::default_font_name, 20)
+      end
 
-  …
+      …
 
-  def draw
-    @background_image.draw(0, 0, ZOrder::Background)
-    @player.draw
-    @stars.each { |star| star.draw }
-    @font.draw("Score: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
-  end
-end
-}}}
+      def draw
+        @background_image.draw(0, 0, ZOrder::Background)
+        @player.draw
+        @stars.each { |star| star.draw }
+        @font.draw("Score: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+      end
+    end
 
 What's left for the player? Right: A counter for the score, loading the sound and playing it.
 
-{{{
-class Player
-  attr_reader :score
+    class Player
+      attr_reader :score
 
-  def initialize(window)
-    @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
-    @beep = Gosu::Sample.new(window, "media/Beep.wav")
-    @x = @y = @vel_x = @vel_y = @angle = 0.0
-    @score = 0
-  end
+      def initialize(window)
+        @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
+        @beep = Gosu::Sample.new(window, "media/Beep.wav")
+        @x = @y = @vel_x = @vel_y = @angle = 0.0
+        @score = 0
+      end
 
-  …
+      ...
 
-  def collect_stars(stars)
-    stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 35 then
-        @score += 10
-        @beep.play
-        true
-      else
-        false
+      def collect_stars(stars)
+        stars.reject! do |star|
+          if Gosu::distance(@x, @y, star.x, star.y) < 35 then
+            @score += 10
+            @beep.play
+            true
+          else
+            false
+          end
+        end
       end
     end
-  end
-end
-}}}
 
-As you can see, loading and playing sound effects couldn't be easier! See the RubyReference for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
+As you can see, loading and playing sound effects couldn't be easier! See the (rdoc)[http://www.libgosu.org/rdoc] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
 
-That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the [http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 Gosu Showcase board].
+That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the (Gosu Showcase board)[http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2].
