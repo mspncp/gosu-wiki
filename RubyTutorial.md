@@ -1,117 +1,108 @@
-#summary Tutorial for a small game using Ruby/Gosu.
+# Tutorial for a small game using Ruby/Gosu
 
-[http://www.libgosu.org/cgi-bin/mwf/forum.pl http://www.libgosu.org/wiki_images/board_link.png]
+(http://www.libgosu.org/wiki_images/board_link.png)[http://www.libgosu.org/cgi-bin/mwf/forum.pl]
 
-= Translations =
+## Translations
 
-For links to translations of this tutorial (Traditional Chinese, Spanish, French) see the DocsOverview page.
+For links to translations of this tutorial (Traditional Chinese, Spanish, French) see the [[Home]] page.
 
-= Source code =
+## Source code
 
-The code for the complete game, together with the required media files, can be found in the Gosu distribution of your choice ('examples/Tutorial.rb').
-
-If you have installed Gosu via RubyGems, the examples are in your 'gems' folder together with the rest of the library. For example, on OS X 10.5, the examples can be found in `/Library/Ruby/Gems/1.8/gems/gosu-<version>/examples`.
-
-If you have not installed Gosu via RubyGems, you have to copy gosu.so (or gosu.bundle, respectively) into the examples directory, then run Tutorial.rb.
+This and other example games are included with the rest of the library. For example, on OS X 10.5, the examples can be found in `/Library/Ruby/Gems/1.8/gems/gosu-<version>/examples`.
 
 If you don't have an editor that supports direct execution (TextMate, SciTE…), `cd` into the directory and run it via `ruby Tutorial.rb`.
 
-= 1. Overriding Window's callbacks =
+## 1. Overriding Window's callbacks
 
 The easiest way to create a complete Gosu application is to write a new class that derives from Gosu::Window (see the reference for a complete description of its interface). Here's how a minimal GameWindow class might look like:
 
-{{{
-require 'gosu'
-
-class GameWindow < Gosu::Window
-  def initialize
-    super(640, 480, false)
-    self.caption = "Gosu Tutorial Game"
-  end
-
-  def update
-  end
-
-  def draw
-  end
-end
-
-window = GameWindow.new
-window.show
-}}}
-
-The constructor initializes the Gosu::Window base class. The parameters shown here create a 640x480 pixels large, non-fullscreen—that's what the "false" stands for—window. Then it changes the window's caption, which is empty until then.
-
-update() and draw() are overrides of Gosu::Window's member functions. update() is called 60 times per second (by default) and should contain the main game logic: move objects, handle collisions, etc.
-
-draw() is called afterwards and whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain the code to redraw the whole screen, and no logic whatsoever.
-
-Then follows the main program. A window is created and its show() member function is called, which does not return until the window has been closed by the user or its own code. Tada - now you have a small black window with a title of your choice!
-
-A diagram of the main loop is shown on the WindowMainLoop page.
-
-= 2. Using Images =
-
-{{{
-class GameWindow < Gosu::Window
-  def initialize
-    super(640, 480, false)
-    self.caption = "Gosu Tutorial Game"
+    require 'gosu'
     
-    @background_image = Gosu::Image.new(self, "media/Space.png", true)
-  end
+    class GameWindow < Gosu::Window
+      def initialize
+        super 640, 480, false
+        self.caption = "Gosu Tutorial Game"
+      end
+    
+      def update
+      end
+    
+      def draw
+      end
+    end
+    
+    window = GameWindow.new
+    window.show
 
-  def update
-  end
+The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large, non-fullscreen window. It also changes the window's caption, which is empty until then.
 
-  def draw
-    @background_image.draw(0, 0, 0);
-  end
-end
-}}}
+`update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is called 60 times per second (by default) and should contain the main game logic: move objects, handle collisions, etc.
 
-Gosu::Image#initialize takes three arguments. First, like all media resources, it is tied to a window (self). All of Gosu's resources need a Window for initialization and will hold an internal reference to that window. Second, the file name of the image file is given. The third argument specifies whether the image is to be created with hard borders. See BasicConcepts for an explanation.
+`draw()` is called afterwards and whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain the code to redraw the whole screen, and no logic whatsoever.
 
-As mentioned in the last lesson, the window's draw() member function is the place to draw everything, so this is the place for us to draw our background image.
+Then follows the main program. A window is created and its `show()` member function is called, which does not return until the window has been closed by the user or its own code. Tada - now you have a small black window with a title of your choice!
 
-The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see BasicConcepts.
+A diagram of the main loop is shown on the [[WindowMainLoop]] page.
 
-=== Player & movement ===
+## 2. Using Images
+
+    class GameWindow < Gosu::Window
+      def initialize
+        super(640, 480, false)
+        self.caption = "Gosu Tutorial Game"
+        
+        @background_image = Gosu::Image.new(self, "media/Space.png", true)
+      end
+    
+      def update
+      end
+    
+      def draw
+        @background_image.draw(0, 0, 0);
+      end
+    end
+
+`Gosu::Image#initialize` takes three arguments. First, like all media resources, it is tied to a window (self). All of Gosu's resources need a Window for initialization and will hold an internal reference to that window. Second, the file name of the image file is given. The third argument specifies whether the image is to be created with hard borders. See BasicConcepts for an explanation.
+
+As mentioned in the last lesson, the window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image.
+
+The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see [[BasicConcepts]].
+
+### Player & movement
 
 Here comes a simple player class:
 
-{{{
-class Player
-  def initialize(window)
-    @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
-    @x = @y = @vel_x = @vel_y = @angle = 0.0
-  end
-
-  def warp(x, y)
-    @x, @y = x, y
-  end
-  
-  def turn_left
-    @angle -= 4.5
-  end
-  
-  def turn_right
-    @angle += 4.5
-  end
-  
-  def accelerate
-    @vel_x += Gosu::offset_x(@angle, 0.5)
-    @vel_y += Gosu::offset_y(@angle, 0.5)
-  end
-  
-  def move
-    @x += @vel_x
-    @y += @vel_y
-    @x %= 640
-    @y %= 480
+    class Player
+      def initialize(window)
+        @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
+        @x = @y = @vel_x = @vel_y = @angle = 0.0
+      end
     
-    @vel_x *= 0.95
-    @vel_y *= 0.95
+      def warp(x, y)
+        @x, @y = x, y
+      end
+      
+      def turn_left
+        @angle -= 4.5
+      end
+      
+      def turn_right
+        @angle += 4.5
+      end
+      
+      def accelerate
+        @vel_x += Gosu::offset_x(@angle, 0.5)
+        @vel_y += Gosu::offset_y(@angle, 0.5)
+      end
+      
+      def move
+        @x += @vel_x
+        @y += @vel_y
+        @x %= 640
+        @y %= 480
+        
+        @vel_x *= 0.95
+        @vel_y *= 0.95
   end
 
   def draw
