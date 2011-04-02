@@ -70,7 +70,7 @@ As mentioned in the last lesson, the window's `draw()` member function is the pl
 
 The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see [[BasicConcepts]].
 
-#### Player & movement
+#### 2.1 Player & movement
 
 Here comes a simple player class:
 
@@ -122,7 +122,7 @@ There are a couple of things to say about this:
   * The player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later.
   * Also, see the [rdoc][] for all drawing methods and arguments.
 
-#### Integrating Player with the Window
+#### 2.2 Integrating Player with the Window
 
     class GameWindow < Gosu::Window
       def initialize
