@@ -1,6 +1,7 @@
+
 # Ruby Tutorial
 
-[[board_link.png|frame|alt=Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!]](http://www.libgosu.org/cgi-bin/mwf/forum.pl)
+[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
 
 ## Translations
 
@@ -12,7 +13,8 @@ This and other example games are included with the rest of the library. For exam
 
 If you don't have an editor that supports direct execution (TextMate, SciTE…), `cd` into the directory and run it via `ruby Tutorial.rb`.
 
-## 1. Overriding Window's callbacks
+## Down to Business
+### 1. Overriding Window's callbacks
 
 The easiest way to create a complete Gosu application is to write a new class that derives from Gosu::Window (see the reference for a complete description of its interface). Here's how a minimal GameWindow class might look like:
 
@@ -44,7 +46,7 @@ Then follows the main program. A window is created and its `show()` member funct
 
 A diagram of the main loop is shown on the [[WindowMainLoop]] page.
 
-## 2. Using Images
+### 2. Using Images
 
     class GameWindow < Gosu::Window
       def initialize
@@ -68,7 +70,7 @@ As mentioned in the last lesson, the window's `draw()` member function is the pl
 
 The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see [[BasicConcepts]].
 
-### Player & movement
+#### Player & movement
 
 Here comes a simple player class:
 
@@ -112,15 +114,15 @@ Here comes a simple player class:
 
 There are a couple of things to say about this:
 
-[[http://www.libgosu.org/wiki_images/angles2.png]]
+![Angles in Gosu][FIG:angles]
 
   * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would pass `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
   * When loading BMP files, Gosu replaces `0xff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
   * Note that `draw_rot` puts the *center* of the image at (x; y) - *not* the upper left corner as draw does! This can be controlled by the `center_x`/`center_y` arguments if you want.
   * The player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later.
-  * Also, see the (rdoc)[http://www.libgosu.org/rdoc] for all drawing methods and arguments.
+  * Also, see the [rdoc][] for all drawing methods and arguments.
 
-### Integrating Player with the Window
+#### Integrating Player with the Window
 
     class GameWindow < Gosu::Window
       def initialize
@@ -159,10 +161,10 @@ There are a couple of things to say about this:
     end
 
 As you can see, we have introduced keyboard and gamepad input!
-Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overriden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see (rdoc)[http://www.libgosu.org/rdoc]).
+Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overriden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see [rdoc][]).
 While getting feedback on pushed buttons is suitable for one-time events such as UI interaction, jumping or typing, it is rather useless for actions that span several frames - for example, moving by holding buttons down. This is where the update() member function comes into play, which only calls the player's movement methods. If you run this lesson's code, you should be able to fly around!
 
-# 3. Simple animations
+### 3. Simple animations
 
 First, we are going to get rid of the magic numbers for Z positions from now on by replacing them with the following constants:
 
@@ -245,7 +247,7 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
 
 Done! You can now collect stars.
 
-## 4. Text and sound
+### 4. Text and sound
 
 Finally, we want to draw the current score using a bitmap font and play a 'beep' sound every time the player collects a star. The Window will handle the text part, loading a font 20 pixels high:
 
@@ -292,6 +294,11 @@ What's left for the player? Right: A counter for the score, loading the sound an
       end
     end
 
-As you can see, loading and playing sound effects couldn't be easier! See the (rdoc)[http://www.libgosu.org/rdoc] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
+As you can see, loading and playing sound effects couldn't be easier! See the [rdoc][] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
 
-That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the (Gosu Showcase board)[http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2].
+That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the [Gosu Showcase board][boards.showcase].
+
+[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
+[boards.showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2
+[rdoc]: http://www.libgosu.org/rdoc
+[FIG:angles]: http://www.libgosu.org/wiki_images/angles2.png
