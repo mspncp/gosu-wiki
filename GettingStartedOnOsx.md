@@ -1,6 +1,6 @@
 # Getting Started on OS X
 
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!][IMG:forum] ][forum]
+[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
 
 ## Installing Boost (required for using Gosu with C++ only)
 
@@ -25,11 +25,11 @@ Remove & trash the following files:
 
 Then right-click "Other Frameworks" and add a reference to an existing framework, namely Gosu.framework. Make sure you didn't put Gosu.framework into a system directory like `/System/Library/Frameworks` because Xcode treats these directories with some magic.
 
-![Xcode files][FIG:Xcode.files]
+[[xcode_files.png]]
 
 In order to make the Boost headers accessible, select 'Project/Edit Active Project' from the top menu, search for 'Header Search Paths' in 'Build' and set it to `/usr/local/include`, or `/opt/local/include` if you used MacPorts to install Boost.
 
-![Xcode header search paths][FIG:Xcode.headers]
+[[xcode_header_paths.png]]
 
 Your application bundle also needs to contain the Gosu.framework bundle. To instruct Xcode to automatically copy it into your application, choose Project/New Build Phase and select "Frameworks" as the Copy Files' target directory. Then locate this new build phase in the targets list and add Gosu.framework to it as well. (Note: You may have to drag & drop the framework into the build phase from the finder, instead of adding it via a right-click.)
 
@@ -97,6 +97,4 @@ That's it -- have fun!
 [boost]: http://www.boost.org/
 [forum]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
 [homebrew]: http://mxcl.github.com/homebrew/
-[IMG:forum]: http://www.libgosu.org/wiki_images/board_link.png
-[FIG:Xcode.files]: http://www.libgosu.org/wiki_images/xcode_files.png
-[FIG:Xcode.headers]: http://www.libgosu.org/wiki_images/xcode_header_paths.png
+[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"
