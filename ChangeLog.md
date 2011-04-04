@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.7.29
+* 2011-03-25: Added GL_FLOAT support in all places where RGBA BLOB strings are passed in Ruby (determined by the length of the string)
+
 ## 0.7.28 (first GitHub backed release)
 * 2011-03-12: Added Image::insert(Bitmap, x, y) / Image#insert(binary_string, x, y) (undocumented for now)
 * 2011-03-05: Fixed Color#==
