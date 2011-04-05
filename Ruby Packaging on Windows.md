@@ -1,10 +1,9 @@
-#summary Ruby Packaging on Windows.
+#summary Ruby Packaging on Windows
 
 [ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
 
-To compile your Ruby game into an executable on Windows, you need to run it through the following program from the command line:
+To compile your Ruby game into an executable on Windows, you need to run it through (this program)[http://github.com/larsch/ocra/tree/master] from the command line.
 
-[http://github.com/larsch/ocra/tree/master]
 
 In theory, it should be as simple as these two lines in a command prompt:
 
