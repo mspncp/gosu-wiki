@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-04)
+(Last update: 2011-04-05)
 
 ## Gosu 0.7.x
   * Print, then re-raise exceptions, in Gosu 0.7.xxxx (Window#draw/update)
@@ -145,7 +145,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Mention Gosu's respectable age somewhere :)
   * Link to benkos example & Chingu regarding states
   * Put RubyTutorial into rdoc
-  * Convert one wiki page to GitHub format (daily)
   * Add some first eye catchers to front page
   * Add "What now?" link list to front page
   * Emphasize difference between button\_down and button\_down? somewhere
