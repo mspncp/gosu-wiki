@@ -1,4 +1,6 @@
-#summary How to set up Gosu on Linux or FreeBSD.
+# Getting Started on Linux
+
+(or FreeBSD, as I am told!)
 
 [ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
 
