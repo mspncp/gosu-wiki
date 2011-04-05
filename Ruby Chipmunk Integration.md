@@ -1,14 +1,14 @@
-#summary Ruby & Chipmunk Tutorial by Dirk Johnson.
+# Ruby Chipmunk Integration
 
-[http://www.libgosu.org/cgi-bin/mwf/forum.pl http://www.libgosu.org/wiki_images/board_link.png]
+A tutorial contributed by Dirk Johnson.
 
-= The Ruby & Chipmunk Tutorial =
+[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
 
 This tutorial covers integrating the Chipmunk Physics Engine's Ruby bindings with Gosu's Ruby bindings.  This tutorial assumes that both Gosu and Chipmunk have been properly installed.  See http://wiki.slembcke.net/main/published/Chipmunk. The source code for this tutorial can be found in Gosu's 'examples' folder, but to run it, you'll need to copy the chipmunk extension there too if you haven't installed it system-wide.
 
-*Pre-compiled Chipmunk libraries* are available in [http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=82 this forum thread]. Thanks, bentglasstube!
+*Pre-compiled Chipmunk libraries* are available in (this forum thread)[http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=82]. Thanks, bentglasstube!
 
-= Prolog =
+## Prolog
 
 Lately, I have been writing a game I have been threatening to write on-and-off for a long time.  I am, of course, using Ruby as the implementation language and Gosu as the animation layer.  One thing I faced early on was implementing the physics of the game; following one of my coding mantras, I took the approach of "get it to work first, worry about optimizing later". While the performance I saw was basically adequate for the scope of version 0.1, I could see it would start to bog down fairly quickly going forward.  As it happens, I showed Julian an early copy of my work and he pointed me to Chipmunk to handle the physics.
 
@@ -22,9 +22,9 @@ So, that left me with discovering just what Chipmunk v3 could do for me.  I coul
 
 Let us begin...
 
-= Chipmunk 101 =
+## Chipmunk 101
 
-== Universal Attributes ==
+### Universal Attributes
 
 Lets look at the Tutorial's Player class.  Notice it has instance variables for tracking what I call the universal attributes of a game object:
 
@@ -36,27 +36,27 @@ Lets look at the Tutorial's Player class.  Notice it has instance variables for 
 
 With Chipmunk, your game objects will no longer track your universal attributes, instead, your game objects will have a Chipmunk Body (sometimes called a rigid body) instance (CP::Body), which will track your universal attributes for you.  This is a good thing.  Now your game objects can focus on what makes them unique.
 
-== Space To Play ==
+### Space To Play
 
 In the Tutorial, collision analysis was done by the Player object, however, when you really think about it, determining whether one object collides with another object is really the purview of the universe in which your game objects live.  Luckily, Chipmunk provides us a "universe" object called Space (CP::Space).  Space is responsible for defining gravity and damping as well as keeping track of the Bodies and Shapes that exist within.  (Note: you can have none, one, or many Spaces in your game, easily allowing variable forces on your game objects, however, this tutorial assumes one Space.)
 
-== Shapely Objects ==
+### Shapely Objects
 
 The astute student will have noticed I snuck in a new term in the last paragraph: Shape.  While the Body is used to track universal attributes, the Shape (CP::Shape) is used to define the physical boundaries of those attributes.  Since a Shape is defined as being physical, it is primarily used for collision detection.  As one might guess, a Shape is pretty useless without a Body, therefore, each Shape has a Body.  This means that our game objects need only have a single reference to a Shape and they automatically get a Body, too!  It should be noted that your Shapes need to be convex shapes, which means all internal angles are less than or equal to 180 degrees.  Visually, this means no dimples in the shape.  If the game object being defined is more complex than a single convex shape can define, then a game object can have more than one Shape, that, when pieced together, form the overall shape of the object.  In this case, each Shape should point to the same Body.  (To me it is a bit awkward to have the Shape own the Body, considering that a game object could have more than one Shape but only need a single Body - rather, I would have the Body own the Shape(s).  This is, however, a minor detail and easily worked around.)
 
-== Oh! Did That Connect? ==
+### Oh! Did That Connect?
 
 In order to detect "collisions", the Tutorial cycled through every Star every update and judged the distance between the Player and the Stars; if the distance was less than a threshold (in this case, 35), then there was a collision and the Star was removed and the score increased by 10.  Now that game objects have Shapes, we can let Space do this work for us.  One might ask, "How do we tell Space to increment the score and remove the Star when there is a collision?"  I'm glad you asked, and the answer is "Ruby blocks!"  Space allows us to define blocks of code (sometimes called closures) that will be called when a Player collides with a Star (or, more generically, when one collision type collides with another collision type).  This allows us to increment the score and remove the Star from Space automagically!  Pretty cool.
 
-= Beginning With The End In Mind =
+### Beginning With The End In Mind
 
 Go ahead and run the ChipmunkIntegration.rb; it is located at the end of this tutorial.  The ship (Player) performs like I like the ship to perform.  You may prefer a different feel.  Notice I added a "reverse" (the down button).  When you are through getting a feel for where we are heading, lets get our hands dirty.
 
 (Note: The code at the end of this tutorial is commented and explains things this tutorial does not mention so be sure to read the comments in the code as well.)
 
-= Getting Our Hands Dirty =
+## Getting Our Hands Dirty
 
-== Send In The Player ==
+### Send In The Player
 
 Now that we understand the Chipmunk concepts that we need to apply to our game model, lets update the Player class by removing the following:
 
@@ -84,7 +84,7 @@ Now that we have ripped out the undesirable characteristics of our Player, lets 
   * Update the draw method to use the Body angle, but be sure to convert from radians to degrees
 	  * One thing to note is that Gosu has 0 degrees (0 radians) starting at the top of the screen and Chipmunk has 0 radians (0 degrees) pointing to the right. This is handled in our Numeric#radians_to_gosu method)
 
-== Stars In Your Eyes ==
+### Stars In Your Eyes
 
 Lets next update the Star class.  This is actually quite trivial:
 
@@ -98,7 +98,7 @@ Lets next update the Star class.  This is actually quite trivial:
 
 See, that wasn't so bad, was it?  And, we are half way there!
 
-== Setting Up The Environment ==
+### Setting Up The Environment
 
 Initializing the environment properly is key to the whole physics engine working well.  Lets take this one step at a time by starting from scratch.  Referring to the code at the end of this tutorial will make things a lot clearer as you read:
 
@@ -154,6 +154,8 @@ The next step is to integrate stepping Space with the Gosu::Window update.  One 
 
 Congratulations!  You have converted the Gosu Tutorial to using Chipmunk!  And, along the way, you should have been armed with most of what you need to do the same to your games.  I hope you enjoyed this as much as I did, and I hope you make some awesome stuff with Gosu and Chipmunk (ChipSu?).
 
-= Epilog =
+### Epilog
 
 As of this writing, Chipmunk's Ruby bindings documentation is out of date.  On the Chipmunk forums, the author, Scott Lembcke, has said he will be updating the docs and will "soon" release version 4.  In the meantime, scour the C documentation, the code, and the forums.  I will do my best to update this tutorial for version 4 when it is released.
+
+[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"

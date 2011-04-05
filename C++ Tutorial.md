@@ -5,7 +5,7 @@
 
 ## Source Code
 
-The code for the complete game, together with the required media files, can be found in the Gosu distribution of your choice ('examples/Tutorial.cpp'). To run the game, setup a new project as seen in [[GettingStartedOnOsx]], [[GettingStartedOnWindows]] or [[GettingStartedOnLinux]], respectively, and use `Tutorial.cpp` as the only source file.
+The code for the complete game, together with the required media files, can be found in the Gosu distribution of your choice ('examples/Tutorial.cpp'). To run the game, setup a new project as seen in [[Getting Started on OS X]], [[Getting Started on Windows]] or [[Getting Started on Linux]], respectively, and use `Tutorial.cpp` as the only source file.
 
 ## 1. Overriding Window's callbacks
 
@@ -55,7 +55,7 @@ The constructor initializes the `Gosu::Window` base class. The parameters shown 
 
 Then follows the main program. A window is created and its `show()` member function is called, which does not return until the window has been closed by the user or its own code. Tada - now you have a small black window with a title of your choice!
 
-A diagram of the main loop is shown on the [[WindowMainLoop]] page.
+A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
 ## 2. Using Images
 

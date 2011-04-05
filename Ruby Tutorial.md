@@ -43,7 +43,7 @@ The constructor initializes the `Gosu::Window` base class. The parameters shown 
 
 Then follows the main program. A window is created and its `show()` member function is called, which does not return until the window has been closed by the user or its own code. Tada - now you have a small black window with a title of your choice!
 
-A diagram of the main loop is shown on the [[WindowMainLoop]] page.
+A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
 ### 2. Using Images
 
@@ -67,7 +67,7 @@ A diagram of the main loop is shown on the [[WindowMainLoop]] page.
 
 As mentioned in the last lesson, the window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image.
 
-The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see [[BasicConcepts]].
+The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see [[Basic Concepts]].
 
 #### 2.1 Player & movement
 

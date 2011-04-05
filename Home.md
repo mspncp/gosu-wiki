@@ -8,25 +8,19 @@ This Wiki is in the process of being converted from Google Code's wiki format to
 
 ## Installation
 
-Depending on your operating system, see [[GettingStartedOnOSX]], [[GettingStartedOnWindows]] or [[GettingStartedOnLinux]].
+Depending on your operating system, see [[Getting Started on OS X]], [[Getting Started on Windows]] or [[Getting Started on Linux]].
 
 ## Tutorial
 
-Consult either the [[RubyTutorial]] or the [[CppTutorial]].
+Consult either the [[Ruby Tutorial]] or the [[C++ Tutorial]].
 
 ### Translated Tutorials (Ruby)
 
-[*Thai* translation of the Tutorial](http://thaigamasutra.com/2009/11/30/gosu-tutorial-thai-tranlation/)
-
 [*French* mirror/translation of the old Google Code page, provided by Damien Gouteux](http://code.google.com/p/gosu-fr/)
-
-[*Polish* translation by S. Wojnowski](http://rubyhelp.org/articles/gosu)
 
 [*Traditional Chinese* translation by poga](http://devpoga.wordpress.com/2008/05/28/ruby_gosu_tutorial/)
 
 [*Spanish* translation by ladybenko](http://cafeina.ladybenko.net/?p=485)
-
-[Another *French* introduction by Guigui](http://www.relite.org/forum/ruby-gosu-cours-complet-t4879.html)
 
 ## Reference
 
@@ -34,7 +28,7 @@ Consult either the [[RubyTutorial]] or the [[CppTutorial]].
 
 ## Ruby Game Packaging
 
-Since Ruby is not a compiled language, it may not be obvious how to release games written in it to the public. For instructions see either [[RubyPackagingOnOSX]] or [[RubyPackagingOnWindows]].
+Since Ruby is not a compiled language, it may not be obvious how to release games written in it to the public. For instructions see either [[Ruby Packaging on OS X]] or [[Ruby Packaging on Windows]].
 
 ## Further Inspiration
 
