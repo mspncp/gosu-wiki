@@ -1,4 +1,4 @@
-#summary How to wrap up Ruby/Gosu games for deployment on Mac OS X.
+# Ruby Packaging on OS X
 
 [ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
 
