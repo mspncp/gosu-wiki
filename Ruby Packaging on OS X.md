@@ -13,6 +13,6 @@ And you're done! You now have a fully functional .app bundle.
 
 The .app is a self-contained Ruby 1.9.2 (core) installation. This especially means that you need to put comments of the form `# Encoding: UTF -8` on the first line of every source file that uses non-ASCII characters. If you need to use libraries other than Ruby's core and Gosu, see the Extending Gosu forum for advice.
 
-*Update:* Sadly the results will only work on 10.6 right now. (See this forum thread for details)[http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=456].
+*Update:* Sadly the results will only work on 10.6 right now. [See this forum thread for details](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=456).
 
 [boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"
