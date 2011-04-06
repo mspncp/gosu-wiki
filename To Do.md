@@ -1,12 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-05)
+(Last update: 2011-04-06)
 
 ## Gosu 0.7.x
   * Print, then re-raise exceptions, in Gosu 0.7.xxxx (Window#draw/update)
-  * Make Mac/Gosu work with MacRuby
-  * Make Mac/Gosu work with Rubinius
   * Release 0.7.30
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Move GOSU\_VERSION into a Ruby file and out of SWIG
@@ -125,6 +123,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make MacUtility.hpp public
   * Fix attached example program
   * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
+  * Find out why glGetError apparently returns an error in Gosu (where? why?)
 ## Gosu Touch
   * See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
