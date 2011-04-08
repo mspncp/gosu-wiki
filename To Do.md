@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-06)
+(Last update: 2011-04-08)
 
 ## Gosu 0.7.x
   * Print, then re-raise exceptions, in Gosu 0.7.xxxx (Window#draw/update)
@@ -211,4 +211,3 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
   * Deprecate beginGL/endGL in favor of scheduleGL
   * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
-  * Make GDIplus loading faster with Bitmap::ConvertFormat / Bitmap::LockBits?
