@@ -1,14 +1,21 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-08)
+(Last update: 2011-04-11)
 
 ## Gosu 0.7.x
-  * Print, then re-raise exceptions, in Gosu 0.7.xxxx (Window#draw/update)
+  * Remove -lpng everywhere
+  * Install cmdline VNC client on iMac via SSH
+  * See if image\_insert.rb works on iMac
+  * Install 64-bit Windows
+  * Try to reproduce "hidden exceptions" bug
+  * Print, then re-raise exceptions (Window#draw/update)
+  * Install 64-bit Windows & 
+  * Fix Bitmap* -> BitmapFreeImage in Linux makefile, extconf
+  * Add Gosu::copyright()
   * Release 0.7.30
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Move GOSU\_VERSION into a Ruby file and out of SWIG
-  * Replace Bitmap* by SDL\_image or DevIL
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Try to get gl\_info for large images working
@@ -211,3 +218,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
   * Deprecate beginGL/endGL in favor of scheduleGL
   * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
+  * Add Gosu::StringArg (a variant of char*/wchar*/string/wstring)
+  * How would a TexturePacker like thingie work for Gosu?
