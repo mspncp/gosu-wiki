@@ -12,7 +12,7 @@ If you do not wish to use z ordering, just pass the same constant all the time.
 
 Functions related to image creation accept a boolean "tileable" argument. This is a consequence of using 3D hardware acceleration. Try to notice the subtle difference between these two, overstretched images:
 
-[[hard_borders.png]]
+[[hard_borders.png|alt=Effect of the tileable parameter]]
 
 When you draw an image with stretching factors other than 1.0 (10.0 in this case) or at odd coordinates, it will become interpolated—which, in general, is much better than getting all pixel-y.
 
@@ -24,9 +24,9 @@ While most images should not be tileable, you should always pass true for map ti
 
 In all functions that expect arguments for all four corners of a rectangle or quadrilateral, except `ImageData::draw` (in C++), you can either pass clockwise coordinates, or coordinates in the following order (a Z shape):
 
-[[corner_indices.png]]
+[[corner_indices.png|alt=Order of corners in Gosu]]
 
-## Drawing with Colors
+## Drawing with Colours
 
 Almost all image drawing functions accept modulation colours. The colours of all pixels on the source image will be multiplied with these colours, where a channel value of 255 corresponds to the maximum value of 1.0. This means modulation colours can be used only to reduce particular channels of an image.
 
