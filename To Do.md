@@ -1,16 +1,17 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-11)
+(Last update: 2011-04-12)
 
 ## Gosu 0.7.x
+  * RMagick Tut: replace, replace JPEG by new obscure format (SVG?)
   * Remove -lpng everywhere
   * Install cmdline VNC client on iMac via SSH
   * See if image\_insert.rb works on iMac
   * Install 64-bit Windows
   * Try to reproduce "hidden exceptions" bug
   * Print, then re-raise exceptions (Window#draw/update)
-  * Install 64-bit Windows & 
+  * Install 64-bit Windows &
   * Fix Bitmap* -> BitmapFreeImage in Linux makefile, extconf
   * Add Gosu::copyright()
   * Release 0.7.30
