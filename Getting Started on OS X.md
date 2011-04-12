@@ -1,7 +1,4 @@
 # Getting Started on OS X
-
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
-
 ## Installing Boost (required for using Gosu with C++ only)
 
 [Boost][] is a collection of libraries that is used throughout Gosu. Many parts of Boost have been marked for inclusion in the next standard of C++, so it's definitely worth a look a its docs.
@@ -95,6 +92,4 @@ To test if everything works, you can use this Hello World script:
 That's it -- have fun!
 
 [boost]: http://www.boost.org/
-[forum]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
 [homebrew]: http://mxcl.github.com/homebrew/
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"
