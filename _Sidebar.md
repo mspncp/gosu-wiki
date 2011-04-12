@@ -1,12 +1,19 @@
+Feel free to add to this wiki. For questions, please visit the forum. Thank you!
+
 * [Official Website][web]
+* Getting Started
+  * [[Getting Started on OS X]]
+  * [[Getting Started on Windows]]
+  * [[Getting Started On Linux]]
+* Tutorials
+  * [[Ruby Tutorial]]
+  * [[C++ Tutorial]]
 * [Gosu Boards][boards]
   * [Gosu Exchange][exchange] - Questions? Ask them here.
   * [Gosu Showcase][showcase] - Show off your projects.
   * [Extending Gosu][extending] - Libraries that play nicely with Gosu.
 * [RDoc][]
 * [C++ Documentation][doxygen]
-
-Feel free to add to this wiki. For questions, please visit the forum. Thank you!
 
 [web]: http://www.libgosu.org/
 [boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
