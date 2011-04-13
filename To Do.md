@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-12)
+(Last update: 2011-04-13)
 
 ## Gosu 0.7.x
   * RMagick Tut: replace, replace JPEG by new obscure format (SVG?)
@@ -186,7 +186,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for clarification
   * Note: changing looping may restart song (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
-  * Link OpenGL tutorials
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
