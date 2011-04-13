@@ -1,7 +1,5 @@
 # Ruby Packaging on Windows
 
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
-
 To compile your Ruby game into an executable on Windows, you need to run it through [this program](http://github.com/larsch/ocra/tree/master) from the command line.
 
 
@@ -21,5 +19,3 @@ To let your game find the DLLs you have to change the PATH environment like this
 If you have any trouble, feel free to ask on the Gosu boards. Ocra is still a project in development and everybody can benefit from sharing your experience.
 
 If you run into problems with bundling fmod.dll, [please see this thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=426).
-
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"

@@ -1,7 +1,5 @@
 # Window Main Loop
 
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
-
 Usually, you create a subclass of `Gosu::Window` and override the parts that you need. Then, you create an instance of this class and call `show` on it. What happens then is this:
 
 [[main_loop.png]]
@@ -37,5 +35,3 @@ You can also write your games by checking `Gosu::milliseconds()` between one `up
 This style naturally works better with a low framerate, but may need more up-front thinking, and the calculations may be slower in general because floating-point values are a more natural fit here.
 
 This is definitely a by-case choice and Gosu tries to support both styles of programming.
-
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"

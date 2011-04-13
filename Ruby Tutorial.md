@@ -1,7 +1,5 @@
 # Ruby Tutorial
 
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
-
 ## Translations
 
 For links to translations of this tutorial (Traditional Chinese, Spanish, French) see the [[Home]] page.
@@ -297,7 +295,6 @@ As you can see, loading and playing sound effects couldn't be easier! See the [r
 
 That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the [Gosu Showcase board][boards.showcase].
 
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"
 [boards.showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
 [rdoc]: http://www.libgosu.org/rdoc "Gosu RDoc Reference Documentation"
 [FIG:angles]: http://www.libgosu.org/wiki_images/angles2.png

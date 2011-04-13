@@ -2,8 +2,6 @@
 
 A tutorial contributed by Dirk Johnson.
 
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
-
 This tutorial covers integrating the Chipmunk Physics Engine's Ruby bindings with Gosu's Ruby bindings.  This tutorial assumes that both Gosu and Chipmunk have been properly installed.  See http://wiki.slembcke.net/main/published/Chipmunk. The source code for this tutorial can be found in Gosu's 'examples' folder, but to run it, you'll need to copy the chipmunk extension there too if you haven't installed it system-wide.
 
 *Pre-compiled Chipmunk libraries* are available in (this forum thread)[http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=82]. Thanks, bentglasstube!
@@ -157,5 +155,3 @@ Congratulations!  You have converted the Gosu Tutorial to using Chipmunk!  And, 
 ### Epilog
 
 As of this writing, Chipmunk's Ruby bindings documentation is out of date.  On the Chipmunk forums, the author, Scott Lembcke, has said he will be updating the docs and will "soon" release version 4.  In the meantime, scour the C documentation, the code, and the forums.  I will do my best to update this tutorial for version 4 when it is released.
-
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"

@@ -1,7 +1,5 @@
 # C++ Tutorial
 
-[ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
-
 ## Source Code
 
 The code for the complete game, together with the required media files, can be found in the Gosu distribution of your choice ('examples/Tutorial.cpp'). To run the game, setup a new project as seen in [[Getting Started on OS X]], [[Getting Started on Windows]] or [[Getting Started on Linux]], respectively, and use `Tutorial.cpp` as the only source file.
@@ -428,5 +426,4 @@ As you can see, loading and playing sound effects couldn't be easier! See the re
 
 That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, see the games on the [Gosu Showcase board][showcase].
 
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"
 [showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
