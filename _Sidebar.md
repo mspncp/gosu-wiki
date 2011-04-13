@@ -1,6 +1,7 @@
+[ ![Gosu][logo] ][web]
+
 Feel free to add to this wiki. For questions, please visit the forum. Thank you!
 
-* [Official Website][web]
 * Getting Started
   * [[Getting Started on OS X]]
   * [[Getting Started on Windows]]
@@ -22,3 +23,5 @@ Feel free to add to this wiki. For questions, please visit the forum. Thank you!
 [extending]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=4
 [rdoc]: http://www.libgosu.org/rdoc/
 [doxygen]: http://www.libgosu.org/cpp/
+
+[logo]: http://www.libgosu.org/forum_header.png
