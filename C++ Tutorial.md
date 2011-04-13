@@ -1,4 +1,3 @@
-
 # C++ Tutorial
 
 [ ![Please post feedback and additions as comments to this page and visit the boards for questions outside the scope of a single wiki page. Thank you!](board_link.png) ][boards]
@@ -7,22 +6,23 @@
 
 The code for the complete game, together with the required media files, can be found in the Gosu distribution of your choice ('examples/Tutorial.cpp'). To run the game, setup a new project as seen in [[Getting Started on OS X]], [[Getting Started on Windows]] or [[Getting Started on Linux]], respectively, and use `Tutorial.cpp` as the only source file.
 
-## 1. Overriding Window's callbacks
+## The Tutorial
+### 1. Overriding Window's callbacks
 
 The easiest way to create a complete Gosu application is to write a new class that derives from `Gosu::Window` (see the reference for a complete description of its interface). Here's how a minimal GameWindow class might look like:
 
     #include <Gosu/Gosu.hpp>
     #include <Gosu/AutoLink.hpp> // Makes life easier for Windows users compiling this.
-
+    
     #include <boost/scoped_ptr.hpp> // Used throughout Gosu and this tutorial.
     #include <boost/shared_ptr.hpp> // Learn them, they're moving into standard C++!
     #include <boost/lexical_cast.hpp> // Could also use <sstream>, just for int <-> string conversion
-
+      
     #include <cmath>
     #include <cstdlib>
     #include <list>
     #include <vector>
-
+      
     class GameWindow : public Gosu::Window
     {
     public:
@@ -31,16 +31,16 @@ The easiest way to create a complete Gosu application is to write a new class th
         {
             setCaption(L"Gosu Tutorial Game");
         }
-
+        
         void update()
         {
         }
-
+        
         void draw()
         {
         }
     };
-
+    
     int main(int argc, char* argv[])
     {
         GameWindow window;
@@ -57,12 +57,12 @@ Then follows the main program. A window is created and its `show()` member funct
 
 A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
-## 2. Using Images
+### 2. Using Images
 
     class GameWindow : public Gosu::Window
     {
         boost::scoped_ptr<Gosu::Image> backgroundImage;
-
+        
     public:
         GameWindow()
         : Window(640, 480, false)
@@ -71,11 +71,11 @@ A diagram of the main loop is shown on the [[Window Main Loop]] page.
             std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Space.png";
             backgroundImage.reset(new Gosu::Image(graphics(), filename, false));
         }
-
+        
         void update()
         {
         }
-
+        
         void draw()
         {
             backgroundImage->draw(0, 0, 0);
@@ -88,7 +88,7 @@ Note: A `scoped_ptr` is used here so we can delay creation of the image. `boost:
 
 As mentioned in the last lesson, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at (0;0) - the third image is the Z position; again, see BasicConcepts.
 
-### Player & movement
+#### 2.1. Player & Movement
 
 Here comes a simple player class:
 
@@ -96,7 +96,7 @@ Here comes a simple player class:
     {
         boost::scoped_ptr<Gosu::Image> image;
         double posX, posY, velX, velY, angle;
-
+        
     public:
         explicit Player(Gosu::Graphics& graphics)
         {
@@ -104,29 +104,29 @@ Here comes a simple player class:
             image.reset(new Gosu::Image(graphics, filename));
             posX = posY = velX = velY = angle = 0;
         }
-
+        
         void warp(double x, double y)
         {
             posX = x;
             posY = y;
         }
-
+        
         void turnLeft()
         {
             angle -= 4.5;
         }
-
+        
         void turnRight()
         {
             angle += 4.5;
         }
-
+        
         void accelerate()
         {
             velX += Gosu::offsetX(angle, 0.5);
             velY += Gosu::offsetY(angle, 0.5);
         }
-
+        
         void move()
         {
             posX += velX;
@@ -134,17 +134,17 @@ Here comes a simple player class:
                 posX += 640;
             while (posX > 640)
                 posX -= 640;
-
+            
             posY += velY;
             while (posY < 0)
                 posY += 480;
             while (posY > 480)
                 posY -= 480;
-
+            
             velX *= 0.95;
             velY *= 0.95;
         }
-
+        
         void draw() const
         {
             image->drawRot(posX, posY, 1, angle);
@@ -153,19 +153,19 @@ Here comes a simple player class:
 
 There are a couple of things to say about this:
 
-[[angles2.png]]
+[[angles2.png|alt=Angles in Gosu]]
 
   * `Player::accelerate` makes use of the offsetX/offsetY functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would pass `offsetX(30, 100)` pixels horizontally and `offsetY(30, 100)` pixels vertically.
   * When loading BMP files, Gosu replaces #ff00ff (fuchsia/magenta; that really ugly pink) with transparent pixels.
   * Note that drawRot puts the *center* of the image at (x; y) - *not* the upper left corner, as with draw. Also, the player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later. Also, see the reference for all drawing methods and arguments.
 
-### Integrating Player with the Window
+#### 2.2. Integrating Player with the Window
 
     class GameWindow : public Gosu::Window
     {
         boost::scoped_ptr<Gosu::Image> backgroundImage;
         Player player;
-
+        
     public:
         GameWindow()
         : Window(640, 480, false), player(graphics())
@@ -173,10 +173,10 @@ There are a couple of things to say about this:
             setCaption(L"Gosu Tutorial Game");
             std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Space.png";
             backgroundImage.reset(new Gosu::Image(graphics(), filename, false));
-
+            
             player.warp(320, 240);
         }
-
+        
         void update()
         {
             if (input().down(Gosu::kbLeft) || input().down(Gosu::gpLeft))
@@ -187,13 +187,13 @@ There are a couple of things to say about this:
                   player.accelerate();
             player.move();
         }
-
+        
         void draw()
         {
             player.draw();
             backgroundImage->draw(0, 0, 0);
         }
-	
+        
         void buttonDown(Gosu::Button btn)
         {
             if (btn == Gosu::kbEscape)
@@ -205,7 +205,7 @@ As you can see, we have introduced keyboard and gamepad input!
 Similar to `update()` and `draw()`, `Gosu::Window` provides two virtual member functions `buttonDown(id)` and `buttonUp(id)` which can be overriden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see the reference).
 While getting feedback on pushed buttons is suitable for one-time events such as UI interaction, jumping or typing, it is rather useless for actions that span several frames - for example, moving by holding buttons down. This is where the update() member function comes into play, which only calls the player's movement methods. If you run this lesson's code, you should be able to fly around!
 
-## 3, Simple animations
+### 3. Simple animations
 
 First, we are going to get rid of the magic numbers for Z positions from now on by replacing them with the following enumeration:
 
@@ -234,12 +234,12 @@ Let's introduce the stars which are the central object of this lesson. Stars app
         Animation* animation;
         Gosu::Color color;
         double posX, posY;
-
+        
     public:
         explicit Star(Animation& anim)
         {
             animation = &anim;
-	
+            
             color.setAlpha(255);
             double red = Gosu::random(40, 255);
             color.setRed(static_cast<Gosu::Color::Channel>(red));
@@ -247,19 +247,19 @@ Let's introduce the stars which are the central object of this lesson. Stars app
             color.setGreen(static_cast<Gosu::Color::Channel>(green));
             double blue = Gosu::random(40, 255);
             color.setBlue(static_cast<Gosu::Color::Channel>(blue));
-
+            
             posX = Gosu::random(0, 640);
             posY = Gosu::random(0, 480);
         }
-
+        
         double x() const { return posX; }
         double y() const { return posY; }
-
+        
         void draw() const
         {
             Gosu::Image& image = 
                 *animation->at(Gosu::milliseconds() / 100 % animation->size());
-
+                
             image.draw(posX - image.width() / 2.0, posY - image.height() / 2.0,
                 zStars, 1, 1, color, Gosu::amAdditive);
         }
@@ -274,7 +274,7 @@ Now let's add easy code to the player to collect away stars from a list:
     class Player
     {
         ...
-
+        
         void collectStars(std::list<Star>& stars)
         {
             std::list<Star>::iterator cur = stars.begin();
@@ -303,13 +303,13 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
         : Window(640, 480, false), player(graphics())
         {
             setCaption(L"Gosu Tutorial Game");
-
+            
             std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Space.png";
             backgroundImage.reset(new Gosu::Image(graphics(), filename, false));
-
+            
             filename = Gosu::sharedResourcePrefix() + L"media/Star.png";
             Gosu::imagesFromTiledBitmap(graphics(), filename, 25, 25, false, starAnim);
-
+            
             player.warp(320, 240);
         }
         
@@ -318,7 +318,7 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
             ...
             player.move();
             player.collectStars(stars);
-
+            
             if (std::rand() % 25 == 0 && stars.size() < 25)
                 stars.push_back(Star(starAnim));
         }
@@ -339,7 +339,7 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
 
 Done! You can now collect stars.
 
-### 4. Text and sound
+### 4. Text and Sound
 
 Finally, we want to draw the current score using a bitmap font and play a 'beep' sound every time the player collects a star. The Window will handle the text part, loading a font 20 pixels high:
 
@@ -348,13 +348,13 @@ Finally, we want to draw the current score using a bitmap font and play a 'beep'
         boost::scoped_ptr<Gosu::Image> backgroundImage;
         Animation starAnim;
         Gosu::Font font;
-
+        
         Player player;
         std::list<Star> stars;
-
+          
     public:
         ...
-
+        
         GameWindow()
         : Window(640, 480, false),
             font(graphics(), Gosu::defaultFontName(), 20),
@@ -362,20 +362,20 @@ Finally, we want to draw the current score using a bitmap font and play a 'beep'
         {
             ...
         }
-
+        
         ...
-
+        
         void draw()
         {
             player.draw();
             backgroundImage->draw(0, 0, zBackground);
-
+            
             for (std::list<Star>::const_iterator i = stars.begin();
                 i != stars.end(); ++i)
             {
                 i->draw();
             }
-
+            
             font.draw(L"Score: " + boost::lexical_cast<std::wstring>(player.getScore()),
                 10, 10, zUI, 1, 1, Gosu::Colors::yellow);
         }
@@ -389,27 +389,27 @@ What's left for the player? Right: A counter for the score, loading the sound an
         boost::scoped_ptr<Gosu::Sample> beep;
         double posX, posY, velX, velY, angle;
         unsigned score;
-
+        
     public:
         Player(Gosu::Graphics& graphics, Gosu::Audio& audio)
         {
             std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Starfighter.bmp";
             image.reset(new Gosu::Image(graphics, filename));
-
+            
             filename = Gosu::sharedResourcePrefix() + L"media/Beep.wav";
             beep.reset(new Gosu::Sample(audio, filename));
-
+            
             posX = posY = velX = velY = angle = 0;
             score = 0;
         }
-
+        
         unsigned getScore() const
         {
             return score;
         }
-
+        
         ...
-
+        
         void collectStars(std::list<Star>& stars, unsigned& score)
         {
             ...
@@ -426,6 +426,7 @@ What's left for the player? Right: A counter for the score, loading the sound an
 
 As you can see, loading and playing sound effects couldn't be easier! See the reference for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
 
-That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, see the games on the (Gosu Showcase board)[http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2].
+That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, see the games on the [Gosu Showcase board][showcase].
 
 [boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl "Gosu Boards"
+[showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
