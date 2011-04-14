@@ -1,17 +1,17 @@
 # Getting Started on Linux
 
-(or FreeBSD, as I am told!)
+(Gosu supposedly also works on FreeBSD if you adapt these steps.)
 
 ## Dependencies
 
 To install Gosu in any form, you will need the following packages (install via `sudo apt-get install <packagename>`):
 
-  * g++
-  * libgl1-mesa-dev
-  * libpango1.0-dev
-  * libboost-dev
-  * libsdl-mixer1.2-dev
-  * libsdl-ttf2.0-dev
+  * `g++`
+  * `libgl1-mesa-dev`
+  * `libpango1.0-dev`
+  * `libboost-dev`
+  * `libsdl-mixer1.2-dev`
+  * `libsdl-ttf2.0-dev`
 
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
 
