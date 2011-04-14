@@ -1,7 +1,5 @@
 [ ![Gosu][logo] ][web]
 
-Feel free to add to this wiki. For questions, please visit the forum. Thank you!
-
 * Getting Started
   * [[Getting Started on OS X]]
   * [[Getting Started on Windows]]

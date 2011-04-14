@@ -1,13 +1,9 @@
 # Gosu Documentation Overview
-## Installation
+## Installation, Tutorial
 
-Depending on your operating system, see [[Getting Started on OS X]], [[Getting Started on Windows]] or [[Getting Started on Linux]].
+Depending on your operating system and programming language, please refer to the appropriate pages from the side bar.
 
-## Tutorial
-
-Consult either the [[Ruby Tutorial]] or the [[C++ Tutorial]].
-
-### Translated Tutorials (Ruby)
+## Translations of the Ruby Tutorial
 
 * [*French* mirror/translation of the old Google Code page, provided by Damien Gouteux][tutorial.fr]
 * [*Traditional Chinese* translation by poga][tutorial.zh]
