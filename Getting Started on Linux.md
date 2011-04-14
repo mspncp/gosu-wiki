@@ -15,12 +15,14 @@ To install Gosu in any form, you will need the following packages (install via `
 
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
 
-    # For C++
-    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
-    # To install the gem for Ruby 1.8
-    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev ruby1.8-dev
-    # To install the gem for Ruby 1.9.1/1.9.2(?)
-    sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev ruby1.9.1-dev
+```bash
+# For C++
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
+# To install the gem for Ruby 1.8
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev ruby1.8-dev
+# To install the gem for Ruby 1.9.1/1.9.2(?)
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev ruby1.9.1-dev
+```
 
 *Please check* how to install all this software if you are on a different distribution.
 
@@ -34,8 +36,10 @@ Afterwards, `gem install gosu` should work.
 
 To compile Gosu, `cd` into the `linux` subdirectory and run:
 
-    ./configure
-    make
+```bash
+./configure
+make
+```
 
 There is a deprecated `make install` command that will work for C++, but as most Linux distributions are using a package manager nowadays we recommend copying the resulting `linux/libgosu.a` file to your game's directory manually.
 
@@ -45,9 +49,11 @@ There is a deprecated `make install` command that will work for C++, but as most
 
 You have to compile with `` `gosu-config --cxxflags` `` and `` `gosu-config --libs` ``, so a simple Makefile could look like this:
 
-    OBJS = main.o player.o
-    CXXFLAGS += `gosu-config --cxxflags`
-    LIBS = `gosu-config --libs`
-    
-    myGame: $(OBJS) libgosu.a
-            g++ -o myGame $(OBJS) libgosu.a $(LIBS)
+```make
+OBJS = main.o player.o
+CXXFLAGS += `gosu-config --cxxflags`
+LIBS = `gosu-config --libs`
+
+myGame: $(OBJS) libgosu.a
+        g++ -o myGame $(OBJS) libgosu.a $(LIBS)
+```
