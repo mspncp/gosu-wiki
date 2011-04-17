@@ -1,17 +1,16 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-13)
+(Last update: 2011-04-17)
 
 ## Gosu 0.7.x
-  * RMagick Tut: replace, replace JPEG by new obscure format (SVG?)
+  * Add Color#with\_alpha
   * Remove -lpng everywhere
   * Install cmdline VNC client on iMac via SSH
   * See if image\_insert.rb works on iMac
   * Install 64-bit Windows
   * Try to reproduce "hidden exceptions" bug
   * Print, then re-raise exceptions (Window#draw/update)
-  * Install 64-bit Windows &
   * Fix Bitmap* -> BitmapFreeImage in Linux makefile, extconf
   * Add Gosu::copyright()
   * Release 0.7.30
@@ -79,6 +78,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Get rid of context selection error with driver set to always do FSAA (Windows)
     * OS X: Release all keys on battery notification dialog (?)
   * Finish the RMagick bundling thing
+    * See what's new with ImageMagick, apparently there is a universal conf flag?!
     * Try to build RMagick.bundle against the 10.4 SDK
     * Link the all-in-one-bundle from the boards: http://rubyforge.org/forum/forum.php?thread\_id=26872&forum\_id=32
     * Test RMagick.bundle on Tiger
@@ -132,6 +132,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix attached example program
   * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
   * Find out why glGetError apparently returns an error in Gosu (where? why?)
+  * Image::insert/Bitmap::insert should memcpy if possible
 ## Gosu Touch
   * See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
@@ -186,6 +187,9 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for clarification
   * Note: changing looping may restart song (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
+  * Add Color#dup to rdoc
+  * Fix doxygen's fugliness (what's up there?!)
+  * Refresh SupportedAudioFormats
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
