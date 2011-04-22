@@ -1,15 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-17)
+(Last update: 2011-04-22)
 
 ## Gosu 0.7.x
-  * Add Color#with\_alpha
-  * Remove -lpng everywhere
-  * Install cmdline VNC client on iMac via SSH
+  * Remove -lpng in Windows projects
   * See if image\_insert.rb works on iMac
-  * Install 64-bit Windows
-  * Try to reproduce "hidden exceptions" bug
   * Print, then re-raise exceptions (Window#draw/update)
   * Fix Bitmap* -> BitmapFreeImage in Linux makefile, extconf
   * Add Gosu::copyright()
@@ -18,26 +14,21 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Move GOSU\_VERSION into a Ruby file and out of SWIG
   * Get GLFW working on OS X
   * Get GLFW working on Linux
-  * Try to get gl\_info for large images working
   * Throw exception for '' as a font name
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
-  * Update docs
-  * Comment #insert
   * Release a roadmap for 0.7, 0.8 & 0.9
   * Try audio formats with Audiere
-  * Perform 0.8 hyperjump (reordering all To Do tasks below)
   * Use 10.4 SSH to compile truly universal RubyGosu App \o/
   * Find out what Gosu::Song::play does when it's already playing on all three platforms, then clarify docs
   * Add FontFlags support for SDL\_TTF Gosu/Text
   * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
-  * Fix Segfault when Image.new doesn't find its file on Linux (see GoogleCode issue)
+  * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
   * Test Gosu&ocra with audiere.dll
   * See why Gosu::~Song with Ogg files sometimes causes other songs to stop
   * Ensure that Gosu::Song: currentSong is never 0'ed asynchronously (who is setting that variable anyway? Me right?)
-  * Ensure that Gosu::createText us always width*1 pixels for empty strings
   * Add m4a to audio\_formats.rb
   * Make <c=> more efficient in Font::drawRel
   * Add <s=> to text formatting
@@ -55,8 +46,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if really old games have problems running in current Gosu
   * The screen size/OpenGL stuff …
     * See if John Shea's talk had something about not being locked to pixel positions
-    * Make initial window black instead of garbled on OS X
-    * Add support for giving font flags from Ruby
+    * Make initial window black instead of garbled on OS X (if it persists with glfw)
     * Screen size / fullscreen stuff
       * Iterate on first category of fullscreen tests
       * Add fullscreen accessors to make proper FS OpenGL possible
@@ -97,7 +87,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Make Gosu::Color more tolerant regarding its component values
     * Assure that files from doxygen task are considered for packaging
     * Compile all-in-one RMagick for Windows: http://rubyforge.org/forum/forum.php?thread\_id=26872&forum\_id=32
-    * Get rid of quad/tri/line drawing
+    * Get rid of quad/tri drawing in favor of textures
     * Review: http://rubyforge.org/tracker/index.php?func=detail&aid=21405&group\_id=375&atid=1504
     * Make sure README and LICENSE are appropriately named in the Gem
     * Collect Gosu YouTube videos and link them prominently
@@ -122,8 +112,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * KbBracketLeft and KbBracketRight for ÖÄ?
   * Make more stuff configurable like http://github.com/cout/rice/blob/98ba7098e2de5849f2e7272021340976a768456f/ruby.ac#L7-20
   * Try and see if Gosu can be made to correctly release pushed buttons when the keyboard is overloaded
-  * Add Gosu::tempDir
-  * Remove OS X file artefacts (.\_README.txt) from Linux tarball
   * Fix error when creating an Image from "\n" on OS X
   * Add callback for the OS-supplied "close" button
   * Correctly implement render-to-texture (render{})
@@ -178,7 +166,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Include CptnCpp as sample game
   * Document alpha modes for Ruby
   * Add rdoc to Gosu gem
-  * Update TextInput.cpp to include setCaretPos
   * Make sure that WindowMainLoop states that the whole order is just about perceived performance
   * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
   * Say "you can attach files after posting" below input box in board
@@ -187,9 +174,9 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for clarification
   * Note: changing looping may restart song (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
-  * Add Color#dup to rdoc
   * Fix doxygen's fugliness (what's up there?!)
-  * Refresh SupportedAudioFormats
+  * Refresh SupportedAudioFormats on Windows
+  * Refresh SupportedAudioFormats on Linux
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
