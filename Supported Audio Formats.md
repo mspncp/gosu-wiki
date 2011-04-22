@@ -1,17 +1,21 @@
 # Supported Audio Formats
 
-## (Outdated, this needs to be re-tested on Windows)
+This list is populated using the semi-automated script from `feature_tests/audio_formats.rb`. It is important to note that many container formats, such as WAV or OGG, can contain several types of audio data. Recommended formats for compatibility are PCM WAV (not the weird floating-point kind) and Ogg Vorbis.
 
-This list is populated using the semi-automated script from `feature_tests/audio_formats.rb`. It is important to note that many container formats, such as WAV or OGG, can contain several types of audio data. Recommended formats are Ogg Vorbis and PCM WAV, which are the most usual combinations.
+                    Format|Sample (OS X)|Song (OS X)
+--------------------------|--------------|------------
+          aiff 32bit float|      &#x2713;|    &#x2713;
+              au 16bit pcm|      &#x2713;|    &#x2713;
+        caf be 16bit 44khz|      &#x2713;|    &#x2713;
+        caf le 16bit 44khz|      &#x2713;|    &#x2713;
+         caf le 8bit 44khz|      &#x2713;|    &#x2713;
+              general midi|              |            
+           impulse tracker|              |            
+           mp3 128k stereo|      &#x2713;|    &#x2713;
+mp3 avg 96kbit jointstereo|      &#x2713;|    &#x2713;
+                ogg vorbis|      &#x2713;|    &#x2713;
+             wav 16bit pcm|      &#x2713;|    &#x2713;
+             wav 32bit pcm|      &#x2713;|    &#x2713;
+         wav 4bit ms adpcm|      &#x2713;|    &#x2713;
 
-## TODO reformat as HTML for GitHub wiki
-
-|| Platform || aiff 32bit float || au 16bit pcm || caf be 16bit 44khz || caf le 16bit 44khz || caf le 8bit 44khz || general midi || impulse tracker || mp3 128k stereo || mp3 avg 96kbit jointstereo || ogg vorbis || wav 16bit pcm || wav 32bit pcm || wav 4bit ms adpcm ||
-|| OS X (Gosu::Sample) || Yes || Yes || Yes || Yes || Yes ||  ||  || Yes || Yes || Yes || Yes || Yes || Yes ||
-|| OS X (Gosu::Song)  || Yes || Yes || Yes || Yes || Yes ||  ||  || Yes || Yes || Yes || Yes || Yes || Yes ||
-|| Windows (Gosu::Sample) ||  ||  ||  ||  ||  ||  ||  || Yes || Yes || Yes || Yes || || Yes ||
-|| Windows (Gosu::Song)  ||  ||  ||  ||  ||  || Yes || Yes || Yes || Yes || Yes || Yes || || Yes ||
-|| Linux (Gosu::Sample) ||  ||  ||  ||  ||  ||  ||  ||  ||  || Yes || Yes || ? (TODO) || Yes ||
-|| Linux (Gosu::Song)  ||  ||  ||  ||  ||  || Yes || Yes || Yes || Yes || Yes || Yes || ? (TODO) || ||
-
-OS X refers to both Macs and iPhones/iPods. I only tested the CAF formats because they are popular on the iPhone.
+OS X refers to both OS X and iOS, given that Apple keeps its frameworks in sync. I've thrown in a selection of CAF formats since they are popular on iOS.
