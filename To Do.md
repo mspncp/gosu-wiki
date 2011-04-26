@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-22)
+(Last update: 2011-04-26)
 
 ## Gosu 0.7.x
+  * Fix currentSong on Windows
   * Remove -lpng in Windows projects
   * See if image\_insert.rb works on iMac
   * Print, then re-raise exceptions (Window#draw/update)
@@ -177,6 +178,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix doxygen's fugliness (what's up there?!)
   * Refresh SupportedAudioFormats on Windows
   * Refresh SupportedAudioFormats on Linux
+  * Upload RubyGosu Wrapper again
+  * Link wrapper / downloads from Deployment wiki pages
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
