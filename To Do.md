@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-26)
+(Last update: 2011-04-29)
 
 ## Gosu 0.7.x
   * Fix currentSong on Windows
@@ -214,3 +214,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
   * Add Gosu::StringArg (a variant of char*/wchar*/string/wstring)
   * How would a TexturePacker like thingie work for Gosu?
+  * Rename SampleInstance to Channel
