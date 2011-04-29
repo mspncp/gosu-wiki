@@ -5,7 +5,7 @@
 * 2011-04-29: Ruby: Exceptions within Window#draw/update are now puts'ed too for redundancy
 * 2011-04-29: Linux: Gosu now uses FreeImage to read/write images, supports more formats
 * 2011-04-28: Windows: All-around fixed Gosu::SampleInstance/currentSong
-* 2011-04-10: Windows: Gosu now uses GDI+ to read/write images, supports more formats
+* 2011-04-10: Windows: Gosu now uses GDI+ to read/write images, supports more formats (thanks to mathias for the fork/lots of code)
 * 2011-04-10: Mac/iOS: Gosu now uses Apple APIs to read/write images, supports more formats
 * 2011-04-06: Mac: The 'ruby' platform Gem should now work with MacRuby, Rubinius given all dependencies (experimental)
 
