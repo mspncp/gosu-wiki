@@ -2,7 +2,7 @@
 
 ## 0.7.30
 * 2011-04-29: Windows: Improved Audiere error handling with incompatible formats
-* 2011-04-29: Ruby: Exceptions within Window#draw/update are now puts'ed too for redundancy
+* 2011-04-29: Ruby: Exceptions within Window#draw/update are now puts'ed too for redundancy (issue 78)
 * 2011-04-29: Linux: Gosu now uses FreeImage to read/write images, supports more formats
 * 2011-04-28: Windows: All-around fixed Gosu::SampleInstance/currentSong
 * 2011-04-10: Windows: Gosu now uses GDI+ to read/write images, supports more formats (thanks to mathias for the fork/lots of code)
