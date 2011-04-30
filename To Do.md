@@ -1,16 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-04-29)
+(Last update: 2011-05-01)
 
 ## Gosu 0.7.x
-  * Fix currentSong on Windows
-  * Remove -lpng in Windows projects
   * See if image\_insert.rb works on iMac
-  * Print, then re-raise exceptions (Window#draw/update)
-  * Fix Bitmap* -> BitmapFreeImage in Linux makefile, extconf
   * Add Gosu::copyright()
-  * Release 0.7.30
+  * Release 0.7.31 with all pending hot fixes
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Move GOSU\_VERSION into a Ruby file and out of SWIG
   * Get GLFW working on OS X
@@ -176,10 +172,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Note: changing looping may restart song (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
   * Fix doxygen's fugliness (what's up there?!)
-  * Refresh SupportedAudioFormats on Windows
   * Refresh SupportedAudioFormats on Linux
-  * Upload RubyGosu Wrapper again
-  * Link wrapper / downloads from Deployment wiki pages
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
@@ -214,4 +207,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
   * Add Gosu::StringArg (a variant of char*/wchar*/string/wstring)
   * How would a TexturePacker like thingie work for Gosu?
+  * Order USB devices alphabetically (so gamepad 0 is always 0)
   * Rename SampleInstance to Channel
