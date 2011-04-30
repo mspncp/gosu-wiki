@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.7.31
+* 2011-04-30: Mac/iOS: Proper exception when image loading fails
+
 ## 0.7.30
 * 2011-04-29: Windows: Improved Audiere error handling with incompatible formats
 * 2011-04-29: Ruby: Exceptions within Window#draw/update are now puts'ed too for redundancy (issue 78)
