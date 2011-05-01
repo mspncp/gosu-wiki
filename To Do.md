@@ -4,20 +4,21 @@ This list of tasks is exported automatically from my OmniFocus projects.
 (Last update: 2011-05-01)
 
 ## Gosu 0.7.x
+  * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
   * Add Gosu::copyright()
-  * Release 0.7.31 with all pending hot fixes
-  * Start working on 0.8 interface… Reshuffle all tasks below this
   * Move GOSU\_VERSION into a Ruby file and out of SWIG
-  * Get GLFW working on OS X
-  * Get GLFW working on Linux
   * Throw exception for '' as a font name
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
-  * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
+  * Release 0.7.32
+  * Start working on 0.8 interface… Reshuffle all tasks below this
   * Release a roadmap for 0.7, 0.8 & 0.9
-  * Try audio formats with Audiere
+  * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Use 10.4 SSH to compile truly universal RubyGosu App \o/
+  * Get GLFW working on OS X
+  * Get GLFW working on Linux
+  * Try audio formats with Audiere
   * Find out what Gosu::Song::play does when it's already playing on all three platforms, then clarify docs
   * Add FontFlags support for SDL\_TTF Gosu/Text
   * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
@@ -146,8 +147,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make logo in Rdoc clickable
   * Add OpenGL Wiki page
   * Add Unicode Support wiki page
-  * Add some RSS feed to main index.html page
-  * Make tt blocks prettier on front page
   * Deployment wiki page/rdoc: Mention Icon resource support!
   * UTF8 Support for PotD texts(?)
   * Donate to allison's author
@@ -168,8 +167,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Say "you can attach files after posting" below input box in board
   * Fix download for all my LD games as soon as Mac wrapper is nicer :(
   * Point out that Font#text\_width is only relevant to Font#draw etc
-  * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for clarification
-  * Note: changing looping may restart song (audiere)
+  * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
+  * Note: changing looping may restart song—clarify this? (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
   * Fix doxygen's fugliness (what's up there?!)
   * Refresh SupportedAudioFormats on Linux
