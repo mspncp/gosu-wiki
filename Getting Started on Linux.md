@@ -12,7 +12,7 @@ To install Gosu in any form, you will need the following packages (install via `
   * `libboost-dev`
   * `libsdl-mixer1.2-dev`
   * `libsdl-ttf2.0-dev`
-  * `libfreeimage3`
+  * `libfreeimage3` # 3.13 or higher required
   * `libfreeimage-dev`
 
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
