@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-01)
+(Last update: 2011-05-02)
 
 ## Gosu 0.7.x
+  * Make retrofication available in C++
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
   * Add Gosu::copyright()
