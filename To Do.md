@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-02)
+(Last update: 2011-05-04)
 
 ## Gosu 0.7.x
+  * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
   * Make retrofication available in C++
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
@@ -172,7 +173,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Note: changing looping may restart song—clarify this? (audiere)
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
   * Fix doxygen's fugliness (what's up there?!)
-  * Refresh SupportedAudioFormats on Linux
+  * Point out that the RubyGosu.app lib dir can be cleaned up
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
