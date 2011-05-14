@@ -133,13 +133,13 @@ There are a couple of things to say about this:
       end
 
       def update
-        if button_down? Gosu::Button::KbLeft or button_down? Gosu::Button::GpLeft then
+        if button_down? Gosu::KbLeft or button_down? Gosu::GpLeft then
           @player.turn_left
         end
-        if button_down? Gosu::Button::KbRight or button_down? Gosu::Button::GpRight then
+        if button_down? Gosu::KbRight or button_down? Gosu::GpRight then
           @player.turn_right
         end
-        if button_down? Gosu::Button::KbUp or button_down? Gosu::Button::GpButton0 then
+        if button_down? Gosu::KbUp or button_down? Gosu::GpButton0 then
           @player.accelerate
         end
         @player.move
@@ -151,7 +151,7 @@ There are a couple of things to say about this:
       end
 
       def button_down(id)
-        if id == Gosu::Button::KbEscape
+        if id == Gosu::KbEscape
           close
         end
       end
