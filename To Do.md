@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-10)
+(Last update: 2011-05-14)
 
 ## Gosu 0.7.x
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
@@ -13,6 +13,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
   * Release 0.7.32
+  * libfreeimage: Remove version requirement from docs
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Release a roadmap for 0.7, 0.8 & 0.9
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
