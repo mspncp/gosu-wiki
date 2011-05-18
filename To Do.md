@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-14)
+(Last update: 2011-05-18)
 
 ## Gosu 0.7.x
+  * Investigate and fix bug that breaks Wrath's instructions on 64-bit OS X
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
@@ -121,6 +122,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
   * Find out why glGetError apparently returns an error in Gosu (where? why?)
   * Image::insert/Bitmap::insert should memcpy if possible
+  * Expose Gosu Directories in Ruby
 ## Gosu Touch
   * See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
@@ -166,7 +168,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add rdoc to Gosu gem
   * Make sure that WindowMainLoop states that the whole order is just about perceived performance
   * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
-  * Say "you can attach files after posting" below input box in board
   * Fix download for all my LD games as soon as Mac wrapper is nicer :(
   * Point out that Font#text\_width is only relevant to Font#draw etc
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
