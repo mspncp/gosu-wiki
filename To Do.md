@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-18)
+(Last update: 2011-05-19)
 
 ## Gosu 0.7.x
   * Investigate and fix bug that breaks Wrath's instructions on 64-bit OS X
@@ -175,6 +175,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
   * Fix doxygen's fugliness (what's up there?!)
   * Point out that the RubyGosu.app lib dir can be cleaned up
+  * Show version on libgosu.org front page
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
