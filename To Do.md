@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-19)
+(Last update: 2011-05-22)
 
 ## Gosu 0.7.x
   * Investigate and fix bug that breaks Wrath's instructions on 64-bit OS X
@@ -137,7 +137,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix music stopping after locking the screen for a long time
   * Fix too-many-Fingers-bug
   * Unify drawQuad's effective triangularization on iOS and desktop
-  * Try to compile FreeGemas for iOS
 ## Gosu CI/Usability
   * Document 64px minimum for reliable single-texture optimization
   * Mention Gosu's respectable age somewhere :)
@@ -160,7 +159,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Tutorials: Mention where to find the final source code
   * Document MAX\_TEXTURE\_SIZE
   * .app'ify ippa's game after :retrofy is in and the wrapper can handle texplay
-  * Consider libgosu.spreadshirt.com
   * Make sure that it is documented what happens to different drawing ops with same z-order
   * Update README.txt and website year
   * Include CptnCpp as sample game
@@ -172,7 +170,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Point out that Font#text\_width is only relevant to Font#draw etc
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
   * Note: changing looping may restart song—clarify this? (audiere)
-  * Insert http://www.libgosu.org/cgi-bin/mwf/default/nav\_up.png
   * Fix doxygen's fugliness (what's up there?!)
   * Point out that the RubyGosu.app lib dir can be cleaned up
   * Show version on libgosu.org front page
