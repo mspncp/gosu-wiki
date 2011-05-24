@@ -1,10 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-22)
+(Last update: 2011-05-24)
 
 ## Gosu 0.7.x
-  * Investigate and fix bug that breaks Wrath's instructions on 64-bit OS X
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
@@ -152,7 +151,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add Unicode Support wiki page
   * Deployment wiki page/rdoc: Mention Icon resource support!
   * UTF8 Support for PotD texts(?)
-  * Donate to allison's author
   * Explain SampleInstance vs. Sample somewhere
   * OR&G: Build simpler version
   * Check if DelphiGL wiki accepts donations
