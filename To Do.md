@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-24)
+(Last update: 2011-05-26)
 
 ## Gosu 0.7.x
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
@@ -171,6 +171,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix doxygen's fugliness (what's up there?!)
   * Point out that the RubyGosu.app lib dir can be cleaned up
   * Show version on libgosu.org front page
+  * Make whole "tab header" area on libgosu.org clickable, not just link
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
