@@ -1,10 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-26)
+(Last update: 2011-05-27)
 
 ## Gosu 0.7.x
-  * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
+  * Optionally use FreeImage in Windows
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
   * Add Gosu::copyright()
@@ -18,6 +18,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Release a roadmap for 0.7, 0.8 & 0.9
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Use 10.4 SSH to compile truly universal RubyGosu App \o/
+  * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Try audio formats with Audiere
