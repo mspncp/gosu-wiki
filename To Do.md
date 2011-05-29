@@ -1,9 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-27)
+(Last update: 2011-05-29)
 
 ## Gosu 0.7.x
+  * Find & fix GL error properly
+  * Fix Song#volume with short songs
   * Optionally use FreeImage in Windows
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
@@ -120,7 +122,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make MacUtility.hpp public
   * Fix attached example program
   * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
-  * Find out why glGetError apparently returns an error in Gosu (where? why?)
   * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
 ## Gosu Touch
@@ -173,6 +174,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Point out that the RubyGosu.app lib dir can be cleaned up
   * Show version on libgosu.org front page
   * Make whole "tab header" area on libgosu.org clickable, not just link
+  * Link to /downloads not only for C++ on homepage
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
