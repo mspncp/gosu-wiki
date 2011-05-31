@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-29)
+(Last update: 2011-05-31)
 
 ## Gosu 0.7.x
   * Find & fix GL error properly
@@ -211,3 +211,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * How would a TexturePacker like thingie work for Gosu?
   * Order USB devices alphabetically (so gamepad 0 is always 0)
   * Rename SampleInstance to Channel
+  * Look at wox-Gem to refactor rake/mac.rb
+  * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
