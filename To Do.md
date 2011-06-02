@@ -1,11 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-05-31)
+(Last update: 2011-06-02)
 
 ## Gosu 0.7.x
-  * Find & fix GL error properly
-  * Fix Song#volume with short songs
   * Optionally use FreeImage in Windows
   * Protect ALL Window callbacks & add call to close() in case of an error
   * See if image\_insert.rb works on iMac
@@ -15,6 +13,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
   * Release 0.7.32
+  * Fix Song#volume with short songs
   * libfreeimage: Remove version requirement from docs
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Release a roadmap for 0.7, 0.8 & 0.9
@@ -175,6 +174,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Show version on libgosu.org front page
   * Make whole "tab header" area on libgosu.org clickable, not just link
   * Link to /downloads not only for C++ on homepage
+  * Fix rdoc template
 ## Gosu 0.8.x (preliminary)
   * Rename gl\_tex\_info to gl\_info and make it an array for Image
   * Rename needs\_x? to need\_x? in Ruby
