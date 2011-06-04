@@ -1,21 +1,19 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-02)
+(Last update: 2011-06-04)
 
 ## Gosu 0.7.x
-  * Optionally use FreeImage in Windows
-  * Protect ALL Window callbacks & add call to close() in case of an error
-  * See if image\_insert.rb works on iMac
   * Add Gosu::copyright()
-  * Move GOSU\_VERSION into a Ruby file and out of SWIG
   * Throw exception for '' as a font name
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
   * Release 0.7.32
-  * Fix Song#volume with short songs
   * libfreeimage: Remove version requirement from docs
+  * See if image\_insert.rb works on iMac
+  * Move GOSU\_VERSION into a Ruby file and out of SWIG
   * Start working on 0.8 interface… Reshuffle all tasks below this
+  * Fix Song#volume with short songs
   * Release a roadmap for 0.7, 0.8 & 0.9
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Use 10.4 SSH to compile truly universal RubyGosu App \o/
