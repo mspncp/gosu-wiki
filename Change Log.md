@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.7.32
+* 2011-06-04: Mac/Ruby: Added chipmunk back to .app wrapper
+* 2011-06-04: All: Added GOSU_COPYRIGHT_NOTICE to make it easier for game devs to fulfill BSD requirements
+* 2011-06-04: Ruby: Lots of work towards making exceptions transparent to the main UI message loop
+* 2011-06-04: Windows/Ruby: Added optional support for FreeImage. If image loading with GDI+ fails, Ruby/Gosu will look for FreeImage.dll and retry.
+* 2011-06-01: Mac/Ruby: One more attempt to clear the GL error (to keep ruby-opengl from complaining)
+* 2011-06-01: All: Text handling code correctly fails when a function is unexpectedly passed a newline (for example, Font#draw does not handle it)
+* 2011-05-13: Linux: Gosu does not require freeimage ≥3.13 anymore
+
 ## 0.7.31
 * 2011-04-30: Mac/iOS: Proper exception when image loading fails
 
