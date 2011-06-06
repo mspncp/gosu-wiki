@@ -4,6 +4,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
 (Last update: 2011-06-06)
 
 ## Gosu 0.7.x
+  * Document GOSU\_COPYRIGHT\_NOTICE
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Release a roadmap for 0.7, 0.8 & 0.9
   * Throw exception for '' as a font name
