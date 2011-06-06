@@ -1,20 +1,16 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-04)
+(Last update: 2011-06-06)
 
 ## Gosu 0.7.x
-  * Add Gosu::copyright()
+  * Start working on 0.8 interface… Reshuffle all tasks below this
+  * Release a roadmap for 0.7, 0.8 & 0.9
   * Throw exception for '' as a font name
   * Throw exception for multiple windows
   * Add Gosu::potential\_fps
-  * Release 0.7.32
-  * libfreeimage: Remove version requirement from docs
   * See if image\_insert.rb works on iMac
-  * Move GOSU\_VERSION into a Ruby file and out of SWIG
-  * Start working on 0.8 interface… Reshuffle all tasks below this
   * Fix Song#volume with short songs
-  * Release a roadmap for 0.7, 0.8 & 0.9
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Use 10.4 SSH to compile truly universal RubyGosu App \o/
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
