@@ -78,7 +78,7 @@ Next, you need to go into the project options, select C/C++ options, then Code G
 
 *In Visual C++ 2010*, you will also need to change the compiler toolset to vc90 on the project's first property page. Gosu is not built for the vc100 toolset.
 
-To ensure that your EXE file can find fmod.dll and your project's resources, you should also change its output directory for both configurations. (In this case I have put fmod.dll into the examples folder and built straight to that as I was testing the Tutorial game.)
+To ensure that your EXE file can find audiere.dll and your project's resources, you should also change its output directory for both configurations so that all files end up in the same place. (In this case I have put audiere.dll into the examples folder and built straight to that as I was testing the Tutorial game.)
 
 [[msvc_6_outputdir.png|alt=MSVC++ output directory]]
 
