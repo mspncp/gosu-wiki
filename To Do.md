@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-06)
+(Last update: 2011-06-10)
 
 ## Gosu 0.7.x
   * Document GOSU\_COPYRIGHT\_NOTICE
@@ -118,6 +118,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
   * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
+  * Fix warning "instance variable @\_exception not initialized"
 ## Gosu Touch
   * See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
