@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-10)
+(Last update: 2011-06-12)
 
 ## Gosu 0.7.x
   * Document GOSU\_COPYRIGHT\_NOTICE
@@ -120,7 +120,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Expose Gosu Directories in Ruby
   * Fix warning "instance variable @\_exception not initialized"
 ## Gosu Touch
-  * See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
+  * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
   * Let resolution decide orientation
