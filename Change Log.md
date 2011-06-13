@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.7.33
+* 2011-06-13: Windows: Fixed potential GDI+ initialization problem (thanks tuiq)
+* 2011-06-08: Ruby: Fixed exception error (e.g. at shutdown)
+* 2011-06-06: Ruby: Fixed possible crashes with invalid arguments (thanks Spooner)
+
 ## 0.7.32
 * 2011-06-04: Mac/Ruby: Added chipmunk back to .app wrapper
 * 2011-06-04: All: Added GOSU_COPYRIGHT_NOTICE to make it easier for game devs to fulfill BSD requirements
