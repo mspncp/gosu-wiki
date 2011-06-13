@@ -1,10 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-12)
+(Last update: 2011-06-13)
 
 ## Gosu 0.7.x
   * Document GOSU\_COPYRIGHT\_NOTICE
+  * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
   * Start working on 0.8 interface… Reshuffle all tasks below this
   * Release a roadmap for 0.7, 0.8 & 0.9
   * Throw exception for '' as a font name
@@ -118,7 +119,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
   * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
-  * Fix warning "instance variable @\_exception not initialized"
+  * Rename maxWidth argument to width in createText
 ## Gosu Touch
   * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
