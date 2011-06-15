@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-13)
+(Last update: 2011-06-15)
 
 ## Gosu 0.7.x
   * Document GOSU\_COPYRIGHT\_NOTICE
@@ -120,6 +120,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
   * Rename maxWidth argument to width in createText
+  * Adjust Text Entities to line height
+  * Document Text Entities
 ## Gosu Touch
   * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
