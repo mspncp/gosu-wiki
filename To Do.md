@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-15)
+(Last update: 2011-06-17)
 
 ## Gosu 0.7.x
   * Document GOSU\_COPYRIGHT\_NOTICE
@@ -122,6 +122,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Rename maxWidth argument to width in createText
   * Adjust Text Entities to line height
   * Document Text Entities
+  * Gosu: require 'gosu/swig\_patches' instead of messing with File.dirname
+  * Seplace SHGetFolderPath by SHGetSpecialFolderPath
 ## Gosu Touch
   * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
