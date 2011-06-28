@@ -15,24 +15,25 @@ If you don't have an editor that supports direct execution (TextMate, SciTE…),
 
 The easiest way to create a complete Gosu application is to write a new class that derives from Gosu::Window (see the reference for a complete description of its interface). Here's how a minimal GameWindow class might look like:
 
-    require 'gosu'
-    
-    class GameWindow < Gosu::Window
-      def initialize
-        super 640, 480, false
-        self.caption = "Gosu Tutorial Game"
-      end
-    
-      def update
-      end
-    
-      def draw
-      end
-    end
-    
-    window = GameWindow.new
-    window.show
+```ruby
+require 'gosu'
 
+class GameWindow < Gosu::Window
+  def initialize
+    super 640, 480, false
+    self.caption = "Gosu Tutorial Game"
+  end
+  
+  def update
+  end
+  
+  def draw
+  end
+end
+
+window = GameWindow.new
+window.show
+```
 The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large, non-fullscreen window. It also changes the window's caption, which is empty until then.
 
 `update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is called 60 times per second (by default) and should contain the main game logic: move objects, handle collisions, etc.
@@ -45,21 +46,23 @@ A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
 ### 2. Using Images
 
-    class GameWindow < Gosu::Window
-      def initialize
-        super(640, 480, false)
-        self.caption = "Gosu Tutorial Game"
-        
-        @background_image = Gosu::Image.new(self, "media/Space.png", true)
-      end
+```ruby
+class GameWindow < Gosu::Window
+  def initialize
+    super(640, 480, false)
+    self.caption = "Gosu Tutorial Game"
     
-      def update
-      end
-    
-      def draw
-        @background_image.draw(0, 0, 0);
-      end
-    end
+    @background_image = Gosu::Image.new(self, "media/Space.png", true)
+  end
+  
+  def update
+  end
+  
+  def draw
+    @background_image.draw(0, 0, 0);
+  end
+end
+```
 
 `Gosu::Image#initialize` takes three arguments. First, like all media resources, it is tied to a window (self). All of Gosu's resources need a Window for initialization and will hold an internal reference to that window. Second, the file name of the image file is given. The third argument specifies whether the image is to be created with hard borders. See BasicConcepts for an explanation.
 
@@ -165,9 +168,11 @@ While getting feedback on pushed buttons is suitable for one-time events such as
 
 First, we are going to get rid of the magic numbers for Z positions from now on by replacing them with the following constants:
 
-    module ZOrder
-      Background, Stars, Player, UI = *0..3
-    end
+```ruby
+module ZOrder
+  Background, Stars, Player, UI = *0..3
+end
+```
 
 What is an animation? A sequence of images - so we'll use Ruby's built in Arrays to store them. (For a real game, there is no way around writing some classes that fit the game's individual needs, but we'll get away with this simple solution for now.)
 
