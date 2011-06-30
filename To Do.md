@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-24)
+(Last update: 2011-06-30)
 
 ## Gosu 0.7.x
 ## Gosu 0.8.x (preliminary)
@@ -188,5 +188,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Show version on libgosu.org front page
   * Make whole "tab header" area on libgosu.org clickable, not just link
   * Link to /downloads not only for C++ on homepage
-  * Fix rdoc template
+  * Fix rdoc template (update to yard on the way)
   * Create a dynamic screenshot page for all the topics in the Showcase
