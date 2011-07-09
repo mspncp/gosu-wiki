@@ -1,8 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-06-30)
+(Last update: 2011-07-09)
 
+## Gosu 0.7 will nevarrr die
+  * Add libsndfile loading w/ AL backend on Windows
+  * Port libsndfile loading & OpenAL to Linux build chain
 ## Gosu 0.7.x
 ## Gosu 0.8.x (preliminary)
   * Fork website into its own git repository
