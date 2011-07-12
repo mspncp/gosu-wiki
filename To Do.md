@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-07-09)
+(Last update: 2011-07-12)
 
 ## Gosu 0.7 will nevarrr die
   * Add libsndfile loading w/ AL backend on Windows
@@ -130,6 +130,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Rename maxWidth argument to width in createText
   * Document Text Entities
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
+  * Fix: Mouse position on Linux is always reported to be inside the window
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
