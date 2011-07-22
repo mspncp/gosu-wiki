@@ -1,12 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-07-12)
+(Last update: 2011-07-22)
 
 ## Gosu 0.7 will nevarrr die
-  * Add libsndfile loading w/ AL backend on Windows
+  * Fix OpenAL32.dll shutdown error w/ Ruby
+  * Fix libsndfile-1.dll lazy-loading on Windows
   * Port libsndfile loading & OpenAL to Linux build chain
-## Gosu 0.7.x
 ## Gosu 0.8.x (preliminary)
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -145,7 +145,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if xiph Tremor makes sense for Gosu Touch
   * Let resolution decide orientation
   * Integrate "fat" iPhone building from forum
-  * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_OSX
+  * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE
   * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
   * Make sure that iPhone VA vertices are small and well-aligned
   * Use getBytes instead of UTF8String
@@ -154,7 +154,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix too-many-Fingers-bug
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
-  * Make fuchsia work in BMPs in GosuTouch
 ## Gosu CI/Usability
   * Document 64px minimum for reliable single-texture optimization
   * Mention Gosu's respectable age somewhere :)
