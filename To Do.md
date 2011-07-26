@@ -1,12 +1,15 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-07-22)
+(Last update: 2011-07-26)
 
 ## Gosu 0.7 will nevarrr die
   * Fix OpenAL32.dll shutdown error w/ Ruby
   * Fix libsndfile-1.dll lazy-loading on Windows
   * Port libsndfile loading & OpenAL to Linux build chain
+  * Add XDamage extension to GettingStartedOnLinux and Rubygem (linker flags)
+  * Check if everything still works on 10.7
+  * Release .33 (.34?)
 ## Gosu 0.8.x (preliminary)
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
