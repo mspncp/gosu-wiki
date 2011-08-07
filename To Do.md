@@ -1,13 +1,15 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-04)
+(Last update: 2011-08-07)
 
 ## Gosu 0.7 will nevarrr die
+  * Upgrade Ruby 1.9
   * Port libsndfile loading & OpenAL to Linux build chain
-  * Add XDamage extension to GettingStartedOnLinux and Rubygem (linker flags)
+  * Add XDamage Rubygem (linker flags)
   * Check if everything still works on 10.7
   * Release .33 (.34?)
+  * Add XDamage extension to GettingStartedOnLinux
 ## Gosu 0.8.x (preliminary)
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -169,7 +171,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add OpenGL Wiki page
   * Add Unicode Support wiki page
   * Deployment wiki page/rdoc: Mention Icon resource support!
-  * UTF8 Support for PotD texts(?)
+  * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
   * Explain SampleInstance vs. Sample somewhere
   * OR&G: Build simpler version
   * Check if DelphiGL wiki accepts donations
@@ -186,7 +188,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix download for all my LD games as soon as Mac wrapper is nicer :(
   * Point out that Font#text\_width is only relevant to Font#draw etc
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
-  * Note: changing looping may restart song—clarify this? (audiere)
   * Fix doxygen's fugliness (what's up there?!)
   * Point out that the RubyGosu.app lib dir can be cleaned up
   * Show version on libgosu.org front page
