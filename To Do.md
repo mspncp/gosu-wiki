@@ -1,13 +1,13 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-09)
+(Last update: 2011-08-10)
 
 ## Gosu 0.7 will nevarrr die
   * Upgrade Ruby 1.9 on Mac (for .app building)
   * Check if everything still works on 10.7 (xcodebuild??)
   * Release .33 (.34?)
-  * Add XDamage extension to GettingStartedOnLinux
+  * Add new packages to GettingStartedOnLinux
 ## Gosu 0.8.x (preliminary)
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -193,3 +193,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Link to /downloads not only for C++ on homepage
   * Fix rdoc template (update to yard on the way)
   * Create a dynamic screenshot page for all the topics in the Showcase
+  * Link to Windows opengl thread form index page
