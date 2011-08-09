@@ -1,11 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-08)
+(Last update: 2011-08-09)
 
 ## Gosu 0.7 will nevarrr die
-  * Add OpenAL support to Linux Rubygem
-  * Add XDamage Rubygem (linker flags)
   * Upgrade Ruby 1.9 on Mac (for .app building)
   * Check if everything still works on 10.7 (xcodebuild??)
   * Release .33 (.34?)
