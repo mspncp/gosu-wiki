@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.7.34
+* 2011-08-11: Mac: Rebuilt Mac .app wrapper on 10.5 to support 10.4+ (three-way universal)
+* 2011-08-07: Linux: Changed audio backend to OpenAL/libsndfile
+* 2011-07-24: Linux: Redraw the window on window damage
+* 2011-07-14: Windows: Changed audio backend to OpenAL/libsndfile
+* 2011-06-26: C++: Removed dependency on boost (uses TR1/C++03 instead)
+* 2011-06-23: C++: Changed signature of loadImageFile to reduce heap bloat
+* 2011-06-18: Windows: Started to add MinGW compatibility (thanks Jamer & Seisatsu)
+
 ## 0.7.33
 * 2011-06-13: Windows: Fixed potential GDI+ initialization problem (thanks tuiq)
 * 2011-06-08: Ruby: Fixed exception error (e.g. at shutdown)
