@@ -1,13 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-10)
+(Last update: 2011-08-12)
 
 ## Gosu 0.7 will nevarrr die
-  * Upgrade Ruby 1.9 on Mac (for .app building)
-  * Check if everything still works on 10.7 (xcodebuild??)
-  * Release .33 (.34?)
-  * Add new packages to GettingStartedOnLinux
 ## Gosu 0.8.x (preliminary)
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -132,6 +128,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Document Text Entities
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
   * Fix: Mouse position on Linux is always reported to be inside the window
+  * Use big texture for LargeImage if possible
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
