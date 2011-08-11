@@ -1,7 +1,10 @@
 # Change Log
 
-## 0.7.34
-* 2011-08-11: Mac/Ruby: Rebuilt the Mac .app's guts on 10.5 to support 10.4+ (three-way universal)
+## 0.7.35
+* 2011-08-11: Fixed some bugs that had snuck themselves into the 0.7.34 release.
+
+## 0.7.34 (yanked, broken on all platforms)
+* 2011-08-11: Mac/Ruby: Rebuilt the Mac .app to support 10.4+ (three-way universal)
 * 2011-08-07: Linux: Changed audio backend to OpenAL/libsndfile (thanks again to Jamer)
 * 2011-07-24: Linux: Redraw the window on window damage (thanks Jamer)
 * 2011-07-14: Windows: Changed audio backend to OpenAL/libsndfile
