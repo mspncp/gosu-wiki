@@ -24,7 +24,7 @@ You can work your way from here using the RubyTutorial if you want.
 
 ## Adding Header/Library Paths (for C++ with Visual C++ 2008)
 
-The only dependency for using Gosu is (boost)[http://www.boost.org/]. Many parts of boost have been marked for inclusion in the next standard of C++, so you'd better look at it anyway! :) Download the latest release and extract it into a separate directory. *You do not have to compile anything* for Gosu, the boost headers are enough and cover most of its libraries.
+Gosu has no dependencies, unless you want to compile it yourself. However, we recommend (boost)[http://www.boost.org/], which the Gosu Tutorial game also uses. Simply download the latest release and extract it into a separate directory (you don't need to compile anything except for a few select parts of boost).
 
 In Visual C++, go to Tools/Options/Projects and Solutions/VC++ Directories. Select the list of directories for include files and add the two directories you extracted boost and Gosu into—not the contained 'boost' or 'Gosu' subfolders.
 
@@ -91,19 +91,26 @@ If you need a starting point or want to test if everything is correctly set up, 
     {
     public:
         MyWindow()
-        : Gosu::Window(640, 480, false, 20)
+        :   Window(640, 480, false, 20)
         {
             setCaption(L"Hello World!");
         }
     };
     
-    int main(int argc, char* argv[])
+    int main()
     {
-        MyWindow win;
-        win.show();
-        return 0;
+        MyWindow window;
+        window.show();
     }
 
-You can work your way from here using the [C++ Tutorial] if you want.
+You can work your way from here using the [[C++ Tutorial]] if you want.
+
+## Getting rid of DLL requirements
+
+Gosu links against FreeImage.dll and OpenAL32.dll. However, if your image formats are covered by Windows' system libraries (PNG, BMP, JPG, GIF and more), then you don't need FreeImage.dll. Similarly, if you don't play any audio, you don't need OpenAL32.dll.
+
+To get rid of the linker errors in this case, go to the properties of your project, "Linker/Input", and add "OpenAL32.dll;FreeImage.dll" to the list of "Delay Loaded DLLs" (empty by default).
+
+(Gosu also needs libsndfile.dll to play audio, but this file is *always* lazily linked and you can just omit it if your app is silent.)
 
 [msdn.upgrade]: http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx
