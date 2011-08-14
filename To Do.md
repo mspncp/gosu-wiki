@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-12)
+(Last update: 2011-08-14)
 
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
@@ -191,3 +191,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix rdoc template (update to yard on the way)
   * Create a dynamic screenshot page for all the topics in the Showcase
   * Link to Windows opengl thread form index page
+  * Mention this as a workaround for installing platform=ruby Gosu on 10.7: export CC="gcc-4.2"; alias gcc="gcc-4.2"
