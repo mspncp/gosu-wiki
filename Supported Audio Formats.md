@@ -1,21 +1,7 @@
 # Supported Audio Formats
 
-This list is populated using the semi-automated script from `feature_tests/audio_formats.rb`. It is important to note that many container formats, such as WAV or OGG, can contain several types of audio data. Recommended formats for compatibility are PCM WAV (not the weird floating-point kind) and Ogg Vorbis.
+The short version is: If you are not interested in iOS, just use common WAV encodings or Ogg Vorbis files for everything. If you also want to deploy on iOS, you should use music in a format that is hardware accelerated such as MP3 and M4A. Gosu Touch also supports Ogg Vorbis music on iOS, but it will slow your game down a lot, and I may drop support altogether at one point.
 
-                    Format|Sample (OS X)|Song (OS X)  |Sample (Win)|Song (Win)|Sample (Linux)|Song (Linux)
---------------------------|--------------|------------|----------------|--------------|--------------|------------
-          aiff 32bit float|      &#x2713;|    &#x2713;|                |              |              |            
-              au 16bit pcm|      &#x2713;|    &#x2713;|                |              |              |            
-        caf be 16bit 44khz|      &#x2713;|    &#x2713;|                |              |              |            
-        caf le 16bit 44khz|      &#x2713;|    &#x2713;|                |              |              |            
-         caf le 8bit 44khz|      &#x2713;|    &#x2713;|                |              |              |            
-              general midi|              |            |                |              |              |            
-           impulse tracker|              |            |                |      &#x2713;|              |    &#x2713;
-           mp3 128k stereo|      &#x2713;|    &#x2713;|        &#x2713;|      &#x2713;|              |    &#x2713;
-mp3 avg 96kbit jointstereo|      &#x2713;|    &#x2713;|        &#x2713;|      &#x2713;|              |    &#x2713;
-                ogg vorbis|      &#x2713;|    &#x2713;|        &#x2713;|      &#x2713;|      &#x2713;|    &#x2713;
-             wav 16bit pcm|      &#x2713;|    &#x2713;|        &#x2713;|      &#x2713;|      &#x2713;|    &#x2713;
-             wav 32bit pcm|      &#x2713;|    &#x2713;|                |              |              |            
-         wav 4bit ms adpcm|      &#x2713;|    &#x2713;|                |              |      &#x2713;|            
+The long version is that Gosu on Windows and Linux uses libsndfile for audio decoding. Its website sports a comprehensive list of all supported formats: http://www.mega-nerd.com/libsndfile/
 
-OS X refers to both OS X and iOS, given that Apple keeps its frameworks in sync. I've thrown in a selection of CAF formats since they are popular on iOS.
+Gosu on OS X and iOS uses the AudioToolkit and AVFoundation frameworks in addition to the Ogg Vorbis libraries to support both Ogg Vorbis files (software decoded) as well as everything that Apple supports on the OS level: CAF, MP3, M4A, WAV, AIFF...
