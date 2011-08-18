@@ -1,10 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-14)
+(Last update: 2011-08-19)
 
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
+  * OpenAL: ExitProcess only on channels left open
+  * Improve error message on image loading failure from Win Ruby/Gosu
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Until first public version (breaks C++ at least)
@@ -192,3 +194,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Create a dynamic screenshot page for all the topics in the Showcase
   * Link to Windows opengl thread form index page
   * Mention this as a workaround for installing platform=ruby Gosu on 10.7: export CC="gcc-4.2"; alias gcc="gcc-4.2"
+  * Add "Feature Pack" to requirements for MSVC
