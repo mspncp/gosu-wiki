@@ -61,3 +61,12 @@ LIBS = `gosu-config --libs`
 myGame: $(OBJS) libgosu.a
         g++ -o myGame $(OBJS) libgosu.a $(LIBS)
 ```
+
+**Note:** if you get an error such as
+
+```
+gosu/Gosu/Fwd.hpp:10: warning: attribute ignored in declaration of ‘struct Gosu::Audio’
+gosu/Gosu/Fwd.hpp:10: warning: attribute for ‘struct Gosu::Audio’ must follow the ‘struct’ keyword
+```
+
+You can solve it by adding the compile option ``-DSWIG``.
