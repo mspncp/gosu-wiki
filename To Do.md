@@ -1,14 +1,17 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-19)
+(Last update: 2011-08-23)
 
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
+  * Make ZOrder default to 0 again
   * OpenAL: ExitProcess only on channels left open
   * Improve error message on image loading failure from Win Ruby/Gosu
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
+  * Fix Gosu::Font(…default, 20) with italics on Windows
+  * Add more inspect strings
   * Until first public version (breaks C++ at least)
     * Make things tileable by default but add :smooth and :pure or something like that
     * Rename needs\_x? to need\_x? in Ruby
