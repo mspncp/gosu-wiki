@@ -1,7 +1,12 @@
 # Change Log
 
-## 0.7.35
-* 2011-08-11: Fixed some bugs that had snuck themselves into the 0.7.34 release.
+## 0.7.36
+* 2011-08-24: Win/Ruby: Fixed unhelpful Image loading errors
+* 2011-08-22: Linux: Lots of configure & Rubygem fixes (thanks again here, Jamer)
+* 2011-08-17: Win/Ruby: Fixed crashing or hanging Ruby process on exit after using audio
+
+## 0.7.35 (yanked
+* 2011-08-11: Fixed some bugs that had snuck into the 0.7.34 release.
 
 ## 0.7.34 (yanked, broken on all platforms)
 * 2011-08-11: Mac/Ruby: Rebuilt the Mac .app to support 10.4+ (three-way universal)
