@@ -1,13 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-23)
+(Last update: 2011-08-25)
 
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
-  * Make ZOrder default to 0 again
-  * OpenAL: ExitProcess only on channels left open
-  * Improve error message on image loading failure from Win Ruby/Gosu
+  * Test whether Wrath works on Windows
+  * Limit number of processed X11 events per frame
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows
@@ -31,7 +30,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Rename all those Ruby examples and feature\_tests
     * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
     * Use float instead of double everywhere (see note)
-  * See if really old games have problems running in current Gosu
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Make Image, Sample, Song, Font use an intrusive\_ptr internally
@@ -157,6 +155,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix too-many-Fingers-bug
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
+  * Add iCade support
 ## Gosu CI/Usability
   * Document 64px minimum for reliable single-texture optimization
   * Mention Gosu's respectable age somewhere :)
