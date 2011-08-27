@@ -1,11 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-25)
+(Last update: 2011-08-27)
 
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
-  * Test whether Wrath works on Windows
+  * Fix enqueueGL
   * Limit number of processed X11 events per frame
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
