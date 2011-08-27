@@ -6,17 +6,17 @@ This list of tasks is exported automatically from my OmniFocus projects.
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
   * Fix enqueueGL
-  * Limit number of processed X11 events per frame
+  * Fix WindowX event queue (see forum thread): for (int i = XPending(display); i > 0; --i)
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
-  * Fix Gosu::Font(…default, 20) with italics on Windows
-  * Add more inspect strings
-  * Until first public version (breaks C++ at least)
+  * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
+  * Add more #inspect strings (easier to use with irb/Pry)
+  * Until first public version (which may break C++)…
     * Make things tileable by default but add :smooth and :pure or something like that
     * Rename needs\_x? to need\_x? in Ruby
     * Make MacUtility.hpp public
     * Adjust Text Entities to line height
-    * Add Gosu::StringArg (a variant of char*/wchar*/string/wstring)
+    * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring)
     * Consequently throw exception for invalid font names
     * Throw exception for multiple windows
     * Change color format
