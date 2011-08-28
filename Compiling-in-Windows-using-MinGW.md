@@ -66,6 +66,7 @@ And these are the .dll you need to ship with your executable:
 * libvorbisfile-3.dll
 * libogg-0.dll
 * OpenAL32.dll
+* libsndfile.dll if you are loading sounds other than Ogg Vorbis (e.g. WAV files)
 
 # DISCLAIMER
 This is still under heavy test. There may be extra things, there may be missing things. Any feedback is appreciated.
