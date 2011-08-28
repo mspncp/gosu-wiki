@@ -17,10 +17,14 @@ Then create a new file and try to run it:
       end
     end
     
-    w = MyWindow.new
-    w.show
+    window = MyWindow.new
+    window.show
 
-You can work your way from here using the RubyTutorial if you want.
+You can work your way from here using the [[RubyTutorial]] if you want.
+
+## Gosu for C++ with MinGW
+
+See this separate guide: [[Compiling in Windows using MinGW]]
 
 ## Adding Header/Library Paths (for C++ with Visual C++ 2008)
 
