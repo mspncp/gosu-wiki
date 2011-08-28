@@ -20,7 +20,7 @@ Then create a new file and try to run it:
     window = MyWindow.new
     window.show
 
-You can work your way from here using the [[RubyTutorial]] if you want.
+You can work your way from here using the [[Ruby Tutorial]] if you want.
 
 ## Gosu for C++ with MinGW
 
