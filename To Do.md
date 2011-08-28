@@ -1,12 +1,13 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-27)
+(Last update: 2011-08-29)
 
 ## Gosu 0.7 will nevarrr die
 ## Gosu 0.8.x (preliminary)
-  * Fix enqueueGL
   * Fix WindowX event queue (see forum thread): for (int i = XPending(display); i > 0; --i)
+  * Fix enqueueGL
+  * Fix and document record{}
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
@@ -160,7 +161,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Document 64px minimum for reliable single-texture optimization
   * Mention Gosu's respectable age somewhere :)
   * Link to benkos example & Chingu regarding states
-  * Put RubyTutorial into rdoc
   * Add some first eye catchers to front page
   * Add "What now?" link list to front page
   * Emphasize difference between button\_down and button\_down? somewhere
