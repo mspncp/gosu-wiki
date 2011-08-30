@@ -1,13 +1,17 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-29)
+(Last update: 2011-08-31)
 
-## Gosu 0.7 will nevarrr die
-## Gosu 0.8.x (preliminary)
-  * Fix WindowX event queue (see forum thread): for (int i = XPending(display); i > 0; --i)
+## Gosu 0.8.x
+  * Add current\_language for Unix
+  * Add current\_language for Windows
+  * Add current\_language for Mac
   * Fix enqueueGL
-  * Fix and document record{}
+  * Fix record texture id stuff
+  * Fix record w/ transforms
+  * Release yet another boring 0.7 version… :/
+  * Document record{}
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
