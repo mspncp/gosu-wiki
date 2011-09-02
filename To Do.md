@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-08-31)
+(Last update: 2011-09-02)
 
 ## Gosu 0.8.x
   * Add current\_language for Unix
@@ -201,3 +201,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Link to Windows opengl thread form index page
   * Mention this as a workaround for installing platform=ruby Gosu on 10.7: export CC="gcc-4.2"; alias gcc="gcc-4.2"
   * Add "Feature Pack" to requirements for MSVC
+  * Add a note: FreeImage 3.9.3-3 is not good enough
