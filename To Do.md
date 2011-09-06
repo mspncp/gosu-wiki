@@ -1,10 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-09-05)
+(Last update: 2011-09-07)
 
 ## Gosu 0.8.x
-  * Add current\_language for Unix
   * Add current\_language for Windows
   * Fix enqueueGL
   * Fix record texture id stuff
