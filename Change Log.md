@@ -1,11 +1,16 @@
 # Change Log
 
+## 0.7.37
+* 2011-09-11: All: Added Gosu::language() that retrieves the user's current language
+* 2011-09-08: Linux: Using X11 Expose event instead of crashy XDamage event (thanks Jamer)
+* 2011-09-04: All: Added Font::setImage/Font#[]=(char, image) to set up a custom image for a character
+
 ## 0.7.36
 * 2011-08-24: Win/Ruby: Fixed unhelpful Image loading errors
 * 2011-08-22: Linux: Lots of configure & Rubygem fixes (thanks again here, Jamer)
 * 2011-08-17: Win/Ruby: Fixed crashing or hanging Ruby process on exit after using audio
 
-## 0.7.35 (yanked
+## 0.7.35 (yanked)
 * 2011-08-11: Fixed some bugs that had snuck into the 0.7.34 release.
 
 ## 0.7.34 (yanked, broken on all platforms)
