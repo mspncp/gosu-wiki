@@ -1,11 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-09-12)
+(Last update: 2011-09-13)
 
 ## Gosu 0.8.x
-  * Add current\_language for Windows
-  * Release yet another boring 0.7 version… :/
+  * Remove WINDOWS\_HINTS from gosu.rb (namespace pollution)
   * Fix enqueueGL
   * Fix record texture id stuff
   * Fix record w/ transforms
