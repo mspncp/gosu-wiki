@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-09-13)
+(Last update: 2011-09-22)
 
 ## Gosu 0.8.x
   * Remove WINDOWS\_HINTS from gosu.rb (namespace pollution)
@@ -169,7 +169,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Emphasize difference between button\_down and button\_down? somewhere
   * Link YouTube videos, and maybe blog tags like http://www.cuberick.com/search/label/gosu?
   * Make logo in forum clickable
-  * Make logo in Rdoc clickable
   * Add OpenGL Wiki page
   * Add Unicode Support wiki page
   * Deployment wiki page/rdoc: Mention Icon resource support!
