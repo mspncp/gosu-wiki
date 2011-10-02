@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-09-22)
+(Last update: 2011-10-03)
 
 ## Gosu 0.8.x
   * Remove WINDOWS\_HINTS from gosu.rb (namespace pollution)
@@ -161,7 +161,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
 ## Gosu CI/Usability
-  * Document 64px minimum for reliable single-texture optimization
   * Mention Gosu's respectable age somewhere :)
   * Link to benkos example & Chingu regarding states
   * Add some first eye catchers to front page
