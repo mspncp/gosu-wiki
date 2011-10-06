@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-03)
+(Last update: 2011-10-07)
 
 ## Gosu 0.8.x
+  * Find out why Gosu::Color.rgb(178, 14, 14).bgr => 921266
   * Remove WINDOWS\_HINTS from gosu.rb (namespace pollution)
   * Fix enqueueGL
   * Fix record texture id stuff
