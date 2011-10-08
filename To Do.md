@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-08)
+(Last update: 2011-10-09)
 
 ## Gosu 0.8.x
   * Remove WINDOWS\_HINTS from gosu.rb (namespace pollution)
@@ -103,7 +103,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Mac: Use Core Text instead of ATSUI
   * Polish/deployment
     * Make it possible to delete images while they are still referenced in the queue.
-    * Make Gosu::Color more tolerant regarding its component values
     * Assure that files from doxygen task are considered for packaging
     * Review: http://rubyforge.org/tracker/index.php?func=detail&aid=21405&group\_id=375&atid=1504
     * Make sure README and LICENSE are appropriately named in the Gem
