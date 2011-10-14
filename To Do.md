@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-14)
+(Last update: 2011-10-15)
 
 ## Gosu 0.8.x
   * Fix record texture id stuff
@@ -197,3 +197,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add "Feature Pack" to requirements for MSVC
   * Add a note: FreeImage 3.9.3-3 is not good enough
   * Mention Panda Canvas as a good educational application of Gosu
+  * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
