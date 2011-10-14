@@ -1,16 +1,14 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-09)
+(Last update: 2011-10-14)
 
 ## Gosu 0.8.x
-  * Remove WINDOWS\_HINTS from gosu.rb (namespace pollution)
-  * Fix enqueueGL
   * Fix record texture id stuff
   * Fix record w/ transforms
+  * Fix enqueueGL
   * Release yet another boring 0.7 version… :/
   * Document record{}
-  * Document Font#[]=
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
