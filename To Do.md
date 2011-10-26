@@ -1,13 +1,14 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-15)
+(Last update: 2011-10-26)
 
 ## Gosu 0.8.x
+  * Make Macros/GL blocks respect the current transforms
   * Fix record texture id stuff
-  * Fix record w/ transforms
-  * Fix enqueueGL
   * Release yet another boring 0.7 version… :/
+  * Make sure 
+  * Fix enqueueGL
   * Document record{}
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -133,6 +134,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
   * Fix: Mouse position on Linux is always reported to be inside the window
   * Use big texture for LargeImage if possible
+  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
