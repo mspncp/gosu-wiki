@@ -1,15 +1,13 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-26)
+(Last update: 2011-10-28)
 
 ## Gosu 0.8.x
+  * Release one more boring 0.7 version
+  * Merge record{} and iPhone rendering code
+  * Fix enqueueGL's ordering
   * Make Macros/GL blocks respect the current transforms
-  * Fix record texture id stuff
-  * Release yet another boring 0.7 version… :/
-  * Make sure 
-  * Fix enqueueGL
-  * Document record{}
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
@@ -42,7 +40,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Windows: Input will regularly query devices which are not currently attached, thereby causing the game to halt every few seconds - think about this
   * FSAA/mipmap experiments
   * Provide C++ application templates where possible, maybe even installers for the templates
-  * Apple remote support would rule.
   * Assure Gosu::File also creates directories as necessary
   * more C++ examples
   * document Gosu's Sockets
