@@ -9,10 +9,8 @@ To install Gosu in any form, you will need the following packages (install via `
   * `g++`
   * `libgl1-mesa-dev`
   * `libpango1.0-dev`
-  * `libboost-dev`
   * `libopenal-dev`
   * `libsndfile-dev`
-  * `libxdamage-dev`
   * `libsdl-ttf2.0-dev`
   * `libfreeimage3`
   * `libfreeimage-dev`
@@ -21,11 +19,11 @@ To install Gosu in any form, you will need the following packages (install via `
 
 ```bash
 # For C++
-sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libopenal-dev libsndfile-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev
 # To install the gem for Ruby 1.8
-sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev ruby1.8-dev rubygems
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libopenal-dev libsndfile-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev ruby1.8-dev rubygems
 # To install the gem for Ruby 1.9.1/1.9.2(?)
-sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libboost-dev libopenal-dev libsndfile-dev libxdamage-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev ruby1.9.1-dev rubygems
+sudo apt-get install g++ libgl1-mesa-dev libpango1.0-dev libopenal-dev libsndfile-dev libsdl-ttf2.0-dev libfreeimage3 libfreeimage-dev ruby1.9.1-dev rubygems
 ```
 
 *Please check* how to install all this software if you are on a different distribution.
