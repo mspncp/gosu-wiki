@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.7.38
+* 2011-10-25: Mac/iPhone: Fixed alpha channels
+* 2011-10-23: All: Renamed 'additive' to 'add' to be consistent with 'multiply'
+* 2011-10-08: Ruby: Made all Color accessors less annoying (will clip & truncate given values)
+* 2011-09-19: Ruby: Fixed some C++ exceptions not being translated properly
+
 ## 0.7.37
 * 2011-09-11: All: Added Gosu::language() that retrieves the user's current language
 * 2011-09-08: Linux: Using X11 Expose event instead of crashy XDamage event (thanks Jamer)
