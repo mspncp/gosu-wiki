@@ -1,12 +1,16 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-28)
+(Last update: 2011-10-29)
 
 ## Gosu 0.8.x
-  * Release one more boring 0.7 version
-  * Merge record{} and iPhone rendering code
-  * Fix enqueueGL's ordering
+  * 0.7.39
+    * Fix Win32 OpenAL load path
+    * See if petermorphose is ocra-able on Windows with .38
+    * Fix Gosu::StreamData::~StreamData
+  * 0.7.40
+    * Merge record{} and iPhone rendering code
+    * Fix enqueueGL's ordering
   * Make Macros/GL blocks respect the current transforms
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
