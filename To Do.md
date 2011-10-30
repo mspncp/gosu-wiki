@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-29)
+(Last update: 2011-10-30)
 
 ## Gosu 0.8.x
   * 0.7.39
@@ -12,6 +12,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Merge record{} and iPhone rendering code
     * Fix enqueueGL's ordering
   * Make Macros/GL blocks respect the current transforms
+  * Use YARD
+  * Fork Gosu.tmbundle into its own git repository
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
@@ -201,3 +203,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add a note: FreeImage 3.9.3-3 is not good enough
   * Mention Panda Canvas as a good educational application of Gosu
   * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
+  * Put tmbundle on front page
+  * RubyGosu.tmbundle erweitern: cmd+R -> main.rb
