@@ -1,17 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-10-31)
+(Last update: 2011-11-01)
 
 ## Gosu 0.8.x
-  * 0.7.39
-    * Fix Win32 OpenAL load path
-    * Fix Gosu::StreamData::~StreamData (stops other OGG songs too)
-  * 0.7.40
-    * Merge record{} and iPhone rendering code
-    * Fix enqueueGL's ordering
+  * Merge record{} and iPhone rendering code
+  * Fix enqueueGL's ordering
   * Make Macros/GL blocks respect the current transforms
-  * Use YARD
   * Fork Gosu.tmbundle into its own git repository
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -183,7 +178,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Update README.txt and website year
   * Include CptnCpp as sample game
   * Document alpha modes for Ruby
-  * Add rdoc to Gosu gem
   * Make sure that WindowMainLoop states that the whole order is just about perceived performance
   * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
   * Fix download for all my LD games as soon as Mac wrapper is nicer :(
