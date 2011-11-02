@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-01)
+(Last update: 2011-11-02)
 
 ## Gosu 0.8.x
   * Merge record{} and iPhone rendering code
@@ -148,7 +148,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Integrate "fat" iPhone building from forum
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE
   * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
-  * Make sure that iPhone VA vertices are small and well-aligned
   * Use getBytes instead of UTF8String
   * Testen, ob nicht alles besser ist, wenn ich graphics width/height die echten Daten des iPhone4 liefern lasse
   * Fix music stopping after locking the screen for a long time
