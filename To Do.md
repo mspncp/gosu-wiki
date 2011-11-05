@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-02)
+(Last update: 2011-11-05)
 
 ## Gosu 0.8.x
   * Merge record{} and iPhone rendering code
@@ -132,6 +132,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix: Mouse position on Linux is always reported to be inside the window
   * Use big texture for LargeImage if possible
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
+  * Add better error message for missing files on Linux/FreeImage
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
@@ -196,4 +197,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Mention Panda Canvas as a good educational application of Gosu
   * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
   * Put tmbundle on front page
-  * RubyGosu.tmbundle erweitern: cmd+R -> main.rb
+  * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
+  * Automatically import wiki pages from git into rdoc on release
