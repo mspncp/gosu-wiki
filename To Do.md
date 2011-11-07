@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-05)
+(Last update: 2011-11-07)
 
 ## Gosu 0.8.x
   * Merge record{} and iPhone rendering code
@@ -191,11 +191,10 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix rdoc template (update to yard on the way)
   * Create a dynamic screenshot page for all the topics in the Showcase
   * Link to Windows opengl thread form index page
-  * Mention this as a workaround for installing platform=ruby Gosu on 10.7: export CC="gcc-4.2"; alias gcc="gcc-4.2"
   * Add "Feature Pack" to requirements for MSVC
   * Add a note: FreeImage 3.9.3-3 is not good enough
   * Mention Panda Canvas as a good educational application of Gosu
   * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
   * Put tmbundle on front page
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
-  * Automatically import wiki pages from git into rdoc on release
+  * Automatically include Wiki pages in rdoc
