@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-07)
+(Last update: 2011-11-10)
 
 ## Gosu 0.8.x
   * Merge record{} and iPhone rendering code
@@ -164,6 +164,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Emphasize difference between button\_down and button\_down? somewhere
   * Link YouTube videos, and maybe blog tags like http://www.cuberick.com/search/label/gosu?
   * Make logo in forum clickable
+  * Merge doxygen header w/ website (tabs)
   * Add OpenGL Wiki page
   * Add Unicode Support wiki page
   * Deployment wiki page/rdoc: Mention Icon resource support!
@@ -180,17 +181,12 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Document alpha modes for Ruby
   * Make sure that WindowMainLoop states that the whole order is just about perceived performance
   * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
-  * Fix download for all my LD games as soon as Mac wrapper is nicer :(
+  * Fix download for all my LD games
   * Point out that Font#text\_width is only relevant to Font#draw etc
   * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
-  * Fix doxygen's fugliness (what's up there?!)
   * Point out that the RubyGosu.app lib dir can be cleaned up
   * Show version on libgosu.org front page
-  * Make whole "tab header" area on libgosu.org clickable, not just link
-  * Link to /downloads not only for C++ on homepage
-  * Fix rdoc template (update to yard on the way)
   * Create a dynamic screenshot page for all the topics in the Showcase
-  * Link to Windows opengl thread form index page
   * Add "Feature Pack" to requirements for MSVC
   * Add a note: FreeImage 3.9.3-3 is not good enough
   * Mention Panda Canvas as a good educational application of Gosu
