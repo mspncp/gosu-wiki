@@ -1,12 +1,22 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-10)
+(Last update: 2011-11-12)
 
 ## Gosu 0.8.x
-  * Merge record{} and iPhone rendering code
-  * Fix enqueueGL's ordering
-  * Make Macros/GL blocks respect the current transforms
+  * Start documenting graphics architecture
+  * Debug Macros not working sometimes (see feature\_tests)
+  * Embed RSD into DrawOp
+  * Run feature\_tests, Peter Morphose, Terava @ iOS
+  * Release a relatively stable rc1 gem with record{} working some more
+  * Make stuff superficially independent of Window
+  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
+  * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
+  * Use float instead of double
+  * Consider using new color format now
+  * Cleanup glBegin, Graphics::begin etc.
+  * Get rid of quad/tri drawing in favor of textures
+  * Release a hellishly unstable rc2 gem
   * Fork Gosu.tmbundle into its own git repository
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -30,12 +40,10 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Make Window::needsCursor return true by default
     * Rename all those Ruby examples and feature\_tests
     * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
-    * Use float instead of double everywhere (see note)
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Make Image, Sample, Song, Font use an intrusive\_ptr internally
   * Experimentation: In Ruby, can the window be a singleton and still provide the ability to inherit from it? (Singleton standard class)
-  * Get rid of quad/tri drawing in favor of textures
   * Add accelerometer support for OS X; maybe find a way to use UniMotion
   * Windows: Input will regularly query devices which are not currently attached, thereby causing the game to halt every few seconds - think about this
   * FSAA/mipmap experiments
@@ -60,7 +68,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
   * See why Gosu::~Song with Ogg files sometimes causes other songs to stop
   * Ensure that Gosu::Song: currentSong is never 0'ed asynchronously (who is setting that variable anyway? Me right?)
-  * Add m4a to audio\_formats.rb
   * Make <c=> more efficient in Font::drawRel
   * Add <s=> to text formatting
   * Gosu: try integer truncing of drawing positions
@@ -84,8 +91,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
       * Test multiple screens on Windows
     * TextField with clip\_to (update example)
   * Make Gosu fun to use on OS X
-    * Create C++ app template for Xcode
-    * Create iPhone app template for Xcode
+    * Create C++ app template for Xcode4
+    * Create iPhone app template for Xcode4
     * Create .pkg wrapper to install Gosu into /Developer/Gosu
   * Make OpenAL  buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
   * Replace draw\_line by something that makes sense
@@ -131,7 +138,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
   * Fix: Mouse position on Linux is always reported to be inside the window
   * Use big texture for LargeImage if possible
-  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Add better error message for missing files on Linux/FreeImage
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
@@ -146,7 +152,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
   * Let resolution decide orientation
-  * Integrate "fat" iPhone building from forum
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE
   * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
   * Use getBytes instead of UTF8String
@@ -157,40 +162,44 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
 ## Gosu CI/Usability
-  * Mention Gosu's respectable age somewhere :)
-  * Link to benkos example & Chingu regarding states
-  * Add some first eye catchers to front page
-  * Add "What now?" link list to front page
-  * Emphasize difference between button\_down and button\_down? somewhere
-  * Link YouTube videos, and maybe blog tags like http://www.cuberick.com/search/label/gosu?
-  * Make logo in forum clickable
-  * Merge doxygen header w/ website (tabs)
-  * Add OpenGL Wiki page
-  * Add Unicode Support wiki page
-  * Deployment wiki page/rdoc: Mention Icon resource support!
-  * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
-  * Explain SampleInstance vs. Sample somewhere
-  * OR&G: Build simpler version
-  * Check if DelphiGL wiki accepts donations
-  * Tutorials: Mention where to find the final source code
-  * Document MAX\_TEXTURE\_SIZE
-  * .app'ify ippa's game after :retrofy is in and the wrapper can handle texplay
-  * Make sure that it is documented what happens to different drawing ops with same z-order
+  * More front page content
+    * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
+    * Show version on libgosu.org front page
+    * Create a dynamic screenshot page for all the topics in the Showcase
+    * Put tmbundle on front page
+    * Link to benkos example & Chingu regarding states
+    * Mention Panda Canvas as a good educational application of Gosu
+    * Add some first eye catchers to front page
+    * Add "What now?" link list to front page
+    * Link YouTube videos, and maybe blog tags like http://www.cuberick.com/search/label/gosu?
+  * More docs
+    * Emphasize difference between button\_down and button\_down? somewhere
+    * Make sure that it is documented what happens to different drawing ops with same z-order
+    * Deployment wiki page/rdoc: Mention Icon resource support!
+    * Explain SampleInstance vs. Sample somewhere
+    * Tutorials: Mention where to find the final source code
+    * Document MAX\_TEXTURE\_SIZE
+    * Document alpha modes for Ruby
+    * Add OpenGL Wiki page
+    * Make sure that WindowMainLoop states that the whole order is just about perceived performance
+    * Add "Feature Pack" to requirements for MSVC
+    * Add a note: FreeImage 3.9.3-3 is not good enough
+    * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
+    * Point out that Font#text\_width is only relevant to Font#draw etc
+    * Point out that the RubyGosu.app lib dir can be cleaned up
+    * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
+    * Add Unicode Support wiki page
+  * New unified layout
+    * Design new layout…
+    * Skin YARD for new layout
+    * Merge doxygen header w/ website (tabs)
+    * Make logo in forum clickable
+  * Polish existing games
+    * OR&G: Build simpler version
+    * Include CptnCpp as sample game
+    * Fix download for all my LD games
+    * .app'ify ippa's game after :retrofy is in and the wrapper can handle texplay
   * Update README.txt and website year
-  * Include CptnCpp as sample game
-  * Document alpha modes for Ruby
-  * Make sure that WindowMainLoop states that the whole order is just about perceived performance
-  * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
-  * Fix download for all my LD games
-  * Point out that Font#text\_width is only relevant to Font#draw etc
-  * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
-  * Point out that the RubyGosu.app lib dir can be cleaned up
-  * Show version on libgosu.org front page
-  * Create a dynamic screenshot page for all the topics in the Showcase
-  * Add "Feature Pack" to requirements for MSVC
-  * Add a note: FreeImage 3.9.3-3 is not good enough
-  * Mention Panda Canvas as a good educational application of Gosu
   * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
-  * Put tmbundle on front page
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Automatically include Wiki pages in rdoc
