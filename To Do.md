@@ -1,9 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-12)
+(Last update: 2011-11-14)
 
 ## Gosu 0.8.x
+  * Merge Xinerama stuff (except Tutorial.cpp change)
+  * Remove assert (section == 0) in OggFile.hpp, line 94
   * Start documenting graphics architecture
   * Debug Macros not working sometimes (see feature\_tests)
   * Embed RSD into DrawOp
