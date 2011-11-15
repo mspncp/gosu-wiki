@@ -1,18 +1,16 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-14)
+(Last update: 2011-11-15)
 
 ## Gosu 0.8.x
-  * Merge Xinerama stuff (except Tutorial.cpp change)
-  * Remove assert (section == 0) in OggFile.hpp, line 94
-  * Start documenting graphics architecture
   * Debug Macros not working sometimes (see feature\_tests)
   * Embed RSD into DrawOp
   * Run feature\_tests, Peter Morphose, Terava @ iOS
-  * Release a relatively stable rc1 gem with record{} working some more
-  * Make stuff superficially independent of Window
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
+  * Release a relatively stable rc1 gem with record{} working some more
+  * Add required libxinerama-dev to wiki page
+  * Make stuff superficially independent of Window
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
   * Use float instead of double
   * Consider using new color format now
@@ -141,6 +139,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix: Mouse position on Linux is always reported to be inside the window
   * Use big texture for LargeImage if possible
   * Add better error message for missing files on Linux/FreeImage
+  * See if this page helps with fullscreen on OS X
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
