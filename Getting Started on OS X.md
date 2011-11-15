@@ -20,7 +20,7 @@ Then right-click "Other Frameworks" and add a reference to an existing framework
 
 Your application bundle also needs to *contain* the Gosu.framework bundle. To instruct Xcode to automatically copy it into your application, choose Project/New Build Phase and select "Frameworks" as the Copy Files' target directory. Then locate this new build phase in the targets list and add Gosu.framework to it as well. (Note: You may have to drag & drop the framework into the build phase from the finder, instead of adding it via a right-click.)
 
-*Note:* If you want to be backwards compatible with 10.4, you will have to fiddle with the framework settings. Gosu supports 10.4, 32-bit and powerpc just fine.)
+*Note:* If you want to be backwards compatible with 10.4, you will have to fiddle with the settings. Gosu supports 10.4, 32-bit and PowerPC just fine. For starters, you may have to set your project's GCC version to 4.0 to get 10.4 support to work; you can set a more recent GCC and OS X SDK by adding user-defined GCC_VERSION_x86_64=4.2 and SDKROOT_x86_64=/Developer/SDKs/MacOSX10.6.sdk)
 
 ## Your application code
 
