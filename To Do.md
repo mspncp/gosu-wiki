@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-15)
+(Last update: 2011-11-16)
 
 ## Gosu 0.8.x
+  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
   * Debug Macros not working sometimes (see feature\_tests)
   * Embed RSD into DrawOp
   * Run feature\_tests, Peter Morphose, Terava @ iOS
@@ -204,3 +205,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Automatically include Wiki pages in rdoc
+  * Mention copyright() in README
