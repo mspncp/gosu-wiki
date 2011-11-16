@@ -1,4 +1,3 @@
-
 # Ruby Tutorial
 
 ## Translations
@@ -166,7 +165,7 @@ end
 ```
 
 As you can see, we have introduced keyboard and gamepad input!
-Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overriden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see [rdoc][]).
+Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overridden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see [rdoc][]).
 While getting feedback on pushed buttons is suitable for one-time events such as UI interaction, jumping or typing, it is rather useless for actions that span several frames - for example, moving by holding buttons down. This is where the update() member function comes into play, which only calls the player's movement methods. If you run this lesson's code, you should be able to fly around!
 
 ### 3. Simple animations
@@ -190,9 +189,9 @@ class Star
   def initialize(animation)
     @animation = animation
     @color = Gosu::Color.new(0xff000000)
-    @color.red = rand(255 - 40) + 40
-    @color.green = rand(255 - 40) + 40
-    @color.blue = rand(255 - 40) + 40
+    @color.red = rand(256 - 40) + 40
+    @color.green = rand(256 - 40) + 40
+    @color.blue = rand(256 - 40) + 40
     @x = rand * 640
     @y = rand * 480
   end
