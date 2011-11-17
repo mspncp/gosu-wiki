@@ -7,13 +7,16 @@
 To install Gosu in any form, you will need the following packages (install via `sudo apt-get install <packagename>`):
 
   * `g++`
+  * `libboost-all-dev`
   * `libgl1-mesa-dev`
   * `libpango1.0-dev`
   * `libopenal-dev`
   * `libsndfile-dev`
   * `libsdl-ttf2.0-dev`
+  * `libsdl-mixer1.2-dev`
   * `libfreeimage3`
   * `libfreeimage-dev`
+  * `freeglut3-dev`
 
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
 
