@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.7.29
+* 2011-11-19: All: Added Window#record(width, height)
+* 2011-11-14: All: Removed an overcautious assert() from OGG file reading
+* 2011-11-14: All: Fixed OGG files' destructor stopping unrelated songs
+* 2011-11-14: Linux: Fullscreen only covers one screen now (thanks JayThirtySeven!)
+* 2011-11-01: Ruby: Switched from rdoc to YARD
+
 ## 0.7.38
 * 2011-10-25: Mac/iPhone: Fixed alpha channels
 * 2011-10-23: All: Renamed 'additive' to 'add' to be consistent with 'multiply'
