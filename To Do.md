@@ -1,15 +1,16 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-16)
+(Last update: 2011-11-18)
 
 ## Gosu 0.8.x
-  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
-  * Debug Macros not working sometimes (see feature\_tests)
+  * Fix: VertexArray Transform pointers go stale between frames
+  * Fix: currentTransforms/absoluteTransforms should be in the queue, no Graphics
   * Embed RSD into DrawOp
+  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
   * Run feature\_tests, Peter Morphose, Terava @ iOS
-  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Release a relatively stable rc1 gem with record{} working some more
+  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Add required libxinerama-dev to wiki page
   * Make stuff superficially independent of Window
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
