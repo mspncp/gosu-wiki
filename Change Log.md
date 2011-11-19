@@ -1,7 +1,12 @@
 # Change Log
 
+## 0.7.40
+* 2011-11-19: All: Fixed interaction between recording and transforms
+* 2011-11-19: Linux: screenWidth/screenHeight also returns the size of the primary screen only (thanks again, JayThirtySeven)
+* 2011-11-19: Linux: Fixed compilation
+
 ## 0.7.39
-* 2011-11-19: All: Added Window#record(width, height)
+* 2011-11-18: All: Added Window#record(width, height)
 * 2011-11-14: All: Removed an overcautious assert() from OGG file reading
 * 2011-11-14: All: Fixed OGG files' destructor stopping unrelated songs
 * 2011-11-14: Linux: Fullscreen only covers one screen now (thanks JayThirtySeven!)
