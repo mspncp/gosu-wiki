@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.7.29
+## 0.7.39
 * 2011-11-19: All: Added Window#record(width, height)
 * 2011-11-14: All: Removed an overcautious assert() from OGG file reading
 * 2011-11-14: All: Fixed OGG files' destructor stopping unrelated songs
