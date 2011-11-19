@@ -1,24 +1,18 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-18)
+(Last update: 2011-11-19)
 
 ## Gosu 0.8.x
-  * Fix: VertexArray Transform pointers go stale between frames
-  * Fix: currentTransforms/absoluteTransforms should be in the queue, no Graphics
-  * Embed RSD into DrawOp
-  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
-  * Run feature\_tests, Peter Morphose, Terava @ iOS
-  * Release a relatively stable rc1 gem with record{} working some more
-  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
-  * Add required libxinerama-dev to wiki page
+  * Fix: currentTransforms/absoluteTransforms should be in the queue, not Graphics (at the same time, pre-apply transforms in macros)
   * Make stuff superficially independent of Window
+  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
   * Use float instead of double
   * Consider using new color format now
   * Cleanup glBegin, Graphics::begin etc.
-  * Get rid of quad/tri drawing in favor of textures
-  * Release a hellishly unstable rc2 gem
+  * Get rid of quad/tri drawing in favor of quads
+  * Release a hellishly unstable rc gem
   * Fork Gosu.tmbundle into its own git repository
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -68,7 +62,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
   * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
-  * See why Gosu::~Song with Ogg files sometimes causes other songs to stop
   * Ensure that Gosu::Song: currentSong is never 0'ed asynchronously (who is setting that variable anyway? Me right?)
   * Make <c=> more efficient in Font::drawRel
   * Add <s=> to text formatting
@@ -142,6 +135,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Use big texture for LargeImage if possible
   * Add better error message for missing files on Linux/FreeImage
   * See if this page helps with fullscreen on OS X
+  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
@@ -164,6 +158,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
+  * Consider splitting Macros at 65k images on iOS
 ## Gosu CI/Usability
   * More front page content
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
