@@ -2,8 +2,8 @@
 
 ## 0.7.40
 * 2011-11-19: All: Fixed interaction between recording and transforms
-* 2011-11-19: Linux: screenWidth/screenHeight also returns the size of the primary screen only (thanks again, JayThirtySeven)
-* 2011-11-19: Linux: Fixed compilation
+* 2011-11-19: Linux: `screenWidth`/`screenHeight` also returns the size of the primary screen only (thanks again, JayThirtySeven)
+* 2011-11-19: Linux/Ruby: Fixed Xinerama linker error
 
 ## 0.7.39
 * 2011-11-18: All: Added Window#record(width, height)
