@@ -1,18 +1,20 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-19)
+(Last update: 2011-11-20)
 
 ## Gosu 0.8.x
-  * Fix: currentTransforms/absoluteTransforms should be in the queue, not Graphics (at the same time, pre-apply transforms in macros)
-  * Make stuff superficially independent of Window
+  * Look into Windows DLL issue (release hotfix gem if possible)
+  * Make record/transforms superficially independent of Window
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
-  * Use float instead of double
-  * Consider using new color format now
-  * Cleanup glBegin, Graphics::begin etc.
   * Get rid of quad/tri drawing in favor of quads
-  * Release a hellishly unstable rc gem
+  * Release 0.8.0a1 --pre
+  * Use float instead of double
+  * Use int instead of unsigned
+  * Consider using new color literal format now
+  * Cleanup glBegin, Graphics::begin etc.
+  * Release 0.8.0a2 --pre
   * Fork Gosu.tmbundle into its own git repository
   * Fork website into its own git repository
   * Fork RubyGosu.app into its own git repository
@@ -26,8 +28,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring)
     * Consequently throw exception for invalid font names
     * Throw exception for multiple windows
-    * Change color format
-    * Deprecate beginGL/endGL in favor of scheduleGL
+    * Kill beginGL/endGL in favor of scheduleGL
     * Rename pimpl/Impl to p/Private
     * Order USB devices alphabetically (so gamepad 0 is always 0)
     * Rename SampleInstance to Channel
@@ -36,9 +37,10 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Make Window::needsCursor return true by default
     * Rename all those Ruby examples and feature\_tests
     * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
+  * Release 0.8.0
   * Get GLFW working on OS X
   * Get GLFW working on Linux
-  * Make Image, Sample, Song, Font use an intrusive\_ptr internally
+  * Make Image, Sample, Song, Font, Texture use an intrusive\_ptr internally (frees Texture from lots of args)
   * Experimentation: In Ruby, can the window be a singleton and still provide the ability to inherit from it? (Singleton standard class)
   * Add accelerometer support for OS X; maybe find a way to use UniMotion
   * Windows: Input will regularly query devices which are not currently attached, thereby causing the game to halt every few seconds - think about this
