@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-25)
+(Last update: 2011-11-26)
 
 ## Gosu 0.8.x
   * Come up with a nice memory union of DrawOp and ArrayVertex
@@ -57,7 +57,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if image\_insert.rb works on iMac
   * Fix Song#volume with short songs
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
-  * Use 10.4 SSH to compile truly universal RubyGosu App \o/
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
   * Try audio formats with Audiere
   * Find out what Gosu::Song::play does when it's already playing on all three platforms, then clarify docs
