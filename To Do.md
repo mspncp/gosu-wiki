@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-26)
+(Last update: 2011-11-28)
 
 ## Gosu 0.8.x
+  * See if Gosu loadTiles colorKey problem can be fixed with applyColorKey(0x00\_00\_00\_00)
   * Come up with a nice memory union of DrawOp and ArrayVertex
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
   * Make record/transforms superficially independent of Window
