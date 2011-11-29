@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-28)
+(Last update: 2011-11-29)
 
 ## Gosu 0.8.x
+  * Disable assert() in extconf.rb
   * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Come up with a nice memory union of DrawOp and ArrayVertex
