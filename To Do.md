@@ -1,12 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-11-29)
+(Last update: 2011-12-04)
 
 ## Gosu 0.8.x
-  * Disable assert() in extconf.rb
-  * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
+  * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Come up with a nice memory union of DrawOp and ArrayVertex
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
   * Make record/transforms superficially independent of Window
@@ -163,7 +162,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
-  * Consider splitting Macros at 65k images on iOS
+  * Split Macros at 65k images on iOS if necessary
 ## Gosu CI/Usability
   * More front page content
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
