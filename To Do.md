@@ -1,9 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-04)
+(Last update: 2011-12-05)
 
 ## Gosu 0.8.x
+  * Understand and merge tuiq's commit
+  * Fix base transform being reset
+  * Try to reproduce danikaze's problems
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Come up with a nice memory union of DrawOp and ArrayVertex
@@ -163,6 +166,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
   * Split Macros at 65k images on iOS if necessary
+  * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
 ## Gosu CI/Usability
   * More front page content
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
@@ -202,7 +206,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Fix download for all my LD games
     * .app'ify ippa's game after :retrofy is in and the wrapper can handle texplay
   * Update README.txt and website year
-  * Check if this makes enum docs easier in Ruby: https://github.com/karlin/enumeration
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Automatically include Wiki pages in rdoc
   * Mention copyright() in README
