@@ -1,12 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-05)
+(Last update: 2011-12-07)
 
 ## Gosu 0.8.x
   * Understand and merge tuiq's commit
   * Fix base transform being reset
-  * Try to reproduce danikaze's problems
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Come up with a nice memory union of DrawOp and ArrayVertex
