@@ -8,7 +8,6 @@ To install Gosu in any form, you will need the following packages (install via `
 
   * `build-essential`
   * `freeglut3-dev`
-  * `libboost-all-dev`
   * `libfreeimage-dev`
   * `libgl1-mesa-dev`
   * `libopenal-dev`
@@ -16,17 +15,16 @@ To install Gosu in any form, you will need the following packages (install via `
   * `libsdl-mixer1.2-dev`
   * `libsdl-ttf2.0-dev`
   * `libsndfile-dev`
-  * `libxinerama-dev`
 
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
 
 ```bash
 # For C++
-sudo apt-get install build-essential freeglut3-dev libboost-all-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev
+sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev
 # To install the gem for Ruby 1.8
-sudo apt-get install build-essential freeglut3-dev libboost-all-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev ruby1.8-dev rubygems
+sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev ruby1.8-dev rubygems
 # To install the gem for Ruby 1.9.1/1.9.2(?)
-sudo apt-get install build-essential freeglut3-dev libboost-all-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev ruby1.9.1-dev rubygems
+sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev ruby1.9.1-dev rubygems
 ```
 
 *Please check* how to install all this software if you are on a different distribution.
