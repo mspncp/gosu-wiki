@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-09)
+(Last update: 2011-12-13)
 
 ## Gosu 0.8.x
   * Understand and merge tuiq's commit
@@ -168,6 +168,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Experiment with UIKit & GTView (Gosu Touch?)
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
+  * lspiro anschauen
 ## Gosu CI/Usability
   * More front page content
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
