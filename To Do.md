@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-13)
+(Last update: 2011-12-14)
 
 ## Gosu 0.8.x
   * Understand and merge tuiq's commit
@@ -211,3 +211,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Automatically include Wiki pages in rdoc
   * Mention copyright() in README
+  * Alias "Meta" keys as "Command"/"Windows"
