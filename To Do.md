@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-14)
+(Last update: 2011-12-16)
 
 ## Gosu 0.8.x
   * Understand and merge tuiq's commit
@@ -142,6 +142,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add better error message for missing files on Linux/FreeImage
   * See if this page helps with fullscreen on OS X
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
+  * rename userDocs to userDocuments
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
@@ -161,6 +162,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Testen, ob nicht alles besser ist, wenn ich graphics width/height die echten Daten des iPhone4 liefern lasse
   * Fix music stopping after locking the screen for a long time
   * Fix too-many-Fingers-bug
+  * Make screenWidth()/screenHeight() return real pixels
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
@@ -169,6 +171,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Experiment with UIKit & GTView (Gosu Touch?)
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
   * lspiro anschauen
+  * Fix vsync blank at PC.ipa startup
 ## Gosu CI/Usability
   * More front page content
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
