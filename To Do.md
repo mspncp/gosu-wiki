@@ -1,23 +1,23 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-16)
+(Last update: 2011-12-17)
 
 ## Gosu 0.8.x
-  * Understand and merge tuiq's commit
   * Fix base transform being reset
-  * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
+  * Release bugfix version
+  * Understand and merge tuiq's commit
   * Test if Carmack's allocation algorithm can handle deallocation well enough
+  * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Come up with a nice memory union of DrawOp and ArrayVertex
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
   * Make record/transforms superficially independent of Window
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Look into Windows DLL issue (release hotfix gem if possible)
   * Get rid of quad/tri drawing in favor of quads
-  * Release 0.8.0a1 --pre
   * Use float instead of double
   * Use int instead of unsigned
-  * Consider using new color literal format now
+  * Release 0.8.0a1 --pre
   * Cleanup glBegin, Graphics::begin etc.
   * Release 0.8.0a2 --pre
   * Fork Gosu.tmbundle into its own git repository
@@ -159,14 +159,14 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE
   * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
   * Use getBytes instead of UTF8String
-  * Testen, ob nicht alles besser ist, wenn ich graphics width/height die echten Daten des iPhone4 liefern lasse
+  * Return pixel(!) resolution in screenWidth()/screenHeight()
   * Fix music stopping after locking the screen for a long time
   * Fix too-many-Fingers-bug
   * Make screenWidth()/screenHeight() return real pixels
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Add iCade support
-  * Split Macros at 65k images on iOS if necessary
+  * Split Macros at 65k images for iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Experiment with UIKit & GTView (Gosu Touch?)
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
