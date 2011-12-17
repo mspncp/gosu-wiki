@@ -11,7 +11,7 @@ All you have to do to share your game with the public is following these easy st
 
 And you're done! You now have a fully functional .app bundle.
 
-The .app is a self-contained Ruby 1.9.2 (core) installation. This means that you have to obey all the rules of Ruby 1.9 if you aren't already, e.g. you need to put comments of the form `# Encoding: UTF-8` on the first line of every source file that uses non-ASCII characters. If you need to use libraries that are not included in the .app, copy them into the `lib` folder. If you need C extensions that are not included in the .app, you should ask on the Extending Gosu board.
+The .app is a self-contained Ruby 1.9 installation with most of the standard library, in case you need it. This means that you have to obey all the rules of Ruby 1.9 if you aren't already, e.g. you need to put comments of the form `# Encoding: UTF-8` on the first line of every source file that uses non-ASCII characters. If you need to use libraries that are not included in the .app, copy them into the `lib` folder. If you need C extensions that are not included in the .app, you should ask on the Extending Gosu board.
 
 ## Why bundle a complete Ruby 1.9 installation?
 
