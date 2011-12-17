@@ -2,6 +2,7 @@
 
 ## 0.7.41
 * 2011-12-16: All: Fixed several subtle bugs in the transform stack
+* 2011-12-16: Mac/Ruby: Added 'racc' library to .app bundle
 * 2011-11-29: All: Fixed flush() when inside transforms/clipping
 * 2011-11-20: Linux: Fixed another PNG loading bug (thanks again, Jamer!)
 
