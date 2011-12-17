@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.7.41
+* 2011-12-16: All: Fixed several subtle bugs in the transform stack
+* 2011-11-29: All: Fixed flush() when inside transforms/clipping
+* 2011-11-20: Linux: Fixed another PNG loading bug (thanks again, Jamer!)
+
 ## 0.7.40
 * 2011-11-19: All: Fixed interaction between recording and transforms
 * 2011-11-19: Linux: `screenWidth`/`screenHeight` also returns the size of the primary screen only (thanks again, JayThirtySeven)
