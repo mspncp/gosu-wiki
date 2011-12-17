@@ -1,8 +1,9 @@
 # Ruby Packaging on OS X
 
-The Mac package of Gosu (from [the Gosu downloads](http://www.libgosu.org/downloads/)) comes with a mysterious `RubyGosu App.app` bundle. All you have to do to share your game with the public is following these easy steps:
+All you have to do to share your game with the public is following these easy steps:
 
-  * Duplicate this bundle, open its contents via the right-click menu
+  * Find the most recent Mac app wrapper in [the Gosu downloads](http://www.libgosu.org/downloads/)
+  * Open the app's contents via the right-click menu in Finder
   * Edit the Info.plist file, and change at least the bundle identifier.
   * Copy your game files into the `Contents/Resources` subfolder (Gosu libraries are not necessary, they are built in)
   * Rename your game's main source file to `Main.rb`
