@@ -1,12 +1,12 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-17)
+(Last update: 2011-12-21)
 
 ## Gosu 0.8.x
-  * Fix base transform being reset
-  * Release bugfix version
+  * Also install chingu's dependencies in .app
   * Understand and merge tuiq's commit
+  * Fix Spooner's SDL\_TTF bug on Linux
   * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Come up with a nice memory union of DrawOp and ArrayVertex
@@ -143,6 +143,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if this page helps with fullscreen on OS X
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
   * rename userDocs to userDocuments
+  * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
