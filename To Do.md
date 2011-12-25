@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2011-12-21)
+(Last update: 2011-12-25)
 
 ## Gosu 0.8.x
   * Also install chingu's dependencies in .app
@@ -144,6 +144,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
   * rename userDocs to userDocuments
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
+  * Rename Icon to Icon.icns in .app wrapper
+  * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
