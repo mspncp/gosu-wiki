@@ -1,13 +1,14 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-01-08)
+(Last update: 2012-01-13)
 
 ## Gosu 0.8.x
   * Also install chingu's dependencies in .app
   * Understand and merge tuiq's commit
   * Fix Spooner's SDL\_TTF bug on Linux
   * Test if Carmack's allocation algorithm can handle deallocation well enough
+  * Look at Hanmacs Commits
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Come up with a nice memory union of DrawOp and ArrayVertex
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
