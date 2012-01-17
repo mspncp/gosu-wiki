@@ -1,11 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-01-13)
+(Last update: 2012-01-17)
 
 ## Gosu 0.8.x
-  * Also install chingu's dependencies in .app
-  * Understand and merge tuiq's commit
   * Fix Spooner's SDL\_TTF bug on Linux
   * Test if Carmack's allocation algorithm can handle deallocation well enough
   * Look at Hanmacs Commits
