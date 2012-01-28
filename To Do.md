@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-01-25)
+(Last update: 2012-01-28)
 
 ## Gosu 0.8.x
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
@@ -218,3 +218,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Automatically include Wiki pages in rdoc
   * Mention copyright() in README
   * Alias "Meta" keys as "Command"/"Windows"
+  * Document that the Gosu::Window might be smaller than expected
+  * Document that record{} can be called anywhere
