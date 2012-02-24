@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-02-20)
+(Last update: 2012-02-24)
 
 ## Gosu 0.8.x
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
@@ -146,14 +146,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
   * Fix NSAutoreleaseNoPool leaks in Gosu
-## Gosu 0.9.x+
-  * Redesign (see forum) drawing interface
-  * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
-  * simplify Gosu's IO philosophy (C++)
-  * Make plans for an official Scene/State system
-  * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
-  * How would a TexturePacker like thingie work for Gosu?
-  * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
 ## Gosu Touch
   * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
