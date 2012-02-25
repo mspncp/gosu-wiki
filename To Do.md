@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-02-24)
+(Last update: 2012-02-25)
 
 ## Gosu 0.8.x
+  * Fix Window#gl crash bug
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
