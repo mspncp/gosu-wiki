@@ -1,11 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-02-25)
+(Last update: 2012-02-26)
 
 ## Gosu 0.8.x
-  * Fix Window#gl crash bug
-  * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
   * Boot to Windows and see what all the OpenAL issues are about.
@@ -23,7 +21,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Release 0.8.0a2 --pre
   * Fork Gosu.tmbundle into its own git repository
   * Fork website into its own git repository
-  * Fork RubyGosu.app into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
   * Add more #inspect strings (easier to use with irb/Pry)
   * Until first public version (which may break C++)…
@@ -147,6 +144,11 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
   * Fix NSAutoreleaseNoPool leaks in Gosu
+## Gosu .app Wrapper
+  * Remove prebuilt Ruby 1.9 binary from Mac Gosu gem
+  * Fork RubyGosu.app into its own git repository
+  * Update to Ruby 1.9.3
+  * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
 ## Gosu Touch
   * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
