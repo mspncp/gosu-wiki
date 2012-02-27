@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-02-26)
+(Last update: 2012-02-27)
 
 ## Gosu 0.8.x
+  * Gosu Gemfile for rake-Tasks
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
   * Boot to Windows and see what all the OpenAL issues are about.
@@ -89,10 +90,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
       * Try not to hide the mouse cursor outside of the main window on OS X
       * Test multiple screens on Windows
     * TextField with clip\_to (update example)
-  * Make Gosu fun to use on OS X
-    * Create C++ app template for Xcode4
-    * Create iPhone app template for Xcode4
-    * Create .pkg wrapper to install Gosu into /Developer/Gosu
+  * Create C++ app template for Xcode4
+  * Create iPhone app template for Xcode4
   * Make OpenAL  buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
   * Replace draw\_line by something that makes sense
   * Text quality
@@ -114,7 +113,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Retry properly showing/hiding the mouse on OS X (immune to blocking main thread)
   * Mac OS: Mauszeiger wird im FS sichtbar bei Klick in obere linke Ecke: Warum?
   * Re-introduce Async support
-  * Look at http://freeimage.sourceforge.net/requirements.html
   * Look at http://slick.cokeandcode.com/index.php?entry=entry080426-213044
   * Experiment: resizing the window possible?
   * More alpha modes! http://www.adobe.com/devnet/pdf/pdfs/blend\_modes.pdf
@@ -129,7 +127,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add callback for the OS-supplied "close" button
   * Correctly implement render-to-texture (render{})
   * Try to understand the benchmark on stackoverflow
-  * @ivar to Sample in SampleInstance, to Image in GLTexInfo to prevent GC desasters
   * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
   * Rename maxWidth argument to width in createText
