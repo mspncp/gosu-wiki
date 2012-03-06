@@ -1,10 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-02-27)
+(Last update: 2012-03-06)
 
 ## Gosu 0.8.x
   * Gosu Gemfile for rake-Tasks
+  * Macros must keep image(texchunk) alive!!
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
   * Boot to Windows and see what all the OpenAL issues are about.
