@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-06)
+(Last update: 2012-03-07)
 
 ## Gosu 0.8.x
   * Gosu Gemfile for rake-Tasks
@@ -58,7 +58,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
   * Add Gosu::potential\_fps
-  * See if image\_insert.rb works on iMac
+  * See if image\_insert.rb works on Big-Endian iMac
   * Fix Song#volume with short songs
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
