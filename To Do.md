@@ -1,10 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-07)
+(Last update: 2012-03-09)
 
 ## Gosu 0.8.x
-  * Gosu Gemfile for rake-Tasks
+  * Find out why SDL\_mixer is still mentioned in the Wiki - necessary?
   * Macros must keep image(texchunk) alive!!
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
@@ -61,7 +61,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if image\_insert.rb works on Big-Endian iMac
   * Fix Song#volume with short songs
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
-  * Check if every SWIG C++ exception causes the segfault on Linux (alternatively, it is likely Gosu's fault!)
   * Try audio formats with Audiere
   * Find out what Gosu::Song::play does when it's already playing on all three platforms, then clarify docs
   * Add FontFlags support for SDL\_TTF Gosu/Text
@@ -214,3 +213,11 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Alias "Meta" keys as "Command"/"Windows"
   * Document that the Gosu::Window might be smaller than expected
   * Document that record{} can be called anywhere
+## Gosu 0.9.x+
+  * Redesign (see forum) drawing interface
+  * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
+  * simplify Gosu's IO philosophy (C++)
+  * Make plans for an official Scene/State system
+  * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
+  * How would a TexturePacker like thingie work for Gosu?
+  * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
