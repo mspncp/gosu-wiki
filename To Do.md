@@ -1,10 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-09)
+(Last update: 2012-03-12)
 
 ## Gosu 0.8.x
-  * Find out why SDL\_mixer is still mentioned in the Wiki - necessary?
+  * Find out why SDL\_mixer is still mentioned in the Wiki - should be unnecessary on Linux?
   * Macros must keep image(texchunk) alive!!
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
