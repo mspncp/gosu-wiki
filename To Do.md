@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-12)
+(Last update: 2012-03-14)
 
 ## Gosu 0.8.x
+  * Meditate: Given Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
   * Find out why SDL\_mixer is still mentioned in the Wiki - should be unnecessary on Linux?
   * Macros must keep image(texchunk) alive!!
   * Fix/clarify TextInput vs. <markup> and &entities;
