@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-14)
+(Last update: 2012-03-17)
 
 ## Gosu 0.8.x
   * Meditate: Given Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
@@ -222,3 +222,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
   * How would a TexturePacker like thingie work for Gosu?
   * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
+  * Use symbols AND fixnums for button ids?
