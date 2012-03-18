@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.7.43
+* 2011-03-18: All: Recorded macros can be arbitrarily rotated or `draw_as_quad`-ed
+* 2011-03-16: Ruby: Internal `gosu/zen` progress & example, you should check it out (thanks @erisdiscord)
+* 2011-03-15: Ruby: Internal `gosu/preview` progress, production-ready if you use Bundler responsibly
+* 2011-02-25: Ruby: Fix GC of enqueued `Window#gl` blocks (thanks to RavensKrag for reporting)
+* 2011-01-19: Linux: Fix colors having swapped channels in SDL text (thanks to Spooner for reporting)
+* 2011-01-12: Linux: Added constants for meta keys (thanks to Hanmac)
+* 2011-01-17: Windows: Fix debugging chaos when an assertion in `Window::draw` is raised (thanks to tuiq)
+
+## 0.7.42
+* 2011-04-01: This release requires a Gosu Gold account.
+
 ## 0.7.41
 * 2011-12-16: All: Fixed several subtle bugs in the transform stack
 * 2011-11-29: All: Fixed flush() when inside transforms/clipping
