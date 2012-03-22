@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-21)
+(Last update: 2012-03-22)
 
 ## Gosu 0.8.x
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
@@ -143,6 +143,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
   * Fix NSAutoreleaseNoPool leaks in Gosu
+  * Add block to Zen::window for initialization. Or setup()?
 ## Gosu .app Wrapper
   * Remove prebuilt Ruby 1.9 binary from Mac Gosu gem
   * Fork RubyGosu.app into its own git repository
