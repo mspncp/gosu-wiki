@@ -59,7 +59,7 @@ class GameWindow < Gosu::Window
   end
   
   def draw
-    @background_image.draw(0, 0, 0);
+    @background_image.draw(0, 0, 0)
   end
 end
 ```
