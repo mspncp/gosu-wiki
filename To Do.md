@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-22)
+(Last update: 2012-03-27)
 
 ## Gosu 0.8.x
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
@@ -145,7 +145,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix NSAutoreleaseNoPool leaks in Gosu
   * Add block to Zen::window for initialization. Or setup()?
 ## Gosu .app Wrapper
-  * Remove prebuilt Ruby 1.9 binary from Mac Gosu gem
   * Fork RubyGosu.app into its own git repository
   * Update to Ruby 1.9.3
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
