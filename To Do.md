@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-03-27)
+(Last update: 2012-04-01)
 
 ## Gosu 0.8.x
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
@@ -146,7 +146,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add block to Zen::window for initialization. Or setup()?
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
-  * Update to Ruby 1.9.3
+  * Create Xcode project ot build the very shallow core only
+  * Create Rakefile to put everything together
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
 ## Gosu Touch
   * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
@@ -172,8 +173,9 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Gosu Image from CGImage constructor?
 ## Gosu CI/Usability
   * More front page content
+    * Make a three-col layout: zen / Ruby / C++
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
-    * Show version on libgosu.org front page
+    * Show current version on libgosu.org front page
     * Create a dynamic screenshot page for all the topics in the Showcase
     * Put tmbundle on front page
     * Link to benkos example & Chingu regarding states
