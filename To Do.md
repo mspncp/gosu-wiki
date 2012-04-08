@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-01)
+(Last update: 2012-04-08)
 
 ## Gosu 0.8.x
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
@@ -60,7 +60,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
   * Add Gosu::potential\_fps
-  * See if image\_insert.rb works on Big-Endian iMac
   * Fix Song#volume with short songs
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Try audio formats with Audiere
