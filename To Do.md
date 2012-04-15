@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-08)
+(Last update: 2012-04-15)
 
 ## Gosu 0.8.x
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
@@ -216,6 +216,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Alias "Meta" keys as "Command"/"Windows"
   * Document that the Gosu::Window might be smaller than expected
   * Document that record{} can be called anywhere
+  * Mention releasy on packaging wiki pages
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
