@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-15)
+(Last update: 2012-04-16)
 
 ## Gosu 0.8.x
+  * Reconfigure gosu on Linux
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Given Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
@@ -141,7 +142,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * rename userDocs to userDocuments
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
-  * Fix NSAutoreleaseNoPool leaks in Gosu
   * Add block to Zen::window for initialization. Or setup()?
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
