@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-16)
+(Last update: 2012-04-17)
 
 ## Gosu 0.8.x
   * Reconfigure gosu on Linux
@@ -131,7 +131,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Try to understand the benchmark on stackoverflow
   * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
-  * Rename maxWidth argument to width in createText
   * Document Text Entities
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
   * Fix: Mouse position on Linux is always reported to be inside the window
