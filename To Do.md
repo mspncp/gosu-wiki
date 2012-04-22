@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-17)
+(Last update: 2012-04-22)
 
 ## Gosu 0.8.x
   * Reconfigure gosu on Linux
@@ -153,8 +153,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if xiph Tremor makes sense for Gosu Touch
   * Let resolution decide orientation
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE
-  * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
   * Use getBytes instead of UTF8String
+    * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
   * Return pixel(!) resolution in screenWidth()/screenHeight()
   * Fix music stopping after locking the screen for a long time
   * Fix too-many-Fingers-bug
