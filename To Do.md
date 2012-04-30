@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-22)
+(Last update: 2012-04-30)
 
 ## Gosu 0.8.x
   * Reconfigure gosu on Linux
@@ -94,7 +94,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * TextField with clip\_to (update example)
   * Create C++ app template for Xcode4
   * Create iPhone app template for Xcode4
-  * Make OpenAL  buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
+  * Make OpenAL buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
   * Replace draw\_line by something that makes sense
   * Text quality
     * Implement ffUnderline by hand in createText/Font
