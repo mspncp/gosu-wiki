@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-04-30)
+(Last update: 2012-05-09)
 
 ## Gosu 0.8.x
   * Reconfigure gosu on Linux
@@ -161,7 +161,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make screenWidth()/screenHeight() return real pixels
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
-  * Add iCade support
   * Split Macros at 65k images for iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Experiment with UIKit & GTView (Gosu Touch?)
