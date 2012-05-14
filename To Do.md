@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-05-09)
+(Last update: 2012-05-14)
 
 ## Gosu 0.8.x
   * Reconfigure gosu on Linux
@@ -144,7 +144,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add block to Zen::window for initialization. Or setup()?
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
-  * Create Xcode project ot build the very shallow core only
+  * Create Xcode project to build the very shallow core only
   * Create Rakefile to put everything together
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
 ## Gosu Touch
