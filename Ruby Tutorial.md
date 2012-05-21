@@ -79,6 +79,7 @@ class Player
   def initialize(window)
     @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
     @x = @y = @vel_x = @vel_y = @angle = 0.0
+    @score = 0
   end
 
   def warp(x, y)
@@ -213,9 +214,13 @@ Now let's add easy code to the player to collect away stars from an array:
 ```ruby
 class Player
   ...
+  def score
+    @score
+  end
+
   def collect_stars(stars)
-    stars.reject! do |star|
-      Gosu::distance(@x, @y, star.x, star.y) < 35
+    if stars.reject! {|star| Gosu::distance(@x, @y, star.x, star.y) < 35 } then
+      @score += 1
     end
   end
 end
