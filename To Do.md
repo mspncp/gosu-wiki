@@ -1,9 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-05-21)
+(Last update: 2012-05-22)
 
 ## Gosu 0.8.x
+  * Gosu Audio: Dynamic OpenAL channel limit?
   * Reconfigure gosu on Linux
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
