@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-05-23)
+(Last update: 2012-05-29)
 
 ## Gosu 0.8.x
   * Reconfigure gosu on Linux
@@ -142,6 +142,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
   * Add block to Zen::window for initialization. Or setup()?
+  * Improve C++ exception display
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
   * Create Xcode project to build the very shallow core only
