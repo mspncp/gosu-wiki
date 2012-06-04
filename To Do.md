@@ -1,10 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-05-29)
+(Last update: 2012-06-04)
 
 ## Gosu 0.8.x
-  * Reconfigure gosu on Linux
+  * Try, again, to work around OpenAL shutdown issues
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Given Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
@@ -149,7 +149,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Create Rakefile to put everything together
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
 ## Gosu Touch
-  * First: see if the zooming is still an issue at all! Then: See if [UIScreen scale] really gives us a hint about zooming on the iPad - and if so, tell the user to STOP IT man!
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
   * Let resolution decide orientation
@@ -207,7 +206,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * OR&G: Build simpler version
     * Include CptnCpp as sample game
     * Fix download for all my LD games
-    * .app'ify ippa's game after :retrofy is in and the wrapper can handle texplay
   * Update README.txt and website year
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Automatically include Wiki pages in rdoc
