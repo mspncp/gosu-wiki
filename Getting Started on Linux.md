@@ -4,18 +4,7 @@
 
 ## Dependencies
 
-To install Gosu in any form, you will need the following packages (install via `sudo apt-get install <packagename>`):
-
-  * `build-essential`
-  * `freeglut3-dev`
-  * `libfreeimage-dev`
-  * `libgl1-mesa-dev`
-  * `libopenal-dev`
-  * `libpango1.0-dev`
-  * `libsdl-mixer1.2-dev`
-  * `libsdl-ttf2.0-dev`
-  * `libsndfile-dev`
-  * `libxinerama-dev`
+To install Gosu in any form, you will need the following packages `build-essential`, `freeglut3-dev`, `libfreeimage-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libpango1.0-dev`, `libsdl-mixer1.2-dev`, `libsdl-ttf2.0-dev`, `libsndfile-dev`, `ibxinerama-dev`
 
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
 
