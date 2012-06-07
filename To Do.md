@@ -1,23 +1,21 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-06-04)
+(Last update: 2012-06-07)
 
 ## Gosu 0.8.x
   * Try, again, to work around OpenAL shutdown issues
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
-  * Meditate: Given Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
+  * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
   * Find out why SDL\_mixer is still mentioned in the Wiki - should be unnecessary on Linux?
   * Macros must keep image(texchunk) alive!!
   * Fix/clarify TextInput vs. <markup> and &entities;
   * Put github upload back in place
-  * Boot to Windows and see what all the OpenAL issues are about.
   * Try to fix loadTiles alpha problem by another applyColorKey(0x00\_00\_00\_00)?
   * Come up with a nice memory union of DrawOp and ArrayVertex
   * Add special case: Macro::draw in record{} must split up the old Macro again (whew...)
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
-  * Look into Windows DLL issue (release hotfix gem if possible)
   * Get rid of quad/tri drawing in favor of quads
   * Use float instead of double
   * Use int instead of unsigned
@@ -165,7 +163,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Experiment with UIKit & GTView (Gosu Touch?)
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
-  * lspiro anschauen
   * Fix vsync blank at PC.ipa startup
   * Gosu Image from CGImage constructor?
 ## Gosu CI/Usability
