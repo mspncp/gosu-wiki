@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-06-07)
+(Last update: 2012-06-25)
 
 ## Gosu 0.8.x
   * Try, again, to work around OpenAL shutdown issues
@@ -212,6 +212,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Document that record{} can be called anywhere
   * Mention releasy on packaging wiki pages
   * Create docset for Dash
+  * Fix missing Headers in To Do Wiki page
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
