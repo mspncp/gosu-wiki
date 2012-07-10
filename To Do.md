@@ -1,9 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-06-28)
+(Last update: 2012-07-10)
 
 ## Gosu 0.8.x
+  * Get Gosu to compile again
+  * Add color multiplying to Gosu::Macro
   * Try, again, to work around OpenAL shutdown issues
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
