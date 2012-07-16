@@ -1,16 +1,25 @@
 # Change Log
 
+## 0.7.44
+* 2012-07-17: Linux: Fix compilation (thanks @nat1192)
+* 2012-07-16: Windows: Fix OpenAL crash at shutdown, get rid of custom OpenAL32.dll
+* 2012-07-16: All: Macros and enqueued draw() calls are unaffected by released Images
+* 2012-07-16: All: Max out at 255 AL sources on all systems except iOS
+* 2012-05-31: Linux/Windows: milliseconds() returns time since first call of milliseconds()
+* 2012-05-20: Windows: Require MSVC 2010 (thanks to @quit for the support)
+* 2012-04-15: Mac: Fixed some minor memory leaks
+
 ## 0.7.43
-* 2011-03-18: All: Recorded macros can be arbitrarily rotated or `draw_as_quad`-ed
-* 2011-03-16: Ruby: Internal `gosu/zen` progress & example, you should check it out (thanks @erisdiscord)
-* 2011-03-15: Ruby: Internal `gosu/preview` progress, production-ready if you use Bundler responsibly
-* 2011-02-25: Ruby: Fix GC of enqueued `Window#gl` blocks (thanks to RavensKrag for reporting)
-* 2011-01-19: Linux: Fix colors having swapped channels in SDL text (thanks to Spooner for reporting)
-* 2011-01-12: Linux: Added constants for meta keys (thanks to Hanmac)
-* 2011-01-17: Windows: Fix debugging chaos when an assertion in `Window::draw` is raised (thanks to tuiq)
+* 2012-03-18: All: Recorded macros can be arbitrarily rotated or `draw_as_quad`-ed
+* 2012-03-16: Ruby: Internal `gosu/zen` progress & example, you should check it out (thanks @erisdiscord)
+* 2012-03-15: Ruby: Internal `gosu/preview` progress, production-ready if you use Bundler responsibly
+* 2012-02-25: Ruby: Fix GC of enqueued `Window#gl` blocks (thanks to RavensKrag for reporting)
+* 2012-01-19: Linux: Fix colors having swapped channels in SDL text (thanks to Spooner for reporting)
+* 2012-01-12: Linux: Added constants for meta keys (thanks to Hanmac)
+* 2012-01-17: Windows: Fix debugging chaos when an assertion in `Window::draw` is raised (thanks to tuiq)
 
 ## 0.7.42
-* 2011-04-01: This release requires a Gosu Gold account.
+* 2012-04-01: This release requires a Gosu Gold account.
 
 ## 0.7.41
 * 2011-12-16: All: Fixed several subtle bugs in the transform stack
