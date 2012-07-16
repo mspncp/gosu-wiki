@@ -1,13 +1,9 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-07-15)
+(Last update: 2012-07-16)
 
 ## Gosu 0.8.x
-  * Try, again, to work around OpenAL shutdown issues
-    * Find out when exactly I need to free stuff
-    * Rework Gosu so that it can free resources in this place
-    * Verify that it works and axe custom OpenAL.dll
   * Make the wrapper's menu bar on OS X more complete
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
@@ -107,7 +103,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Retry properly showing/hiding the mouse on OS X (immune to blocking main thread)
   * Mac OS: Mauszeiger wird im FS sichtbar bei Klick in obere linke Ecke: Warum?
   * Look at http://slick.cokeandcode.com/index.php?entry=entry080426-213044
-  * Experiment: resizing the window possible?
   * More alpha modes! http://www.adobe.com/devnet/pdf/pdfs/blend\_modes.pdf
   * Document Gosu::interpolate, improve it too?
   * Think: Possible to have beautiful quotation mark indenting?@Gosu Text
@@ -162,6 +157,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix vsync blank at PC.ipa startup
   * Gosu Image from CGImage constructor?
 ## Gosu CI/Usability
+  * Expand *.rdoc in gemspec
+  * Remove MSVC2008 from Gosu website/docs
   * More front page content
     * Make a three-col layout: zen / Ruby / C++
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
@@ -219,3 +216,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
   * Use symbols AND fixnums for button ids?
   * Re-introduce Async support
+  * Look into MikMod support
