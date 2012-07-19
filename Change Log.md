@@ -1,11 +1,15 @@
 # Change Log
 
+## 0.7.45 (Ruby gem only)
+* 2012-07-19: Mac: Added missing binary for Ruby 1.9
+• 2012-07-19: Ruby: The Gosu gem now correctly builds rdoc on installation (if enabled)
+
 ## 0.7.44
 * 2012-07-17: Linux: Fix compilation (thanks @nat1192)
 * 2012-07-16: Windows: Fix OpenAL crash at shutdown, get rid of custom OpenAL32.dll
 * 2012-07-16: All: Macros and enqueued draw() calls are unaffected by released Images
 * 2012-07-16: All: Max out at 255 AL sources on all systems except iOS
-* 2012-05-31: Linux/Windows: milliseconds() returns time since first call of milliseconds()
+* 2012-05-31: Linux/Windows: milliseconds() returns time since first call of milliseconds() (thanks @quit)
 * 2012-05-20: Windows: Require MSVC 2010 (thanks to @quit for the support)
 * 2012-04-15: Mac: Fixed some minor memory leaks
 
