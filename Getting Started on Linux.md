@@ -17,6 +17,17 @@ sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-
 sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev ruby1.9.1-dev rubygems
 ```
 
+*Copy-and-paste command line* for Fedora, last tested on 17, should work across all versions:
+
+```bash
+# For C++
+sudo yum groupinstall --assumeyes "Development Tools"
+sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_mixer-devel SDL_ttf-devel libsndfile-devel libXinerama-devel
+# To install the gem for Ruby 1.9
+sudo yum groupinstall --assumeyes "Development Tools"
+sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_mixer-devel SDL_ttf-devel libsndfile-devel libXinerama-devel ruby-devel rubygems
+```
+
 *Please check* how to install all this software if you are on a different distribution.
 
 ## Ruby Gem
@@ -50,4 +61,3 @@ LIBS = `gosu-config --libs`
 myGame: $(OBJS) libgosu.a
         g++ -o myGame $(OBJS) libgosu.a $(LIBS)
 ```
-
