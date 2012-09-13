@@ -28,6 +28,15 @@ sudo yum groupinstall --assumeyes "Development Tools"
 sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_mixer-devel SDL_ttf-devel libsndfile-devel libXinerama-devel ruby-devel rubygems
 ```
 
+*Copy-and-paste command line* for Arch Linux, last tested on 2012-09-13:
+
+```bash
+# For C++
+sudo pacman -S freeglut freeimage libegl openal pango sdl_mixer sdl_ttf libsndfile libxinerama
+# To install the gem for Ruby 1.9
+sudo pacman -S freeglut freeimage libegl openal pango sdl_mixer sdl_ttf libsndfile libxinerama ruby
+```
+
 *Please check* how to install all this software if you are on a different distribution.
 
 ## Ruby Gem
