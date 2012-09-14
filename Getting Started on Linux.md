@@ -9,12 +9,15 @@ To install Gosu in any form, you will need the following packages `build-essenti
 *Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
 
 ```bash
-# For C++ (Or Ruby, if you already have it installed, for example using RVM)
+# For C++ or Ruby
 sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev
-# To install the gem _and_ Ruby 1.8
-sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev ruby1.8-dev rubygems
-# To install the gem _and_ Ruby 1.9
-sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev ruby1.9.1-dev rubygems
+
+# Unless using RVM/rbenv or similar to install Ruby, you might want to install system Ruby:
+# If you install Ruby 1.9 (may install 1.9.1, 1.9.2 or 1.9.3 depending on your distro).
+sudo apt-get install ruby1.9.1-dev rubygems
+# If you need to install Ruby 1.8 for some reason (deprecated)
+sudo apt-get install ruby1.8-dev rubygems
+
 ```
 
 *Copy-and-paste command line* for Fedora, last tested on 17, should work across all versions:
