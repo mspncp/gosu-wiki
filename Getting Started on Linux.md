@@ -23,21 +23,22 @@ sudo apt-get install ruby1.8-dev rubygems
 *Copy-and-paste command line* for Fedora, last tested on 17, should work across all versions:
 
 ```bash
-# For C++
+# For C++ or Ruby
 sudo yum groupinstall --assumeyes "Development Tools"
 sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_mixer-devel SDL_ttf-devel libsndfile-devel libXinerama-devel
-# To install the gem for Ruby 1.9
-sudo yum groupinstall --assumeyes "Development Tools"
-sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_mixer-devel SDL_ttf-devel libsndfile-devel libXinerama-devel ruby-devel rubygems
+
+# To install Ruby 1.9
+sudo yum install --assumeyes ruby-devel rubygems
 ```
 
 *Copy-and-paste command line* for Arch Linux, last tested on 2012-09-13:
 
 ```bash
-# For C++
+# For C++ or Ruby
 sudo pacman -S freeglut freeimage libegl openal pango sdl_mixer sdl_ttf libsndfile libxinerama
-# To install the gem for Ruby 1.9
-sudo pacman -S freeglut freeimage libegl openal pango sdl_mixer sdl_ttf libsndfile libxinerama ruby
+
+# To install Ruby 1.9
+sudo pacman -S ruby
 ```
 
 *Please check* how to install all this software if you are on a different distribution.
