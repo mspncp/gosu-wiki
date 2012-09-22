@@ -41,6 +41,15 @@ sudo pacman -S freeglut freeimage libegl openal pango sdl_mixer sdl_ttf libsndfi
 sudo pacman -S ruby
 ```
 
+*Copy-and-paste command line* for Gentoo Linux, last tested 2012-09-21:
+```Bash
+# For C++ or Ruby
+sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl-mixer media-libs/sdl-ttf media-libs/libsndfile x11-libs/libXinerama
+
+# To install Ruby 1.9
+sudo emerge -atv ruby:1.9
+```
+
 *Please check* how to install all this software if you are on a different distribution.
 
 ## Ruby Gem
