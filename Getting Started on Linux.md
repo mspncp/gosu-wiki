@@ -48,6 +48,9 @@ sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-
 
 # To install Ruby 1.9
 sudo emerge -atv ruby:1.9
+
+# For me, I had to install gosu like this:
+gem install gosu -- --with-ldflags=-lXinerama
 ```
 
 *Please check* how to install all this software if you are on a different distribution.
