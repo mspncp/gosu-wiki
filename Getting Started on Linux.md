@@ -25,7 +25,7 @@ sudo apt-get install ruby1.8-dev rubygems
 ```bash
 # For C++ or Ruby
 sudo yum groupinstall --assumeyes "Development Tools"
-sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_mixer-devel SDL_ttf-devel libsndfile-devel libXinerama-devel
+sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel libsndfile-devel libXinerama-devel
 
 # To install Ruby 1.9
 sudo yum install --assumeyes ruby-devel rubygems
@@ -35,7 +35,7 @@ sudo yum install --assumeyes ruby-devel rubygems
 
 ```bash
 # For C++ or Ruby
-sudo pacman -S freeglut freeimage libegl openal pango sdl_mixer sdl_ttf libsndfile libxinerama
+sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxinerama
 
 # To install Ruby 1.9
 sudo pacman -S ruby
@@ -44,7 +44,7 @@ sudo pacman -S ruby
 *Copy-and-paste command line* for Gentoo Linux, last tested 2012-09-21:
 ```Bash
 # For C++ or Ruby
-sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl-mixer media-libs/sdl-ttf media-libs/libsndfile x11-libs/libXinerama
+sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl-ttf media-libs/libsndfile x11-libs/libXinerama
 
 # To install Ruby 1.9
 sudo emerge -atv ruby:1.9
