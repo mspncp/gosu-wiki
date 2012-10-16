@@ -35,7 +35,7 @@ sudo yum install --assumeyes ruby-devel rubygems
 
 ```bash
 # For C++ or Ruby
-sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxinerama
+sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxinerama pkg-config
 
 # To install Ruby 1.9
 sudo pacman -S ruby
