@@ -53,6 +53,14 @@ sudo emerge -atv ruby:1.9
 gem install gosu -- --with-ldflags=-lXinerama
 ```
 
+*Copy-and-paste command line* for OpenSuse (12.1), last tested 2012-11-14:
+```Bash
+sudo zypper addrepo http://download.opensuse.org/repositories/games/openSUSE_12.1/ opensuse-games
+sudo zypper install libfreeimage-devel freeglut-devel libSDL_ttf libsndfile-devel openal-soft-devel libSDL_ttf-devel pango-devel libvorbis-devel
+
+gem install gosu
+```
+
 *Please check* how to install all this software if you are on a different distribution.
 
 ## Ruby Gem
