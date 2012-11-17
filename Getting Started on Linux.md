@@ -71,25 +71,42 @@ Afterwards, `gem install gosu` should work.
 
 ## Compiling Gosu for C++
 
-To compile Gosu, `cd` into the `linux` subdirectory and run:
+To compile Gosu, `cd` into the `cmake` subdirectory and run:
 
 ```bash
-./configure
-make
+./build.sh
 ```
 
-There is a deprecated `make install` command that will work for C++, but as most Linux distributions are using a package manager nowadays we recommend copying the resulting `linux/libgosu.a` file to your game's directory manually.
+If you are using debian/ubuntu you can use 
+```bash
+./create_deb_package.sh
+xdg-open build/*.deb
+```
+On all other systems you can run, but be aware, there is no uninstall target
+```bash
+cd build
+sudo make install
+```
 
-## Using Gosu in C++
+## Using Gosu in C++ with cmake
 
-(The following assumes that you have installed Gosu system-wide via `sudo make install`. If not, you will have to add paths as necessary.)
+Have a look at the examples, the example CMakeLists.txt are short, commented and straight forward.
 
-You have to compile with `` `gosu-config --cxxflags` `` and `` `gosu-config --libs` ``, so a simple Makefile could look like this:
+```CMakeLists.txt
+Find_Library(gosu REQUIRED)
+```
+
+
+## Using Gosu in C++ without cmake
+
+(The following assumes that you have installed Gosu system-wide)
+
+You have to compile with `` `pkg-config --cflags gosu` `` and `` `pkg-config --libs gosu` ``, so a simple Makefile could look like this:
 
 ```make
 OBJS = main.o player.o
-CXXFLAGS += `gosu-config --cxxflags`
-LIBS = `gosu-config --libs`
+CXXFLAGS += `pkg-config --cflags gosu`
+LIBS = `pkg-config --libs gosu`
 
 myGame: $(OBJS) libgosu.a
         g++ -o myGame $(OBJS) libgosu.a $(LIBS)
