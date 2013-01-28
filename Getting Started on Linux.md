@@ -25,7 +25,7 @@ sudo apt-get install ruby1.8-dev rubygems
 ```bash
 # For C++ or Ruby
 sudo yum groupinstall --assumeyes "Development Tools"
-sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel libsndfile-devel libXinerama-devel
+sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel
 
 # To install Ruby 1.9
 sudo yum install --assumeyes ruby-devel rubygems
