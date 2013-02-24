@@ -3,6 +3,7 @@
 This list of tasks is exported automatically from my OmniFocus projects.
 (Last update: 2013-02-24)
 
+
 ## Gosu 0.7.x / 0.8.x
   * Gosu 0.7.46
     * merge obk's X11 button patch
@@ -135,6 +136,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Try rake-compiler
   * Find out why the attached file allows the image to exceed its boundaries (by a lot)
   * Fix Memory leaks in WindowX shareContext
+
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
   * Create Xcode project to build the very shallow core only
@@ -142,6 +144,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Make the wrapper's menu bar on OS X more complete
+
 ## Gosu Touch
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
@@ -162,6 +165,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix vsync blank at PC.ipa startup
   * Gosu Image from CGImage constructor?
   * Warnung über Root View Controller beheben
+
 ## Gosu CI/Usability
   * Remove MSVC2008 from Gosu wiki
   * Rubinius und MacRuby auf HP verlinken 
@@ -211,6 +215,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Create Gosu docset for Dash
   * Fix missing Headers in To Do Wiki page
   * Update github docs for Xcode4
+
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
