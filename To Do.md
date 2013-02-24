@@ -1,20 +1,31 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2012-07-16)
+(Last update: 2013-02-24)
 
-## Gosu 0.8.x
-  * Make the wrapper's menu bar on OS X more complete
+## Gosu 0.7.x / 0.8.x
+  * Gosu 0.7.46
+    * merge obk's X11 button patch
+    * See if panic() clashes with a Unix standard function
+    * Add a "whence" argument to panic()
+    * Exclude panic() from SWIG
+    * Release Gosu (only question is Windows compilation)
+  * ABSOLUTELY update the docs on how to setup C++ Gosu on Windows!
+  * Gosu 0.7.47
+    * Port multi-gamepad code to Windows
+    * Fix new OpenAL bug on github/boards
+    * Make Gosu retina-ready
+  * Make sure that Gosu::clamp prevents NaN whenever possible
+  * Automatically create OpenGL context when Image is first created (half done)
+  * Look at Jamer's commit re: improved image loading
+  * More awesome Vertex Arrays
+    * Pre-transform all vertex arrays
+    * Come up with a nice memory union of DrawOp and ArrayVertex
+    * Split up macros into vertices when drawn inside record{} (allow nesting)
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
-  * Find out why SDL\_mixer is still mentioned in the Wiki - should be unnecessary on Linux?
   * Fix/clarify TextInput vs. <markup> and &entities;
-  * Put github upload back in place
-  * More awesome Vertex Arrays
-    * Pre-Multiply all vertex arrays
-    * Come up with a nice memory union of DrawOp and ArrayVertex
-    * Split up macros into vertices when drawn inside record{} (allow nesting)
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Get rid of quad/tri drawing in favor of quads
   * Use float instead of double
@@ -29,7 +40,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Rename needs\_x? to need\_x? in Ruby
     * Make MacUtility.hpp public
     * Adjust Text Entities to line height
-    * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring)
+    * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring/C++11 strings)
     * Consequently throw exception for invalid font names
     * Throw exception for multiple windows
     * Kill beginGL/endGL in favor of scheduleGL
@@ -49,29 +60,24 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Provide C++ application templates where possible, maybe even installers for the templates
   * Assure Gosu::File also creates directories as necessary
   * more C++ examples
-  * document Gosu's Sockets
   * Look at wox-Gem to refactor rake/mac.rb
   * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
   * Add Gosu::potential\_fps
   * Fix Song#volume with short songs
-  * Find out what Gosu::Song::play does when it's already playing on all three platforms, then clarify docs
+  * Find out what Gosu::Song::play does when it's already playing with each implementation, then clarify docs
   * Add FontFlags support for SDL\_TTF Gosu/Text
   * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
   * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
-  * Ensure that Gosu::Song: currentSong is never 0'ed asynchronously (who is setting that variable anyway? Me right?)
   * Make <c=> more efficient in Font::drawRel
   * Add <s=> to text formatting
   * Gosu: try integer truncing of drawing positions
   * Remove setResolution and use transforms instead
-  * Windows: Improve shrinking heuristics (get task bar size)
-  * WindowX: add shrinking for oversized resolutions
   * Use Gosu text formatting in Tutorial.rb
   * Make C++'s Gosu::multiply available to Ruby
   * Add Numeric#clamp, Numeric#wrap to Ruby
   * The screen size/OpenGL stuff …
-    * See if John Shea's talk had something about not being locked to pixel positions
     * Make initial window black instead of garbled on OS X (if it persists with glfw)
     * Screen size / fullscreen stuff
       * Iterate on first category of fullscreen tests
@@ -115,7 +121,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add callback for the OS-supplied "close" button
   * Correctly implement render-to-texture (render{})
   * Try to understand the benchmark on stackoverflow
-  * Image::insert/Bitmap::insert should memcpy if possible
   * Expose Gosu Directories in Ruby
   * Document Text Entities
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
@@ -123,21 +128,22 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Use big texture for LargeImage if possible
   * Add better error message for missing files on Linux/FreeImage
   * See if this page helps with fullscreen on OS X
-  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
   * rename userDocs to userDocuments
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
-  * Add block to Zen::window for initialization. Or setup()?
   * Improve C++ exception display
   * Try rake-compiler
   * Find out why the attached file allows the image to exceed its boundaries (by a lot)
+  * Fix Memory leaks in WindowX shareContext
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
   * Create Xcode project to build the very shallow core only
   * Create Rakefile to put everything together
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
+  * Make the wrapper's menu bar on OS X more complete
 ## Gosu Touch
+  * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
   * Let resolution decide orientation
@@ -151,16 +157,16 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Split Macros at 65k images for iOS
-  * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Experiment with UIKit & GTView (Gosu Touch?)
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
   * Fix vsync blank at PC.ipa startup
   * Gosu Image from CGImage constructor?
+  * Warnung über Root View Controller beheben
 ## Gosu CI/Usability
-  * Expand *.rdoc in gemspec
-  * Remove MSVC2008 from Gosu website/docs
+  * Remove MSVC2008 from Gosu wiki
+  * Rubinius und MacRuby auf HP verlinken 
   * More front page content
-    * Make a three-col layout: zen / Ruby / C++
+    * Make a three-col layout: (zen / Ruby / C++?)
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
     * Show current version on libgosu.org front page
     * Create a dynamic screenshot page for all the topics in the Showcase
@@ -181,7 +187,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Add OpenGL Wiki page
     * Make sure that WindowMainLoop states that the whole order is just about perceived performance
     * Add "Feature Pack" to requirements for MSVC
-    * Add a note: FreeImage 3.9.3-3 is not good enough
     * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
     * Point out that Font#text\_width is only relevant to Font#draw etc
     * Point out that the RubyGosu.app lib dir can be cleaned up
@@ -198,22 +203,24 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Fix download for all my LD games
   * Update README.txt and website year
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
-  * Automatically include Wiki pages in rdoc
   * Mention copyright() in README
   * Alias "Meta" keys as "Command"/"Windows"
   * Document that the Gosu::Window might be smaller than expected
   * Document that record{} can be called anywhere
   * Mention releasy on packaging wiki pages
-  * Create docset for Dash
+  * Create Gosu docset for Dash
   * Fix missing Headers in To Do Wiki page
+  * Update github docs for Xcode4
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
   * simplify Gosu's IO philosophy (C++)
   * Make plans for an official Scene/State system
-  * Add QuickLook support to image loading on 10.5+ via QLThumbnailImageCreate :D
   * How would a TexturePacker like thingie work for Gosu?
   * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
   * Use symbols AND fixnums for button ids?
   * Re-introduce Async support
   * Look into MikMod support
+  * Image::insert/Bitmap::insert should memcpy if possible
+  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
+  * Add block to Zen::window for initialization. Or setup()?
