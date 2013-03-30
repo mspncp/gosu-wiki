@@ -1,23 +1,45 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-02-24)
-
+(Last update: 2013-03-30)
 
 ## Gosu 0.7.x / 0.8.x
   * Gosu 0.7.46
+    * Add multi-gamepad support on Windows
+    * Setup Gosu 10.6 build setuo via VNC
     * merge obk's X11 button patch
     * See if panic() clashes with a Unix standard function
     * Add a "whence" argument to panic()
     * Exclude panic() from SWIG
-    * Release Gosu (only question is Windows compilation)
+    * Release Gosu 0.7.46
   * ABSOLUTELY update the docs on how to setup C++ Gosu on Windows!
   * Gosu 0.7.47
-    * Port multi-gamepad code to Windows
+    * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
     * Fix new OpenAL bug on github/boards
     * Make Gosu retina-ready
+  * Gosu 0.7.48
+    * Automatically create OpenGL context when Image is first created (half done - see old working copy from 10.6)
+    * Somehow manage to update RubyGosu.app
+    * Introduce one "0.8" style constructor as a proof of concept
+  * Gosu 0.8.0
+    * Make the interface nicer all around
+      * Make things tileable by default but add :smooth and :pure or something like that
+      * Rename needs\_x? to need\_x? in Ruby
+      * Make MacUtility.hpp public
+      * Adjust Text Entities to line height
+      * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring/C++11 strings)
+      * Consequently throw exception for invalid font names
+      * Throw exception for multiple windows
+      * Kill beginGL/endGL in favor of scheduleGL
+      * Rename pimpl/Impl to p/Private
+      * Order USB devices alphabetically (so gamepad 0 is always 0)
+      * Rename SampleInstance to Channel
+      * Remove the "from\_" from "from\_hsv" and "from\_ashv", and deprecate Color#initialize
+      * Deprecate Image::getData, introduce Image::data
+      * Make Window::needsCursor return true by default
+      * Rename all those Ruby examples and feature\_tests
+      * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
   * Make sure that Gosu::clamp prevents NaN whenever possible
-  * Automatically create OpenGL context when Image is first created (half done)
   * Look at Jamer's commit re: improved image loading
   * More awesome Vertex Arrays
     * Pre-transform all vertex arrays
@@ -37,22 +59,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
   * Add more #inspect strings (easier to use with irb/Pry)
   * Until first public version (which may break C++)…
-    * Make things tileable by default but add :smooth and :pure or something like that
-    * Rename needs\_x? to need\_x? in Ruby
-    * Make MacUtility.hpp public
-    * Adjust Text Entities to line height
-    * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring/C++11 strings)
-    * Consequently throw exception for invalid font names
-    * Throw exception for multiple windows
-    * Kill beginGL/endGL in favor of scheduleGL
-    * Rename pimpl/Impl to p/Private
-    * Order USB devices alphabetically (so gamepad 0 is always 0)
-    * Rename SampleInstance to Channel
-    * Remove the "from\_" from "from\_hsv" and "from\_ashv", and deprecate Color#initialize
-    * Deprecate Image::getData, introduce Image::data
-    * Make Window::needsCursor return true by default
-    * Rename all those Ruby examples and feature\_tests
-    * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Add accelerometer support for OS X; maybe find a way to use UniMotion
@@ -78,18 +84,15 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Use Gosu text formatting in Tutorial.rb
   * Make C++'s Gosu::multiply available to Ruby
   * Add Numeric#clamp, Numeric#wrap to Ruby
-  * The screen size/OpenGL stuff …
-    * Make initial window black instead of garbled on OS X (if it persists with glfw)
-    * Screen size / fullscreen stuff
-      * Iterate on first category of fullscreen tests
-      * Add fullscreen accessors to make proper FS OpenGL possible
-      * Add fullscreen stretching prevention
-      * Re-Evaluate glfw for fixing the fullscreen mess
-      * Think about adding cmd+F support for toggling fullscreen: Possible?
-      * Think about adding alt+enter support for toggling fullscreen: Possible?
-      * Try not to hide the mouse cursor outside of the main window on OS X
-      * Test multiple screens on Windows
-    * TextField with clip\_to (update example)
+  * Screen mess
+    * Iterate on first category of fullscreen tests
+    * Add fullscreen accessors to make proper FS OpenGL possible
+    * Add fullscreen stretching prevention
+    * Think about adding cmd+F support for toggling fullscreen: Possible?
+    * Think about adding alt+enter support for toggling fullscreen: Possible?
+    * Try not to hide the mouse cursor outside of the main window on OS X
+    * Test multiple screens on Windows
+  * TextField with clip\_to (update example)
   * Create C++ app template for Xcode4
   * Create iPhone app template for Xcode4
   * Make OpenAL buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
@@ -136,7 +139,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Try rake-compiler
   * Find out why the attached file allows the image to exceed its boundaries (by a lot)
   * Fix Memory leaks in WindowX shareContext
-
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
   * Create Xcode project to build the very shallow core only
@@ -144,7 +146,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Make the wrapper's menu bar on OS X more complete
-
 ## Gosu Touch
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
@@ -160,13 +161,13 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Split Macros at 65k images for iOS
-  * Experiment with UIKit & GTView (Gosu Touch?)
+  * Experiment with UIKit & GSTView (Gosu Touch?)
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
   * Fix vsync blank at PC.ipa startup
   * Gosu Image from CGImage constructor?
   * Warnung über Root View Controller beheben
-
 ## Gosu CI/Usability
+  * Split up Gosu todo task into its own github project
   * Remove MSVC2008 from Gosu wiki
   * Rubinius und MacRuby auf HP verlinken 
   * More front page content
@@ -215,7 +216,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Create Gosu docset for Dash
   * Fix missing Headers in To Do Wiki page
   * Update github docs for Xcode4
-
+  * Fix Gosu docs: 'RGBA' octet == WRONG
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
   * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
