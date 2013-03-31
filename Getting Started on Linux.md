@@ -4,20 +4,19 @@
 
 ## Dependencies
 
-To install Gosu in any form, you will need the following packages `build-essential`, `freeglut3-dev`, `libfreeimage-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libpango1.0-dev`, `libsdl-mixer1.2-dev`, `libsdl-ttf2.0-dev`, `libsndfile-dev`, `libxinerama-dev`
+To install Gosu in any form, you will need the following packages `build-essential`, `freeglut3-dev`, `libfreeimage-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libpango1.0-dev`, `libsdl-ttf2.0-dev`, `libsndfile-dev`, `libxinerama-dev`
 
-*Copy-and-pastable command line* for Ubuntu, last tested on 10.10, should work across all versions:
+*Copy-and-paste command line* for Ubuntu, last tested on 12.10:
 
 ```bash
-# For C++ or Ruby
-sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev libpango1.0-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev
+# Gosu's dependencies for both C++ and Ruby
+sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev libopenal-dev \
+                     libpango1.0-dev libsdl-ttf2.0-dev libsndfile-dev libxinerama-dev
 
-# Unless using RVM/rbenv or similar to install Ruby, you might want to install system Ruby:
-# If you install Ruby 1.9 (may install 1.9.1, 1.9.2 or 1.9.3 depending on your distro).
+# To install Ruby 1.9 - skip this if you are using rvm or rb-env
 sudo apt-get install ruby1.9.1-dev rubygems
-# If you need to install Ruby 1.8 for some reason (deprecated)
-sudo apt-get install ruby1.8-dev rubygems
-
+# Do not use 'sudo' if you are using rvm or rb-env
+sudo gem install gosu
 ```
 
 *Copy-and-paste command line* for Fedora, last tested on 17, should work across all versions:
