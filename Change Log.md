@@ -1,8 +1,24 @@
 # Change Log
 
+## 0.7.46
+* 2013-03-31: Mac: Drop support for OS X 10.4
+* 2013-03-30: Linux: Use scancodes as button IDs on Linux, just like on Windows (thanks @oli-obk!)
+* 2013-02-24: Mac: Disable fullscreen mode for now, as it is broken on 10.7/10.8 (will fix after May)
+* 2013-02-24: Mac: Add support for up to 4 gamepads
+* 2013-01-13: Mac: Allow window to use more desktop real estate
+* 2013-01-10: Mac: Fix bizarre crash on OS X with Ruby 1.9
+* 2012-11-13: Linux/MinGW: Add CMake build files (thanks again @oli-obk)
+* 2012-09-29: Windows: Fix bug where Gosu would not run in a directory with spaces in its filename
+* 2012-09-25: Windows/C++: Show error and shut down when draw() throws an exception (thanks @quit)
+* 2012-09-16: Mac: Fix Image::save
+* 2012-09-16: Mac: Fix a crash in font rendering
+* 2012-09-09: C++: Add Socket example game (huge thanks to @oli-obk!)
+* 2012-08-13: All: Fix integer truncation of clipping rectangles (thanks @jamer)
+* 2012-07-21: Ruby: Fix `gl(z) {}` memory leak
+
 ## 0.7.45 (Ruby gem only)
 * 2012-07-19: Mac: Added missing binary for Ruby 1.9
-• 2012-07-19: Ruby: The Gosu gem now correctly builds rdoc on installation (if enabled)
+* 2012-07-19: Ruby: The Gosu gem now correctly builds rdoc on installation (if enabled)
 
 ## 0.7.44
 * 2012-07-17: Linux: Fix compilation (thanks @nat1192)
