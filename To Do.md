@@ -1,43 +1,35 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-03-31)
+(Last update: 2013-04-01)
 
 
 ## Gosu 0.7.x / 0.8.x
-  * Gosu 0.7.46
-    * Test if char\_to\_id/id\_to\_char are broken on Linux or not
-    * Release Ruby Gosu 0.7.46
-  * Setup Gosu 10.6 build setup via VNC - try to build .framework and App Wrapper
   * Update the docs on how to setup C++ Gosu on Windows! - And possibly OS X
-  * Gosu 0.7.47
-    * Add multi-gamepad support on Windows
-    * Fix gamepad unplug exception on Mac
-    * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
-    * Fix new OpenAL bug on github/boards
-    * Make Gosu retina-ready
   * Gosu 0.7.48
+    * Make Gosu retina-ready
+    * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
     * Automatically create OpenGL context when Image is first created (half done - see old working copy from 10.6)
     * Somehow manage to update RubyGosu.app
     * Introduce one "0.8" style constructor as a proof of concept
   * Gosu 0.8.0
-    * Make the interface nicer all around
-      * Make things tileable by default but add :smooth and :pure or something like that
-      * Rename needs\_x? to need\_x? in Ruby
-      * Make MacUtility.hpp public
-      * Adjust Text Entities to line height
-      * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring/C++11 strings)
-      * Consequently throw exception for invalid font names
-      * Throw exception for multiple windows
-      * Kill beginGL/endGL in favor of scheduleGL
-      * Rename pimpl/Impl to p/Private
-      * Order USB devices alphabetically (so gamepad 0 is always 0)
-      * Rename SampleInstance to Channel
-      * Remove the "from\_" from "from\_hsv" and "from\_ashv", and deprecate Color#initialize
-      * Deprecate Image::getData, introduce Image::data
-      * Make Window::needsCursor return true by default
-      * Rename all those Ruby examples and feature\_tests
-      * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
+    * GpButtonX must fire after GpYButtonX (might break some games)
+    * Make things tileable by default but add :smooth and :pure or something like that
+    * Rename needs\_x? to need\_x? in Ruby
+    * Make MacUtility.hpp public
+    * Adjust Text Entities to line height
+    * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring/C++11 strings)
+    * Consequently throw exception for invalid font names
+    * Throw exception for multiple windows
+    * Kill beginGL/endGL in favor of scheduleGL
+    * Rename pimpl/Impl to p/Private
+    * Order USB devices alphabetically (so gamepad 0 is always 0)
+    * Rename SampleInstance to Channel
+    * Remove the "from\_" from "from\_hsv" and "from\_ashv", and deprecate Color#initialize
+    * Deprecate Image::getData, introduce Image::data
+    * Make Window::needsCursor return true by default
+    * Rename all those Ruby examples and feature\_tests
+    * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
   * Make sure that Gosu::clamp prevents NaN whenever possible
   * Look at Jamer's commit re: improved image loading
   * More awesome Vertex Arrays
