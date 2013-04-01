@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.7.47
+* 2013-04-01: All: Add msOther0 - msOther7 constants for extra mouse buttons
+* 2013-04-01: All: Add constants: kbBacktick, kbMinus, kbEqual, kbBracketLeft, kbBracketRight, kbBackslash, kbSemicolon, kbApostrophe, kbComma, kbPeriod, kbSlash
+* 2013-04-01: Windows: Add support for up to four gamepads
+* 2013-04-01: Linux: Fix `button_down`/`button_up`/`TextInput` (thanks @oli-obk)
+* 2013-04-01: Linux: Enable optimizations in CMake build files (thanks @oli-obk)
+* 2013-04-01: Mac: Work around crashes in C++ exception handling
+* 2013-04-01: Mac: Fix some gamepad bugs (e.g. unplugging when Gosu is running)
+* 2013-04-01: Mac: Fix a bug where Gosu processes would not terminate while a song is running
+
 ## 0.7.46
 * 2013-03-31: Mac: Drop support for OS X 10.4
 * 2013-03-30: Linux: Use scancodes as button IDs on Linux, just like on Windows (thanks @oli-obk!)
