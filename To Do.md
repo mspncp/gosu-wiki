@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-04-01)
+(Last update: 2013-04-02)
 
 
 ## Gosu 0.7.x / 0.8.x
@@ -203,7 +203,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Update README.txt and website year
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Mention copyright() in README
-  * Alias "Meta" keys as "Command"/"Windows"
   * Document that the Gosu::Window might be smaller than expected
   * Document that record{} can be called anywhere
   * Mention releasy on packaging wiki pages
