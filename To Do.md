@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-04-02)
+(Last update: 2013-04-13)
 
 
 ## Gosu 0.7.x / 0.8.x
@@ -146,7 +146,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Let resolution decide orientation
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE vs. GOSU\_IS\_IPHONE vs. GOSU\_IS\_OPENGLES
   * Use getBytes instead of UTF8String
-    * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
+  * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
   * Return pixel(!) resolution in screenWidth()/screenHeight()
   * Fix music stopping after locking the screen for a long time
   * Fix too-many-Fingers-bug
