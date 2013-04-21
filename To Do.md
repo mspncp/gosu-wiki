@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-04-13)
+(Last update: 2013-04-21)
 
 
 ## Gosu 0.7.x / 0.8.x
@@ -211,6 +211,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Update github docs for Xcode4
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
+  * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
 
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
