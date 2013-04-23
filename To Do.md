@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-04-21)
+(Last update: 2013-04-23)
 
 
 ## Gosu 0.7.x / 0.8.x
@@ -205,7 +205,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Mention copyright() in README
   * Document that the Gosu::Window might be smaller than expected
   * Document that record{} can be called anywhere
-  * Mention releasy on packaging wiki pages
+  * Mention releasy on Windows packaging wiki page
   * Create Gosu docset for Dash
   * Fix missing Headers in To Do Wiki page
   * Update github docs for Xcode4
