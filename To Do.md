@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-04-23)
+(Last update: 2013-04-24)
 
 
 ## Gosu 0.7.x / 0.8.x
@@ -212,6 +212,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
+  * Restore the part of my mwForum adjustments where I tell people how to format `code`
 
 ## Gosu 0.9.x+
   * Redesign (see forum) drawing interface
