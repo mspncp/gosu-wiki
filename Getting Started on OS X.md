@@ -1,30 +1,47 @@
 # Getting Started on OS X
 
-## Starting a new Gosu game (C++)
+## Creating a New C++ Gosu Project
 
-*Note: The guide and screenshots are talking about Xcode 3. I am not sure if anyone has tried this with Xcode 4.*
+Gosu uses [CocoaPods](http://cocoapods.org/) to streamline the Xcode project setup. Even though CocoaPods calls itself an "Objective C library manager", it is a great tool to integrate the C++ based Gosu library into your project along with all its dependencies.
 
-In Xcode, create a new 'Application/Cocoa Application' project.
+### Prerequisites
+
+* Xcode 4.x from the Mac App Store
+* In Xcode, make sure to visit the preferences (cmd ,) and install the Command Line Tools (I'm not sure if they are technically necessary)
+* CocoaPods, which can be installed using `sudo gem install cocoapods`
+
+### Creating the project
+
+Start Xcode and create a new project. Use the template 'OS X/Application/Cocoa Application':
+
+[[xcode_new_app.png]]
+
+None of the settings in the following dialog are required, so you can leave them all unchecked:
+
+[[xcode_new_app_settings.png]]
 
 Remove & trash the following files:
 
-* `Resources/MainMenu.nib` (or `.xib`, depending on the version of Xcode)
-* `Other Sources/main.m`
-* `Classes/...AppDelegate.h` and `Classes/...AppDelegate.m`
+* `Classes/AppDelegate.h`
+* `Classes/AppDelegate.m`
+* `Resources/MainMenu.xib`
 
-*Note:* You can remove & trash the precompiled prefix header too. You will need to remove it from the target settings as well then; just right-click your application target and look for 'prefix' in the search field.
+[[xcode_delete_these_files.png]]
 
-Then right-click "Other Frameworks" and add a reference to an existing framework, namely Gosu.framework. Make sure you did not put Gosu.framework into a system directory like `/System/Library/Frameworks` because Xcode treats these directories differently.
+Now close the project, open your text editor of choice and create a file called `Podfile` in the same directory as your `.xcodeproj`:
 
-[[xcode_files.png]]
+```ruby
+# Gosu should work with versions as low as OS X 10.5
+platform :osx, '10.8'
 
-Your application bundle also needs to *contain* the Gosu.framework bundle. To instruct Xcode to automatically copy it into your application, choose Project/New Build Phase and select "Frameworks" as the Copy Files' target directory. Then locate this new build phase in the targets list and add Gosu.framework to it as well. (Note: You may have to drag & drop the framework into the build phase from the finder, instead of adding it via a right-click.)
+pod 'Gosu', :git => 'https://github.com/jlnr/gosu.git'
+```
 
-*Note:* If you want to be backwards compatible with 10.4, you will have to fiddle with the settings. Gosu supports 10.4, 32-bit and PowerPC just fine. For starters, you may have to set your project's GCC version to 4.0 to get 10.4 support to work; you can set a more recent GCC and OS X SDK by adding user-defined GCC_VERSION_x86_64=4.2 and SDKROOT_x86_64=/Developer/SDKs/MacOSX10.6.sdk)
+On the command line, navigate to the folder in which you created the `Podfile` and run `pod install`. This will create an `.xcodeworkspace` file that contains your project, Gosu and all of its dependencies.
 
-## Your application code
+### Adding Code and Resources
 
-You can then add new code files, for example the ones from the tutorial or this minimal application code:
+At this point, your project still contains the `main.m` file that Xcode has generated for you. Rename it to `main.cpp` and replace its contents by the following code:
 
 ```cpp
 #include <Gosu/Gosu.hpp>
@@ -46,27 +63,11 @@ int main()
 }
 ```
 
-*Note:* Usually, you want to right-click your target, Get Info, select Build/All Configurations/Build Locations and _change the Per-configuration Build Products Path to '.'_ or something similar, so the application will have the correct position relative to your game's resources.
+If you "Build & Run" the project now (cmd+R), you should see an empty, black window with the caption "Hello World".
 
-### 64-bit Support
+## Creating a New Ruby/Gosu Project
 
-Gosu supports 64-bit builds, but there is a catch. Custom TTF file font loading for 64-bit uses an API not yet available on 10.5. This means you should include a flag to keep 10.5 from starting your 64-bit build: To do this, edit the `.plist` file of your project to add this key:
-
-```xml
-<key>LSMinimumSystemVersionByArchitecture</key>
-<dict>
-	<key>x86_64</key>
-	<string>10.6.0</string>
-	<key>i386</key>
-	<string>10.4.0</string>
-	<key>ppc</key>
-	<string>10.4.0</string>
-</dict>
-```
-
-If you edit the file through Xcode, the editing will be a bit more intuitive.
-
-## Starting a new Gosu game (Ruby)
+*TO DO: This should be updated to use bundler, and explain how to set up Releasy.*
 
 Getting started with Ruby is a lot easier (surprise). Just install the gem via `sudo gem install gosu`. If you are using Ruby 1.8 or Ruby 1.9, this will installed the precompiled gem for your and you *do not even need Xcode*.
 If you are using MacRuby or Rubinius, you will need to explicitly `sudo gem install ruby --platform=ruby`, which requires Xcode to be installed on your system.
