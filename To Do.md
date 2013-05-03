@@ -1,29 +1,37 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-04-30)
+(Last update: 2013-05-03)
 
 
-## Gosu 0.7.x / 0.8.x
+## Gosu
   * Update the docs on how to setup C++ Gosu on Windows!
   * Gosu 0.7.48
-    * Make Gosu retina-ready
-    * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
+    * Publicly discontinue Gosu.framework / gosu-mac archives
+    * Fix app wrapper
+    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Mac
+    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Win
+    * Order USB devices alphabetically (so that gamepad 0 is always 0) - Mac
+    * Order USB devices alphabetically (so that gamepad 0 is always 0) - Win
+    * Clean up Retina-readiness commit
+  * More awesome Vertex Arrays
+    * Pre-transform all vertex arrays
+    * Come up with a nice memory union of DrawOp and ArrayVertex
+    * Split up macros into vertices when drawn inside record{} (allow nesting)
+  * Gosu 0.7.GERMANY - everything that I can only fix in June
     * Automatically create OpenGL context when Image is first created (half done - see old working copy from 10.6)
     * Somehow manage to update RubyGosu.app
     * Introduce one "0.8" style constructor as a proof of concept
+    * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
   * Gosu 0.8.0
-    * GpButtonX must fire after GpYButtonX (might break some games)
     * Make things tileable by default but add :smooth and :pure or something like that
     * Rename needs\_x? to need\_x? in Ruby
-    * Make MacUtility.hpp public
     * Adjust Text Entities to line height
     * Add Gosu::StringArg (a variant type of char*/wchar*/string/wstring/C++11 strings)
     * Consequently throw exception for invalid font names
     * Throw exception for multiple windows
     * Kill beginGL/endGL in favor of scheduleGL
     * Rename pimpl/Impl to p/Private
-    * Order USB devices alphabetically (so gamepad 0 is always 0)
     * Rename SampleInstance to Channel
     * Remove the "from\_" from "from\_hsv" and "from\_ashv", and deprecate Color#initialize
     * Deprecate Image::getData, introduce Image::data
@@ -32,10 +40,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
   * Make sure that Gosu::clamp prevents NaN whenever possible
   * Look at Jamer's commit re: improved image loading
-  * More awesome Vertex Arrays
-    * Pre-transform all vertex arrays
-    * Come up with a nice memory union of DrawOp and ArrayVertex
-    * Split up macros into vertices when drawn inside record{} (allow nesting)
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
@@ -49,7 +53,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fork website into its own git repository
   * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
   * Add more #inspect strings (easier to use with irb/Pry)
-  * Until first public version (which may break C++)…
   * Get GLFW working on OS X
   * Get GLFW working on Linux
   * Add accelerometer support for OS X; maybe find a way to use UniMotion
@@ -130,6 +133,12 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Try rake-compiler
   * Find out why the attached file allows the image to exceed its boundaries (by a lot)
   * Fix Memory leaks in WindowX shareContext
+  * Image::insert/Bitmap::insert should memcpy if possible
+  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
+  * simplify Gosu's IO philosophy (C++)
+  * Make plans for an official Scene/State system
+  * How would a TexturePacker like thingie work for Gosu?
+  * Redesign (see forum) drawing interface
 
 ## Gosu .app Wrapper
   * Fork RubyGosu.app into its own git repository
@@ -139,7 +148,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Make the wrapper's menu bar on OS X more complete
 
-## Gosu Touch
+## Gosu iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
@@ -154,17 +163,18 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Unify drawQuad's effective triangularization on iOS and desktop
   * See if there is a native/fastest mixing rate on Mac/iPhone
   * Split Macros at 65k images for iOS
-  * Experiment with UIKit & GSTView (Gosu Touch?)
+  * Experiment with UIKit & GOSUView
   * Fix rotation hell; at least shouldAutorotate should return YES for one value.
   * Fix vsync blank at PC.ipa startup
   * Gosu Image from CGImage constructor?
   * Warnung über Root View Controller beheben
 
+## Gosu Android
+
 ## Gosu CI/Usability
   * Split up Gosu todo task into its own github project
-  * Rubinius und MacRuby auf HP verlinken 
   * More front page content
-    * Make a three-col layout: (zen / Ruby / C++?)
+    * Make a three-col layout: (Ruby / C++ / more?)
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
     * Show current version on libgosu.org front page
     * Create a dynamic screenshot page for all the topics in the Showcase
@@ -213,15 +223,3 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
 
 ## Gosu 0.9.x+
-  * Redesign (see forum) drawing interface
-  * Rewrite Gosu::Input with support for multiple gamepads and analog joysticks, serializable button IDs, …
-  * simplify Gosu's IO philosophy (C++)
-  * Make plans for an official Scene/State system
-  * How would a TexturePacker like thingie work for Gosu?
-  * If there ever is functionality to 'and' and 'or' Gosu::Button, how would one check in buttonDown?
-  * Use symbols AND fixnums for button ids?
-  * Re-introduce Async support
-  * Look into MikMod support
-  * Image::insert/Bitmap::insert should memcpy if possible
-  * Apply colorKey AFTER splitting the bitmap into tiles, not before!
-  * Add block to Zen::window for initialization. Or setup()?
