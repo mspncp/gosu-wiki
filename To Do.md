@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-05-03)
+(Last update: 2013-05-12)
 
 
 ## Gosu
@@ -170,6 +170,11 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Warnung über Root View Controller beheben
 
 ## Gosu Android
+  * Move code from main.cpp into Gosu
+  * Investigate into OpenAL for NDK apps
+  * Structure
+    * Move Gosu into a separate .so with the help of a project template
+    * Merge gosu/android into gosu/master
 
 ## Gosu CI/Usability
   * Split up Gosu todo task into its own github project
