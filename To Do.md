@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-05-12)
+(Last update: 2013-05-23)
 
 
 ## Gosu
@@ -226,5 +226,3 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
-
-## Gosu 0.9.x+
