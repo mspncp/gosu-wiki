@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-05-23)
+(Last update: 2013-06-23)
 
 
 ## Gosu
@@ -14,6 +14,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Order USB devices alphabetically (so that gamepad 0 is always 0) - Mac
     * Order USB devices alphabetically (so that gamepad 0 is always 0) - Win
     * Clean up Retina-readiness commit
+  * Document subimage
   * More awesome Vertex Arrays
     * Pre-transform all vertex arrays
     * Come up with a nice memory union of DrawOp and ArrayVertex
