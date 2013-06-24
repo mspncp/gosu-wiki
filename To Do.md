@@ -1,10 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-06-23)
+(Last update: 2013-06-24)
 
 
 ## Gosu
+  * extconf.rb - don't symlink if there is a symlink already
   * Update the docs on how to setup C++ Gosu on Windows!
   * Gosu 0.7.48
     * Publicly discontinue Gosu.framework / gosu-mac archives
