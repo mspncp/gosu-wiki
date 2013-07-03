@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-01)
+(Last update: 2013-07-03)
 
 
 ## Gosu
@@ -150,6 +150,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make the wrapper's menu bar on OS X more complete
 
 ## Gosu iOS
+  * Finish cocoapod-ification
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
