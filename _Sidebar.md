@@ -3,7 +3,7 @@
 * Getting Started
   * [[Getting Started on OS X]]
   * [[Getting Started on Windows]]
-  * [[Getting Started On Linux]]
+  * [[Getting Started on Linux]]
 * Tutorials
   * [[Ruby Tutorial]]
   * [[C++ Tutorial]]
