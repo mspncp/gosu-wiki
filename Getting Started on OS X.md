@@ -8,8 +8,8 @@ Gosu uses [CocoaPods](http://cocoapods.org/) to streamline the Xcode project set
 
 ### Prerequisites
 
-* Xcode 4.x from the Mac App Store
-* In Xcode, make sure to visit the preferences (cmd ,) and install the Command Line Tools (I'm not sure if they are technically necessary)
+* Xcode 4+ from the Mac App Store
+* In Xcode, make sure to visit the preferences and install the Command Line Tools
 * CocoaPods, which can be installed using `sudo gem install cocoapods`
 
 ### Creating the project
@@ -71,8 +71,8 @@ If you "Build & Run" the project now (cmd+R), you should see an empty, black win
 
 ### Prerequisites
 
-* Xcode 4.x from the Mac App Store
-* In Xcode, make sure to visit the preferences (cmd ,) and install the Command Line Tools (I'm not sure if they are technically necessary)
+* Xcode 4+ from the Mac App Store
+* In Xcode, make sure to visit the preferences and install the Command Line Tools
 
 ### Installing the gem
 
