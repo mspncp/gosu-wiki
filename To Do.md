@@ -1,10 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-03)
+(Last update: 2013-07-08)
 
 
 ## Gosu
+  * Fix Ruby 2.0 build bug (see fix by @Hanmac)
   * Update the docs on how to setup C++ Gosu on Windows!
   * Gosu 0.7.48
     * Publicly discontinue Gosu.framework / gosu-mac archives
@@ -150,7 +151,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make the wrapper's menu bar on OS X more complete
 
 ## Gosu iOS
-  * Finish cocoapod-ification
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
