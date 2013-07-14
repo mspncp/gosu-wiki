@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.7.48
+* 2013-07-12: Linux: Fix compilation bug with Ruby 2.0 (#181)
+* 2013-06-24: Mac: Use full Retina resolution where available
+* 2013-06-24: All: Add `Image#subimage(x,y,w,h)` / `ImageData::subimage(x,y,w,h)` (#178)
+
 ## 0.7.47
 * 2013-04-01: All: Add msOther0 - msOther7 constants for extra mouse buttons
 * 2013-04-01: All: Add constants: kbBacktick, kbMinus, kbEqual, kbBracketLeft, kbBracketRight, kbBackslash, kbSemicolon, kbApostrophe, kbComma, kbPeriod, kbSlash
