@@ -1,30 +1,27 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-08)
+(Last update: 2013-07-15)
 
 
 ## Gosu
-  * Fix Ruby 2.0 build bug (see fix by @Hanmac)
+  * Document subimage
   * Update the docs on how to setup C++ Gosu on Windows!
-  * Gosu 0.7.48
+  * Fix release process
     * Publicly discontinue Gosu.framework / gosu-mac archives
     * Fix app wrapper
-    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Mac
-    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Win
-    * Order USB devices alphabetically (so that gamepad 0 is always 0) - Mac
-    * Order USB devices alphabetically (so that gamepad 0 is always 0) - Win
-    * Clean up Retina-readiness commit
-  * Document subimage
+    * Automate swig generation again (Rakefile)
+  * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
+  * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Mac
+  * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Win
+  * Order USB devices alphabetically (so that gamepad 0 is always 0) - Mac
+  * Order USB devices alphabetically (so that gamepad 0 is always 0) - Win
   * More awesome Vertex Arrays
     * Pre-transform all vertex arrays
     * Come up with a nice memory union of DrawOp and ArrayVertex
     * Split up macros into vertices when drawn inside record{} (allow nesting)
-  * Gosu 0.7.GERMANY - everything that I can only fix in June
-    * Automatically create OpenGL context when Image is first created (half done - see old working copy from 10.6)
-    * Somehow manage to update RubyGosu.app
-    * Introduce one "0.8" style constructor as a proof of concept
-    * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
+  * Automatically create OpenGL context when Image is first created (half done - see old working copy from 10.6)
+  * Introduce one "0.8" style constructor as a proof of concept
   * Gosu 0.8.0
     * Make things tileable by default but add :smooth and :pure or something like that
     * Rename needs\_x? to need\_x? in Ruby
