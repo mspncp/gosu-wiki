@@ -1,21 +1,22 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-15)
+(Last update: 2013-07-19)
 
 
 ## Gosu
+  * Fix app wrapper
   * Document subimage
   * Update the docs on how to setup C++ Gosu on Windows!
   * Fix release process
     * Publicly discontinue Gosu.framework / gosu-mac archives
-    * Fix app wrapper
     * Automate swig generation again (Rakefile)
   * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
   * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Mac
   * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Win
   * Order USB devices alphabetically (so that gamepad 0 is always 0) - Mac
   * Order USB devices alphabetically (so that gamepad 0 is always 0) - Win
+  * Split Gosu website into its own github project
   * More awesome Vertex Arrays
     * Pre-transform all vertex arrays
     * Come up with a nice memory union of DrawOp and ArrayVertex
@@ -140,8 +141,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Redesign (see forum) drawing interface
 
 ## Gosu .app Wrapper
-  * Fork RubyGosu.app into its own git repository
-  * Create Xcode project to build the very shallow core only
   * Create Rakefile to put everything together
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
@@ -176,6 +175,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Merge gosu/android into gosu/master
 
 ## Gosu CI/Usability
+  * Add Gosu & Ruby.app logos to github READMEs
   * Split up Gosu todo task into its own github project
   * More front page content
     * Make a three-col layout: (Ruby / C++ / more?)
