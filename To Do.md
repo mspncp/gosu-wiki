@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-19)
+(Last update: 2013-07-24)
 
 
 ## Gosu
@@ -145,6 +145,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Make the wrapper's menu bar on OS X more complete
+  * Read wycats' posting about tokaido(?)
 
 ## Gosu iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
