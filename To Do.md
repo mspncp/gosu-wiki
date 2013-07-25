@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-24)
+(Last update: 2013-07-25)
 
 
 ## Gosu
@@ -141,11 +141,14 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Redesign (see forum) drawing interface
 
 ## Gosu .app Wrapper
-  * Create Rakefile to put everything together
+  * Add Ashton as a gem
+  * Modify Rakefile to not ruin the installed ruby2.0.0 afterwards
+  * Use MacBook Pro to build Ruby app for Intel 10.5
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
-  * Compare RubyGosu.app to https://github.com/steveklabnik/furoshiki
   * Make the wrapper's menu bar on OS X more complete
+  * Create Rakefile to put everything together
   * Read wycats' posting about tokaido(?)
+  * Build Retina-ready icns that still works on 10.5; see http://stackoverflow.com/questions/12772346/retina-ready-icns-icon-file-on-10-5-leopard-size-limit
 
 ## Gosu iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
