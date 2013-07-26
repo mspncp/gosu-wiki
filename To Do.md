@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-25)
+(Last update: 2013-07-26)
 
 
 ## Gosu
@@ -141,7 +141,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Redesign (see forum) drawing interface
 
 ## Gosu .app Wrapper
-  * Add Ashton as a gem
+  * Add 'ashton' as a gem, replace 'ruby-opengl2' by 'opengl'
   * Modify Rakefile to not ruin the installed ruby2.0.0 afterwards
   * Use MacBook Pro to build Ruby app for Intel 10.5
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
