@@ -1,11 +1,10 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-07-26)
+(Last update: 2013-07-27)
 
 
 ## Gosu
-  * Fix app wrapper
   * Document subimage
   * Update the docs on how to setup C++ Gosu on Windows!
   * Fix release process
