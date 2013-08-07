@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-08-05)
+(Last update: 2013-08-07)
 
 
 ## Gosu
@@ -179,6 +179,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Merge gosu/android into gosu/master
 
 ## Gosu CI/Usability
+  * Add a CONTRIBUTING.md à la https://github.com/blog/1184-contributing-guidelines
   * Add Gosu & Ruby.app logos to github READMEs
   * Split up Gosu todo task into its own github project
   * More front page content
