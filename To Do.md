@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-08-07)
+(Last update: 2013-08-11)
 
 
 ## Gosu
@@ -143,11 +143,11 @@ This list of tasks is exported automatically from my OmniFocus projects.
 ## Gosu .app Wrapper
   * Add 'ashton' as a gem, replace 'ruby-opengl2' by 'opengl'
   * Modify Rakefile to not ruin the installed ruby2.0.0 afterwards
-  * Use MacBook Pro to build Ruby app for Intel 10.5
   * Add Rubygems to .app wrapper with  RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Make the wrapper's menu bar on OS X more complete
   * Create Rakefile to put everything together
   * Read wycats' posting about tokaido(?)
+  * Use MacBook Pro to build Ruby app for Intel 10.5
   * Build Retina-ready icns that still works on 10.5; see http://stackoverflow.com/questions/12772346/retina-ready-icns-icon-file-on-10-5-leopard-size-limit
 
 ## Gosu iOS
