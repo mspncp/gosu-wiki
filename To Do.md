@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-08-11)
+(Last update: 2013-08-14)
 
 
 ## Gosu
@@ -139,6 +139,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make plans for an official Scene/State system
   * How would a TexturePacker like thingie work for Gosu?
   * Redesign (see forum) drawing interface
+  * Warning when relying on case sensitivity
 
 ## Gosu .app Wrapper
   * Add 'ashton' as a gem, replace 'ruby-opengl2' by 'opengl'
