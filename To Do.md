@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-08-14)
+(Last update: 2013-08-15)
 
 
 ## Gosu
@@ -12,6 +12,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Publicly discontinue Gosu.framework / gosu-mac archives
     * Automate swig generation again (Rakefile)
   * Switch Mac Gosu to using full-desktop windows, not resolution switching!!
+  * Warning when relying on case sensitivity
   * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Mac
   * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Win
   * Order USB devices alphabetically (so that gamepad 0 is always 0) - Mac
@@ -139,7 +140,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make plans for an official Scene/State system
   * How would a TexturePacker like thingie work for Gosu?
   * Redesign (see forum) drawing interface
-  * Warning when relying on case sensitivity
 
 ## Gosu .app Wrapper
   * Add 'ashton' as a gem, replace 'ruby-opengl2' by 'opengl'
