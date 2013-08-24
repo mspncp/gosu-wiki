@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-08-22)
+(Last update: 2013-08-24)
 
 
 ## Gosu
@@ -148,6 +148,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Make the wrapper's menu bar on OS X more complete
   * Create Rakefile to put everything together
   * Build Retina-ready icns that still works on 10.5; see http://stackoverflow.com/questions/12772346/retina-ready-icns-icon-file-on-10-5-leopard-size-limit
+  * See if we can just use Tokaido instead
 
 ## Gosu iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
