@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-08-24)
+(Last update: 2013-09-14)
 
 
 ## Gosu
@@ -154,22 +154,9 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
   * Compare with OolongEngine for audio issues
   * See if xiph Tremor makes sense for Gosu Touch
-  * Let resolution decide orientation
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE vs. GOSU\_IS\_IPHONE vs. GOSU\_IS\_OPENGLES
-  * Use getBytes instead of UTF8String
-  * Migrate WindowTouch.mm to CADisplayLink (3.1 SDK)
-  * Return pixel(!) resolution in screenWidth()/screenHeight()
-  * Fix music stopping after locking the screen for a long time
-  * Fix too-many-Fingers-bug
-  * Make screenWidth()/screenHeight() return real pixels
-  * Unify drawQuad's effective triangularization on iOS and desktop
-  * See if there is a native/fastest mixing rate on Mac/iPhone
-  * Split Macros at 65k images for iOS
-  * Experiment with UIKit & GOSUView
-  * Fix rotation hell; at least shouldAutorotate should return YES for one value.
-  * Fix vsync blank at PC.ipa startup
-  * Gosu Image from CGImage constructor?
-  * Warnung über Root View Controller beheben
+  * See if there is a native/fastest OpenAL mixing rate on Mac/iPhone
+  * Experiment with UIKit & a reusable GOSUView
 
 ## Gosu Android
   * Move code from main.cpp into Gosu
@@ -230,3 +217,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
+  * Comment <b> etc. in Text functionality
