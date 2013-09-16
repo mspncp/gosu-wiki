@@ -21,7 +21,7 @@
 * About
   * [[Design Rationale]]
   * [[Change Log]]
-  * [[To Do]]
+  * Public [GitHub Issues][issues] & semi-public [[To Do]] list
 * [Gosu Boards][boards]
   * [Gosu Exchange][exchange] - Questions? Ask them here.
   * [Gosu Showcase][showcase] - Show off your projects.
@@ -34,5 +34,5 @@
 [extending]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=4
 [rdoc]: http://www.libgosu.org/rdoc/
 [doxygen]: http://www.libgosu.org/cpp/
-
+[issues]: https://github.com/jlnr/gosu/issues
 [logo]: http://www.libgosu.org/forum_header.png
