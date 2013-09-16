@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-09-14)
+(Last update: 2013-09-16)
 
 
 ## Gosu
@@ -149,6 +149,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Create Rakefile to put everything together
   * Build Retina-ready icns that still works on 10.5; see http://stackoverflow.com/questions/12772346/retina-ready-icns-icon-file-on-10-5-leopard-size-limit
   * See if we can just use Tokaido instead
+  * Point out that the RubyGosu.app lib dir can be cleaned up
 
 ## Gosu iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
@@ -166,7 +167,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Merge gosu/android into gosu/master
 
 ## Gosu CI/Usability
-  * Add a CONTRIBUTING.md à la https://github.com/blog/1184-contributing-guidelines
   * Add Gosu & Ruby.app logos to github READMEs
   * Split up Gosu todo task into its own github project
   * More front page content
@@ -174,7 +174,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
     * Show current version on libgosu.org front page
     * Create a dynamic screenshot page for all the topics in the Showcase
-    * Put tmbundle on front page
     * Link to benkos example & Chingu regarding states
     * Mention Panda Canvas as a good educational application of Gosu
     * Add some first eye catchers to front page
@@ -193,7 +192,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Add "Feature Pack" to requirements for MSVC
     * Document how Font roughly works (allow devs to cache chars by text\_width'ing the alphabet)
     * Point out that Font#text\_width is only relevant to Font#draw etc
-    * Point out that the RubyGosu.app lib dir can be cleaned up
     * Link to the FMOD MP3 licensing info page (or the page it refers to) publicly for MP3 clarification
     * Add Unicode Support wiki page
   * New unified layout
