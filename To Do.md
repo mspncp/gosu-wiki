@@ -1,5 +1,3 @@
-# To Do list
-
 This list of tasks is exported automatically from my OmniFocus projects.
 (Last update: 2013-09-16)
 
@@ -44,7 +42,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
-  * Fix/clarify TextInput vs. <markup> and &entities;
+  * Fix/clarify TextInput vs. &lt;markup> and &entities;
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Get rid of quad/tri drawing in favor of quads
   * Use float instead of double
@@ -72,8 +70,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
   * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
-  * Make <c=> more efficient in Font::drawRel
-  * Add <s=> to text formatting
+  * Make &lt;c=> more efficient in Font::drawRel
+  * Add &lt;s=> to text formatting
   * Gosu: try integer truncing of drawing positions
   * Remove setResolution and use transforms instead
   * Use Gosu text formatting in Tutorial.rb
@@ -90,7 +88,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * TextField with clip\_to (update example)
   * Create C++ app template for Xcode4
   * Create iPhone app template for Xcode4
-  * Make OpenAL buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
+  * Make OpenAL buffers in Mac port larger and make sure that update\_interval&lt;66 always plays running Songs without jitter
   * Text quality
     * Implement ffUnderline by hand in createText/Font
     * Creating a non-existent font should throw an exception on all platforms, test on which it does
@@ -168,7 +166,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
 
 ## Gosu CI/Usability
   * Add Gosu & Ruby.app logos to github READMEs
-  * Split up Gosu todo task into its own github project
   * More front page content
     * Make a three-col layout: (Ruby / C++ / more?)
     * UTF8 Support for PotD texts (see Florian Gro\_ß\_)
@@ -215,4 +212,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
-  * Comment <b> etc. in Text functionality
+  * Comment &lt;b> etc. in Text functionality
