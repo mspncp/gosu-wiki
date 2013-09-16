@@ -4,15 +4,28 @@
   * [[Getting Started on OS X]]
   * [[Getting Started on Windows]]
   * [[Getting Started on Linux]]
+  * [[Compiling in Windows using MinGW]]
 * Tutorials
   * [[Ruby Tutorial]]
+  * [[Ruby Chipmunk Integration]]
   * [[C++ Tutorial]]
+  * [[Basic Concepts]]
+* In-Depth Documentation
+  * [RDoc][rdoc]
+  * [C++ Documentation][doxygen]
+  * [[Window Main Loop]]
+  * [[Supported Audio Formats]]
+* Deployment
+  * [[Ruby Packaging on OS X]]
+  * [[Ruby Packaging on Windows]]
+* About
+  * [[Design Rationale]]
+  * [[Change Log]]
+  * [[To Do]]
 * [Gosu Boards][boards]
   * [Gosu Exchange][exchange] - Questions? Ask them here.
   * [Gosu Showcase][showcase] - Show off your projects.
   * [Extending Gosu][extending] - Libraries that play nicely with Gosu.
-* [RDoc][]
-* [C++ Documentation][doxygen]
 
 [web]: http://www.libgosu.org/
 [boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
