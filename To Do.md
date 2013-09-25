@@ -1,7 +1,7 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-09-16)
+(Last update: 2013-09-25)
 
 
 ## Gosu
@@ -213,3 +213,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
   * Comment <b> etc. in Text functionality
+  * Describe project structure in CONTRIBUTING.md
