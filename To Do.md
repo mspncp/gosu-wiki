@@ -1,10 +1,11 @@
 # To Do list
 
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-09-25)
+(Last update: 2013-09-29)
 
 
 ## Gosu
+  * Try to reproduce Releasy's issue #44
   * Document subimage
   * Debug ker's linker problem on Linux
   * Update the docs on how to setup C++ Gosu on Windows!
