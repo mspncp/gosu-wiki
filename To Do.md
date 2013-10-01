@@ -1,7 +1,5 @@
-# To Do list
-
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-09-29)
+(Last update: 2013-10-01)
 
 
 ## Gosu
@@ -45,7 +43,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
-  * Fix/clarify TextInput vs. <markup> and &entities;
+  * Fix/clarify TextInput vs. &lt;markup> and &entities;
   * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Get rid of quad/tri drawing in favor of quads
   * Use float instead of double
@@ -73,8 +71,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
   * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
-  * Make <c=> more efficient in Font::drawRel
-  * Add <s=> to text formatting
+  * Make &lt;c=> more efficient in Font::drawRel
+  * Add &lt;s=> to text formatting
   * Gosu: try integer truncing of drawing positions
   * Remove setResolution and use transforms instead
   * Use Gosu text formatting in Tutorial.rb
@@ -91,7 +89,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * TextField with clip\_to (update example)
   * Create C++ app template for Xcode4
   * Create iPhone app template for Xcode4
-  * Make OpenAL buffers in Mac port larger and make sure that update\_interval<66 always plays running Songs without jitter
+  * Make OpenAL buffers in Mac port larger and make sure that update\_interval&lt;66 always plays running Songs without jitter
   * Text quality
     * Implement ffUnderline by hand in createText/Font
     * Creating a non-existent font should throw an exception on all platforms, test on which it does
@@ -112,7 +110,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * More alpha modes! http://www.adobe.com/devnet/pdf/pdfs/blend\_modes.pdf
   * Document Gosu::interpolate, improve it too?
   * Think: Possible to have beautiful quotation mark indenting?@Gosu Text
-  * See if other libraries catch the release of the 'A' key in cmd+a
   * Add check for Caps Lock/Num Lock
   * KbBracketLeft and KbBracketRight for ÖÄ?
   * Make more stuff configurable like http://github.com/cout/rice/blob/98ba7098e2de5849f2e7272021340976a768456f/ruby.ac#L7-20
@@ -213,5 +210,5 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
-  * Comment <b> etc. in Text functionality
+  * Comment &lt;b> etc. in Text functionality
   * Describe project structure in CONTRIBUTING.md
