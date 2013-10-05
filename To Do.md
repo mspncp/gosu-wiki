@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-10-01)
+(Last update: 2013-10-05)
 
 
 ## Gosu
@@ -165,6 +165,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Merge gosu/android into gosu/master
 
 ## Gosu CI/Usability
+  * Note on front page: Gem needs apple-gcc42
   * Add Gosu & Ruby.app logos to github READMEs
   * More front page content
     * Make a three-col layout: (Ruby / C++ / more?)
