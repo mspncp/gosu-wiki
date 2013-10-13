@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2013-10-05)
+(Last update: 2013-10-13)
 
 
 ## Gosu
@@ -44,7 +44,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Automatically create 'pkg' folder since git can't handle empty folders
   * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
   * Fix/clarify TextInput vs. &lt;markup> and &entities;
-  * See if Gosu can be made to use BGRA again because it is apparently faster on OSX/iOS
   * Get rid of quad/tri drawing in favor of quads
   * Use float instead of double
   * Use int instead of unsigned
@@ -55,12 +54,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Add more #inspect strings (easier to use with irb/Pry)
   * Get GLFW working on OS X
   * Get GLFW working on Linux
-  * Add accelerometer support for OS X; maybe find a way to use UniMotion
   * Windows: Input will regularly query devices which are not currently attached, thereby causing the game to halt every few seconds - think about this
-  * FSAA/mipmap experiments
-  * Provide C++ application templates where possible, maybe even installers for the templates
   * Assure Gosu::File also creates directories as necessary
-  * more C++ examples
   * Look at wox-Gem to refactor rake/mac.rb
   * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
@@ -87,8 +82,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Try not to hide the mouse cursor outside of the main window on OS X
     * Test multiple screens on Windows
   * TextField with clip\_to (update example)
-  * Create C++ app template for Xcode4
-  * Create iPhone app template for Xcode4
   * Make OpenAL buffers in Mac port larger and make sure that update\_interval&lt;66 always plays running Songs without jitter
   * Text quality
     * Implement ffUnderline by hand in createText/Font
@@ -103,28 +96,19 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Review: http://rubyforge.org/tracker/index.php?func=detail&aid=21405&group\_id=375&atid=1504
     * Make sure README and LICENSE are appropriately named in the Gem
     * Now that the Rakefile works, stop doing every task every time (use file dependencies)
-  * Make examples discoverable
   * Retry properly showing/hiding the mouse on OS X (immune to blocking main thread)
-  * Mac OS: Mauszeiger wird im FS sichtbar bei Klick in obere linke Ecke: Warum?
-  * Look at http://slick.cokeandcode.com/index.php?entry=entry080426-213044
-  * More alpha modes! http://www.adobe.com/devnet/pdf/pdfs/blend\_modes.pdf
   * Document Gosu::interpolate, improve it too?
   * Think: Possible to have beautiful quotation mark indenting?@Gosu Text
   * Add check for Caps Lock/Num Lock
-  * KbBracketLeft and KbBracketRight for ÖÄ?
-  * Make more stuff configurable like http://github.com/cout/rice/blob/98ba7098e2de5849f2e7272021340976a768456f/ruby.ac#L7-20
-  * Try and see if Gosu can be made to correctly release pushed buttons when the keyboard is overloaded
   * Fix error when creating an Image from "\n" on OS X
   * Add callback for the OS-supplied "close" button
-  * Correctly implement render-to-texture (render{})
-  * Try to understand the benchmark on stackoverflow
+  * Try to understand this benchmark on stackoverflow
   * Expose Gosu Directories in Ruby
   * Document Text Entities
   * COMMON\_CPP\_FILES in Rakefile should contain the headers!
   * Fix: Mouse position on Linux is always reported to be inside the window
   * Use big texture for LargeImage if possible
   * Add better error message for missing files on Linux/FreeImage
-  * See if this page helps with fullscreen on OS X
   * rename userDocs to userDocuments
   * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
   * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
@@ -134,10 +118,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Fix Memory leaks in WindowX shareContext
   * Image::insert/Bitmap::insert should memcpy if possible
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
-  * simplify Gosu's IO philosophy (C++)
-  * Make plans for an official Scene/State system
-  * How would a TexturePacker like thingie work for Gosu?
-  * Redesign (see forum) drawing interface
 
 ## Gosu .app Wrapper
   * Add 'ashton' as a gem, replace 'ruby-opengl2' by 'opengl'
@@ -155,7 +135,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if xiph Tremor makes sense for Gosu Touch
   * Clear up GOSU\_IS\_MAC vs. GOSU\_IS\_APPLE vs. GOSU\_IS\_IPHONE vs. GOSU\_IS\_OPENGLES
   * See if there is a native/fastest OpenAL mixing rate on Mac/iPhone
-  * Experiment with UIKit & a reusable GOSUView
 
 ## Gosu Android
   * Move code from main.cpp into Gosu
