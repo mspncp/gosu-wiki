@@ -7,6 +7,7 @@ Depending on your operating system and programming language, please refer to the
 * [*French* mirror/translation of the old Google Code page, provided by Damien Gouteux][tutorial.fr]
 * [*Traditional Chinese* translation by poga][tutorial.zh]
 * [*Spanish* translation by ladybenko][tutorial.es]
+* [*Japanese* translation by myokoym][tutorial.ja]
 
 # Reference
 
@@ -24,6 +25,7 @@ There are many games you can take a look at in the [Gosu Showcase board][showcas
 [tutorial.es]: http://cafeina.ladybenko.net/?p=485 "Gosu Tutorial - Spanish"
 [tutorial.fr]: http://code.google.com/p/gosu-fr/ "Gosu Tutorial - French"
 [tutorial.zh]: http://devpoga.wordpress.com/2008/05/28/ruby_gosu_tutorial/ "Gosu Tutorial - Traditional Chinese"
+[tutorial.ja]: https://gist.github.com/myokoym/7148859 "Gosu Tutorial - Japanese"
 
 [doxygen]: http://www.libgosu.org/cpp/ "Gosu C++ Reference"
 [rdoc]: http://www.libgosu.org/rdoc/ "Gosu RDoc Reference"
