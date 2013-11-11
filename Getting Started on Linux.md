@@ -40,7 +40,7 @@ sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxine
 sudo pacman -S ruby
 ```
 
-## Gentoo Linux (last tested 2012-09-21)
+## Gentoo Linux (last tested 2013-11-10)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
