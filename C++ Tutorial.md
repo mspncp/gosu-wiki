@@ -75,7 +75,7 @@ public:
     {
         setCaption(L"Gosu Tutorial Game");
 
-        std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Space.png";
+        std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
         backgroundImage.reset(new Gosu::Image(graphics(), filename, true));
     }
 
@@ -94,7 +94,7 @@ public:
 *Note:* `Image` has no default constructor as Gosu does not support empty zombie images. An `auto_ptr` is used here so we can delay the actual creation of the image. The new `unique_ptr`in C++0x or `boost::optional` from the Boost library do the trick as well, or you could just use the Image as a direct member and initialize it in the initializer list, as we will do in another class.
 Of course, if you want to use a raw pointer and `new`/`delete`, we cannot stop you either.
 
-`Gosu::Image`'s constructor takes three arguments. First, it is tied to a Graphics instance (`graphics()` yields the Window's embedded Graphics object). Second, the filename of the image file is given. Note the `sharedResourcePrefix` function, which returns The Right Thing; see the reference for more information. The third argument specifies whether the image is to be created with hard or soft borders when tiling. See [[BasicConcepts]] for an explanation. It is ignored in this Tutorial. When in doubt, pass true.
+`Gosu::Image`'s constructor takes three arguments. First, it is tied to a Graphics instance (`graphics()` yields the Window's embedded Graphics object). Second, the filename of the image file is given. Note the `resourcePrefix` function, which returns The Right Thing; see the reference for more information. The third argument specifies whether the image is to be created with hard or soft borders when tiling. See [[BasicConcepts]] for an explanation. It is ignored in this Tutorial. When in doubt, pass true.
 
 As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at `0, 0` - the third image is the Z position; again, see [[BasicConcepts]].
 
@@ -110,7 +110,7 @@ class Player
         
     public:
         explicit Player(Gosu::Graphics& graphics)
-        :   image(graphics, Gosu::sharedResourcePrefix() + L"media/Starfighter.bmp")
+        :   image(graphics, Gosu::resourcePrefix() + L"media/Starfighter.bmp")
         {
             posX = posY = velX = velY = angle = 0;
         }
@@ -181,7 +181,7 @@ public:
     {
         setCaption(L"Gosu Tutorial Game");
         
-        std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Space.png";
+        std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
         backgroundImage.reset(new Gosu::Image(graphics(), filename, true));
         
         player.warp(320, 240);
@@ -324,10 +324,10 @@ public:
     {
         setCaption(L"Gosu Tutorial Game");
         
-        std::wstring filename = Gosu::sharedResourcePrefix() + L"media/Space.png";
+        std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
         backgroundImage.reset(new Gosu::Image(graphics(), filename, true));
         
-        filename = Gosu::sharedResourcePrefix() + L"media/Star.png";
+        filename = Gosu::resourcePrefix() + L"media/Star.png";
         Gosu::imagesFromTiledBitmap(graphics(), filename, 25, 25, false, starAnim);
         
         player.warp(320, 240);
@@ -420,8 +420,8 @@ class Player
     
 public:
     Player(Gosu::Graphics& graphics)
-    :   image(graphics, Gosu::sharedResourcePrefix() + L"media/Starfighter.bmp"),
-        beep(Gosu::sharedResourcePrefix() + L"media/Beep.wav")
+    :   image(graphics, Gosu::resourcePrefix() + L"media/Starfighter.bmp"),
+        beep(Gosu::resourcePrefix() + L"media/Beep.wav")
     {
         posX = posY = velX = velY = angle = 0;
         score = 0;
