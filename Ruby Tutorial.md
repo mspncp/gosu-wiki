@@ -47,6 +47,8 @@ A diagram of the main loop is shown on the [[Window Main Loop]] page.
 ### 2. Using Images
 
 ```ruby
+require 'gosu'
+
 class GameWindow < Gosu::Window
   def initialize
     super(640, 480, false)
