@@ -64,6 +64,10 @@ class GameWindow < Gosu::Window
     @background_image.draw(0, 0, 0)
   end
 end
+
+
+window = GameWindow.new
+window.show
 ```
 
 `Gosu::Image#initialize` takes three arguments. First, like all media resources, it is tied to a window (self). All of Gosu's resources need a Window for initialization and will hold an internal reference to that window. Second, the file name of the image file is given. The third argument specifies whether the image is to be created with hard borders. See BasicConcepts for an explanation.
