@@ -1,4 +1,4 @@
-# Getting Started on Linux
+# Getting Started on Linux, FreeBSD or Raspbian on the Raspberry Pi
 
 ## Pre-release version of Gosu 0.8.0
 
