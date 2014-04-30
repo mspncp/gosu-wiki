@@ -168,6 +168,9 @@ class GameWindow < Gosu::Window
     end
   end
 end
+
+window = GameWindow.new
+window.show
 ```
 
 As you can see, we have introduced keyboard and gamepad input!
