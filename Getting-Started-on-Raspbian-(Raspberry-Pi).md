@@ -1,24 +1,42 @@
 # Getting Started on Raspbian (Raspberry Pi)
 
-In theory, Raspbian is 'just' another Linux distribution. However, its package manager is missing Gosu's (new) main dependency, SDL 2.0. There is a package called `libsdl2-dev` in the Debian Jessie repositories, but it comes without the `RPI` video driver and cannot be used to install Gosu.
+In theory, Raspbian is 'just' another Linux distribution. However, its package manager is missing Gosu's (new) main dependency, SDL 2. There is a package called `libsdl2-dev` in the Debian Jessie repositories, but it comes without the `RPI` video driver and cannot be used to install Gosu.
 
 You can follow these steps to install Ruby/Gosu anyway:
 
 1. Install Raspbian on an SD card, if you haven't already ([downloads and instructions](http://www.raspberrypi.org/downloads/))
 
-2. In Raspbian, go to the [SDL download page](http://www.libsdl.org/download-2.0.php) and download the latest version in `.tar.gz` format. If you click "Save", it will be downloaded into `/home/pi`, which is what I will assume in the steps below.
+2. In Raspbian, go to the [SDL 2 download page](http://www.libsdl.org/download-2.0.php) and download the latest version in `.tar.gz` format. If you click "Save", it will be downloaded into `/home/pi`, which is what I will assume in the steps below.
+
+3. Also download the latest version of [SDL_ttf](https://www.libsdl.org/projects/SDL_ttf/) into the same directory.
 
 3. Open a terminal and run:
     ```bash
-    sudo apt-get install ruby ruby-dev build-essential libfreeimage-dev libopenal-dev libpango1.0-dev libsndfile-dev
+    sudo apt-get install ruby ruby-dev build-essential libfreeimage-dev libopenal-dev libpango1.0-dev libsndfile-dev libudev-dev libasound2-dev
     ```
 
-4. Now unpack and compile SDL. The last line will take roughly one hour to complete:
+4. Unpack and compile SDL 2. The last line will take roughly one hour to complete:
 
     ```bash
     tar zxvf SDL2-2.*.tar.gz
     cd SDL2-2.*
     ./configure --prefix=/opt/SDL2 --disable-video-x11 && make && sudo make install
+    cd ..
     ```
 
-5. WIP
+5. Unpack and compile SDL_ttf. This shouldn't take nearly as long.
+
+    ```bash
+    tar zxvf SDL2_ttf-2.*.tar.gz
+    cd SDL2_ttf-2.*
+    ./configure --prefix=/opt/SDL2 && make && sudo make install
+    cd ..
+    ```
+
+6. Install Gosu with the following command:
+
+   ```bash
+   sudo gem install gosu --pre -- --with-cflags=-I/opt/SDL2/include --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
+   ```
+
+Congratulations, you should now be able to run Ruby/Gosu games! *Note:* It is best to run all games in fullscreen mode on Raspbian, since windowed mode does not work as expected.
