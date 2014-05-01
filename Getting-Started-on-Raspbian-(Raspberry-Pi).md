@@ -1,12 +1,21 @@
-Getting Started on the Raspberry Pi
-Pre-release version of Gosu 0.8.0
+# Getting Started on Raspbian (Raspberry Pi)
 
-Gosu 0.8.0 uses SDL 2.0 as its backend, which at the same time makes Gosu a lot more portable and light-weight.
+In theory, Raspbian is 'just' another Linux distribution. However, its package manager is missing Gosu's (new) main dependency, SDL 2.0. There is a package called `libsdl2-dev` in the Debian Jessie repositories, but it comes without the `RPI` video driver and cannot be used to install Gosu.
 
-If you want to install the pre-release version of Gosu 0.8.x on Linux, you will need the following packages: build-essential, libfreeimage-dev, libopenal-dev, libpango1.0-dev, libsdl2-dev, libsdl2-ttf2.0-dev, libsndfile-dev. (Successfully tested on Ubuntu 14.04)
+You can follow these steps to install Ruby/Gosu anyway:
 
-On Raspbian, there is no package for SDL 2.x. However, you can extract the source tarball from libsdl.org and then run ./configure && make && sudo make install to install it. Afterwards you can install the --pre gem as on other Linux distributions.
+1. Install Raspbian on an SD card, if you haven't already ([downloads and instructions](http://www.raspberrypi.org/downloads/))
+2. In Raspbian, go to the [SDL download page](http://www.libsdl.org/download-2.0.php) and download the latest version in `.tar.gz` format. If you click "Save", it will be downloaded into `/home/pi` (which is what I will assume below)
+3. Open a terminal and run:
+    ```bash
+    sudo apt-get install ruby ruby-dev build-essential libfreeimage-dev libopenal-dev libpango1.0-dev libsdl2-dev libsdl2-ttf2.0-dev libsndfile-dev
+    ```
 
-Note: Please edit this wiki page if you know how to install SDL 2 in a better place than /usr/local and have Gosu find it
+4. Now unpack and compile SDL. The last line will take about one hour to complete:
 
-Note: There is a libsdl2-dev package in the 'jessie' testing repository, but it is useless as it does not come with the RPI video driver
+    ```bash
+    tar zxvf SDL2-2.*.tar.gz
+    cd SDL2-2.*
+    ./configure -prefix=/opt/SDL2
+    ```
+5. WIP

@@ -4,6 +4,7 @@
   * [[Getting Started on OS X]]
   * [[Getting Started on Windows]]
   * [[Getting Started on Linux]]
+  * [[Getting Started on Raspbian (Raspberry Pi)]]
   * [[Compiling in Windows using MinGW]]
 * Tutorials
   * [[Ruby Tutorial]]
