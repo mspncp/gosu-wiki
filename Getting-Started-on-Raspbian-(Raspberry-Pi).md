@@ -21,16 +21,15 @@ You can follow these steps to install Ruby/Gosu anyway:
     tar zxvf SDL2-2.*.tar.gz
     cd SDL2-2.*
     ./configure --prefix=/opt/SDL2 --disable-video-x11 && make && sudo make install
-    cd ..
     ```
 
 5. Unpack and compile SDL_ttf. This shouldn't take nearly as long.
 
     ```bash
+    cd ..
     tar zxvf SDL2_ttf-2.*.tar.gz
     cd SDL2_ttf-2.*
     ./configure --prefix=/opt/SDL2 && make && sudo make install
-    cd ..
     ```
 
 6. Install Gosu with the following command:
@@ -38,5 +37,7 @@ You can follow these steps to install Ruby/Gosu anyway:
    ```bash
    sudo gem install gosu --pre -- --with-cflags=-I/opt/SDL2/include --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
    ```
+
+7. Optional: Clean up by deleting the SDL folders and `.tar.gz` files in your home directory.
 
 Congratulations, you should now be able to run Ruby/Gosu games! *Note:* It is best to run all games in fullscreen mode on Raspbian, since windowed mode does not work as expected.
