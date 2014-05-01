@@ -22,7 +22,8 @@
 * About
   * [[Design Rationale]]
   * [[Change Log]]
-  * Public [GitHub Issues][issues] & semi-public [[To Do]] list
+  * Public [GitHub Issues][issues]
+  * My personal [[To Do]] list
 * [Gosu Boards][boards]
   * [Gosu Exchange][exchange] - Questions? Ask them here.
   * [Gosu Showcase][showcase] - Show off your projects.
