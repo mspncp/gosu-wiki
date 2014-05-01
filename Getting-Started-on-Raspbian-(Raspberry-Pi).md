@@ -26,7 +26,7 @@ You can follow these steps to install Ruby/Gosu anyway:
 5. Unpack and compile SDL_ttf. This shouldn't take nearly as long.
 
     ```bash
-    cd ..
+    cd
     tar zxvf SDL2_ttf-2.*.tar.gz
     cd SDL2_ttf-2.*
     ./configure --prefix=/opt/SDL2 && make && sudo make install
