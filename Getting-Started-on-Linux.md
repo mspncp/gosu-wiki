@@ -4,7 +4,7 @@
 
 To install Gosu 0.7.x on Linux, you will need the following packages: `build-essential`, `freeglut3-dev`, `libfreeimage-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libpango1.0-dev`, `libsdl-ttf2.0-dev`, `libsndfile-dev`, `libxinerama-dev`.
 
-## Ubuntu (last tested on 12.10)
+## Ubuntu (last tested on 13.10)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
