@@ -19,12 +19,12 @@ sudo apt-get install ruby1.9.1-dev rubygems
 sudo gem install gosu
 ```
 
-## Fedora (last tested on 17)
+## Fedora (last tested on 20)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo yum groupinstall --assumeyes "Development Tools"
-sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel
+sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel gcc-c++
 
 # To install Ruby 1.9
 sudo yum install --assumeyes ruby-devel rubygems
