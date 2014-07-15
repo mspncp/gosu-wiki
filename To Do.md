@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-07-14)
+(Last update: 2014-07-15)
 
 
 ## Gosu
@@ -120,7 +120,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Merge gosu/android into gosu/master
 
 ## Gosu CI/Usability
-  * Fix broken calendar reminder that updates the To Do list
   * Add Gosu & Ruby.app logos to github READMEs
   * More front page content
     * Make a three-col layout: (Ruby / C++ / more?)
