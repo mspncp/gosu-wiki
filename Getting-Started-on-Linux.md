@@ -20,6 +20,16 @@ sudo apt-get install ruby-dev
 sudo gem install gosu
 ```
 
+## Manjaro Linux (last tested on 2014-08-24 with Gosu 0.8.2)
+
+```bash
+# Gosu's dependencies for both C++ and Ruby
+sudo pacman -S freeglut freeimage libegl openal pango sdl2_ttf libsndfile libxinerama pkg-config
+
+# To install Ruby 2.1.0
+sudo pacman -S ruby
+```
+
 ## Fedora (last tested on 20 with Gosu 0.7.x)
 
 ```bash
