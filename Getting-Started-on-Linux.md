@@ -4,7 +4,7 @@
 
 ## Dependencies
 
-To install Gosu 0.8.x on Linux, you will need the following packages: `build-essential`, `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libfreeimage-dev`, `libopenal-dev`, `libsndfile-dev`.
+To install Gosu 0.8.x on Linux, you will need the following packages, even though the names will be different in every distribution: `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libfreeimage-dev`, `libopenal-dev`, `libsndfile-dev`.
 
 ## Ubuntu (last tested on Trusty Tahr (14.04), with Gosu 0.8.2)
 
@@ -61,13 +61,23 @@ sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-
 sudo emerge -atv ruby:1.9
 ```
 
-## OpenSuse (last tested on 2012-11-14 / 12.1 with Gosu 0.7.x)
+## OpenSUSE (last tested on OpenSUSE 13.1 with Gosu 0.8.2)
 
 ```bash
+# General development tools
+sudo zypper install --type pattern devel_basis
+# Add the 'games' repository for libfreeimage-devel
 sudo zypper addrepo http://download.opensuse.org/repositories/games/openSUSE_12.1/ opensuse-games
-sudo zypper install libfreeimage-devel freeglut-devel libSDL_ttf libsndfile-devel openal-soft-devel libSDL_ttf-devel pango-devel libvorbis-devel
+# Gosu's dependencies for both C++ and Ruby
+sudo zypper install libSDL2-devel libSDL2_ttf-devel pango-devel libfreeimage-devel libsndfile-devel openal-soft-devel libvorbis-devel
 
-gem install gosu
+# To install the Ruby headers
+sudo zypper install ruby-devel
+
+# If you are using rvm or rbenv, do not use 'sudo'
+sudo gem install gosu
+
+NOTE THIS DOES NOT WORK - OpenSUSE ships with SDL 2.0.0. Gosu should start using the SDL_VERSION_ATLEAST(X, Y, Z) macro :(
 ```
 
 *Please check* how to install all this software if you are on a different distribution.
