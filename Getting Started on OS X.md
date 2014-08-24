@@ -1,5 +1,32 @@
 # Getting Started on OS X
 
+## Creating a New Ruby/Gosu Project
+
+### Prerequisites
+[text](url)
+Gosu 0.8.x+ relies on the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2 libogg libvorbis`.
+
+### Installing the gem
+
+Just install the gem via `sudo gem install gosu`, or omit the `sudo` if you use rvm or rbenv to manage your Ruby installations.
+
+To test whether everything works as expected, you can use this Hello World script:
+
+```ruby
+require 'rubygems' # only necessary in Ruby 1.8
+require 'gosu'
+
+class MyWindow < Gosu::Window
+  def initialize
+   super(640, 480, false)
+   self.caption = 'Hello World!'
+  end
+end
+
+window = MyWindow.new
+window.show
+```
+
 ## Creating a New C++ Gosu Project
 
 *TO DO: This does not yet explain how resource loading works; TL;DR add your resources to the Xcode project and use `Gosu::resource_path` to find them.*
@@ -66,35 +93,3 @@ int main()
 ```
 
 If you "Build & Run" the project now (cmd+R), you should see an empty, black window with the caption "Hello World".
-
-## Creating a New Ruby/Gosu Project
-
-### Prerequisites
-
-* Xcode 4+ from the Mac App Store
-* In Xcode, make sure to visit the preferences and install the Command Line Tools
-
-### Installing the gem
-
-*TO DO: This should be updated to use bundler, and explain how to set up Releasy.*
-
-Getting started with Ruby is a lot easier (surprise). Just install the gem via `sudo gem install gosu`.
-
-To test whether everything works as expected, you can use this Hello World script:
-
-```ruby
-require 'rubygems' # only necessary in Ruby 1.8
-require 'gosu'
-
-class MyWindow < Gosu::Window
-  def initialize
-   super(640, 480, false)
-   self.caption = 'Hello World!'
-  end
-end
-
-window = MyWindow.new
-window.show
-```
-
-That's it -- have fun!
