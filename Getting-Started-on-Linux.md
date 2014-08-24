@@ -1,25 +1,26 @@
 # Getting Started on Linux
 
+(Please help us update the information below! :) Most of it refers to Gosu 0.7.x).
+
 ## Dependencies
 
-To install Gosu 0.7.x on Linux, you will need the following packages: `build-essential`, `freeglut3-dev`, `libfreeimage-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libpango1.0-dev`, `libsdl-ttf2.0-dev`, `libsndfile-dev`, `libxinerama-dev`.
+To install Gosu 0.8.x on Linux, you will need the following packages: `build-essential`, `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libfreeimage-dev`, `libopenal-dev`, `libsndfile-dev`.
 
-## Ubuntu (last tested on 13.10)
+## Ubuntu (last tested on 14.04)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
-sudo apt-get install build-essential freeglut3-dev libfreeimage-dev libgl1-mesa-dev \
-                     libopenal-dev libpango1.0-dev libsdl-ttf2.0-dev libsndfile-dev \
-                     libxinerama-dev
+sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev \
+                     libgl1-mesa-dev libfreeimage-dev libopenal-dev libsndfile-dev
 
-# To install Ruby 1.9 - if you are using rvm or rb-env, skip this step
-sudo apt-get install ruby1.9.1-dev rubygems
+# To install Ruby 1.9.x - if you are using rvm or rbenv, please skip this step
+sudo apt-get install ruby-dev
 
-# If you are using rvm or rb-env, do not use 'sudo'
+# If you are using rvm or rbenv, do not use 'sudo'
 sudo gem install gosu
 ```
 
-## Fedora (last tested on 20)
+## Fedora (last tested on 20 with Gosu 0.7.x)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
@@ -30,7 +31,7 @@ sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel ope
 sudo yum install --assumeyes ruby-devel rubygems
 ```
 
-## Arch Linux (last tested on 2012-09-13)
+## Arch Linux (last tested on 2012-09-13 with Gosu 0.7.x)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
@@ -40,7 +41,7 @@ sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxine
 sudo pacman -S ruby
 ```
 
-## Gentoo Linux (last tested 2013-11-10)
+## Gentoo Linux (last tested 2013-11-10 with Gosu 0.7.x)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
@@ -50,7 +51,7 @@ sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-
 sudo emerge -atv ruby:1.9
 ```
 
-## OpenSuse (last tested on 2012-11-14 / 12.1)
+## OpenSuse (last tested on 2012-11-14 / 12.1 with Gosu 0.7.x)
 
 ```bash
 sudo zypper addrepo http://download.opensuse.org/repositories/games/openSUSE_12.1/ opensuse-games
@@ -61,7 +62,7 @@ gem install gosu
 
 *Please check* how to install all this software if you are on a different distribution.
 
-## Compiling Gosu for C++
+## Compiling Gosu for C++ (last tested with Gosu 0.7.x)
 
 To compile Gosu, `cd` into the `cmake` subdirectory and run:
 
