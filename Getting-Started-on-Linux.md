@@ -77,10 +77,10 @@ sudo zypper install ruby-devel
 # If you are using rvm or rbenv, do not use 'sudo'
 sudo gem install gosu
 
-NOTE THIS DOES NOT WORK - OpenSUSE ships with SDL 2.0.0. Gosu should start using the SDL_VERSION_ATLEAST(X, Y, Z) macro :(
+NOTE THIS DOES NOT WORK!
 ```
 
-*Please check* how to install all this software if you are on a different distribution.
+Note: OpenSUSE only has SDL 2.0.0 in its repository and Gosu is missing the necessary #ifdef dance around some new functions, see [issue 242](https://github.com/jlnr/gosu/issues/242).
 
 ## Compiling Gosu for C++ (last tested with Gosu 0.7.x)
 
