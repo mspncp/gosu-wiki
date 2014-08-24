@@ -3,7 +3,7 @@
 ## Creating a New Ruby/Gosu Project
 
 ### Prerequisites
-[text](url)
+
 Gosu 0.8.x+ relies on the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2 libogg libvorbis`.
 
 ### Installing the gem
