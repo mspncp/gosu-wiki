@@ -35,7 +35,7 @@ You can follow these steps to install Ruby/Gosu anyway:
 6. Install Gosu with the following command:
 
    ```bash
-   sudo gem install gosu --pre -- --with-cflags=-I/opt/SDL2/include --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
+   sudo gem install gosu -- --with-cflags=-I/opt/SDL2/include --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
    ```
 
 7. Optional: Run an example to verify that everything works. You can use this command to jump straight into Gosu's example folder, then run a game:
