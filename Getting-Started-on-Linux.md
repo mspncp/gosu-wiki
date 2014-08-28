@@ -61,7 +61,7 @@ sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-
 sudo emerge -atv ruby:1.9
 ```
 
-## OpenSUSE (last tested on OpenSUSE 13.1 with Gosu 0.8.2)
+## OpenSUSE (last tested on OpenSUSE 13.1 with Gosu 0.8.3)
 
 ```bash
 # General development tools
@@ -76,11 +76,7 @@ sudo zypper install ruby-devel
 
 # If you are using rvm or rbenv, do not use 'sudo'
 sudo gem install gosu
-
-NOTE THIS DOES NOT WORK!
 ```
-
-Note: OpenSUSE only has SDL 2.0.0 in its repository and Gosu is missing the necessary #ifdef dance around some new functions, see [issue 242](https://github.com/jlnr/gosu/issues/242).
 
 ## Compiling Gosu for C++ (last tested with Gosu 0.7.x)
 
