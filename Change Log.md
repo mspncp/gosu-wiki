@@ -5,7 +5,7 @@
 * 2014-08-28: All: Fixed `MsWheelUp`/`MsWheelDown` being swapped (thanks to @d3vkit for reporting)
 
 ## 0.8.2
-* 2014-08-24: Windows: Gosu now support Ruby 2.0.0.
+* 2014-08-24: Windows: Gosu now supports Ruby 2.0.0.
 * 2014-08-20: All: `Gosu::screen_width`/`screen_height` incorrectly returned 0 before a `Gosu::Window` was constructed.
 
 ## 0.8.1
