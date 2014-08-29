@@ -1,5 +1,30 @@
 # Change Log
 
+## 0.8.3
+* 2014-08-28: Linux: Fix compilation errors on OpenSuSE 13.1 and other distributions which do not provide the latest version of SDL.
+* 2014-08-28: All: Fixed `MsWheelUp`/`MsWheelDown` being swapped (thanks to @d3vkit for reporting)
+
+## 0.8.2
+* 2014-08-24: Windows: Gosu now support Ruby 2.0.0.
+* 2014-08-20: All: `Gosu::screen_width`/`screen_height` incorrectly returned 0 before a `Gosu::Window` was constructed.
+
+## 0.8.1
+* 2014-08-19: Windows: Fix a non-deterministic crash when loading TTF files.
+* 2014-08-19: Windows: Fix audio crashes caused by updating to an unmodified OpenAL Soft 1.16.0.
+* 2014-08-19: All: Fix a bug where the mouse wheel would either trigger `button_up` or `button_down`, but not both.
+* 2014-08-11: All: Refactor (fix) `GOSU_COPYRIGHT_NOTICE`.
+
+## 0.8.0
+* Gosu now uses SDL 2.x as its backend. This implicitly fixes Mac fullscreen support, and makes it possible to use Gosu on the Raspberry Pi.
+
+## 0.7.50
+* 2013-11-06: Ruby: Fix various glitches in the SWIG-generated Ruby interface
+
+## 0.7.49
+* 2013-09-27: Mac: Fix compilation on OS X 10.9 Mavericks
+* 2013-09-23: Linux: Add cmake build files
+* 2013-07-16: Mac: Update Ruby.app to Ruby 2.0.0
+
 ## 0.7.48
 * 2013-07-12: Linux: Fix compilation bug with Ruby 2.0 (#181)
 * 2013-06-24: Mac: Use full Retina resolution where available
