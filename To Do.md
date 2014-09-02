@@ -1,8 +1,9 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-08-30)
+(Last update: 2014-09-02)
 
 
 ## Gosu
+  * Fix clip\_to bug on HiDPI display
   * See if I can reproduce this Releasy issue
   * Try to reproduce Releasy's issue #44
   * Improve Input
@@ -14,9 +15,8 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Pre-transform all vertex arrays
     * Come up with a nice memory union of DrawOp and ArrayVertex
     * Split up macros into vertices when drawn inside record{} (allow nesting)
-  * Introduce one "0.9" style constructor as a proof of concept
   * Gosu 0.9.0
-    * Automatically create OpenGL context when Image is first created (half done - see old working copy from 10.6)
+    * Introduce one "0.9" style constructor as a proof of concept
     * Make things tileable by default but add :smooth and :pure or something like that
     * Rename needs\_x? to need\_x? in Ruby
     * Adjust Text Entities to line height
