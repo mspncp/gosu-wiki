@@ -6,6 +6,8 @@
 
 Gosu 0.8.x+ relies on the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2 libogg libvorbis`.
 
+Note: If you are adventurous, you can also install the Mercurial version of SDL: `brew install sdl2 --HEAD`. This has fixed a few HiDPI-related bugs for me (.
+
 ### Installing the gem
 
 Just install the gem via `sudo gem install gosu`, or omit the `sudo` if you use rvm or rbenv to manage your Ruby installations.
