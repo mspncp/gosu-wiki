@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.8.4
+* 2014-09-03: All: `Gosu::available_width` & `Gosu::available_height` can now be used to calculate the available space for a non-fullscreen window. (The return value is only accurate on OS X and Windows for now.)
+* 2014-09-03: All: `Gosu::Window::show` now respects `needsRedraw`/`needs_redraw?` again.
+* 2014-08-31: Mac: Fix scaling errors on Retina displays, caused by a regression in Gosu 0.8.3.
+
 ## 0.8.3
 * 2014-08-28: Linux: Fix compilation errors on OpenSuSE 13.1 and other distributions which do not provide the latest version of SDL.
 * 2014-08-28: All: Fixed `MsWheelUp`/`MsWheelDown` being swapped (thanks to @d3vkit for reporting)
