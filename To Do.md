@@ -1,9 +1,8 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-09-02)
+(Last update: 2014-09-03)
 
 
 ## Gosu
-  * Fix clip\_to bug on HiDPI display
   * See if I can reproduce this Releasy issue
   * Try to reproduce Releasy's issue #44
   * Improve Input
