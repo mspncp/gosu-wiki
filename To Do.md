@@ -1,8 +1,9 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-09-03)
+(Last update: 2014-09-04)
 
 
 ## Gosu
+  * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
   * See if I can reproduce this Releasy issue
   * Try to reproduce Releasy's issue #44
   * Improve Input
