@@ -1,21 +1,17 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-09-04)
+(Last update: 2014-09-08)
 
 
 ## Gosu
-  * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
-  * See if I can reproduce this Releasy issue
-  * Try to reproduce Releasy's issue #44
-  * Improve Input
-    * Fix/clarify TextInput vs. &lt;markup> and &entities;
-    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Mac
-    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first - Win
-    * Order USB devices alphabetically (so that gamepad 0 is always 0) - SDL
-  * More awesome Vertex Arrays
-    * Pre-transform all vertex arrays
-    * Come up with a nice memory union of DrawOp and ArrayVertex
-    * Split up macros into vertices when drawn inside record{} (allow nesting)
-  * Gosu 0.9.0
+  * 0.8/Releasy Deployment Fixes
+    * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
+    * Try compiling Gosu with Ruby 2.0 64-bit on Windows
+    * Expose Gosu Directories in Ruby
+    * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
+    * See if I can reproduce this Releasy issue
+    * Try to reproduce Releasy's issue #44
+  * Gosu 0.9.0-style Interface (get rid of Window references everywhere)
+    * rename userDocs to userDocuments
     * Introduce one "0.9" style constructor as a proof of concept
     * Make things tileable by default but add :smooth and :pure or something like that
     * Rename needs\_x? to need\_x? in Ruby
@@ -34,73 +30,62 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Make Window::needsCursor return true by default
     * Rename all those Ruby examples and feature\_tests
     * Change ImageData::toBitmap to toBlob(byte*, size\_t) and copy directly in RSTRING; add Image::toBitmap() instead
+  * More awesome Vertex Arrays
+    * Pre-transform all vertex arrays
+    * Come up with a nice memory union of DrawOp and ArrayVertex
+    * Split up macros into vertices when drawn inside record{} (allow nesting)
+  * Improve Input
+    * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
+    * Fix/clarify TextInput vs. &lt;markup> and &entities;
+    * GpButtonX must fire after GpYButtonX so that control setup screens receive the more specific ID first
+    * Order USB devices alphabetically (so that gamepad 0 is always 0) - TODO: check if SDL already does that?
+  * Improve text rendering
+    * Add FontFlags support for SDL\_TTF Gosu/Text
+    * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
+    * Make &lt;c=> more efficient in Font::drawRel
+    * Add &lt;s=> to text formatting
+    * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
+    * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
+    * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
+    * Implement ffUnderline by hand in createText/Font
+    * Creating a non-existent font should throw an exception on all platforms, test on which it does
+    * Font should respect monospaced fonts and fonts with very weird kerning (Zapfino...): do research
+    * Verify that "Daniel" font works properly in Font and Text
+    * Mac: Use Core Text instead of ATSUI
+    * Fix error when creating an Image from "\n" on OS X
+    * Use Gosu text formatting in Tutorial.rb
+    * TextField with clip\_to (update example)
   * Make sure that Gosu::clamp prevents NaN whenever possible
   * Look at Jamer's commit re: improved image loading
   * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
   * Automatically create 'pkg' folder since git can't handle empty folders
-  * Meditate: Imagine a Window::baseTransform that will affect Graphics *and* (inversed) Input - would this help games? Or rather add input un-transforming in general? Hmm!
-  * Fix Gosu::Font(…default, 20) with italics on Windows (see forum thread)
-  * Add more #inspect strings (easier to use with irb/Pry)
-  * Windows: Input regularly queries devices which are not currently attached, this caused games to halt every few seconds (years ago) - does this still happen?
+  * Add more #inspect strings (makes Gosu easier to use with irb/Pry)
   * Assure Gosu::File also creates directories as necessary
-  * Look at wox-Gem to refactor rake/mac.rb
-  * Font#draw with given block that yields each character's Gosu::Image, x, and y to a block, rather than drawing them
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
   * Add Gosu::potential\_fps
-  * Fix Song#volume with short songs
   * Warning when relying on case sensitivity
-  * Find out what Gosu::Song::play does when it's already playing with each implementation, then clarify docs
-  * Add FontFlags support for SDL\_TTF Gosu/Text
-  * Fix Unicode support for SDL\_TTF port (see feature\_tests/UnicodeTest.rb, @loc\_test)
-  * Fix exceptions being turned into segfaults on Linux (see GoogleCode issue)
   * See if clipping coordinate calculation is correct with all transformations considered (why is Terava off by one pixel?)
-  * Make &lt;c=> more efficient in Font::drawRel
-  * Add &lt;s=> to text formatting
   * Gosu: try integer truncing of drawing positions
   * Remove setResolution and use transforms instead
-  * Use Gosu text formatting in Tutorial.rb
   * Make C++'s Gosu::multiply available to Ruby
   * Add Numeric#clamp, Numeric#wrap to Ruby
-  * TextField with clip\_to (update example)
   * Make OpenAL buffers in Mac port larger and make sure that update\_interval&lt;66 always plays running Songs without jitter
-  * Text quality
-    * Implement ffUnderline by hand in createText/Font
-    * Creating a non-existent font should throw an exception on all platforms, test on which it does
-    * Font should respect monospaced fonts and fonts with very weird kerning (Zapfino...): do research
-    * Verify that Daniel font works properly in Font and Text
-    * Linux: Support other XKeySyms than Latin 1
-    * Mac: Add dead keys to TextInput
-    * Mac: Use Core Text instead of ATSUI
-  * Polish/deployment
-    * Assure that files from doxygen task are considered for packaging
-    * Review: http://rubyforge.org/tracker/index.php?func=detail&aid=21405&group\_id=375&atid=1504
-    * Make sure README and LICENSE are appropriately named in the Gem
-    * Now that the Rakefile works, stop doing every task every time (use file dependencies)
-  * Retry properly showing/hiding the mouse on OS X (immune to blocking main thread)
   * Document Gosu::interpolate, improve it too?
-  * Think: Possible to have beautiful quotation mark indenting?@Gosu Text
-  * Fix error when creating an Image from "\n" on OS X
   * Add callback for the OS-supplied "close" button
   * Try to understand this benchmark on stackoverflow
-  * Expose Gosu Directories in Ruby
-  * Document Text Entities
-  * COMMON\_CPP\_FILES in Rakefile should contain the headers!
-  * Fix: Mouse position on Linux is always reported to be inside the window
   * Use big texture for LargeImage if possible
   * Add better error message for missing files on Linux/FreeImage
-  * rename userDocs to userDocuments
-  * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
-  * Investigate Gosu bug: TextInput doesn't stop KbP/KbB from being sent to button\_down on Windows
   * Improve C++ exception display
   * Find out why the attached file allows the image to exceed its boundaries (by a lot)
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
 
 ## Gosu .app Wrapper
+  * Build 0.8 version (must bundle SDL2!)
   * Add Rubygems to .app wrapper with RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Modify Rakefile to not ruin the installed ruby2.0.0 afterwards
   * Create Rakefile to put everything together
   * Build Retina-ready icns that still works on 10.5; see http://stackoverflow.com/questions/12772346/retina-ready-icns-icon-file-on-10-5-leopard-size-limit
-  * Point out that the RubyGosu.app lib dir can be cleaned up
+  * Add more docs (e.g.: the Ruby.app lib dir can be cleaned up)
 
 ## Gosu iOS
   * Add \_\_attribute\_\_((aligned(16))) to Gosu::Transform and make it binary compatible with GLKits GLKMatrix4
@@ -109,13 +94,9 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * See if there is a native/fastest OpenAL mixing rate on Mac/iPhone
 
 ## Gosu Android
-  * Waiting for SDL port on OS X...might just use SDL to port Gosu to Android as well
+  * Start a new project from scratch, try to port the SDL-based Gosu 0.8 to Android (should be easier!)
   * Take a look at Gradle for Android building - otherwise, setup maven
-  * Move code from main.cpp into Gosu
-  * Investigate into OpenAL for NDK apps
-  * Structure
-    * Move Gosu into a separate .so with the help of a project template
-    * Merge gosu/android into gosu/master
+  * Look at OpenAL for NDK apps
 
 ## Gosu CI/Usability
   * Add Gosu & Ruby.app logos to github READMEs
@@ -158,7 +139,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Mention copyright() in README
   * Document that the Gosu::Window might be smaller than expected
   * Document that record{} can be called anywhere
-  * Update github docs for Xcode4
   * Fix Gosu docs: 'RGBA' octet == WRONG
   * Link video tutorials from front page
   * Document Gosu::\_release\_openal\_resources and how it could be useful in testing (or can I fix this in a better way?)
@@ -170,3 +150,4 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Split Gosu website into its own github project
   * Fork Gosu.tmbundle into its own git repository
   * Compare Gosu prefix() functions to SDL path helpers
+  * Find out what Gosu::Song::play does when it's already playing, then clarify docs (i.e. does it start over or keep playing?)
