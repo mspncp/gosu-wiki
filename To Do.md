@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-09-08)
+(Last update: 2014-09-12)
 
 
 ## Gosu
@@ -80,7 +80,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
 
 ## Gosu .app Wrapper
-  * Build 0.8 version (must bundle SDL2!)
+  * Build 0.8 version (must bundle SDL 2.0.4!)
   * Add Rubygems to .app wrapper with RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Modify Rakefile to not ruin the installed ruby2.0.0 afterwards
   * Create Rakefile to put everything together
