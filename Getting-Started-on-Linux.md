@@ -20,6 +20,8 @@ sudo apt-get install ruby-dev
 sudo gem install gosu
 ```
 
+See also [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1137) for another detailed guide.
+
 ## Manjaro Linux (last tested on 2014-09-02 with Gosu 0.8.3)
 
 ```bash
