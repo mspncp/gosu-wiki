@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.8.5
+* 2014-09-28: Linux/Mac: Fix compilation with recent versions of Ruby
+* 2014-09-09: Mac: Fix compilation in rvm
+
 ## 0.8.4
 * 2014-09-03: All: `Gosu::available_width` & `Gosu::available_height` can now be used to calculate the available space for a non-fullscreen window. (The return value is only accurate on OS X and Windows for now.)
 * 2014-09-03: All: `Gosu::Window::show` now respects `needsRedraw`/`needs_redraw?` again.
