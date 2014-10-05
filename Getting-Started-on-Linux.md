@@ -6,7 +6,7 @@
 
 To install Gosu 0.8.x on Linux, you will need the following packages, even though the names will be different in every distribution: `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libfreeimage-dev`, `libopenal-dev`, `libsndfile-dev`.
 
-## Ubuntu (last tested on Trusty Tahr (14.04), with Gosu 0.8.2)
+## Ubuntu (last tested on Trusty Tahr (14.04), with Gosu 0.8.5)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
