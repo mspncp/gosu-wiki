@@ -1,10 +1,11 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-09-12)
+(Last update: 2014-10-13)
 
 
 ## Gosu
   * 0.8/Releasy Deployment Fixes
     * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
+    * Also build a MSVC library for the new Ruby 2.1
     * Try compiling Gosu with Ruby 2.0 64-bit on Windows
     * Expose Gosu Directories in Ruby
     * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
