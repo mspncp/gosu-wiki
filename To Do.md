@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-10-13)
+(Last update: 2014-10-29)
 
 
 ## Gosu
@@ -100,6 +100,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Look at OpenAL for NDK apps
 
 ## Gosu CI/Usability
+  * Explain how to compile Ruby/Gosu in CONTRIBUTING.md
   * Add Gosu & Ruby.app logos to github READMEs
   * More front page content
     * Make a three-col layout: (Ruby / C++ / more?)
