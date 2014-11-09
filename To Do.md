@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-10-29)
+(Last update: 2014-11-09)
 
 
 ## Gosu
@@ -137,6 +137,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Include CptnCpp as sample game
     * Fix download for all my LD games
   * Update README.txt and website year
+  * Move Gosu examples into separate project/gem
   * Extend RubyGosu.tmbundle: cmd+R -> runs main.rb
   * Mention copyright() in README
   * Document that the Gosu::Window might be smaller than expected
