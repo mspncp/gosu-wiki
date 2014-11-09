@@ -53,7 +53,7 @@ sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxine
 sudo pacman -S ruby
 ```
 
-## Gentoo Linux (last tested 2013-11-10 with Gosu 0.7.x)
+## Gentoo Linux (last tested 2014-11-09 with Gosu 0.8.x)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby, ensure you have the 'opengl' USE Flag set globally or at least for media-libs/libsdl2.
