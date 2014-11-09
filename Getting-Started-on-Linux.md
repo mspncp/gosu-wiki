@@ -56,11 +56,11 @@ sudo pacman -S ruby
 ## Gentoo Linux (last tested 2013-11-10 with Gosu 0.7.x)
 
 ```bash
-# Gosu's dependencies for both C++ and Ruby
-sudo emerge -atv media-libs/freeglut media-libs/freeimage media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl-ttf media-libs/libsndfile x11-libs/libXinerama
+# Gosu's dependencies for both C++ and Ruby, ensure you have the 'opengl' USE Flag set globally or at least for media-libs/libsdl2.
+sudo emerge -av media-libs/freeglut media-libs/freeimage media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl2-ttf media-libs/libsndfile x11-libs/libXinerama
 
-# To install Ruby 1.9
-sudo emerge -atv ruby:1.9
+# To install Ruby
+sudo emerge -av dev-lang/ruby
 ```
 
 ## OpenSUSE (last tested on OpenSUSE 13.1 with Gosu 0.8.3)
