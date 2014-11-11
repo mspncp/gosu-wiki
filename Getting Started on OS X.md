@@ -1,16 +1,24 @@
 # Getting Started on OS X
 
-## Creating a New Ruby/Gosu Project
+## Ruby
 
 ### Prerequisites
 
 Gosu 0.8.x+ relies on the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2 libogg libvorbis`.
 
-Note: If you are adventurous, you can also install the Mercurial version of SDL: `brew install sdl2 --HEAD`. This has fixed a few HiDPI-related bugs for me (.
+Note: If you are adventurous, you can also install the Mercurial version of SDL: `brew install sdl2 --HEAD`. This has fixed a few HiDPI-related bugs for me.
+
+### System Ruby vs rvm vs rbenv
+
+OS X ships with a decent version of Ruby, and Gosu works just fine with it after you install either Apple's command-line tools (`xcode-select --install`) or Xcode (from the Mac App Store).
+
+But if you are running **OS X 10.9 and have installed Xcode 6.1**, you will need to install Apple's command-line tools on top of Xcode: `xcode-select --install`; [Apple bug](https://github.com/Homebrew/homebrew/issues/33431). Also, **OS X 10.9.0 – 10.9.2** have shipped with a broken `rbconfig` file that prevented Gosu and other C extensions from being built, simply update OS X in this case; [Apple bug](https://github.com/flori/json/issues/200).
+
+**rbenv** seems to work just as well. **rvm doesn't** - it sometimes works, but the next day, it will use homebrew to install bizarre compilers behind your back, which will then fail at compiling C++ or Objective C. Please try to use rbenv or Apple's Ruby instead.
 
 ### Installing the gem
 
-Just install the gem via `sudo gem install gosu`, or omit the `sudo` if you use rvm or rbenv to manage your Ruby installations.
+Just install the gem via `sudo gem install gosu`. (Omit the `sudo` if you use rvm or rbenv to manage your Ruby installations.)
 
 To test whether everything works as expected, you can use this Hello World script:
 
