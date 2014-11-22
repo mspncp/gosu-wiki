@@ -1,8 +1,9 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-11-09)
+(Last update: 2014-11-22)
 
 
 ## Gosu
+  * Test in Windows 8.1 VM
   * 0.8/Releasy Deployment Fixes
     * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
     * Also build a MSVC library for the new Ruby 2.1
