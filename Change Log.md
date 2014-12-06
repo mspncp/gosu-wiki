@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.8.6
+* 2014-12-06: Windows: Add support for Ruby 2.1.x
+* 2014-11-09: All: Check SDL 2 return values when creating the window
+
 ## 0.8.5
 * 2014-09-28: Linux/Mac: Fix compilation with recent versions of Ruby
 * 2014-09-09: Mac: Fix compilation in rvm
