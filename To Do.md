@@ -1,18 +1,22 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-11-22)
+(Last update: 2014-12-06)
 
 
 ## Gosu
-  * Test in Windows 8.1 VM
-  * 0.8/Releasy Deployment Fixes
+  * Cleanup of existing stuff
     * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
     * Also build a MSVC library for the new Ruby 2.1
     * Try compiling Gosu with Ruby 2.0 64-bit on Windows
-    * Expose Gosu Directories in Ruby
-    * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
+  * 0.9.0pre1
+    * Understand CMake a bit...
+    * Split gosu GitHub project into gosu (Ruby) and libgosu (C++)?
+    * Clean up CMake system and ensure it works on OS X
+    * ...ensure it works on Linux
+    * Release as 0.9.0.pre1
+  * Releasy Deployment Fixes
     * See if I can reproduce this Releasy issue
     * Try to reproduce Releasy's issue #44
-  * Gosu 0.9.0-style Interface (get rid of Window references everywhere)
+  * Gosu 1.0.0-style Interface (get rid of Window references everywhere)
     * rename userDocs to userDocuments
     * Introduce one "0.9" style constructor as a proof of concept
     * Make things tileable by default but add :smooth and :pure or something like that
@@ -57,10 +61,10 @@ This list of tasks is exported automatically from my OmniFocus projects.
     * Fix error when creating an Image from "\n" on OS X
     * Use Gosu text formatting in Tutorial.rb
     * TextField with clip\_to (update example)
+  * Fix: :align=>:center doesn't work without also passing :width (not intuitive)
+  * Expose Gosu Directories in Ruby
   * Make sure that Gosu::clamp prevents NaN whenever possible
   * Look at Jamer's commit re: improved image loading
-  * Fix implicit requirement to have "../gosu == ." in rake/linux.rb
-  * Automatically create 'pkg' folder since git can't handle empty folders
   * Add more #inspect strings (makes Gosu easier to use with irb/Pry)
   * Assure Gosu::File also creates directories as necessary
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
@@ -150,7 +154,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Describe project structure in CONTRIBUTING.md
   * Document subimage and &entities;
   * Update the docs on how to setup C++ Gosu on Windows!
-  * Publicly discontinue Gosu.framework / gosu-mac archives
   * Split Gosu website into its own github project
   * Fork Gosu.tmbundle into its own git repository
   * Compare Gosu prefix() functions to SDL path helpers
