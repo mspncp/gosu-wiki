@@ -1,22 +1,16 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-12-06)
+(Last update: 2014-12-07)
 
 
 ## Gosu
-  * Cleanup of existing stuff
-    * Commit my MSVC library for Ruby 2.0.0, and all other static libraries while I'm at it
-    * Also build a MSVC library for the new Ruby 2.1
-    * Try compiling Gosu with Ruby 2.0 64-bit on Windows
-  * 0.9.0pre1
+  * 0.8.6 aftermatch
     * Understand CMake a bit...
-    * Split gosu GitHub project into gosu (Ruby) and libgosu (C++)?
     * Clean up CMake system and ensure it works on OS X
-    * ...ensure it works on Linux
-    * Release as 0.9.0.pre1
+    * Ensure CMake works on Linux
   * Releasy Deployment Fixes
     * See if I can reproduce this Releasy issue
     * Try to reproduce Releasy's issue #44
-  * Gosu 1.0.0-style Interface (get rid of Window references everywhere)
+  * Gosu 0.9.0-style Interface (get rid of Window references everywhere)
     * rename userDocs to userDocuments
     * Introduce one "0.9" style constructor as a proof of concept
     * Make things tileable by default but add :smooth and :pure or something like that
