@@ -22,6 +22,33 @@ sudo gem install gosu
 
 See also [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1137) for another detailed guide.
 
+## Ubuntu 12.04 (or minor)
+
+Install C++ dependencies not available by default:
+
+### Imagefree
+
+```bash
+sudo apt-get install libfreeimage3 libfreeimage-dev
+```
+
+### Sndfile
+
+Download link & instructions here: http://www.linuxfromscratch.org/blfs/view/svn/multimedia/libsndfile.html
+
+### SDL2
+
+Sources needed:
++ https://www.libsdl.org/download-2.0.php
++ https://www.libsdl.org/projects/SDL_ttf/
++ https://www.libsdl.org/projects/SDL_image/
++ https://www.libsdl.org/projects/SDL_mixer/
+
+For each source you need to:
++ Download archive
++ Extract archive
++ Compile source (```./configure && make && sudo make install```)
+
 ## Manjaro Linux (last tested on 2014-09-02 with Gosu 0.8.3)
 
 ```bash
