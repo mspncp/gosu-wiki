@@ -70,7 +70,7 @@ sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel ope
 sudo yum install --assumeyes ruby-devel rubygems
 ```
 
-## Arch Linux (last tested on 2012-09-13 with Gosu 0.8.x)
+## Arch Linux (last tested on 2014-12-09 with Gosu 0.8.x)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
