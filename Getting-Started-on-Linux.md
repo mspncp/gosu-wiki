@@ -70,13 +70,13 @@ sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel ope
 sudo yum install --assumeyes ruby-devel rubygems
 ```
 
-## Arch Linux (last tested on 2012-09-13 with Gosu 0.7.x)
+## Arch Linux (last tested on 2012-09-13 with Gosu 0.8.x)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
-sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxinerama pkg-config
+sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxinerama pkg-config sdl2_ttf sdl2
 
-# To install Ruby 1.9
+# To install Ruby
 sudo pacman -S ruby
 ```
 
