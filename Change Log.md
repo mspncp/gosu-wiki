@@ -1,6 +1,7 @@
 # Change Log
 
 ## 0.8.6
+* 2014-12-10: Windows: Add support for Ruby 2.1.x x64
 * 2014-12-06: Windows: Add support for Ruby 2.1.x
 * 2014-11-09: All: Check SDL 2 return values when creating the window
 
