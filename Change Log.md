@@ -2,6 +2,8 @@
 
 ## 0.8.6
 * 2014-12-10: Windows: Add support for Ruby 2.1.x x64
+* 2014-12-10: Windows: Update FreeImage to v3.16.0 (64-bit release only)
+* 2014-12-10: Windows: Update OpenAL soft to v1.16.0 (64-bit release only)
 * 2014-12-06: Windows: Add support for Ruby 2.1.x
 * 2014-11-09: All: Check SDL 2 return values when creating the window
 
