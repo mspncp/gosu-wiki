@@ -1,9 +1,10 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-12-07)
+(Last update: 2014-12-10)
 
 
 ## Gosu
-  * 0.8.6 aftermatch
+  * Add/update third party licenses in depencencies/
+  * 0.8.6 aftermath
     * Understand CMake a bit...
     * Clean up CMake system and ensure it works on OS X
     * Ensure CMake works on Linux
@@ -100,6 +101,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
 
 ## Gosu CI/Usability
   * Explain how to compile Ruby/Gosu in CONTRIBUTING.md
+  * Add build instructions for MSVC x64 build
   * Add Gosu & Ruby.app logos to github READMEs
   * More front page content
     * Make a three-col layout: (Ruby / C++ / more?)
