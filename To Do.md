@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-12-10)
+(Last update: 2014-12-13)
 
 
 ## Gosu
@@ -81,9 +81,10 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Apply colorKey AFTER splitting the bitmap into tiles, not before!
 
 ## Gosu .app Wrapper
-  * Build 0.8 version (must bundle SDL 2.0.4!)
-  * Add Rubygems to .app wrapper with RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
+  * Waiting for SDL 2.0.4...
   * Modify Rakefile to not ruin the installed ruby2.0.0 afterwards
+  * Build 0.8 version (must bundle SDL!)
+  * Add Rubygems to .app wrapper with RUBYLIB='' (so it doesn't use a local version), RUBYOPT = '', GEM\_PATH = 'runtime\_path/to/vendor'
   * Create Rakefile to put everything together
   * Build Retina-ready icns that still works on 10.5; see http://stackoverflow.com/questions/12772346/retina-ready-icns-icon-file-on-10-5-leopard-size-limit
   * Add more docs (e.g.: the Ruby.app lib dir can be cleaned up)
