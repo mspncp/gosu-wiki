@@ -1,11 +1,10 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-12-16)
+(Last update: 2014-12-20)
 
 
 ## Gosu
   * Add/update third party licenses in depencencies/
   * 0.8.6 aftermath
-    * Understand CMake a bit...
     * Clean up CMake system and ensure it works on OS X
     * Ensure CMake works on Linux
   * Releasy Deployment Fixes
