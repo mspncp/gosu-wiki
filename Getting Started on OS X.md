@@ -14,7 +14,7 @@ OS X ships with a decent version of Ruby, and Gosu works just fine with it after
 
 But if you are running **OS X 10.9 and have installed Xcode 6.1**, you will need to install Apple's command-line tools on top of Xcode: `xcode-select --install`; [Apple bug](https://github.com/Homebrew/homebrew/issues/33431). Also, **OS X 10.9.0 – 10.9.2** have shipped with a broken `rbconfig` file that prevented Gosu and other C extensions from being built, simply update OS X in this case; [Apple bug](https://github.com/flori/json/issues/200).
 
-**rbenv** seems to work just as well. **rvm doesn't** - it sometimes works, but the next day, it will use homebrew to install bizarre compilers behind your back, which will then fail at compiling C++ or Objective C. Please try to use rbenv or Apple's Ruby instead.
+**rbenv** seems to work just as well. **rvm doesn't** - it sometimes works, but the next day, it will use homebrew to install bizarre compilers behind your back, which will then fail at compiling C++ or Objective C. Please try to use rbenv or Apple's Ruby instead. For example, to simply switch to Apple's Ruby use `rvm use system`.
 
 ### Installing the gem
 
