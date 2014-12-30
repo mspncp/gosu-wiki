@@ -1,12 +1,9 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-12-20)
+(Last update: 2014-12-30)
 
 
 ## Gosu
   * Add/update third party licenses in depencencies/
-  * 0.8.6 aftermath
-    * Clean up CMake system and ensure it works on OS X
-    * Ensure CMake works on Linux
   * Releasy Deployment Fixes
     * See if I can reproduce this Releasy issue
     * Try to reproduce Releasy's issue #44
@@ -59,7 +56,6 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Expose Gosu Directories in Ruby
   * Make sure that Gosu::clamp prevents NaN whenever possible
   * Look at Jamer's commit re: improved image loading
-  * Add more #inspect strings (makes Gosu easier to use with irb/Pry)
   * Assure Gosu::File also creates directories as necessary
   * Find out why this could happen: 'RuntimeError: While calculating the width of a text, the following error occured: The operation completed successfully.'
   * Add Gosu::potential\_fps
