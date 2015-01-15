@@ -1,8 +1,9 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2014-12-30)
+(Last update: 2015-01-15)
 
 
 ## Gosu
+  * Clean up & check in CMake fixes
   * Add/update third party licenses in depencencies/
   * Releasy Deployment Fixes
     * See if I can reproduce this Releasy issue
