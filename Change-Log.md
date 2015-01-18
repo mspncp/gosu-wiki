@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.8.7
+* 2015-01-17: All: Improve gamepad support by using the SDL_GameController API
+* 2015-01-17: Windows: Fix LoadError in Ruby 2.1.x x64 gem
+
 ## 0.8.6
 * 2014-12-10: Windows: Add support for Ruby 2.1.x x64
 * 2014-12-10: Windows: Update FreeImage to v3.16.0 (64-bit release only)
