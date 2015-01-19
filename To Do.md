@@ -1,9 +1,10 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2015-01-15)
+(Last update: 2015-01-19)
 
 
 ## Gosu
   * Clean up & check in CMake fixes
+  * SDL: Map analog trigger buttons, forgot about those last time.
   * Add/update third party licenses in depencencies/
   * Releasy Deployment Fixes
     * See if I can reproduce this Releasy issue
