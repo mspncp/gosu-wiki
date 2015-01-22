@@ -1,5 +1,5 @@
 This list of tasks is exported automatically from my OmniFocus projects.
-(Last update: 2015-01-19)
+(Last update: 2015-01-22)
 
 
 ## Gosu
@@ -98,7 +98,7 @@ This list of tasks is exported automatically from my OmniFocus projects.
   * Look at OpenAL for NDK apps
 
 ## Gosu CI/Usability
-  * Deactivate or fix Project of the Day script
+  * Deactivate or fix Project of the Day script (durch Slideshow ersetzen?)
   * Explain how to compile Ruby/Gosu in CONTRIBUTING.md
   * Add build instructions for MSVC x64 build
   * Add Gosu & Ruby.app logos to github READMEs
