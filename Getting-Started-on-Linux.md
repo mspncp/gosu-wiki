@@ -59,12 +59,12 @@ sudo pacman -S freeglut freeimage libegl openal pango sdl2_ttf libsndfile libxin
 sudo pacman -S ruby
 ```
 
-## Fedora (last tested on 20 with Gosu 0.7.x)
+## Fedora (last tested on 21 with Gosu 0.8.6)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo yum groupinstall --assumeyes "Development Tools"
-sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel gcc-c++
+sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL2_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel gcc-c++
 
 # To install Ruby 1.9
 sudo yum install --assumeyes ruby-devel rubygems
