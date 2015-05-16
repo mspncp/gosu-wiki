@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.9.0
+* 2015-05-16: All: New interfaces where almost is independent from Gosu::Window
+
 ## 0.8.7
 * 2015-01-17: All: Improve gamepad support by using the SDL_GameController API
 * 2015-01-17: Windows: Fix LoadError in Ruby 2.1.x x64 gem
