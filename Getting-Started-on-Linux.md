@@ -1,6 +1,6 @@
 # Getting Started on Linux
 
-(Please help us update the information below! :) Most of it refers to Gosu 0.7.x).
+Please help us keep this information up-to-date! :)
 
 ## Dependencies
 
@@ -66,7 +66,7 @@ sudo pacman -S ruby
 sudo yum groupinstall --assumeyes "Development Tools"
 sudo yum install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL2_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel gcc-c++
 
-# To install Ruby 1.9
+# To install Ruby
 sudo yum install --assumeyes ruby-devel rubygems
 ```
 
@@ -115,7 +115,7 @@ To compile Gosu, `cd` into the `cmake` subdirectory and run:
 ./build.sh
 ```
 
-If you are using debian/ubuntu you can use 
+If you are using Debian/Ubuntu, you can use 
 ```bash
 ./create_deb_package.sh
 xdg-open build/*.deb
