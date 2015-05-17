@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.9.1
+* 2015-05-17: Ruby: Fixes freeze-at-exit bug (thanks to RunnerPack for reporting this)
+* 2015-05-17: Ruby: Fixes one uninitialised variable that could affect text alignment
+* 2015-05-16: Ruby: Fixes backwards compatibility in Font#initialize
+
 ## 0.9.0
 * 2015-05-16: All: New interface where almost everything is independent from Gosu::Window
 
