@@ -185,11 +185,11 @@ public:
     
     void update()
     {
-        if (Gosu::down(Gosu::kbLeft) || Gosu::down(Gosu::gpLeft))
+        if (Gosu::Input::down(Gosu::kbLeft) || Gosu::Input::down(Gosu::gpLeft))
             player.turnLeft();
-        if (Gosu::down(Gosu::kbRight) || Gosu::down(Gosu::gpRight))
+        if (Gosu::Input::down(Gosu::kbRight) || Gosu::Input::down(Gosu::gpRight))
             player.turnRight();
-        if (Gosu::down(Gosu::kbUp) || Gosu::down(Gosu::gpButton0))
+        if (Gosu::Input::down(Gosu::kbUp) || Gosu::Input::down(Gosu::gpButton0))
             player.accelerate();
         player.move();
     }
