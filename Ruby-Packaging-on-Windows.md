@@ -7,12 +7,12 @@ In theory, ocra should be as simple as these two lines in a command prompt:
     gem install ocra
     ocra my_ruby_game.rb
 
-If you are using sound, you have to ship `fmod.dll` too. Other gems like `ruby-opengl` might require their own DLLs too. You can put them in a `lib` subdirectory and then include them on the command line:
+Other gems like `chipmunk` and `opengl` might require their own DLLs too. You can put them in a `lib` subdirectory and then include them on the command line:
 
     ocra my_ruby_game.rb lib\*
 
-To let your game find the DLLs you have to change the PATH environment like this somewhere early in your game:
+To let your game find the DLLs, you have to change the `PATH` environment variable like this somewhere early in your game:
 
-    ENV['PATH'] = File.join(GAMEROOT,"lib") + ";" + ENV['PATH']
+    ENV['PATH'] = File.join(GAMEROOT, "lib") + ";" + ENV['PATH']
 
-If you have any trouble, feel free to ask on the Gosu boards.
+If you have any questions, feel free to ask on the Gosu boards.
