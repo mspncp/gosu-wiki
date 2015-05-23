@@ -118,9 +118,9 @@ class Player
 end
 ```
 
-There are a couple of things to say about this:
+There are a couple of things to note about this:
 
-![Angles in Gosu][FIG:angles]
+[[angles2.png|alt=Angles in Gosu]]
 
   * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would move a distance of `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
   * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
@@ -327,4 +327,3 @@ That's it! Everything else is up to your imagination. If you want to see example
 
 [boards.showcase]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
 [RDoc]: https://www.libgosu.org/rdoc "Gosu RDoc Reference Documentation"
-[FIG:angles]: https://raw.githubusercontent.com/wiki/jlnr/gosu/angles2.png
