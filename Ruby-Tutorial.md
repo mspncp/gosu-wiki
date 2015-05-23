@@ -323,7 +323,7 @@ end
 
 As you can see, loading and playing sound effects couldn't be easier! See the [RDoc][] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
 
-That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the [Gosu Showcase board][boards.showcase].
+That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
 
 [boards.showcase]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
 [RDoc]: https://www.libgosu.org/rdoc "Gosu RDoc Reference Documentation"
