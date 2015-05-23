@@ -10,7 +10,7 @@ Do you want to share your game with other Mac users? Simply follow these steps:
 
 And you’re done! You should now have a fully functional .app bundle.
 
-The .app is a self-contained Ruby 2.1 installation with most of the standard library plus a few libraries that are often used together with Gosu.
+The .app is a self-contained Ruby installation with most of the standard library, plus a few libraries that are often used together with Gosu.
 
 ## Using Releasy
 
