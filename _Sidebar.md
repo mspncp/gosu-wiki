@@ -20,7 +20,6 @@
   * [[Ruby Packaging on OS X]]
   * [[Ruby Packaging on Windows]]
 * About
-  * [[Design Rationale]]
   * [[Change Log]]
   * [GitHub Issues][issues]
 * [Gosu Boards][boards]
