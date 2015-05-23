@@ -6,9 +6,7 @@ For links to translations of this tutorial (Traditional Chinese, Spanish, French
 
 ## Source code
 
-This and other example games are included with the rest of the library. For example, on OS X 10.5, the examples can be found in `/Library/Ruby/Gems/1.8/gems/gosu-<version>/examples`.
-
-If you don't have an editor that supports direct execution (TextMate, SciTE…), `cd` into the directory and run it via `ruby Tutorial.rb`.
+This and other example games can be found in the [gosu-examples](https://github.com/gosu/gosu-examples) Ruby gem.
 
 ## Down to Business
 ### 1. Overriding Window's callbacks
@@ -20,7 +18,7 @@ require 'gosu'
 
 class GameWindow < Gosu::Window
   def initialize
-    super 640, 480, false
+    super 640, 480
     self.caption = "Gosu Tutorial Game"
   end
   
@@ -34,13 +32,13 @@ end
 window = GameWindow.new
 window.show
 ```
-The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large, non-fullscreen window. It also changes the window's caption, which is empty until then.
+The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large window. It also sets the caption of the window, which is displayed in its title bar. You can create a fullscreen window by passing `:fullscreen => true` after the width and height.
 
 `update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is called 60 times per second (by default) and should contain the main game logic: move objects, handle collisions, etc.
 
-`draw()` is called afterwards and whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain the code to redraw the whole screen, and no logic whatsoever.
+`draw()` is called afterwards and whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain the code to redraw the whole screen, but no updates to the game's state.
 
-Then follows the main program. A window is created and its `show()` member function is called, which does not return until the window has been closed by the user or its own code. Tada - now you have a small black window with a title of your choice!
+Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user or by calling `close()`.
 
 A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
@@ -51,10 +49,10 @@ require 'gosu'
 
 class GameWindow < Gosu::Window
   def initialize
-    super(640, 480, false)
+    super 640, 480
     self.caption = "Gosu Tutorial Game"
     
-    @background_image = Gosu::Image.new(self, "media/Space.png", true)
+    @background_image = Gosu::Image.new("media/Space.png", :tileable => true)
   end
   
   def update
@@ -69,11 +67,11 @@ window = GameWindow.new
 window.show
 ```
 
-`Gosu::Image#initialize` takes three arguments. First, like all media resources, it is tied to a window (self). All of Gosu's resources need a Window for initialization and will hold an internal reference to that window. Second, the file name of the image file is given. The third argument specifies whether the image is to be created with hard borders. See BasicConcepts for an explanation.
+`Gosu::Image#initialize` takes two arguments, the filename and an (optional) options hash. Here we set `:tileable` to `true`, see [[Basic Concepts]] for an explanation. Basically, you should use `:tileable => true` for background images and map tiles.
 
-As mentioned in the last lesson, the window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image.
+As mentioned in the last lesson, the window's `draw()` member function is the place to draw everything, so we override it and draw our background image.
 
-The arguments are almost obvious. The image is drawn at (0;0) - the third argument is the Z position; again, see [[Basic Concepts]].
+The image is drawn at (0;0) - the third argument is the Z position; again, see [[Basic Concepts]].
 
 #### 2.1 Player & movement
 
@@ -81,8 +79,8 @@ Here comes a simple player class:
 
 ```ruby
 class Player
-  def initialize(window)
-    @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
+  def initialize
+    @image = Gosu::Image.new("media/Starfighter.bmp")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
   end
@@ -124,34 +122,34 @@ There are a couple of things to say about this:
 
 ![Angles in Gosu][FIG:angles]
 
-  * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would pass `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
-  * When loading BMP files, Gosu replaces `0xff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
+  * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would move a distance of `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
+  * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
   * Note that `draw_rot` puts the *center* of the image at (x; y) - *not* the upper left corner as draw does! This can be controlled by the `center_x`/`center_y` arguments if you want.
   * The player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later.
-  * Also, see the [rdoc][] for all drawing methods and arguments.
+  * Also, see the [RDoc][] for all drawing methods and arguments.
 
-#### 2.2 Integrating Player with the Window
+#### 2.2 Using our Player class inside Window
 
 ```ruby
 class GameWindow < Gosu::Window
   def initialize
-    super(640, 480, false)
+    super 640, 480
     self.caption = "Gosu Tutorial Game"
 
-    @background_image = Gosu::Image.new(self, "media/Space.png", true)
+    @background_image = Gosu::Image.new("media/Space.png", :tileable => true)
 
-    @player = Player.new(self)
+    @player = Player.new
     @player.warp(320, 240)
   end
 
   def update
-    if button_down? Gosu::KbLeft or button_down? Gosu::GpLeft then
+    if Gosu::button_down? Gosu::KbLeft or Gosu::button_down? Gosu::GpLeft then
       @player.turn_left
     end
-    if button_down? Gosu::KbRight or button_down? Gosu::GpRight then
+    if Gosu::button_down? Gosu::KbRight or Gosu::button_down? Gosu::GpRight then
       @player.turn_right
     end
-    if button_down? Gosu::KbUp or button_down? Gosu::GpButton0 then
+    if Gosu::button_down? Gosu::KbUp or Gosu::button_down? Gosu::GpButton0 then
       @player.accelerate
     end
     @player.move
@@ -174,8 +172,8 @@ window.show
 ```
 
 As you can see, we have introduced keyboard and gamepad input!
-Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overridden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see [rdoc][]).
-While getting feedback on pushed buttons is suitable for one-time events such as UI interaction, jumping or typing, it is rather useless for actions that span several frames - for example, moving by holding buttons down. This is where the update() member function comes into play, which only calls the player's movement methods. If you run this lesson's code, you should be able to fly around!
+Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overridden, and do nothing by default. We do this here to close the window when the user presses ESC. (For a list of predefined button constants, see the [RDoc][]).
+While getting feedback on pushed buttons via `button_down` is suitable for one-time events such as UI interaction, jumping or typing, it is not place to implement actions that span several frames - for example, moving by holding buttons down. This is where the `update()` member function comes into play, which calls the player's movement methods depending on which buttons are held down during this frame. If you run this lesson's code, you should be able to fly around!
 
 ### 3. Simple animations
 
@@ -187,7 +185,7 @@ module ZOrder
 end
 ```
 
-What is an animation? A sequence of images - so we'll use Ruby's built in Arrays to store them. (For a real game, there is no way around writing some classes that fit the game's individual needs, but we'll get away with this simple solution for now.)
+What is an animation? A sequence of images - so we'll use Ruby's built in `Array` to store them. (Feel free to write utility classes for animations in your game.)
 
 Let's introduce the stars which are the central object of this lesson. Stars appear out of nowhere at a random place on the screen and live their animated lives until the player collects them. The definition of the Star class is rather simple:
 
@@ -197,7 +195,7 @@ class Star
 
   def initialize(animation)
     @animation = animation
-    @color = Gosu::Color.new(0xff000000)
+    @color = Gosu::Color.new(0xff_000000)
     @color.red = rand(256 - 40) + 40
     @color.green = rand(256 - 40) + 40
     @color.blue = rand(256 - 40) + 40
@@ -240,15 +238,15 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
 ...
 class Window < Gosu::Window
   def initialize
-    super(640, 480, false)
+    super 640, 480
     self.caption = "Gosu Tutorial Game"
 
-    @background_image = Gosu::Image.new(self, "media/Space.png", true)
+    @background_image = Gosu::Image.new("media/Space.png", :tileable => true)
 
-    @player = Player.new(self)
+    @player = Player.new
     @player.warp(320, 240)
 
-    @star_anim = Gosu::Image::load_tiles(self, "media/Star.png", 25, 25, false)
+    @star_anim = Gosu::Image::load_tiles("media/Star.png", 25, 25)
     @stars = Array.new
   end
 
@@ -280,7 +278,7 @@ Finally, we want to draw the current score using a bitmap font and play a 'beep'
 class Window < Gosu::Window
   def initialize
     ...
-    @font = Gosu::Font.new(self, Gosu::default_font_name, 20)
+    @font = Gosu::Font.new(20)
   end
 
   ...
@@ -289,7 +287,7 @@ class Window < Gosu::Window
     @background_image.draw(0, 0, ZOrder::Background)
     @player.draw
     @stars.each { |star| star.draw }
-    @font.draw("Score: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xffffff00)
+    @font.draw("Score: #{@player.score}", 10, 10, ZOrder::UI, 1.0, 1.0, 0xff_ffff00)
   end
 end
 ```
@@ -300,9 +298,9 @@ What's left for the player? Right: A counter for the score, loading the sound an
 class Player
   attr_reader :score
 
-  def initialize(window)
-    @image = Gosu::Image.new(window, "media/Starfighter.bmp", false)
-    @beep = Gosu::Sample.new(window, "media/Beep.wav")
+  def initialize
+    @image = Gosu::Image.new("media/Starfighter.bmp")
+    @beep = Gosu::Sample.new("media/Beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
   end
@@ -323,10 +321,10 @@ class Player
 end
 ```
 
-As you can see, loading and playing sound effects couldn't be easier! See the [rdoc][] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
+As you can see, loading and playing sound effects couldn't be easier! See the [RDoc][] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
 
 That's it! Everything else is up to your imagination. If you can't imagine how this is enough to create games, take a look at the examples on the [Gosu Showcase board][boards.showcase].
 
-[boards.showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
-[rdoc]: http://www.libgosu.org/rdoc "Gosu RDoc Reference Documentation"
-[FIG:angles]: http://www.libgosu.org/wiki_images/angles2.png
+[boards.showcase]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
+[RDoc]: https://www.libgosu.org/rdoc "Gosu RDoc Reference Documentation"
+[FIG:angles]: https://raw.githubusercontent.com/wiki/jlnr/gosu/angles2.png
