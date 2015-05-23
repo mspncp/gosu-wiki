@@ -27,7 +27,7 @@ class GameWindow : public Gosu::Window
 {
 public:
     GameWindow()
-    :   Window(640, 480, false)
+    :   Window(640, 480)
     {
         setCaption(L"Gosu Tutorial Game");
     }
@@ -50,7 +50,7 @@ int main()
 }
 ```
 
-The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large, non-fullscreen window. Then it changes the caption, which is empty until then. Note that Gosu uses `std::wstring` almost everywhere.
+The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large window. Then it changes the caption, which is empty until then. Note that Gosu uses `std::wstring` almost everywhere.
 
 `update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is (by default) called 60 times per second and should contain the main game logic, such as moving objects around and testing for collisions.
 
@@ -69,14 +69,12 @@ class GameWindow : public Gosu::Window
 
 public:
     GameWindow()
-    :   Window(640, 480, false),
-        font(graphics(), Gosu::defaultFontName(), 20),
-        player(graphics())
+    :   Window(640, 480), font(20), player()
     {
         setCaption(L"Gosu Tutorial Game");
 
         std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
-        backgroundImage.reset(new Gosu::Image(graphics(), filename, true));
+        backgroundImage.reset(new Gosu::Image(filename, Gosu::ifTileable));
     }
 
     void update()
@@ -91,12 +89,11 @@ public:
 };
 ```
 
-*Note:* `Image` has no default constructor as Gosu does not support empty zombie images. An `auto_ptr` is used here so we can delay the actual creation of the image. The new `unique_ptr`in C++0x or `boost::optional` from the Boost library do the trick as well, or you could just use the Image as a direct member and initialize it in the initializer list, as we will do in another class.
-Of course, if you want to use a raw pointer and `new`/`delete`, we cannot stop you either.
+*Note:* `Image` has no default constructor, as it is not clear how a default-constructed `Gosu::Image` should behave. You can use `auto_ptr`, `unique_ptr` (new in C++11), `boost::optional` or raw pointers when you want to delay the creation of an image.
 
-`Gosu::Image`'s constructor takes three arguments. First, it is tied to a Graphics instance (`graphics()` yields the Window's embedded Graphics object). Second, the filename of the image file is given. Note the `resourcePrefix` function, which returns The Right Thing; see the reference for more information. The third argument specifies whether the image is to be created with hard or soft borders when tiling. See [[BasicConcepts]] for an explanation. It is ignored in this Tutorial. When in doubt, pass true.
+`Gosu::Image`'s constructor takes two arguments, the filename of the image file is given and "image flags". Here we pass `ifTileable`, see [[Basic Concepts]] for an explanation; basically, you should use it for map tiles and background images.
 
-As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at `0, 0` - the third image is the Z position; again, see [[BasicConcepts]].
+As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at `0, 0` - the third image is the Z position; again, see [[Basic Concepts]].
 
 #### 2.1. Player & Movement
 
@@ -109,8 +106,8 @@ class Player
     double posX, posY, velX, velY, angle;
         
     public:
-        explicit Player(Gosu::Graphics& graphics)
-        :   image(graphics, Gosu::resourcePrefix() + L"media/Starfighter.bmp")
+        Player()
+        :   image(Gosu::resourcePrefix() + L"media/Starfighter.bmp")
         {
             posX = posY = velX = velY = angle = 0;
         }
@@ -155,7 +152,7 @@ class Player
     };
 ```
 
-There are a couple of things to say about this:
+There are a couple of things to note about this:
 
 [[angles2.png|alt=Angles in Gosu]]
 
@@ -176,24 +173,23 @@ class GameWindow : public Gosu::Window
         
 public:
     GameWindow()
-    :   Window(640, 480, false),
-        player(graphics())
+    :   Window(640, 480)
     {
         setCaption(L"Gosu Tutorial Game");
         
         std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
-        backgroundImage.reset(new Gosu::Image(graphics(), filename, true));
+        backgroundImage.reset(new Gosu::Image(filename, Gosu::ifTileable));
         
         player.warp(320, 240);
     }
     
     void update()
     {
-        if (input().down(Gosu::kbLeft) || input().down(Gosu::gpLeft))
+        if (Gosu::down(Gosu::kbLeft) || Gosu::down(Gosu::gpLeft))
             player.turnLeft();
-        if (input().down(Gosu::kbRight) || input().down(Gosu::gpRight))
+        if (Gosu::down(Gosu::kbRight) || Gosu::down(Gosu::gpRight))
             player.turnRight();
-        if (input().down(Gosu::kbUp) || input().down(Gosu::gpButton0))
+        if (Gosu::down(Gosu::kbUp) || Gosu::down(Gosu::gpButton0))
             player.accelerate();
         player.move();
     }
@@ -319,16 +315,15 @@ class GameWindow : public Gosu::Window
     
 public:
     GameWindow()
-    :   Window(640, 480, false),
-        player(graphics())
+    :   Window(640, 480)
     {
         setCaption(L"Gosu Tutorial Game");
         
         std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
-        backgroundImage.reset(new Gosu::Image(graphics(), filename, true));
+        backgroundImage.reset(new Gosu::Image(filename, Gosu::ifTileable));
         
         filename = Gosu::resourcePrefix() + L"media/Star.png";
-        Gosu::imagesFromTiledBitmap(graphics(), filename, 25, 25, false, starAnim);
+        starAnim = Gosu::loadTiles(filename, 25, 25);
         
         player.warp(320, 240);
     }
@@ -380,9 +375,7 @@ public:
     ...
     
     GameWindow()
-    :   Window(640, 480, false),
-        font(graphics(), Gosu::defaultFontName(), 20),
-        player(graphics())
+    :   Window(640, 480, false), font(20)
     {
         ...
     }
@@ -403,7 +396,7 @@ public:
         std::wstringstream score;
         score << L"Score: "; 
         score << player.getScore();
-        font.draw(score.str(), 10, 10, zUI, 1, 1, Gosu::Colors::yellow);
+        font.draw(score.str(), 10, 10, zUI, 1, 1, Gosu::Color::YELLOW);
     }
 };
 ```
@@ -419,8 +412,8 @@ class Player
     unsigned score;
     
 public:
-    Player(Gosu::Graphics& graphics)
-    :   image(graphics, Gosu::resourcePrefix() + L"media/Starfighter.bmp"),
+    Player()
+    :   image(Gosu::resourcePrefix() + L"media/Starfighter.bmp"),
         beep(Gosu::resourcePrefix() + L"media/Beep.wav")
     {
         posX = posY = velX = velY = angle = 0;
