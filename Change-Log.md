@@ -1,6 +1,7 @@
 # Change Log
 
 ## 0.9.2
+* 2015-05-24: Windows: Support for Ruby 2.2.x
 * 2015-05-24: All: Allow macro recording outside of Window::draw
 * 2015-05-23: All: Use new SDL_GetGlobalMouseState function if available
 
