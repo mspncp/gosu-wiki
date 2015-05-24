@@ -44,10 +44,10 @@
 * 2014-08-19: Windows: Fix a non-deterministic crash when loading TTF files.
 * 2014-08-19: Windows: Fix audio crashes caused by updating to an unmodified OpenAL Soft 1.16.0.
 * 2014-08-19: All: Fix a bug where the mouse wheel would either trigger `button_up` or `button_down`, but not both.
-* 2014-08-11: All: Refactor (fix) `GOSU_COPYRIGHT_NOTICE`.
 
 ## 0.8.0
-* Gosu now uses SDL 2.x as its backend. This implicitly fixes Mac fullscreen support, and makes it possible to use Gosu on the Raspberry Pi.
+* 2014-08-18: Gosu now uses SDL 2.x as its backend. This implicitly fixes Mac fullscreen support, and makes it possible to use Gosu on the Raspberry Pi.
+* 2014-08-11: All: Refactor (fix) `GOSU_COPYRIGHT_NOTICE`.
 
 ## 0.7.50
 * 2013-11-06: Ruby: Fix various glitches in the SWIG-generated Ruby interface
@@ -532,4 +532,4 @@
 * MSVC: removed non-working MSVC6 compatibility (hopeless)
 
 ## 0.3.0
-(initial public release)
+(initial public release based on internal libraries)
