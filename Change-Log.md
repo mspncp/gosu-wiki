@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.9.2
+* 2015-05-24: All: Allow macro recording outside of Window::draw
+* 2015-05-23: All: Use new SDL_GetGlobalMouseState function if available
+
 ## 0.9.1
 * 2015-05-17: Ruby: Fixes freeze-at-exit bug (thanks to RunnerPack for reporting this)
 * 2015-05-17: Ruby: Fixes one uninitialised variable that could affect text alignment
