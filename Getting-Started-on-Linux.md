@@ -130,11 +130,13 @@ On all other systems you can use this to install Gosu - but be aware, there is n
 sudo make install
 ```
 
-## Using Gosu in C++ with cmake
+## Using Gosu in C++ with CMake
 
-Have a look at the examples, the example `CMakeLists.txt` are short, commented and straight forward.
+Have a look at the examples. The example `CMakeLists.txt` are short, commented and straight forward, and can be used as a starting point for your own Gosu C++ games:
 
-## Using Gosu in C++ without cmake
+https://github.com/gosu/gosu/blob/master/examples/Tutorial/CMakeLists.txt
+
+## Using Gosu in C++ without CMake
 
 (The following assumes that you have installed Gosu system-wide. Note: This hasn't been tested in a while...)
 
