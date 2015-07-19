@@ -107,32 +107,32 @@ sudo zypper install ruby-devel
 sudo gem install gosu
 ```
 
-## Compiling Gosu for C++ (last tested with Gosu 0.7.x)
+## Compiling Gosu for C++
 
 To compile Gosu, `cd` into the `cmake` subdirectory and run:
 
 ```bash
-./build.sh
+mkdir -p build
+cd build
+cmake ..
+make
 ```
 
-If you are using Debian/Ubuntu, you can use 
+If you are using Debian/Ubuntu, you can use this to install Gosu:
+
 ```bash
 ./create_deb_package.sh
 xdg-open build/*.deb
 ```
-On all other systems you can run, but be aware, there is no uninstall target
+On all other systems you can use this to install Gosu - but be aware, there is no uninstall target. Run it inside `build`, after running `make`.
+
 ```bash
-cd build
 sudo make install
 ```
 
 ## Using Gosu in C++ with cmake
 
-Have a look at the examples, the example CMakeLists.txt are short, commented and straight forward.
-
-```CMakeLists.txt
-Find_Library(gosu REQUIRED)
-```
+Have a look at the examples, the example `CMakeLists.txt` are short, commented and straight forward.
 
 ## Using Gosu in C++ without cmake
 
