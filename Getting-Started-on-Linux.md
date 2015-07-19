@@ -145,6 +145,6 @@ OBJS = main.o player.o
 CXXFLAGS += `pkg-config --cflags gosu`
 LIBS = `pkg-config --libs gosu`
 
-myGame: $(OBJS) libgosu.a
+myGame: $(OBJS)
         g++ -o myGame $(OBJS) libgosu.a $(LIBS)
 ```
