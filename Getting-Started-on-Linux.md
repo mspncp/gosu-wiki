@@ -136,7 +136,7 @@ Have a look at the examples, the example `CMakeLists.txt` are short, commented a
 
 ## Using Gosu in C++ without cmake
 
-(The following assumes that you have installed Gosu system-wide)
+(The following assumes that you have installed Gosu system-wide. Note: This hasn't been tested in a while...)
 
 You have to compile with `` `pkg-config --cflags gosu` `` and `` `pkg-config --libs gosu` ``, so a simple Makefile could look like this:
 
