@@ -22,7 +22,7 @@ sudo gem install gosu
 
 See also [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1137) for another detailed guide.
 
-## Ubuntu 12.04 (or minor)
+## Ubuntu 12.04 (or below)
 
 Install C++ dependencies not available by default:
 
@@ -36,18 +36,20 @@ sudo apt-get install libfreeimage3 libfreeimage-dev
 
 Download link & instructions here: http://www.linuxfromscratch.org/blfs/view/svn/multimedia/libsndfile.html
 
-### SDL2
+### SDL 2
 
 Sources needed:
 + https://www.libsdl.org/download-2.0.php
 + https://www.libsdl.org/projects/SDL_ttf/
-+ https://www.libsdl.org/projects/SDL_image/
-+ https://www.libsdl.org/projects/SDL_mixer/
 
 For each source you need to:
 + Download archive
 + Extract archive
 + Compile source (```./configure && make && sudo make install```)
+
+## Debian 8 with Nvidia GPU
+
+Please see [this post on the Gosu forum](https://www.libgosu.org/cgi-bin/mwf/topic_show.pl?pid=8476#pid8476) if you run into trouble installing Gosu, or anything else that uses OpenGL.
 
 ## Manjaro Linux (last tested on 2014-09-02 with Gosu 0.8.3)
 
