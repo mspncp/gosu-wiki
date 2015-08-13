@@ -53,7 +53,7 @@ class GameWindow < Gosu::Window
     super 640, 480
     self.caption = "Gosu Tutorial Game"
     
-    @background_image = Gosu::Image.new("media/Space.png", :tileable => true)
+    @background_image = Gosu::Image.new("media/space.png", :tileable => true)
   end
   
   def update
@@ -68,7 +68,7 @@ window = GameWindow.new
 window.show
 ```
 
-(At this point, please download [space.png](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/space.png) and ensure that it is reachable via `media/space.png`.)
+(At this point, please download [space.png](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/space.png) and ensure that it can be found at `media/space.png`.)
 
 `Gosu::Image#initialize` takes two arguments, the filename and an (optional) options hash. Here we set `:tileable` to `true`, see [[Basic Concepts]] for an explanation. Basically, you should use `:tileable => true` for background images and map tiles.
 
@@ -121,17 +121,17 @@ class Player
 end
 ```
 
-(Please download [starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/starfighter.bmp) and ensure that it is reachable via `media/starfighter.bmp`.)
+(Please download [starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/starfighter.bmp) and ensure that it can be found at `media/starfighter.bmp`.)
 
 There are a couple of things to note about this:
 
 [[angles2.png|alt=Angles in Gosu]]
 
   * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would move a distance of `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
-  * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
-  * Note that `draw_rot` puts the *center* of the image at (x, y) - *not* the upper left corner as draw does! This can be controlled by the `center_x`/`center_y` arguments if you want.
+  * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta/magic pink) with transparent pixels.
+  * Note that `draw_rot` puts the *center* of the image at (x, y) - *not* the upper left corner as `draw` does! This can be controlled by the `center_x`/`center_y` arguments if you want.
   * The player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later.
-  * Also, see the [RDoc][] for all drawing methods and arguments.
+  * See the [RDoc][] for all drawing methods and arguments.
 
 #### 2.2 Using our Player class inside Window
 
@@ -141,7 +141,7 @@ class GameWindow < Gosu::Window
     super 640, 480
     self.caption = "Gosu Tutorial Game"
 
-    @background_image = Gosu::Image.new("media/Space.png", :tileable => true)
+    @background_image = Gosu::Image.new("media/space.png", :tileable => true)
 
     @player = Player.new
     @player.warp(320, 240)
@@ -246,12 +246,12 @@ class Window < Gosu::Window
     super 640, 480
     self.caption = "Gosu Tutorial Game"
 
-    @background_image = Gosu::Image.new("media/Space.png", :tileable => true)
+    @background_image = Gosu::Image.new("media/space.png", :tileable => true)
 
     @player = Player.new
     @player.warp(320, 240)
 
-    @star_anim = Gosu::Image::load_tiles("media/Star.png", 25, 25)
+    @star_anim = Gosu::Image::load_tiles("media/star.png", 25, 25)
     @stars = Array.new
   end
 
@@ -272,6 +272,8 @@ class Window < Gosu::Window
   end
   ...
 ```
+
+(Please download [star.png](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/star.png) and ensure that it can be found at `media/star.png`.)
 
 Done! You can now collect stars.
 
@@ -304,8 +306,8 @@ class Player
   attr_reader :score
 
   def initialize
-    @image = Gosu::Image.new("media/Starfighter.bmp")
-    @beep = Gosu::Sample.new("media/Beep.wav")
+    @image = Gosu::Image.new("media/starfighter.bmp")
+    @beep = Gosu::Sample.new("media/beep.wav")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
   end
@@ -326,7 +328,9 @@ class Player
 end
 ```
 
-As you can see, loading and playing sound effects couldn't be easier! See the [RDoc][] for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
+(Please download [beep.wav](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/beep.wav) and ensure that it can be found at `media/beep.wav`.)
+
+As you can see, loading and playing sound effects couldn't be easier! See the [RDoc][] for more powerful ways of playing back sounds.
 
 That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
 
