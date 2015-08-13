@@ -6,12 +6,12 @@ For links to translations of this tutorial (Traditional Chinese, Spanish, French
 
 ## Source code
 
-This and other example games can be found in the [gosu-examples](https://github.com/gosu/gosu-examples) Ruby gem.
+The code and assets for this example and others can be found in the [gosu-examples](https://github.com/gosu/gosu-examples) Ruby gem. Simply `gem install gosu-examples` and then run `gosu-examples`.
 
 ## Down to Business
 ### 1. Overriding Window's callbacks
 
-The easiest way to create a complete Gosu application is to write a new class that derives from Gosu::Window (see the reference for a complete description of its interface). Here's how a minimal GameWindow class might look like:
+Every Gosu application starts with a class that derives from [Gosu::Window](https://www.libgosu.org/rdoc/Gosu/Window.html). A minimal window class looks like this:
 
 ```ruby
 require 'gosu'
@@ -32,13 +32,14 @@ end
 window = GameWindow.new
 window.show
 ```
+
 The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large window. It also sets the caption of the window, which is displayed in its title bar. You can create a fullscreen window by passing `:fullscreen => true` after the width and height.
 
-`update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is called 60 times per second (by default) and should contain the main game logic: move objects, handle collisions, etc.
+`update()` and `draw()` are overrides of `Gosu::Window`'s methods. `update()` is called 60 times per second (by default) and should contain the main game logic: move objects, handle collisions, etc.
 
 `draw()` is called afterwards and whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain the code to redraw the whole screen, but no updates to the game's state.
 
-Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user or by calling `close()`.
+Then follows the main program. We create a window and call its `show()` method, which does not return until the window has been closed by the user or by calling `close()`.
 
 A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
@@ -67,11 +68,13 @@ window = GameWindow.new
 window.show
 ```
 
+(At this point, please download [space.png](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/space.png) and ensure that it is reachable via `media/space.png`.)
+
 `Gosu::Image#initialize` takes two arguments, the filename and an (optional) options hash. Here we set `:tileable` to `true`, see [[Basic Concepts]] for an explanation. Basically, you should use `:tileable => true` for background images and map tiles.
 
 As mentioned in the last lesson, the window's `draw()` member function is the place to draw everything, so we override it and draw our background image.
 
-The image is drawn at (0;0) - the third argument is the Z position; again, see [[Basic Concepts]].
+The image is drawn at (0, 0) - the third argument is the Z position; again, see [[Basic Concepts]].
 
 #### 2.1 Player & movement
 
@@ -80,7 +83,7 @@ Here comes a simple player class:
 ```ruby
 class Player
   def initialize
-    @image = Gosu::Image.new("media/Starfighter.bmp")
+    @image = Gosu::Image.new("media/starfighter.bmp")
     @x = @y = @vel_x = @vel_y = @angle = 0.0
     @score = 0
   end
@@ -118,13 +121,15 @@ class Player
 end
 ```
 
+(Please download [starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/starfighter.bmp) and ensure that it is reachable via `media/starfighter.bmp`.)
+
 There are a couple of things to note about this:
 
 [[angles2.png|alt=Angles in Gosu]]
 
   * Player#accelerate makes use of the `offset_x`/`offset_y` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels at an angle of 30°, it would move a distance of `offset_x(30, 100)` pixels horizontally and `offset_y(30, 100)` pixels vertically.
   * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
-  * Note that `draw_rot` puts the *center* of the image at (x; y) - *not* the upper left corner as draw does! This can be controlled by the `center_x`/`center_y` arguments if you want.
+  * Note that `draw_rot` puts the *center* of the image at (x, y) - *not* the upper left corner as draw does! This can be controlled by the `center_x`/`center_y` arguments if you want.
   * The player is drawn at z=1, i.e. over the background (obviously). We'll replace these magic numbers with something better later.
   * Also, see the [RDoc][] for all drawing methods and arguments.
 
