@@ -7,7 +7,7 @@ The code for the complete game, together with the required media files, can be f
 ## The Tutorial
 ### 1. Overriding Window's callbacks
 
-The easiest way to create a complete Gosu application is to write a new class that derives from `Gosu::Window` (see the reference for a complete description of its interface). Here's how a minimal GameWindow class might look like:
+Every Gosu application starts with a class that derives from [Gosu::Window](https://www.libgosu.org/cpp/class_gosu_1_1_window.html). A minimal window class looks like this:
 
 ```cpp
 // All of Gosu.
@@ -54,9 +54,9 @@ The constructor initializes the `Gosu::Window` base class. The parameters shown 
 
 `update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is (by default) called 60 times per second and should contain the main game logic, such as moving objects around and testing for collisions.
 
-`draw()` is called afterwards or whenever the window needs redrawing for other reasons. It should contain code to redraw the whole scene, but no logic. Think of it as an side-effect free mapping from the game state to the video output.
+`draw()` is called afterwards or whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain code to redraw the whole scene, but no logic.
 
-Then follows the main program. A window is created and its `show()` member function is called, which does not return until the window has been closed by the user or its own code. Tada — now you have a small black window with a title of your choice!
+Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user or by calling `close()`.
 
 A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
@@ -89,11 +89,13 @@ public:
 };
 ```
 
-*Note:* `Image` has no default constructor, as it is not clear how a default-constructed `Gosu::Image` should behave. You can use `auto_ptr`, `unique_ptr` (new in C++11), `boost::optional` or raw pointers when you want to delay the creation of an image.
+(At this point, please download [Space.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Space.png) and ensure that it is reachable via `media/Space.png`.)
 
-`Gosu::Image`'s constructor takes two arguments, the filename of the image file is given and "image flags". Here we pass `ifTileable`, see [[Basic Concepts]] for an explanation; basically, you should use it for map tiles and background images.
+*Note:* `Image` has no default constructor so that there cannot be any 'zombie' images. You can use `auto_ptr`, `unique_ptr` (new in C++11), `boost::optional` or raw pointers when you want to delay the creation of an image.
 
-As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at `0, 0` - the third image is the Z position; again, see [[Basic Concepts]].
+`Gosu::Image`'s constructor takes two arguments, the filename of the image file is given and "image flags". Here we pass `ifTileable`, see [[Basic Concepts]] for an explanation. Basically, you should use this flag for map tiles and background images.
+
+As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at (0, 0) - the third image is the Z position; again, see [[Basic Concepts]].
 
 #### 2.1. Player & Movement
 
@@ -151,6 +153,8 @@ class Player
         }
     };
 ```
+
+(Please download [Starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Starfighter.bmp) and ensure that it is reachable via `media/starfighter.bmp`.)
 
 There are a couple of things to note about this:
 
