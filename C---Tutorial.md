@@ -89,7 +89,7 @@ public:
 };
 ```
 
-(At this point, please download [Space.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Space.png) and ensure that it is reachable via `media/Space.png`.)
+(At this point, please download [Space.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Space.png) and ensure that it can be found at `media/Space.png`.)
 
 *Note:* `Image` has no default constructor so that there cannot be any 'zombie' images. You can use `auto_ptr`, `unique_ptr` (new in C++11), `boost::optional` or raw pointers when you want to delay the creation of an image.
 
@@ -154,7 +154,7 @@ class Player
     };
 ```
 
-(Please download [Starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Starfighter.bmp) and ensure that it is reachable via `media/starfighter.bmp`.)
+(Please download [Starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Starfighter.bmp) and ensure that it can be found at `media/starfighter.bmp`.)
 
 There are a couple of things to note about this:
 
@@ -359,6 +359,8 @@ public:
 };
 ```
 
+(At this point, please download [Star.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Star.png) and ensure that it can be found at `media/Star.png`.)
+
 Done! You can now collect stars.
 
 ### 4. Text and Sound
@@ -443,8 +445,10 @@ public:
 ...
 ```
 
-As you can see, loading and playing sound effects could hardly be easier. See the reference for more powerful ways of playing back sounds - fiddle around with volume, position and pitch.
+(At this point, please download [Beep.wav](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Beep.wav) and ensure that it can be found at `media/Beep.wav`.)
 
-That's it! Everything else is up to your imagination. If you cannot imagine how this is enough to create games, see the games on the [Gosu Showcase board][showcase].
+As you can see, loading and playing sound effects could hardly be easier. See the reference for more powerful ways of playing back sounds.
 
-[showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
+That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
+
+[boards.showcase]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2 "Gosu Showcase Board"
