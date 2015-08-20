@@ -1,7 +1,9 @@
 # Change Log
 
 ## 0.10.0
+* 2015-08-20: Xcode: The `Gosu.podspec` for OS X and iOS is now versioned, instead of being stuck at v0.0.1
 * 2015-08-19: Windows: Upgrade to Visual C++ 2015 (the free Express Desktop edition works)
+* 2015-08-19: C++: Sockets have been extracted to https://github.com/jlnr/Sockets; RIP!
 * 2015-08-17: All: Use stb_image(_write) for image I/O instead of GDI+, FreeImage, UIImage/NSImage etc.
 * 2015-08-15: All: Use stb_vorbis for OGG decoding instead of libogg/libvorbis/libvorbisfile
 * 2015-07-26: Unix: Fix CMake build files
