@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.10.1
+* 2015-08-20: Windows/Linux: Fix audio playback of stereo, non-Ogg-Vorbis files (https://github.com/gosu/gosu/issues/237)
+- 2015-08-20: Ruby: Fix `:retro:` parameter in `Image.load_tiles` and `Image.from_text`
+
 ## 0.10.0
 * 2015-08-20: Xcode: The `Gosu.podspec` for OS X and iOS is now versioned, instead of being stuck at v0.0.1
 * 2015-08-19: Windows: Upgrade to Visual C++ 2015 (the free Express Desktop edition works)
