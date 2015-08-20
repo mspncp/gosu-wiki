@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.10.0
+* 2015-08-19: Windows: Upgrade to Visual C++ 2015 (the free Express Desktop edition works)
+* 2015-08-17: All: Use stb_image(_write) for image I/O instead of GDI+, FreeImage, UIImage/NSImage etc.
+* 2015-08-15: All: Use stb_vorbis for OGG decoding instead of libogg/libvorbis/libvorbisfile
+* 2015-07-26: Unix: Fix CMake build files
+* 2015-07-22: All: Add new `ifRetro`/`:retro` parameter to image constructors
+* 2015-07-15: Ruby: Fix mouse position getter/setter interaction
+
 ## 0.9.2
 * 2015-05-24: Windows: Support for Ruby 2.2.x
 * 2015-05-24: All: Allow macro recording outside of Window::draw
