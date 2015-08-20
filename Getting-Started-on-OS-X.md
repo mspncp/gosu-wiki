@@ -4,9 +4,11 @@
 
 ### Prerequisites
 
-Gosu 0.8.x+ is built on top of the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2 libogg libvorbis`.
+Gosu 0.8.x+ is built on top of the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2`.
 
 Note: If you are adventurous, you can also install a pre-release version of SDL: `brew install sdl2 --HEAD`. This has fixed a few HiDPI-related bugs for me.
+
+Note: Gosu 0.10.0 does not require the `libogg` and `libvorbis` libraries anymore. If you want to install Gosu 0.8.x or 0.9.x, you will have to `brew install libogg libvorbis`.
 
 ### System Ruby (good) vs rbenv (good) vs rvm (bad)
 
