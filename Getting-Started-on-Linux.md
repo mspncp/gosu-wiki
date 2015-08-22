@@ -26,12 +26,6 @@ See also [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?ti
 
 Install C++ dependencies not available by default:
 
-### Imagefree
-
-```bash
-sudo apt-get install libfreeimage3 libfreeimage-dev
-```
-
 ### Sndfile
 
 Download link & instructions here: http://www.linuxfromscratch.org/blfs/view/svn/multimedia/libsndfile.html
