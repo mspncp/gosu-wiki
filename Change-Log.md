@@ -1,8 +1,14 @@
 # Change Log
 
+## 0.10.2
+* 2015-09-15: All: Fix many common text rendering artefacts
+* 2015-09-15: Mac: Fix compilation error on OS X 10.11 El Capitan
+* 2015-09-13: All: Add experimental `Window#tick` method to potential integration with GUI toolkits
+* 2015-09-07: Windows: Update to SDL 2.0.4 RC 2
+
 ## 0.10.1
 * 2015-08-20: Windows/Linux: Fix audio playback of stereo, non-Ogg-Vorbis files (https://github.com/gosu/gosu/issues/237)
-- 2015-08-20: Ruby: Fix `:retro` parameter in `Image.load_tiles` and `Image.from_text`
+* 2015-08-20: Ruby: Fix `:retro` parameter in `Image.load_tiles` and `Image.from_text`
 
 ## 0.10.0
 * 2015-08-20: Xcode: The `Gosu.podspec` for OS X and iOS is now versioned, instead of being stuck at v0.0.1
