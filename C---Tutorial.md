@@ -69,7 +69,7 @@ class GameWindow : public Gosu::Window
 
 public:
     GameWindow()
-    :   Window(640, 480), font(20), player()
+    :   Window(640, 480), font(20)
     {
         setCaption(L"Gosu Tutorial Game");
 
@@ -84,7 +84,7 @@ public:
 
     void draw()
     {
-        // ...
+        backgroundImage->draw(0, 0, 0);
     }
 };
 ```
@@ -138,10 +138,8 @@ class Player
         
         void move()
         {
-            posX += velX;
-            posX = Gosu::wrap(posX, 0.0, 640.0);
-            posY += velY;
-            posY = Gosu::wrap(posY, 0.0, 480.0);
+            posX = Gosu::wrap(posX + velX, 0.0, 640.0);
+            posY = Gosu::wrap(posY + velY, 0.0, 480.0);
 
             velX *= 0.95;
             velY *= 0.95;
@@ -161,10 +159,10 @@ There are a couple of things to note about this:
 [[angles2.png|alt=Angles in Gosu]]
 
   * `Player::accelerate` makes use of the `offsetX`/`offsetY` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels per frame at an angle of 30°, it would pass `offsetX(30, 100)` pixels horizontally and `offsetY(30, 100)` pixels vertically per frame.
-  * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta; that really ugly pink) with transparent pixels.
+  * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta/'magic pink') with transparent pixels.
   * Note that `drawRot` puts the *center* of the image at `x, y` - *not* the upper left corner, as with draw. Also, the player is drawn at `z = 1`, i.e. over the background. We'll replace these magic numbers with something better later. Also, see the reference for all the drawing methods and arguments.
-  * `Gosu::wrap(what, min, max)` maps a value inside the *min..max* range. If the player leaves the screen on the left side, he will enter it from the right side etc. -- if you wanted to disable this "wraparound" feature, you could use `Gosu::clamp(what, min, max)` instead.
-  * The player just loads the image straight in the initializer list, unlike the Window which did it a bit more complicated.
+  * `Gosu::wrap(what, min, max)` maps a value inside the *min..max* range. If the player leaves the screen on the left side, they will re-appear from the right side etc. -- if you want to disable this wraparound, use `Gosu::clamp(what, min, max)` instead.
+  * The player just loads the image straight in the initializer list, unlike the Window which used a pointer.
 
 #### 2.2. Integrating Player with the Window
 
@@ -236,10 +234,6 @@ What is an animation? A sequence of images. A simple Animation type might look l
 
     typedef std::vector<Gosu::Image> Animation;
 
-For historical reasons, this Tutorial still uses a more complicated type:
-
-    typedef std::vector<std::tr1::shared_ptr<Gosu::Image> > Animation;
-
 For a real game, there is no way around writing some classes that fit the game's individual needs, but we'll get away with this solution for now.
 
 Let's introduce the stars which are the central object of this lesson. Stars appear out of nowhere at a random place on the screen and live their animated lives until the player collects them. The definition of the Star class is rather simple:
@@ -247,12 +241,12 @@ Let's introduce the stars which are the central object of this lesson. Stars app
 ```cpp
 class Star
 {
-    Animation& animation;
+    Animation animation;
     Gosu::Color color;
     double posX, posY;
 
 public:
-    explicit Star(Animation& animation)
+    explicit Star(Animation animation)
     :   animation(animation)
     {
         color.setAlpha(255);
@@ -272,8 +266,8 @@ public:
 
     void draw() const
     {
-        Gosu::Image& image =
-            *animation.at(Gosu::milliseconds() / 100 % animation.size());
+        const Gosu::Image& image =
+            animation.at(Gosu::milliseconds() / 100 % animation.size());
 
         image.draw(posX - image.width() / 2.0, posY - image.height() / 2.0,
             zStars, 1, 1, color, Gosu::amAdd);
@@ -347,12 +341,8 @@ public:
     {
         player.draw();
         backgroundImage->draw(0, 0, 0); 
-        for (std::list<Star>::const_iterator i = stars.begin();
-            i != stars.end(); ++i)
-        {
-            i->draw();
-        }
-    
+        for (Star& star : stars)
+            star.draw();
     }
     
     ...
@@ -381,7 +371,7 @@ public:
     ...
     
     GameWindow()
-    :   Window(640, 480, false), font(20)
+    :   Window(640, 480), font(20)
     {
         ...
     }
@@ -393,16 +383,10 @@ public:
         player.draw();
         backgroundImage->draw(0, 0, zBackground);
         
-        for (std::list<Star>::const_iterator i = stars.begin();
-            i != stars.end(); ++i)
-        {
-            i->draw();
-        }
+        for (Star& star : stars)
+            star.draw();
 
-        std::wstringstream score;
-        score << L"Score: "; 
-        score << player.getScore();
-        font.draw(score.str(), 10, 10, zUI, 1, 1, Gosu::Color::YELLOW);
+        font.draw(L"Score: " + std::to_wstring(player.getScore()), 10, 10, zUI, 1, 1, Gosu::Color::YELLOW);
     }
 };
 ```
@@ -428,8 +412,11 @@ public:
         
     unsigned getScore() const
     {
+        return score;
+    }
+
     ...
-    
+
     void collectStars(std::list<Star>& stars, unsigned& score)
     {
         ...
