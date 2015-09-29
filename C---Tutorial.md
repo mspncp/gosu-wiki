@@ -20,7 +20,7 @@ Every Gosu application starts with a class that derives from [Gosu::Window](http
 #include <cmath>
 #include <cstdlib>
 #include <list>
-#include <sstream> // For int <-> string conversion
+#include <string>
 #include <vector>
       
 class GameWindow : public Gosu::Window
