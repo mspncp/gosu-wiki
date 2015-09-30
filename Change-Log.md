@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.10.3
+* 2015-09-30: All: Fix black/white empty window before `Gosu::Window#show` is called (issue #280)
+
 ## 0.10.2
 * 2015-09-15: All: Fix many common text rendering artefacts
 * 2015-09-15: Mac: Fix compilation error on OS X 10.11 El Capitan
