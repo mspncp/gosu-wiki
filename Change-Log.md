@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.10.4 (Ruby only)
+* 2015-10-04: Ruby: Fix compatibility with Gosu 0.8 interface (`Gosu::Image#initialize`)
+
 ## 0.10.3
 * 2015-09-30: All: Fix black/white empty window before `Gosu::Window#show` is called (issue #280)
 
