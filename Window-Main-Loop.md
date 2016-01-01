@@ -26,7 +26,7 @@ First, you can write your game logic in the style of the example games. In every
 However, if the system is too slow for your game, you are very limited in your options:
 
   * You can spawn less particles or reduce eye candy in other ways. This only works if there is much eye candy to begin with.
-  * You can drop frames by returning false in the `needs_redraw? `/`needsRedraw()` callback. You have to be careful not too skip too many frames in a row though.
+  * You can drop frames by returning false in the `needs_redraw? `/`needsRedraw()` callback. You have to be careful not to skip too many frames in a row though.
 
 ## Delta-Time Physics
 
