@@ -1,8 +1,6 @@
 # Getting Started on OS X
 
-## Ruby
-
-### Prerequisites
+## Prerequisites
 
 Gosu is built on top of the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2`.
 
@@ -12,11 +10,11 @@ OS X ships with a decent version of Ruby, and Gosu works just fine with it after
 
 Note: If you are running **OS X 10.9 and have installed Xcode 6.1**, you will need to install Apple's command-line tools, Xcode won't work: `xcode-select --install` ([Apple bug](https://github.com/Homebrew/homebrew/issues/33431)).
 
-**rbenv** seems to work just as well. **rvm doesn't** - it sometimes works, but the next day, it will use Homebrew to install bizarre compilers behind your back, which will then fail to compile C++ or Objective C. Please try to use rbenv or Apple's Ruby instead. `rvm use system`!
+**rbenv** also works. **rvm is NOT supported** - it sometimes works, but just as often, it installs non-standard compilers that are not compatible with Gosu.
 
 ### Installing the gem
 
-Install the gem via `sudo gem install gosu`. Omit the `sudo` if you use rvm or rbenv to manage your Ruby installations.
+Install the gem via `sudo gem install gosu`. Omit the `sudo` if you use rbenv or rvm to manage your Ruby installations.
 
 To test whether everything works as expected, you can use this Hello World script:
 
@@ -25,8 +23,8 @@ require 'gosu'
 
 class MyWindow < Gosu::Window
   def initialize
-   super(640, 480, false)
-   self.caption = 'Hello World!'
+    super(640, 480)
+    self.caption = 'Hello World!'
   end
 end
 
@@ -85,7 +83,7 @@ class MyWindow : public Gosu::Window
 {
 public:
     MyWindow()
-    :   Gosu::Window(640, 480, false)
+    :   Gosu::Window(640, 480)
     {
         setCaption(L"Hello World!");
     }
