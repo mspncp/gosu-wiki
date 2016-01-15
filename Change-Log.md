@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.10.5
+* 2016-01-11: All: Update SDL to 2.0.4 stable. Finally!! <3
+* 2016-01-11: All: Update stb_image, stb_imagewrite and stb_vorbis dependencies
+* 2016-01-11: Ruby: Update SWIG to 3.0.8 - who knows what this will break
+* 2015-12-19: All: Support clockwise coordinates in `Macro#draw`
+* 2015-11-11: Ruby: Use `sdl2-config` on OS X, not only on X11-based systems
+
 ## 0.10.4 (Ruby only)
 * 2015-10-04: Ruby: Fix compatibility with Gosu 0.8 interface (`Gosu::Image#initialize`; issue #360)
 
