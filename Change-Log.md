@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.10.6
+* 2016-02-14: Windows: Fix wrong viewport size in fullscreen
+
 ## 0.10.5
 * 2016-01-11: All: Update SDL to 2.0.4 stable. Finally!! <3
 * 2016-01-11: All: Update stb_image, stb_imagewrite and stb_vorbis dependencies
