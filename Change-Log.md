@@ -1,7 +1,7 @@
 # Change Log
 
 ## 0.10.7
-* 2016-04-24: Windows: Support for Ruby 2.3.ß
+* 2016-04-24: Windows: Support for Ruby 2.3.0
 * 2016-04-23: Linux: Improve mouse getters/setters
 * 2016-04-18: Ruby: Fix Gosu::random not being random
 * 2016-04-18: All: Update stb_image, stb_image_write, stb_vorbis
