@@ -27,12 +27,12 @@
   * [Gosu Showcase][showcase] - Show off your projects.
   * [Extending Gosu][extending] - Libraries that play nicely with Gosu.
 
-[web]: http://www.libgosu.org/
-[boards]: http://www.libgosu.org/cgi-bin/mwf/forum.pl
-[exchange]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=3
-[showcase]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2
-[extending]: http://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=4
-[rdoc]: http://www.libgosu.org/rdoc/
-[doxygen]: http://www.libgosu.org/cpp/
+[web]: https://www.libgosu.org/
+[boards]: https://www.libgosu.org/cgi-bin/mwf/forum.pl
+[exchange]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=3
+[showcase]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2
+[extending]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=4
+[rdoc]: https://www.libgosu.org/rdoc/
+[doxygen]: https://www.libgosu.org/cpp/
 [issues]: https://github.com/jlnr/gosu/issues
-[logo]: http://www.libgosu.org/forum_header.png
+[logo]: https://www.libgosu.org/forum_header.png
