@@ -117,10 +117,11 @@ make
 If you are using Debian/Ubuntu, you can use this to install Gosu:
 
 ```bash
+cd ..
 ./create_deb_package.sh
-xdg-open build/*.deb
+sudo dpkg -i libgosu-dev-0.10.7-Linux.deb
 ```
-On all other systems you can use this to install Gosu - but be aware, there is no uninstall target. Run it inside `build`, after running `make`.
+On all other systems you can use this to install Gosu - but be aware, there is no uninstall target. Run it inside `build`, after running `make`.  Warning:  This puts the object files in a different spot on the system and can cause problems when building a Gosu-based project with the `-lgosu` option passed to g++.
 
 ```bash
 sudo make install
