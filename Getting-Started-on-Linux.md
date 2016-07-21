@@ -18,9 +18,9 @@ sudo apt-get install ruby-dev
 
 # If you are using rvm or rbenv
 gem install gosu
-# otherwise
+# otherwise, you can add "sudo" at the beginning of the command
 sudo gem install gosu
-# DO NOT DO BOTH. :-)
+
 ```
 
 See also [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1137) for another detailed guide.
