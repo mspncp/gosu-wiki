@@ -16,8 +16,11 @@ sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev
 # To install Ruby - if you are using rvm or rbenv, please skip this step
 sudo apt-get install ruby-dev
 
-# If you are using rvm or rbenv, do not use 'sudo'
+# If you are using rvm or rbenv
+gem install gosu
+# otherwise
 sudo gem install gosu
+# DO NOT DO BOTH. :-)
 ```
 
 See also [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1137) for another detailed guide.
