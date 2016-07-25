@@ -16,6 +16,7 @@
   * [C++ Documentation][doxygen]
   * [[Window Main Loop]]
   * [[Supported Audio Formats]]
+  * [[Hacking Gosu]]
 * Deployment
   * [[Ruby Packaging on OS X]]
   * [[Ruby Packaging on Windows]]
