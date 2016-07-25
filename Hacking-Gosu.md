@@ -4,7 +4,7 @@
 
 ### C++ and Ruby
 
-Gosu is implemented as a layer of C++/Objective-C on top of the SDL 2 library.
+Gosu is implemented as a layer of C++/Objective-C on top of the SDL 2 library and operating system APIs (which is why Gosu will not work on all platforms supported by SDL 2).
 The C++ source code lives in [`src/`](https://github.com/gosu/gosu/tree/master/src), the headers in [`Gosu/`](https://github.com/gosu/gosu/tree/master/Gosu).
 
 Gosu is made available to Ruby using [SWIG (Simplified Wrapper and Interface Generator)](http://www.swig.org/). See the `swig` task in the [Rakefile](https://github.com/gosu/gosu/blob/master/Rakefile) for the full command line.
@@ -23,12 +23,19 @@ Here are some workflows that allow for a relatively quick feedback cycle while w
 The best way to test the full Gosu stack (C++ core, Ruby gem) is to rebuild and install the RubyGem:
 
 ```bash
-[sudo] gem install rake-compiler  # This gem is necessary for building Gosu
-export GOSU_RELEASE_VERSION=9.9.9 # This is the version of the Gosu gem to build
-rake swig                         # If changes to the Ruby/Gosu interface have been made
-                                  # (needs SWIG from Homebrew/apt)
+# This gem is necessary for building Gosu
+[sudo] gem install rake-compiler
+# This is the version of the Gosu gem to build - I always use 9.9.9
+export GOSU_RELEASE_VERSION=9.9.9
+# If changes to the Ruby/Gosu interface have been made (needs SWIG from Homebrew/apt)
+rake swig
+# This builds the gem by bundling relevant source code files
 rake gem
+
 [sudo] gem install pkg/gosu-9.9.9.gem
+# ...now run a few tests to see whether your change was effective ...
+# Then uninstall this development version of Gosu:
+[sudo] gem uninstall gosu -v 9.9.9
 ```
 
 ### Xcode & local CocoaPod (C++)
