@@ -4,6 +4,8 @@
 
 Gosu is built on top of the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2`.
 
+(Versions of Gosu earlier than 0.10.0 also require `brew install libogg libvorbis`.)
+
 ### System Ruby (good) vs rbenv (good) vs rvm (bad)
 
 OS X ships with a decent version of Ruby, and Gosu works just fine with it after you install either Apple's command-line tools (`xcode-select --install`) or Xcode (from the Mac App Store).
