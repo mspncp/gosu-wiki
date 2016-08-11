@@ -4,7 +4,7 @@
 
 Gosu is built on top of the SDL 2 library. I recommend installing [Homebrew](http://brew.sh) and then running `brew install sdl2`.
 
-(Versions of Gosu earlier than 0.10.0 also require `brew install libogg libvorbis`.)
+(Versions of Gosu earlier than 0.10.0 also required `brew install libogg libvorbis`. Gosu 0.10.0 and later bundle [stb_vorbis](https://github.com/nothings/stb) instead.)
 
 ### System Ruby (good) vs rbenv (good) vs rvm (bad)
 
