@@ -1,6 +1,7 @@
 # Change Log
 
 ## 0.10.8
+* 2016-08-15: Mac: Fix several compilation issues
 * 2016-08-15: All: Map analog trigger buttons in SDL_GameController API to `GpButton` constants
 * 2016-07-02: Ruby: Gosu::Color can now safely be used as a Hash key (thanks to @shawn42 for the contribution)
 
