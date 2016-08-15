@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.10.8
+* 2016-08-15: All: Map analog trigger buttons in SDL_GameController API to `GpButton` constants
+* 2016-07-02: Ruby: Gosu::Color can now safely be used as a Hash key (thanks to @shawn42 for the contribution)
+
 ## 0.10.7
 * 2016-04-24: Windows: Support for Ruby 2.3.0
 * 2016-04-23: Linux: Improve mouse getters/setters
