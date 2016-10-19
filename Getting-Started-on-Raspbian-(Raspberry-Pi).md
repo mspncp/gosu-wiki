@@ -17,12 +17,20 @@ You can follow these steps to install Ruby/Gosu anyway:
     sudo apt-get install ruby ruby-dev build-essential libfreeimage-dev libopenal-dev libpango1.0-dev libsndfile-dev libudev-dev libasound2-dev
     ```
 
-4. Unpack and compile SDL 2. The last line will take roughly one hour to complete:
+4. Unpack and compile SDL 2. This will take roughly one hour to complete:
 
     ```bash
     tar zxvf SDL2-2.*.tar.gz
     cd SDL2-2.*
-    ./configure --prefix=/opt/SDL2 --disable-video-x11 && make && sudo make install
+    ./configure --prefix=/opt/SDL2 --disable-video-x11
+    make
+    sudo make install
+    ```
+
+    If you are already using *Raspbian Jessie*, try this variant of the `./configure` command instead:
+
+    ```bash
+    ./configure --host=armv7l-raspberry-linux-gnueabihf --disable-pulseaudio --disable-esd --disable-video-mir --disable-video-wayland --disable-video-x11 --disable-video-opengl
     ```
 
 5. Unpack and compile SDL_ttf. This shouldn't take nearly as long.
