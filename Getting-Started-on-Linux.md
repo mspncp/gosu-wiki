@@ -4,14 +4,14 @@ Please help us keep this information up-to-date! :)
 
 ## Dependencies
 
-To install Gosu 0.8.x on Linux, you will need the following packages, even though the names will be different in every distribution: `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libfreeimage-dev`, `libopenal-dev`, `libsndfile-dev`.
+To install Gosu 0.8.x on Linux, you will need the following packages, even though the names will be different in every distribution: `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`.
 
 ## Ubuntu (last tested on Xenial Xerus (16.04), with Gosu 0.10.6) / Linux Mint (last tested on Linux Mint 17.3)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev \
-                     libgl1-mesa-dev libfreeimage-dev libopenal-dev libsndfile-dev
+                     libgl1-mesa-dev libopenal-dev libsndfile-dev
 
 # To install Ruby - if you are using rvm or rbenv, please skip this step
 sudo apt-get install ruby-dev
@@ -52,18 +52,18 @@ Please see [this post on the Gosu forum](https://www.libgosu.org/cgi-bin/mwf/top
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
-sudo pacman -S freeglut freeimage libegl openal pango sdl2_ttf libsndfile libxinerama pkg-config
+sudo pacman -S freeglut libegl openal pango sdl2_ttf libsndfile pkg-config
 
 # To install Ruby 2.1.2
 sudo pacman -S ruby
 ```
 
-## Fedora (last tested on 23 with Gosu 0.10.4)
+## Fedora (last tested on Fedora 25 with Gosu 0.10.8)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo dnf groupinstall --assumeyes "Development Tools"
-sudo dnf install --assumeyes freeglut-devel freeimage-devel mesa-libGL-devel openal-devel pango-devel SDL2_ttf-devel libsndfile-devel libXinerama-devel libvorbis-devel gcc-c++ redhat-rpm-config
+sudo dnf install --assumeyes mesa-libGL-devel openal-devel pango-devel SDL2_ttf-devel libsndfile-devel gcc-c++ redhat-rpm-config
 
 # To install Ruby
 sudo dnf install --assumeyes ruby-devel rubygems
@@ -73,7 +73,7 @@ sudo dnf install --assumeyes ruby-devel rubygems
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
-sudo pacman -S freeglut freeimage libegl openal pango sdl_ttf libsndfile libxinerama pkg-config sdl2_ttf sdl2
+sudo pacman -S freeglut libegl openal pango sdl_ttf libsndfile pkg-config sdl2_ttf sdl2
 
 # To install Ruby
 sudo pacman -S ruby
@@ -83,7 +83,7 @@ sudo pacman -S ruby
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby, ensure you have the 'opengl' USE Flag set globally or at least for media-libs/libsdl2.
-sudo emerge -av media-libs/freeglut media-libs/freeimage media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl2-ttf media-libs/libsndfile x11-libs/libXinerama
+sudo emerge -av media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl2-ttf media-libs/libsndfile
 
 # To install Ruby
 sudo emerge -av dev-lang/ruby
@@ -97,7 +97,7 @@ sudo zypper install --type pattern devel_basis
 # Add the 'games' repository for libfreeimage-devel
 sudo zypper addrepo http://download.opensuse.org/repositories/games/openSUSE_12.1/ opensuse-games
 # Gosu's dependencies for both C++ and Ruby
-sudo zypper install libSDL2-devel libSDL2_ttf-devel pango-devel libfreeimage-devel libsndfile-devel openal-soft-devel libvorbis-devel
+sudo zypper install libSDL2-devel libSDL2_ttf-devel pango-devel libsndfile-devel openal-soft-devel
 
 # To install the Ruby headers
 sudo zypper install ruby-devel
