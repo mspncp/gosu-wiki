@@ -33,7 +33,7 @@
 [exchange]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=3
 [showcase]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=2
 [extending]: https://www.libgosu.org/cgi-bin/mwf/board_show.pl?bid=4
-[rdoc]: https://www.libgosu.org/rdoc/
+[rdoc]: http://www.rubydoc.info/github/gosu/gosu
 [doxygen]: https://www.libgosu.org/cpp/
-[issues]: https://github.com/jlnr/gosu/issues
+[issues]: https://github.com/gosu/gosu/issues
 [logo]: https://www.libgosu.org/forum_header.png
