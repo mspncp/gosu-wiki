@@ -1,7 +1,7 @@
 [ ![Gosu][logo] ][web]
 
 * Getting Started
-  * [[Getting Started on macOS]]
+  * [[Getting Started on OS X]]
   * [[Getting Started on Windows]]
   * [[Getting Started on Linux]]
   * [[Getting Started on Raspbian (Raspberry Pi)]]
