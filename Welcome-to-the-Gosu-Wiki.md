@@ -1,6 +1,6 @@
 # Installation, Tutorial
 
-Depending on your operating system and programming language, please refer to the appropriate pages from the side bar.
+Depending on your operating system and programming language, please refer to the appropriate pages in the sidebar.
 
 # Translations of the Ruby Tutorial
 
