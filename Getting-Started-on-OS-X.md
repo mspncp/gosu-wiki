@@ -2,23 +2,21 @@
 
 ## Prerequisites
 
-To use Gosu, you will either need [Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) or [Apple's command-line developer tools](http://apple.stackexchange.com/a/106716).
-
 Gosu depends on the [SDL 2 library](http://www.libsdl.org/). After installing [Homebrew](http://brew.sh), you can simply run `brew install sdl2`.
 
 If you have not installed a custom Ruby via `rbenv` yet, I recommend also running `brew install ruby`. The problem with Apple's built-in Ruby is that it is often outdated and/or broken. The popular `rvm` tool is not compatible with Gosu. Ruby from Homebrew and `rbenv` are both good choices.
 
-### Installing the gem
+### Installing Ruby/Gosu
 
-Simply install the gem via `gem install gosu`.
+Simply install the Gosu gem via `gem install gosu`.
 
-To test whether everything works as expected, you can use this one-liner:
+To test whether everything works as expected, you can use this one-liner, which should open a window:
 
 ```bash
 ruby -rgosu -e 'w = Gosu::Window.new(200, 150); w.caption = "It works!"; w.show'
 ```
 
-Or you can install the [`gosu-examples` gem](https://github.com/gosu/gosu-examples):
+Or you can install and run the [`gosu-examples` gem](https://github.com/gosu/gosu-examples):
 
 ```bash
 gem install gosu-examples
