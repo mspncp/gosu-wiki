@@ -2,7 +2,7 @@
 
 ## 0.11.0
 * 2017-01-06: Windows: This releases bundles SDL 2.0.5, users on other operating systems should update this library through their package manager
-* 2017-01-06: All: Rename `GOSU_COPYRIGHT_NOTICE` to `Gosu::LICENSES`, content is now platform-specific (thanks @Kjarrigan)
+* 2017-01-06: All: Rename `GOSU_COPYRIGHT_NOTICE` to `Gosu::LICENSES`, its content is now platform-specific (thanks @Kjarrigan)
 * 2016-12-31: C++: Use UTF-8 encoded `std::string` instead of `std::wstring` throughout Gosu (breaking change)
 * 2016-12-19: C++: Use `snake_case` for function and method names, just like in Ruby (breaking change)
 * 2016-12-15: All: `Window::resize` (C++), new setters: `Window#width=`/`#height=`/`fullscreen=` (Ruby); thanks to @Dahrkael for the initial `resize` implementation
