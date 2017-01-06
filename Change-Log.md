@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.11.0
+* 2017-01-06: All: Rename `GOSU_COPYRIGHT_NOTICE` to `Gosu::LICENSES`, content is now platform-specific (thanks @Kjarrigan)
+* 2016-12-31: C++: Use UTF-8 encoded `std::string`s instead of `std::wstring` throughout Gosu (breaking change)
+* 2016-12-19: C++: Use `snake_case` for function and method names, just like in Ruby (breaking change)
+* 2016-12-15: All: `Window::resize` (C++), new setters: `Window#width=`/`#height=`/`fullscreen=` (Ruby)
+* 2016-12-13: All: New setter `Window#update_interval=`
+
 ## 0.10.8
 * 2016-08-15: Mac: Fix several compilation issues
 * 2016-08-15: All: Map analog trigger buttons in SDL_GameController API to `GpButton` constants
