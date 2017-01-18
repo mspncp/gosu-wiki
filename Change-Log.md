@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.11.1
+* 2017-01-17: Window: Fix UTF-8 Text rendering (#373)
+* 2017-01-14: All: Fix loading of 4-bit PNG files (#375)
+* 2017-01-13: All: Fix window placement when starting in fullscreen mode and then switching to windowed (#369)
+* 2017-01-13: All: Add default shortcuts to toggle between fullscreen and windowed mode (alt+enter/cmd+F) (#361)
+* 2017-01-12: Linux: Fix compilation of Color.cpp (#371)
+
 ## 0.11.0
 * 2017-01-06: Windows: This releases bundles SDL 2.0.5, users on other operating systems should update this library through their package manager
 * 2017-01-06: All: Rename `GOSU_COPYRIGHT_NOTICE` to `Gosu::LICENSES`, its content is now platform-specific (thanks @Kjarrigan)
