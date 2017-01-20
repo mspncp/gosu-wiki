@@ -224,7 +224,7 @@ Here we have introduced keyboard and gamepad input!
 
 Similar to `update()` and `draw()`, `Gosu::Window` provides two virtual member functions `button_down(btn)` and `button_up(btn)` which can be overridden. The default implementation of `button_down` lets the user toggle between fullscreen and windowed mode with alt+enter (Windows, Linux) or cmd+F (macOS). Because we want to keep this default behaviour, we call `Window::button_down` if the user has not pressed anything that interests us.
 
-In our implementation of `button_down`, we want to close the window when the user presses `Esc`. The list of button constants can be found in (the C++ reference)[https://www.libgosu.org/cpp/namespace_gosu.html#enum-members].
+In our implementation of `button_down`, we want to close the window when the user presses `Esc`. The list of button constants can be found in [the C++ reference](https://www.libgosu.org/cpp/namespace_gosu.html#enum-members).
 
 These two callbacks for pressed and released buttons are suitable for one-time events such as using an item. But they are not useful for actions that happen *while* a button is pressed — for example, moving the player. This is where the `update()` member function comes into play, which calls the player's movement, which in turn use `Gosu::Input::down`. This method will return `true` as long as a button is being held by the player.
 
@@ -232,111 +232,120 @@ If you run the code in this section, you should be able to fly around.
 
 ### 3. Simple animations
 
-First, we are going to get rid of the magic numbers for Z positions from now on by replacing them with the following enumeration:
+First, we are going to get rid of the magic numbers for Z positions by replacing them with the following enumeration:
 
 ```cpp
 enum ZOrder
 {
-    zBackground,
-    zStars,
-    zPlayer,
-    zUI
+    Z_BACKGROUND,
+    Z_STARS,
+    Z_PLAYER,
+    Z_UI
 };
 ```
 
 What is an animation? A sequence of images. A simple Animation type might look like this:
 
-    typedef std::vector<Gosu::Image> Animation;
+```cpp
+typedef std::vector<Gosu::Image> Animation;
+```
 
-For a real game, there is no way around writing some classes that fit the game's individual needs, but we'll get away with this solution for now.
+In a real game, you may want to write a dedicated animation class, but the `typedef` is good enough for now.
 
-Let's introduce the stars which are the central object of this lesson. Stars appear out of nowhere at a random place on the screen and live their animated lives until the player collects them. The definition of the Star class is rather simple:
+Let's introduce collectible stars, which are the central object of this section. Stars appear out of nowhere at a random position on the screen, and show a rotation animation until collected by the player. The definition of the `Star` class is simple because it has no logic of its own:
 
 ```cpp
 class Star
 {
     Animation animation;
     Gosu::Color color;
-    double posX, posY;
+    double pos_x, pos_y;
 
 public:
     explicit Star(Animation animation)
     :   animation(animation)
     {
-        color.setAlpha(255);
+        color.set_alpha(255);
         double red = Gosu::random(40, 255);
-        color.setRed(static_cast<Gosu::Color::Channel>(red));
+        color.set_red(static_cast<Gosu::Color::Channel>(red));
         double green = Gosu::random(40, 255);
-        color.setGreen(static_cast<Gosu::Color::Channel>(green));
+        color.set_green(static_cast<Gosu::Color::Channel>(green));
         double blue = Gosu::random(40, 255);
-        color.setBlue(static_cast<Gosu::Color::Channel>(blue));
+        color.set_blue(static_cast<Gosu::Color::Channel>(blue));
 
-        posX = Gosu::random(0, 640);
-        posY = Gosu::random(0, 480);
+        pos_x = Gosu::random(0, 640);
+        pos_y = Gosu::random(0, 480);
     }
 
-    double x() const { return posX; }
-    double y() const { return posY; }
+    double x() const
+    {
+        return pos_x;
+    }
+    
+    double y() const
+    {
+        return pos_y;
+    }
 
     void draw() const
     {
-        const Gosu::Image& image =
-            animation.at(Gosu::milliseconds() / 100 % animation.size());
+        const Gosu::Image& image = animation.at(Gosu::milliseconds() / 100 % animation.size());
 
-        image.draw(posX - image.width() / 2.0, posY - image.height() / 2.0,
-            zStars, 1, 1, color, Gosu::amAdd);
+        image.draw(pos_x - image.width() / 2.0, pos_y - image.height() / 2.0, Z_STARS,
+                   1, 1, color, Gosu::AM_ADD);
     }
 };
 ```
 
-Since we do not want each and every star to load the animation again, we cannot do that in its constructor, but rather pass it in from somewhere else. (The Window will load the animation in about three paragraphs.)
+Since we do not want to load the full animation every time we create a `Star`, we will pass an existing `Animation` into its constructor.
 
-To show a different frame of the stars' animation every 100 milliseconds, the time returned by `Gosu::milliseconds()` is divided by 100 and then modulo-ed down to the number of frames. This very image is then additively drawn, centered at the star's position and modulated by a random color we generated in the constructor.
+To show a different frame of the stars' animation every 100 milliseconds, the time returned by `Gosu::milliseconds()` is divided by 100 and then modulo-ed down to the number of frames. The selected image is then drawn *additively*, centred at the star's position, and modulated by a random colour that we generated in the constructor.
 
-Now let's add easy code to the player to collect away stars from a list:
+Now let's add code to the `Player` class to collect stars:
 
 ```cpp
 class Player
 {
     ...
     
-    void collectStars(std::list<Star>& stars)
+    void collect_stars(std::list<Star>& stars)
     {
         std::list<Star>::iterator cur = stars.begin();
-        while (cur != stars.end())
-        {
-            if (Gosu::distance(posX, posY, cur->x(), cur->y()) < 35)
+        while (cur != stars.end()) {
+            if (Gosu::distance(pos_x, pos_y, cur->x(), cur->y()) < 35) {
                 cur = stars.erase(cur);
-            else
+            }
+            else {
                 ++cur;
+            }
         }
     }
 };
 ```
 
-Let's extend Window to load the animation, spawn new stars, have the player collect them and draw the remaining ones:
+Let's extend `GameWindow` to load the animation, spawn new stars, have the player collect them, and draw existing stars:
 
 ```cpp
 class GameWindow : public Gosu::Window
 {
-    std::auto_ptr<Gosu::Image> backgroundImage;
-    Animation starAnim;
+    std::unique_ptr<Gosu::Image> background_image;
+    Animation star_anim;
     
     Player player;
     std::list<Star> stars;
     
 public:
     GameWindow()
-    :   Window(640, 480)
+    : Window(640, 480)
     {
-        setCaption(L"Gosu Tutorial Game");
-        
-        std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
-        backgroundImage.reset(new Gosu::Image(filename, Gosu::ifTileable));
-        
-        filename = Gosu::resourcePrefix() + L"media/Star.png";
-        starAnim = Gosu::loadTiles(filename, 25, 25);
-        
+        set_caption("Gosu Tutorial Game");
+
+        std::string filename = Gosu::resource_prefix() + "media/Space.png";
+        background_image.reset(new Gosu::Image(filename, Gosu::IF_TILEABLE));
+
+        filename = Gosu::resource_prefix() + "media/Star.png";
+        star_anim = Gosu::load_tiles(filename, 25, 25);
+
         player.warp(320, 240);
     }
     
@@ -345,110 +354,112 @@ public:
         ...
         
         player.move();
-        player.collectStars(stars);
-        
-        if (std::rand() % 25 == 0 && stars.size() < 25)
-            stars.push_back(Star(starAnim));
+        player.collect_stars(stars);
+
+        if (std::rand() % 25 == 0 && stars.size() < 25) {
+            stars.push_back(Star(star_anim));
+        }
     }
     
-    void draw()
+    void draw() override
     {
         player.draw();
-        backgroundImage->draw(0, 0, 0); 
-        for (Star& star : stars)
+        background_image->draw(0, 0, Z_BACKGROUND);
+
+        for (Star& star : stars) {
             star.draw();
+        }
     }
     
     ...
 };
 ```
 
-(At this point, please download [Star.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Star.png) and ensure that it can be found at `media/Star.png`.)
+(At this point, please download [Star.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Star.png) and ensure that your compiled binary can find it at `media/Star.png`.)
 
 Done! You can now collect stars.
 
 ### 4. Text and Sound
 
-Finally, we want to draw the current score using a bitmap font and play a 'beep' sound every time the player collects a star. The Window will handle the text part, loading a font 20 pixels high:
+Finally, we want to draw the current score using a bitmap font, and play a "beep" sound every time the player collects a star. The `Window` will handle the text part, loading a font that is 20 pixels high:
 
 ```cpp
 class GameWindow : public Gosu::Window
 {
-    std::auto_ptr<Gosu::Image> backgroundImage;
-    Animation starAnim;
+    std::unique_ptr<Gosu::Image> background_image;
+    Animation star_anim;
     Gosu::Font font;
-    
+
     Player player;
     std::list<Star> stars;
-      
+
 public:
-    ...
-    
     GameWindow()
-    :   Window(640, 480), font(20)
+    : Window(640, 480), font(20)
     {
         ...
     }
     
     ...
     
-    void draw()
+    void draw() override
     {
         player.draw();
-        backgroundImage->draw(0, 0, zBackground);
-        
-        for (Star& star : stars)
-            star.draw();
+        background_image->draw(0, 0, Z_BACKGROUND);
 
-        font.draw(L"Score: " + std::to_wstring(player.getScore()), 10, 10, zUI, 1, 1, Gosu::Color::YELLOW);
+        for (Star& star : stars) {
+            star.draw();
+        }
+
+        font.draw("Score: " + std::to_string(player.get_score()), 10, 10, Z_UI,
+                  1, 1, Gosu::Color::YELLOW);
     }
 };
 ```
 
-What's left for the player? Right: A counter for the score, loading the sound and playing it.
+The `Player` class will be responsible for keeping track of the score, loading a sound and playing it.
 
 ```cpp
 class Player
 {
     Gosu::Image image;
     Gosu::Sample beep;
-    double posX, posY, velX, velY, angle;
+    double pos_x, pos_y, vel_x, vel_y, angle;
     unsigned score;
-    
+
 public:
     Player()
-    :   image(Gosu::resourcePrefix() + L"media/Starfighter.bmp"),
-        beep(Gosu::resourcePrefix() + L"media/Beep.wav")
+    :   image(Gosu::resource_prefix() + "media/Starfighter.bmp"),
+        beep(Gosu::resource_prefix() + "media/Beep.wav")
     {
-        posX = posY = velX = velY = angle = 0;
+        pos_x = pos_y = vel_x = vel_y = angle = 0;
         score = 0;
     }
         
-    unsigned getScore() const
+    unsigned get_score() const
     {
         return score;
     }
 
     ...
 
-    void collectStars(std::list<Star>& stars, unsigned& score)
+    void collect_stars(std::list<Star>& stars)
     {
         ...
-            if (...)
-            {
+            if (...) {
                 cur = stars.erase(cur);
                 score += 10;
                 beep.play();
             }
-            else
+            else {
         ...
     }
 ...
 ```
 
-(At this point, please download [Beep.wav](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Beep.wav) and ensure that it can be found at `media/Beep.wav`.)
+(At this point, please download [Beep.wav](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Beep.wav) and ensure that your compiled binary can find it at `media/Beep.wav`.)
 
-As you can see, loading and playing sound effects could hardly be easier. See the reference for more powerful ways of playing back sounds.
+Loading and playing sound effects could hardly be easier. See [the C++ reference](https://www.libgosu.org/cpp/class_gosu_1_1_sample.html) for more powerful ways of playing back sounds.
 
 That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
 
