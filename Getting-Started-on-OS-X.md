@@ -2,13 +2,13 @@
 
 ## Prerequisites
 
-Gosu depends on the [SDL 2 library](http://www.libsdl.org/). After installing [Homebrew](http://brew.sh), you can simply run `brew install sdl2`.
+Gosu depends on the [SDL 2 library](http://www.libsdl.org/). Please install [Homebrew](http://brew.sh) and run `brew install sdl2`.
 
-If you have not installed a custom Ruby via `rbenv` yet, I recommend also running `brew install ruby`. The problem with Apple's built-in Ruby is that it is often outdated and/or broken. The popular `rvm` tool is not compatible with Gosu. Ruby from Homebrew and `rbenv` are both good choices.
+If you have not installed Ruby yet, I recommend also running `brew install ruby`. The problem with Apple's built-in Ruby is that it is often outdated and/or broken. The popular `rvm` tool is not compatible with Gosu. Ruby from Homebrew and `rbenv` are both good choices.
 
 ### Installing Ruby/Gosu
 
-Simply install the Gosu gem via `gem install gosu`.
+Install the Gosu gem via `gem install gosu`.
 
 To test whether everything works as expected, you can use this one-liner, which should open a window:
 
@@ -23,7 +23,7 @@ gem install gosu-examples
 gosu-examples
 ```
 
-## Creating a New C++ Gosu Project
+## Creating a New C++ Gosu Project with Xcode
 
 *TODO: This does not yet explain how resource loading works: Add your resources to the Xcode project and use `Gosu::resource_path` to find them.*
 
@@ -33,11 +33,11 @@ Gosu uses [CocoaPods](http://cocoapods.org/) to streamline the Xcode project set
 
 * Xcode from the Mac App Store
 * In Xcode, make sure to visit the preferences and install the Command Line Tools
-* CocoaPods, which can be installed using `sudo gem install cocoapods` (again, omit `sudo` if you are using rbenv)
+* CocoaPods, which can be installed using `gem install cocoapods`
 
 ### Creating the project
 
-Start Xcode and create a new project. Use the template 'OS X/Application/Cocoa Application':
+Start Xcode and create a new project. Use the template 'macOS/Application/Cocoa Application':
 
 [[xcode_new_app.png]]
 
@@ -74,9 +74,9 @@ class MyWindow : public Gosu::Window
 {
 public:
     MyWindow()
-    :   Gosu::Window(640, 480)
+    : Gosu::Window(640, 480)
     {
-        setCaption(L"Hello World!");
+        set_caption("Hello World!");
     }
 };
 
@@ -88,3 +88,11 @@ int main()
 ```
 
 If you "Build & Run" the project now (cmd+R), you should see an empty, black window with the caption "Hello World".
+
+## Using Gosu for C++, but without Xcode
+
+If you are not keen on using Xcode and/or CocoaPods, you can also install Gosu as a "normal" library using Homebrew:
+
+`brew install libgosu` ([formula here])
+
+You can then use Gosu with CMake or pkg-config as demonstrated in [[Getting Started on Linux]].
