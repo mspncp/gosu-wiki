@@ -1,4 +1,4 @@
-_**Warning: This guide was kindly donated a while ago, but even the authors have experienced unexplainable problems using Gosu with MinGW. If you can fix/complete the guide, it would be very appreciated. Otherwise, I recommend a free Express version of MSVC.**_
+_**Warning: This guide was kindly donated a while ago, but even the authors have experienced unexplainable problems using Gosu with MinGW. If you can fix/complete the guide, it would be very appreciated. Otherwise, I recommend using the free desktop version of Microsoft Visual C++ 2015.**_
 
 --
 
