@@ -1,8 +1,8 @@
 # Ruby Chipmunk Integration
 
-A tutorial contributed by Dirk Johnson.
+A tutorial contributed by Dirk Johnson. This wiki page explains in prose how to extend the [[Ruby Tutorial]] with the Chipmunk Physics Engine. The result is [this Ruby code](https://github.com/gosu/gosu-examples/blob/master/examples/chipmunk_integration.rb) in the `gosu-examples` gem. Install both the `chipmunk` and `gosu-examples` gems, then run `gosu-examples` to see physics engine in action.
 
-This tutorial covers integrating the Chipmunk Physics Engine's Ruby bindings with Gosu's Ruby bindings.  This tutorial assumes that both Gosu and Chipmunk have been properly installed.  See http://wiki.slembcke.net/main/published/Chipmunk. The source code for this tutorial can be found in Gosu's 'examples' folder, but to run it, you'll need to copy the chipmunk extension there too if you haven't installed it system-wide.
+This tutorial assumes that both Gosu and Chipmunk have been properly installed.  See http://wiki.slembcke.net/main/published/Chipmunk. The source code for this tutorial can be found in Gosu's 'examples' folder, but to run it, you'll need to copy the chipmunk extension there too if you haven't installed it system-wide.
 
 New, better documented bindings to Chipmunk 5.3.4 are available at [[http://github.com/beoran/chipmunk]]. Check there too for the documentation. --Beoran.
 
