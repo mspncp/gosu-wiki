@@ -4,11 +4,11 @@
 
 The code for the complete tutorial game, along with all required media files, can be found this git repository (`examples/Tutorial/Tutorial.cpp`). To run the game, setup a new project as seen in [[Getting Started on OS X]], [[Getting Started on Windows]], or [[Getting Started on Linux]], and use `Tutorial.cpp` as the only source file. Make sure that the compiled binary can find the images and sound effects used in this game (`examples/media`).
 
-## The Tutorial
+## Writing a Simple Game
 
-### 1. Overriding Window's callbacks
+### 1. Overriding Window callbacks
 
-Every Gosu application starts with a class that derives from [Gosu::Window](https://www.libgosu.org/cpp/class_gosu_1_1_window.html). A minimal window class looks like this:
+Every Gosu application starts with a subclass of [Gosu::Window](https://www.libgosu.org/cpp/class_gosu_1_1_window.html). A minimal window class looks like this:
 
 ```cpp
 // The complete Gosu library.
@@ -50,13 +50,13 @@ int main()
 }
 ```
 
-The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large window, then it changes the caption shown in the window's title bar. Note that Gosu accepts and returns `std::string` containing UTF-8 throughout its API.
+The constructor initializes the `Gosu::Window` base class to create a 640x480 pixels large window. It also sets the caption of the window, which is displayed in its title bar. Note that Gosu accepts and returns `std::string` containing UTF-8 throughout its API.
 
-`update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is called 60 times per second by default, and should contain the main game logic, such as moving objects around, or testing for collisions.
+`update()` and `draw()` are overrides of `Gosu::Window` member functions. `update()` is called 60 times per second by default, and should contain the main game logic, such as moving objects around, or testing for collisions.
 
 `draw()` is usually called 60 times per second, but may be skipped for performance reasons. It should contain code to redraw the whole scene, but no game logic.
 
-Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user, or by calling `Gosu::Window::close()`.
+Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user, or by calling `Gosu::Window::close()`. This is the *main loop* of the game.
 
 A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
@@ -91,11 +91,13 @@ public:
 
 (At this point, please download [Space.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Space.png) and ensure that your compiled binary can find it at `media/Space.png`.)
 
-*Note:* `Gosu::Image` has no default constructor to prevent the creation of unusable 'zombie' images. You can use `std::unique_ptr`, `std::shared_ptr`, `std::optional`, or raw pointers if you need to delay the creation of an image.
-
 `Gosu::Image`'s constructor takes two arguments, the filename of the image file and "image flags". Here we pass `IF_TILEABLE`, see [[Basic Concepts]] for an explanation. Basically, you should use this flag for map tiles and background images.
 
-As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is where we draw the background image. The image is drawn at the position (0, 0) - the third image is the z position; see [[Basic Concepts]] for an explanation of Z ordering in Gosu.
+*Note:* `Gosu::Image` has no default constructor to prevent the creation of unusable 'zombie' images. If you use a `Gosu::Image` as a member variable, you will need to initialise it in your constructor's initialiser list. You can use `std::unique_ptr`, `std::shared_ptr`, `std::optional`, or raw pointers if you want to delay the creation of an image.
+
+As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so we override it and draw our background image.
+
+The image is drawn at the position (0, 0) - the third image is the z position; see [[Basic Concepts]] for an explanation of Z ordering in Gosu.
 
 #### 2.1. Player & Movement
 
@@ -157,17 +159,18 @@ public:
 
 (Please download [Starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Starfighter.bmp) and ensure that your compiled binary can find it at `media/starfighter.bmp`.)
 
-There are a couple of things to note about this:
+To explain:
 
 [[angles2.png|alt=Angles in Gosu]]
 
-  * `Player::accelerate` makes use of the `offset_x`/`offset_y` functions. They are similar to the mathematical sin/cos functions: For example, if something moved 100 pixels per frame at an angle of 30°, it would move by `offset_x(30, 100)` pixels horizontally, and by `offset_y(30, 100)` pixels vertically each frame.
+  * `Player::accelerate` makes use of the `offset_x`/`offset_y` functions, which are similar to the mathematical sin/cos functions. If something moved 100 pixels per frame at an angle of 30°, it would move by `offset_x(30, 100)` (=50) pixels horizontally, and by `offset_y(30, 100)` (=-86.6) pixels vertically each frame.
   * When loading BMP image files, Gosu replaces `#ff00ff` (fuchsia/magenta/'magic pink') with transparent pixels.
-  * Note that `Image::draw_rot` puts the *center* of the image at `x, y` - *not* the upper left corner, as with `Image::draw`. Also, the player is drawn at `z = 1`, i.e. over the background. We'll replace this magic number with something better later. See [the C++ reference](https://www.libgosu.org/cpp/class_gosu_1_1_image.html) for the full list of arguments to `draw` and `draw_rot`.
+  * Note that `Image::draw_rot` puts the *center* of the image at `x, y` - *not* the upper left corner, as with `Image::draw`. See [the C++ reference](https://www.libgosu.org/cpp/class_gosu_1_1_image.html) for the full list of arguments to `draw` and `draw_rot`.
+  * The player is drawn at `z = 1`, i.e. over the background. We'll replace this magic number with something better later.
   * `Gosu::wrap(what, min, max)` maps a value inside the *min..max* range. If the player leaves the screen on the left side, they will re-appear from the right side etc. If you want to disable this wraparound, use `Gosu::clamp(what, min, max)` instead.
-  * The `Player` class loads the image straight in its initialiser list, unlike the Window which used a pointer.
+  * The `Player` class loads the image straight in its initialiser list, unlike the Window which used a pointer to move construction of the Image into the constructor body.
 
-#### 2.2. Integrating Player with the Window
+#### 2.2. Using our Player inside GameWindow
 
 ```cpp
 class GameWindow : public Gosu::Window
@@ -220,19 +223,19 @@ public:
 };
 ```
 
-Here we have introduced keyboard and gamepad input!
+Here we have introduced keyboard and gamepad input.
 
-Similar to `update()` and `draw()`, `Gosu::Window` provides two virtual member functions `button_down(btn)` and `button_up(btn)` which can be overridden. The default implementation of `button_down` lets the user toggle between fullscreen and windowed mode with alt+enter (Windows, Linux) or cmd+F (macOS). Because we want to keep this default behaviour, we call `Window::button_down` if the user has not pressed anything that interests us.
+Similar to `update()` and `draw()`, `Gosu::Window` provides two virtual member functions `button_down(btn)` and `button_up(btn)` which can be overridden. The default implementation of `Gosu::Window::button_down` lets the user toggle between fullscreen and windowed mode with alt+enter (Windows, Linux) or cmd+F (macOS). Because we want to keep this default behaviour, we call `Window::button_down` if the user has not pressed anything that interests us.
 
-In our implementation of `button_down`, we want to close the window when the user presses `Esc`. The list of button constants can be found in [the C++ reference](https://www.libgosu.org/cpp/namespace_gosu.html#enum-members).
+In our implementation of `button_down`, we close the window when the user presses `Esc`. The list of button constants can be found in [the C++ reference](https://www.libgosu.org/cpp/namespace_gosu.html#enum-members).
 
-These two callbacks for pressed and released buttons are suitable for one-time events such as using an item. But they are not useful for actions that happen *while* a button is pressed — for example, moving the player. This is where the `update()` member function comes into play, which calls the player's movement, which in turn use `Gosu::Input::down`. This method will return `true` as long as a button is being held by the player.
+These two callbacks for pressed and released buttons are suitable for one-time events such as using an item. But they are not useful for actions that happen *while* a button is pressed — for example, moving the player. This is where the `Window::update()` member function comes into play, which calls `player.move()`, which in turn uses `Gosu::Input::down(Gosu::Button)`. This method will return `true` as long as a button is being held by the player.
 
 If you run the code in this section, you should be able to fly around.
 
 ### 3. Simple animations
 
-First, we are going to get rid of the magic numbers for Z positions by replacing them with the following enumeration:
+First, we are going to get replace the magic numbers for Z positions with the following enumeration:
 
 ```cpp
 enum ZOrder
@@ -459,7 +462,7 @@ public:
 
 (At this point, please download [Beep.wav](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Beep.wav) and ensure that your compiled binary can find it at `media/Beep.wav`.)
 
-Loading and playing sound effects could hardly be easier. See [the C++ reference](https://www.libgosu.org/cpp/class_gosu_1_1_sample.html) for more powerful ways of playing back sounds.
+See [the C++ reference](https://www.libgosu.org/cpp/class_gosu_1_1_sample.html) for more powerful ways of playing back sounds.
 
 That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
 
