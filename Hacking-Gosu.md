@@ -4,10 +4,10 @@
 
 ### C++ and Ruby
 
-Gosu is implemented as a layer of C++/Objective-C on top of the SDL 2 library and operating system APIs (which is why Gosu will not work on all platforms supported by SDL 2).
+Gosu is implemented as a layer of C++/Objective-C on top of the SDL 2 library and operating system APIs.
 The C++ source code lives in [`src/`](https://github.com/gosu/gosu/tree/master/src), the headers in [`Gosu/`](https://github.com/gosu/gosu/tree/master/Gosu).
 
-Gosu is made available to Ruby using [SWIG (Simplified Wrapper and Interface Generator)](http://www.swig.org/). See the `swig` task in the [Rakefile](https://github.com/gosu/gosu/blob/master/Rakefile) for the full command line.
+Gosu is made available to Ruby using [SWIG (Simplified Wrapper and Interface Generator)](http://www.swig.org/). See the `swig` task in the [Rakefile](https://github.com/gosu/gosu/blob/master/Rakefile) for the full command line, and note that the generated file needs additional patching to work.
 
 ### The Rendering System
 
@@ -32,10 +32,11 @@ rake swig
 # This builds the gem by bundling relevant source code files
 rake gem
 
-[sudo] gem install pkg/gosu-9.9.9.gem
+gem install pkg/gosu-9.9.9.gem
 # ...now run a few tests to see whether your change was effective ...
+rake test # for example Gosu's own test suite
 # Then uninstall this development version of Gosu:
-[sudo] gem uninstall gosu -v 9.9.9
+gem uninstall gosu -v 9.9.9
 ```
 
 ### Xcode & local CocoaPod (C++)
