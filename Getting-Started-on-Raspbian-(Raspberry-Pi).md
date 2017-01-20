@@ -48,11 +48,11 @@ You can follow these steps to install Ruby/Gosu anyway:
    sudo gem install gosu -- --with-cflags=-I/opt/SDL2/include --with-cppflags=-I/opt/SDL2/include --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
    ```
 
-7. Optional: Run an example to verify that everything works. You can use this command to jump straight into Gosu's example folder, then run a game:
+7. Optional: Run the example games to verify that everything works.
 
    ```bash
-   cd `dirname \`gem which gosu\``/../examples
-   ruby Tutorial.rb
+   sudo gem install gosu-examples
+   gosu-examples --fullscreen
    ```
 
 8. Optional: Clean up by deleting the SDL folders and `.tar.gz` files in your home directory.
