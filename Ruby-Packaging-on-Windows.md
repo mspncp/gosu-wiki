@@ -15,4 +15,4 @@ To let your game find the DLLs, you have to change the `PATH` environment variab
 
     ENV['PATH'] = File.join(GAMEROOT, "lib") + ";" + ENV['PATH']
 
-If you have any questions, feel free to ask on the Gosu boards.
+If you have any questions, feel free to ask on the [Gosu boards](https://www.libgosu.org/cgi-bin/mwf/forum.pl) or on [reddit](https://www.reddit.com/r/gosu/).
