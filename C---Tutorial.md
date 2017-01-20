@@ -105,116 +105,130 @@ Here comes a simple player class:
 class Player
 {
     Gosu::Image image;
-    double posX, posY, velX, velY, angle;
-        
-    public:
-        Player()
-        :   image(Gosu::resourcePrefix() + L"media/Starfighter.bmp")
-        {
-            posX = posY = velX = velY = angle = 0;
-        }
-        
-        void warp(double x, double y)
-        {
-            posX = x;
-            posY = y;
-        }
-        
-        void turnLeft()
-        {
-            angle -= 4.5;
-        }
-        
-        void turnRight()
-        {
-            angle += 4.5;
-        }
-        
-        void accelerate()
-        {
-            velX += Gosu::offsetX(angle, 0.5);
-            velY += Gosu::offsetY(angle, 0.5);
-        }
-        
-        void move()
-        {
-            posX = Gosu::wrap(posX + velX, 0.0, 640.0);
-            posY = Gosu::wrap(posY + velY, 0.0, 480.0);
+    Gosu::Sample beep;
+    double pos_x, pos_y, vel_x, vel_y, angle;
+    unsigned score;
 
-            velX *= 0.95;
-            velY *= 0.95;
-        }
-        
-        void draw() const
-        {
-            image.drawRot(posX, posY, 1, angle);
-        }
-    };
+public:
+    Player()
+    :   image(Gosu::resource_prefix() + "media/Starfighter.bmp")
+    {
+        pos_x = pos_y = vel_x = vel_y = angle = 0;
+        score = 0;
+    }
+
+    void warp(double x, double y)
+    {
+        pos_x = x;
+        pos_y = y;
+    }
+
+    void turn_left()
+    {
+        angle -= 4.5;
+    }
+
+    void turn_right()
+    {
+        angle += 4.5;
+    }
+
+    void accelerate()
+    {
+        vel_x += Gosu::offset_x(angle, 0.5);
+        vel_y += Gosu::offset_y(angle, 0.5);
+    }
+
+    void move()
+    {
+        pos_x = Gosu::wrap(pos_x + vel_x, 0.0, 640.0);
+        pos_y = Gosu::wrap(pos_y + vel_y, 0.0, 480.0);
+
+        vel_x *= 0.95;
+        vel_y *= 0.95;
+    }
+
+    void draw() const
+    {
+        image.draw_rot(pos_x, pos_y, 1, angle);
+    }
+};
 ```
 
-(Please download [Starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Starfighter.bmp) and ensure that it can be found at `media/starfighter.bmp`.)
+(Please download [Starfighter.bmp](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Starfighter.bmp) and ensure that your compiled binary can find it at `media/starfighter.bmp`.)
 
 There are a couple of things to note about this:
 
 [[angles2.png|alt=Angles in Gosu]]
 
-  * `Player::accelerate` makes use of the `offsetX`/`offsetY` functions. They are similar to what some people use sin/cos for: For example, if something moved 100 pixels per frame at an angle of 30°, it would pass `offsetX(30, 100)` pixels horizontally and `offsetY(30, 100)` pixels vertically per frame.
-  * When loading BMP files, Gosu replaces `#ff00ff` (fuchsia/magenta/'magic pink') with transparent pixels.
-  * Note that `drawRot` puts the *center* of the image at `x, y` - *not* the upper left corner, as with draw. Also, the player is drawn at `z = 1`, i.e. over the background. We'll replace these magic numbers with something better later. Also, see the reference for all the drawing methods and arguments.
-  * `Gosu::wrap(what, min, max)` maps a value inside the *min..max* range. If the player leaves the screen on the left side, they will re-appear from the right side etc. -- if you want to disable this wraparound, use `Gosu::clamp(what, min, max)` instead.
-  * The player just loads the image straight in the initializer list, unlike the Window which used a pointer.
+  * `Player::accelerate` makes use of the `offset_x`/`offset_y` functions. They are similar to the mathematical sin/cos functions: For example, if something moved 100 pixels per frame at an angle of 30°, it would move by `offset_x(30, 100)` pixels horizontally, and by `offset_y(30, 100)` pixels vertically each frame.
+  * When loading BMP image files, Gosu replaces `#ff00ff` (fuchsia/magenta/'magic pink') with transparent pixels.
+  * Note that `Image::draw_rot` puts the *center* of the image at `x, y` - *not* the upper left corner, as with `Image::draw`. Also, the player is drawn at `z = 1`, i.e. over the background. We'll replace this magic number with something better later. See [the C++ reference](https://www.libgosu.org/cpp/class_gosu_1_1_image.html) for the full list of arguments to `draw` and `draw_rot`.
+  * `Gosu::wrap(what, min, max)` maps a value inside the *min..max* range. If the player leaves the screen on the left side, they will re-appear from the right side etc. If you want to disable this wraparound, use `Gosu::clamp(what, min, max)` instead.
+  * The `Player` class loads the image straight in its initialiser list, unlike the Window which used a pointer.
 
 #### 2.2. Integrating Player with the Window
 
 ```cpp
 class GameWindow : public Gosu::Window
 {
-    std::auto_ptr<Gosu::Image> backgroundImage;
+    std::unique_ptr<Gosu::Image> background_image;
 
     Player player;
         
 public:
     GameWindow()
-    :   Window(640, 480)
+    : Window(640, 480), font(20)
     {
-        setCaption(L"Gosu Tutorial Game");
-        
-        std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
-        backgroundImage.reset(new Gosu::Image(filename, Gosu::ifTileable));
-        
+        set_caption("Gosu Tutorial Game");
+
+        std::string filename = Gosu::resource_prefix() + "media/Space.png";
+        background_image.reset(new Gosu::Image(filename, Gosu::IF_TILEABLE));
+
         player.warp(320, 240);
     }
     
-    void update()
+    void update() override
     {
-        if (Gosu::Input::down(Gosu::kbLeft) || Gosu::Input::down(Gosu::gpLeft))
-            player.turnLeft();
-        if (Gosu::Input::down(Gosu::kbRight) || Gosu::Input::down(Gosu::gpRight))
-            player.turnRight();
-        if (Gosu::Input::down(Gosu::kbUp) || Gosu::Input::down(Gosu::gpButton0))
+        if (Gosu::Input::down(Gosu::KB_LEFT) || Gosu::Input::down(Gosu::GP_LEFT)) {
+            player.turn_left();
+        }
+        if (Gosu::Input::down(Gosu::KB_RIGHT) || Gosu::Input::down(Gosu::GP_RIGHT)) {
+            player.turn_right();
+        }
+        if (Gosu::Input::down(Gosu::KB_UP) || Gosu::Input::down(Gosu::GP_BUTTON_0)) {
             player.accelerate();
+        }
         player.move();
     }
     
     void draw()
     {
         player.draw();
-        backgroundImage->draw(0, 0, 0);
+        background_image->draw(0, 0, Z_BACKGROUND);
     }
     
-    void buttonDown(Gosu::Button btn)
+    void button_down(Gosu::Button button) override
     {
-        if (btn == Gosu::kbEscape)
+        if (button == Gosu::KB_ESCAPE) {
            close();
+        }
+        else {
+            Window::button_down(button);
+        }
     }
 };
 ```
 
-As you can see, we have introduced keyboard and gamepad input!
+Here we have introduced keyboard and gamepad input!
 
-Similar to `update()` and `draw()`, `Gosu::Window` provides two virtual member functions `buttonDown(btn)` and `buttonUp(btn)` which can be overridden. They do nothing by default. We do this here to close the window when the user presses `Esc`. For a list of predefined button constants, see the reference.
+Similar to `update()` and `draw()`, `Gosu::Window` provides two virtual member functions `button_down(btn)` and `button_up(btn)` which can be overridden. The default implementation of `button_down` lets the user toggle between fullscreen and windowed mode with alt+enter (Windows, Linux) or cmd+F (macOS). Because we want to keep this default behaviour, we call `Window::button_down` if the user has not pressed anything that interests us.
 
-While getting feedback on pushed buttons is suitable for one-time events such as UI interaction, jumping or typing, it is rather useless for actions that span several frames — for example, moving by holding buttons down. This is where the `update()` member function comes into play, which calls the player's movement methods. If you run this section's code, you should be able to fly around!
+In our implementation of `button_down`, we want to close the window when the user presses `Esc`. The list of button constants can be found in (the C++ reference)[https://www.libgosu.org/cpp/namespace_gosu.html#enum-members].
+
+These two callbacks for pressed and released buttons are suitable for one-time events such as using an item. But they are not useful for actions that happen *while* a button is pressed — for example, moving the player. This is where the `update()` member function comes into play, which calls the player's movement, which in turn use `Gosu::Input::down`. This method will return `true` as long as a button is being held by the player.
+
+If you run the code in this section, you should be able to fly around.
 
 ### 3. Simple animations
 
