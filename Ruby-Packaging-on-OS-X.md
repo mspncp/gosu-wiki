@@ -14,16 +14,16 @@ The .app is a self-contained Ruby installation with most of the standard library
 
 ## Using Releasy
 
-There is a relatively new gem that can handle the packaging for you:
+There is a relatively rough (unmaintained) gem that can handle the packaging for you:
 
-https://github.com/Spooner/releasy/
+https://github.com/gosu/releasy/
 
-It really does nothing else than to automate the process outlined above. (Note: Might not be updated for the latest .app yet)
+It really does nothing else than to automate the process outlined above.
 
 ## Troubleshooting
 
-  * If the app does not start, the OS X Console app is your friend. Open it using Spotlight, start your game and look for any errors that appear.
-  * If Console does not show enough information, open a Terminal and `cd` into the same directory in which the `.app` file is located. Then run `YourGame.app/Contents/MacOS/RubyGosu\ App`.
-  * If it seems that everything is correct, but the app still does not start, try compressing it into a `.zip` file, deleting the `.app`, and unpacking the `.zip` file again. This will force OS X to forget any information that it may have cached about the app. (This is sometimes necessary for OS X to recognise changes made to the `Info.plist` file.)
-  * Using bundler is a little hairy because the structure of the `.app` folder predates it. You might need to ask on the forum, or use `releasy` which understands bundler.
+  * If the app does not start, the macOS Console app is your friend. Open it using Spotlight, start your game and look for any errors that appear.
+  * If Console does not show enough information, open a Terminal and `cd` into the same directory in which the `.app` file is located. Then run `YourGame.app/Contents/MacOS/Ruby`.
+  * If it seems that everything is correct, but the app still does not start, try compressing it into a `.zip` file, deleting the `.app`, and unpacking the `.zip` file again. This will force macOS to forget any information that it may have cached about the app. (This is sometimes necessary for macOS to recognise changes made to the `Info.plist` file.)
+  * Using bundler is a little hairy because the structure of the `.app` folder predates its existence. You might need to ask on the forum, or use `releasy` which understands bundler.
   * If you need to use libraries that are not included in the .app, copy them into the `lib` folder. If you need C extensions that are not included in the .app, you should ask on the Extending Gosu board.
