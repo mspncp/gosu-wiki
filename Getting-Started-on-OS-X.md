@@ -27,7 +27,7 @@ gosu-examples
 
 *TODO: This does not yet explain how resource loading works: Add your resources to the Xcode project and use `Gosu::resource_path` to find them.*
 
-Gosu uses [CocoaPods](http://cocoapods.org/) to streamline the Xcode project setup. Even though CocoaPods calls itself an "Objective C library manager", it is a great tool to integrate the C++ based Gosu library into your project along with all its dependencies.
+Gosu uses [CocoaPods](http://cocoapods.org/) to streamline the Xcode project setup. Even though CocoaPods calls itself an "Objective C library manager", it is a great tool to integrate the C++ based Gosu library into your project along with all its dependencies. This is the recommended way to use Gosu if you want to port your game to iOS later.
 
 ### Prerequisites
 
@@ -89,10 +89,12 @@ int main()
 
 If you "Build & Run" the project now (cmd+R), you should see an empty, black window with the caption "Hello World".
 
-## Using Gosu for C++, but without Xcode
+## Using Gosu for C++ without CocoaPods
 
 If you are not keen on using Xcode and/or CocoaPods, you can also install Gosu as a "normal" library using Homebrew:
 
 `brew install libgosu` ([formula here])
 
 You can then use Gosu with CMake or pkg-config as demonstrated in [[Getting Started on Linux]].
+
+This is the recommended way to use Gosu for desktop games because it makes it easy to build on Linux.
