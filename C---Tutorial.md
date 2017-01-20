@@ -2,24 +2,24 @@
 
 ## Source Code
 
-The code for the complete game, together with the required media files, can be found in the Gosu distribution of your choice ('examples/Tutorial.cpp'). To run the game, setup a new project as seen in [[Getting Started on OS X]], [[Getting Started on Windows]] or [[Getting Started on Linux]], respectively, and use `Tutorial.cpp` as the only source file. Take care so that the resulting game can find the resource files in the same folder (`examples/media`).
+The code for the complete tutorial game, along with all required media files, can be found this git repository (`examples/Tutorial/Tutorial.cpp`). To run the game, setup a new project as seen in [[Getting Started on OS X]], [[Getting Started on Windows]], or [[Getting Started on Linux]], and use `Tutorial.cpp` as the only source file. Make sure that the compiled binary can find the images and sound effects used in this game (`examples/media`).
 
 ## The Tutorial
+
 ### 1. Overriding Window's callbacks
 
 Every Gosu application starts with a class that derives from [Gosu::Window](https://www.libgosu.org/cpp/class_gosu_1_1_window.html). A minimal window class looks like this:
 
 ```cpp
-// All of Gosu.
+// The complete Gosu library.
 #include <Gosu/Gosu.hpp>
-// To safely include std::tr1::shared_ptr
-#include <Gosu/TR1.hpp> 
-// Makes life easier for Windows users compiling this.
+// Makes life a little easier when compiling the game in Visual C++.
 #include <Gosu/AutoLink.hpp>
 
 #include <cmath>
 #include <cstdlib>
 #include <list>
+#include <memory>
 #include <string>
 #include <vector>
       
@@ -27,17 +27,17 @@ class GameWindow : public Gosu::Window
 {
 public:
     GameWindow()
-    :   Window(640, 480)
+    : Window(640, 480)
     {
-        setCaption(L"Gosu Tutorial Game");
+        set_caption("Gosu Tutorial Game");
     }
 
-    void update()
+    void update() override
     {
         // ...
     }
 
-    void draw()
+    void draw() override
     {
         // ...
     }
@@ -50,13 +50,13 @@ int main()
 }
 ```
 
-The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large window. Then it changes the caption, which is empty until then. Note that Gosu uses `std::wstring` almost everywhere.
+The constructor initializes the `Gosu::Window` base class. The parameters shown here create a 640x480 pixels large window, then it changes the caption shown in the window's title bar. Note that Gosu accepts and returns `std::string` containing UTF-8 throughout its API.
 
-`update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is (by default) called 60 times per second and should contain the main game logic, such as moving objects around and testing for collisions.
+`update()` and `draw()` are overrides of `Gosu::Window`'s member functions. `update()` is called 60 times per second by default, and should contain the main game logic, such as moving objects around, or testing for collisions.
 
-`draw()` is called afterwards or whenever the window needs redrawing for other reasons, and may also be skipped every other time if the FPS go too low. It should contain code to redraw the whole scene, but no logic.
+`draw()` is usually called 60 times per second, but may be skipped for performance reasons. It should contain code to redraw the whole scene, but no game logic.
 
-Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user or by calling `close()`.
+Then follows the main program. We create a window and call its `show()` member function, which does not return until the window has been closed by the user, or by calling `Gosu::Window::close()`.
 
 A diagram of the main loop is shown on the [[Window Main Loop]] page.
 
@@ -65,37 +65,37 @@ A diagram of the main loop is shown on the [[Window Main Loop]] page.
 ```cpp
 class GameWindow : public Gosu::Window
 {
-    std::auto_ptr<Gosu::Image> backgroundImage;
+    std::unique_ptr<Gosu::Image> background_image;
 
 public:
     GameWindow()
-    :   Window(640, 480), font(20)
+    : Window(640, 480)
     {
-        setCaption(L"Gosu Tutorial Game");
+        set_caption("Gosu Tutorial Game");
 
-        std::wstring filename = Gosu::resourcePrefix() + L"media/Space.png";
-        backgroundImage.reset(new Gosu::Image(filename, Gosu::ifTileable));
+        std::string filename = Gosu::resource_prefix() + "media/Space.png";
+        background_image.reset(new Gosu::Image(filename, Gosu::IF_TILEABLE));
     }
 
-    void update()
+    void update() override
     {
         // ...
     }
 
-    void draw()
+    void draw() override
     {
-        backgroundImage->draw(0, 0, 0);
+        background_image->draw(0, 0, 0);
     }
 };
 ```
 
-(At this point, please download [Space.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Space.png) and ensure that it can be found at `media/Space.png`.)
+(At this point, please download [Space.png](https://raw.githubusercontent.com/gosu/gosu/master/examples/media/Space.png) and ensure that your compiled binary can find it at `media/Space.png`.)
 
-*Note:* `Image` has no default constructor so that there cannot be any 'zombie' images. You can use `auto_ptr`, `unique_ptr` (new in C++11), `boost::optional` or raw pointers when you want to delay the creation of an image.
+*Note:* `Gosu::Image` has no default constructor to prevent the creation of unusable 'zombie' images. You can use `std::unique_ptr`, `std::shared_ptr`, `std::optional`, or raw pointers if you need to delay the creation of an image.
 
-`Gosu::Image`'s constructor takes two arguments, the filename of the image file is given and "image flags". Here we pass `ifTileable`, see [[Basic Concepts]] for an explanation. Basically, you should use this flag for map tiles and background images.
+`Gosu::Image`'s constructor takes two arguments, the filename of the image file and "image flags". Here we pass `IF_TILEABLE`, see [[Basic Concepts]] for an explanation. Basically, you should use this flag for map tiles and background images.
 
-As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is the place for us to draw our background image. The arguments are almost obvious. The image is drawn at (0, 0) - the third image is the Z position; again, see [[Basic Concepts]].
+As mentioned in the last section, the Window's `draw()` member function is the place to draw everything, so this is where we draw the background image. The image is drawn at the position (0, 0) - the third image is the z position; see [[Basic Concepts]] for an explanation of Z ordering in Gosu.
 
 #### 2.1. Player & Movement
 
