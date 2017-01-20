@@ -4,21 +4,23 @@ Please help us keep this information up-to-date! :)
 
 ## Dependencies
 
-To install Gosu 0.8.x on Linux, you will need the following packages, even though the names will be different in every distribution: `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`.
+To install and use Gosu on Linux, you need the following packages (the names will be slightly different in every distribution):
+
+`libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`
 
 ## Ubuntu (last tested on Xenial Xerus (16.04), with Gosu 0.10.6) / Linux Mint (last tested on Linux Mint 17.3)
 
 ```bash
-# Gosu's dependencies for both C++ and Ruby
+# Dependencies for both C++ and Ruby
 sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev \
                      libgl1-mesa-dev libopenal-dev libsndfile-dev
 
-# To install Ruby - if you are using rvm or rbenv, please skip this step
+# To install Ruby itself - if you are using rvm or rbenv, please skip this step
 sudo apt-get install ruby-dev
 
 # If you are using a Ruby version manager (i.e. : rvm or rbenv)
 gem install gosu
-# otherwise, you can add "sudo" at the beginning of the command
+# If you are using system Ruby, you will need "sudo" to install Ruby libraries (gems)
 sudo gem install gosu
 
 ```
@@ -113,13 +115,13 @@ sudo make install
 
 ## Using Gosu in C++ with CMake
 
-Have a look at the examples. The example `CMakeLists.txt` are short, commented and straight forward, and can be used as a starting point for your own Gosu C++ games:
+Have a look at the examples. The example `CMakeLists.txt` are short, commented and straightforward, and can be used as a starting point for your own Gosu C++ games:
 
 https://github.com/gosu/gosu/blob/master/examples/Tutorial/CMakeLists.txt
 
 ## Using Gosu in C++ without CMake
 
-(The following assumes that you have installed Gosu system-wide. Note: This hasn't been tested in a while...)
+(The following assumes that you have installed Gosu system-wide. Note: This hasn't been tested in a while.)
 
 You have to compile with `` `pkg-config --cflags gosu` `` and `` `pkg-config --libs gosu` ``, so a simple Makefile could look like this:
 
