@@ -93,7 +93,7 @@ If you "Build & Run" the project now (cmd+R), you should see an empty, black win
 
 If you are not keen on using Xcode and/or CocoaPods, you can also install Gosu as a "normal" library using Homebrew:
 
-`brew install libgosu` ([formula here])
+`brew install libgosu` ([formula here](https://github.com/Homebrew/homebrew-core/blob/master/Formula/libgosu.rb))
 
 You can then use Gosu with CMake or pkg-config as demonstrated in [[Getting Started on Linux]].
 
