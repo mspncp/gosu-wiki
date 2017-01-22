@@ -32,8 +32,7 @@ class Tutorial < Gosu::Window
   end
 end
 
-window = Tutorial.new
-window.show
+Tutorial.new.show
 ```
 
 The constructor initializes the `Gosu::Window` base class to create a 640x480 pixels large window. It also sets the caption of the window, which is displayed in its title bar. You can create a fullscreen window by passing `:fullscreen => true` after the width and height.
@@ -67,8 +66,7 @@ class Tutorial < Gosu::Window
   end
 end
 
-window = Tutorial.new
-window.show
+Tutorial.new.show
 ```
 
 (At this point, please download [space.png](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/space.png) and ensure that it can be found at `media/space.png`.)
@@ -176,8 +174,7 @@ class Tutorial < Gosu::Window
   end
 end
 
-window = Tutorial.new
-window.show
+Tutorial.new.show
 ```
 
 Here we have introduced keyboard and gamepad input.
