@@ -207,7 +207,7 @@ class Star
 
   def initialize(animation)
     @animation = animation
-    @color = Gosu::Color.new(0xff_000000)
+    @color = Gosu::Color::BLACK.dup
     @color.red = rand(256 - 40) + 40
     @color.green = rand(256 - 40) + 40
     @color.blue = rand(256 - 40) + 40
@@ -246,7 +246,7 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
 
 ```ruby
 ...
-class Window < Gosu::Window
+class Tutorial < Gosu::Window
   def initialize
     super 640, 480
     self.caption = "Gosu Tutorial Game"
@@ -287,7 +287,7 @@ Done! You can now collect stars.
 Finally, we want to draw the current score using a bitmap font, and play a "beep" sound every time the player collects a star. The `Window` will handle the text part, loading a font that is 20 pixels high:
 
 ```ruby
-class Window < Gosu::Window
+class Tutorial < Gosu::Window
   def initialize
     ...
     @font = Gosu::Font.new(20)
@@ -321,7 +321,7 @@ class Player
 
   def collect_stars(stars)
     stars.reject! do |star|
-      if Gosu::distance(@x, @y, star.x, star.y) < 35 then
+      if Gosu.distance(@x, @y, star.x, star.y) < 35
         @score += 10
         @beep.play
         true
