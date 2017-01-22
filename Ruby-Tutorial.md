@@ -17,7 +17,7 @@ Every Gosu application starts with a subclass of [Gosu::Window](https://www.libg
 ```ruby
 require 'gosu'
 
-class GameWindow < Gosu::Window
+class Tutorial < Gosu::Window
   def initialize
     super 640, 480
     self.caption = "Gosu Tutorial Game"
@@ -32,7 +32,7 @@ class GameWindow < Gosu::Window
   end
 end
 
-window = GameWindow.new
+window = Tutorial.new
 window.show
 ```
 
@@ -51,7 +51,7 @@ A diagram of the main loop is shown on the [[Window Main Loop]] page.
 ```ruby
 require 'gosu'
 
-class GameWindow < Gosu::Window
+class Tutorial < Gosu::Window
   def initialize
     super 640, 480
     self.caption = "Gosu Tutorial Game"
@@ -67,7 +67,7 @@ class GameWindow < Gosu::Window
   end
 end
 
-window = GameWindow.new
+window = Tutorial.new
 window.show
 ```
 
@@ -135,10 +135,10 @@ To explain:
   * Note that `draw_rot` puts the *center* of the image at (x, y) - *not* the upper left corner as `Image#draw` does. See the [RDoc][] for the full list of arguments to `draw` and `draw_rot`.
   * The player is drawn at z=1, i.e. over the background which is drawn with z=0. We'll replace these magic numbers with something better later.
 
-#### 2.2 Using our Player class inside GameWindow
+#### 2.2 Using our Player class
 
 ```ruby
-class GameWindow < Gosu::Window
+class Tutorial < Gosu::Window
   def initialize
     super 640, 480
     self.caption = "Gosu Tutorial Game"
@@ -176,7 +176,7 @@ class GameWindow < Gosu::Window
   end
 end
 
-window = GameWindow.new
+window = Tutorial.new
 window.show
 ```
 
