@@ -20,7 +20,7 @@ require 'gosu'
 class Tutorial < Gosu::Window
   def initialize
     super 640, 480
-    self.caption = "Gosu Tutorial Game"
+    self.caption = "Tutorial Game"
   end
   
   def update
@@ -53,7 +53,7 @@ require 'gosu'
 class Tutorial < Gosu::Window
   def initialize
     super 640, 480
-    self.caption = "Gosu Tutorial Game"
+    self.caption = "Tutorial Game"
     
     @background_image = Gosu::Image.new("media/space.png", :tileable => true)
   end
@@ -139,7 +139,7 @@ To explain:
 class Tutorial < Gosu::Window
   def initialize
     super 640, 480
-    self.caption = "Gosu Tutorial Game"
+    self.caption = "Tutorial Game"
 
     @background_image = Gosu::Image.new("media/space.png", :tileable => true)
 
@@ -249,7 +249,7 @@ Now let's extend Window to load the animation, spawn new stars, have the player 
 class Tutorial < Gosu::Window
   def initialize
     super 640, 480
-    self.caption = "Gosu Tutorial Game"
+    self.caption = "Tutorial Game"
 
     @background_image = Gosu::Image.new("media/space.png", :tileable => true)
 
