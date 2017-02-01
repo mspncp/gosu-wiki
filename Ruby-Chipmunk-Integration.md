@@ -6,6 +6,8 @@ This tutorial assumes that both Gosu and Chipmunk have been properly installed. 
 
 New, better documented bindings to Chipmunk 5.3.4 are available at [[http://github.com/beoran/chipmunk]]. Check there too for the documentation. --Beoran.
 
+There are a few more examples in this [GitHub repository by PhilCK](https://github.com/PhilCK/Chipmunk-Examples).
+
 ## Prolog
 
 Lately, I have been writing a game I have been threatening to write on-and-off for a long time.  I am, of course, using Ruby as the implementation language and Gosu as the animation layer.  One thing I faced early on was implementing the physics of the game; following one of my coding mantras, I took the approach of "get it to work first, worry about optimizing later". While the performance I saw was basically adequate for the scope of version 0.1, I could see it would start to bog down fairly quickly going forward.  As it happens, I showed Julian an early copy of my work and he pointed me to Chipmunk to handle the physics.
