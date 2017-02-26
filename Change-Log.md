@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.11.2
+* 2017-02-26: Ruby: Arguments are automatically converted to String everywhere
+* 2017-02-19: Ruby: Fix name of mouse position setters
+* 2017-02-19: All: Reset current colour to solid white before running GL blocks
+* 2017-01-10: Ruby: Fix handling of exceptions in `Window#needs_redraw?` (#376)
+
 ## 0.11.1
 * 2017-01-17: Window: Fix UTF-8 Text rendering (#373)
 * 2017-01-14: All: Fix loading of 4-bit PNG files (#375)
