@@ -2,68 +2,6 @@
 
 This page is obsolete. Changes in recent versions of Gosu are explained on the [releases page](https://github.com/gosu/gosu/releases).
 
-## 0.10.8
-* 2016-08-15: Mac: Fix several compilation issues
-* 2016-08-15: All: Map analog trigger buttons in SDL_GameController API to `GpButton` constants
-* 2016-07-02: Ruby: Gosu::Color can now safely be used as a Hash key (thanks to @shawn42 for the contribution)
-
-## 0.10.7
-* 2016-04-24: Windows: Support for Ruby 2.3.0
-* 2016-04-23: Linux: Improve mouse getters/setters
-* 2016-04-18: Ruby: Fix Gosu::random not being random
-* 2016-04-18: All: Update stb_image, stb_image_write, stb_vorbis
-* 2016-04-17: Mac: Reduce Gosu::Font artefacts
-* 2016-03-15: Ruby: Fix compilation issues with Ruby 1.9.3
-
-## 0.10.6
-* 2016-02-14: Windows: Fix wrong viewport size in fullscreen
-
-## 0.10.5
-* 2016-01-11: All: Update SDL to 2.0.4 stable. Finally!! <3
-* 2016-01-11: All: Update stb_image, stb_imagewrite and stb_vorbis dependencies
-* 2016-01-11: Ruby: Update SWIG to 3.0.8 - who knows what this will break
-* 2015-12-19: All: Support clockwise coordinates in `Macro#draw`
-* 2015-11-11: Ruby: Use `sdl2-config` on OS X, not only on X11-based systems
-
-## 0.10.4 (Ruby only)
-* 2015-10-04: Ruby: Fix compatibility with Gosu 0.8 interface (`Gosu::Image#initialize`; issue #360)
-
-## 0.10.3
-* 2015-09-30: All: Fix black/white empty window before `Gosu::Window#show` is called (issue #280)
-
-## 0.10.2
-* 2015-09-15: All: Fix many common text rendering artefacts
-* 2015-09-15: Mac: Fix compilation error on OS X 10.11 El Capitan
-* 2015-09-13: All: Add experimental `Window#tick` method to potential integration with GUI toolkits
-* 2015-09-07: Windows: Update to SDL 2.0.4 RC 2
-
-## 0.10.1
-* 2015-08-20: Windows/Linux: Fix audio playback of stereo, non-Ogg-Vorbis files (https://github.com/gosu/gosu/issues/237)
-* 2015-08-20: Ruby: Fix `:retro` parameter in `Image.load_tiles` and `Image.from_text`
-
-## 0.10.0
-* 2015-08-20: Xcode: The `Gosu.podspec` for OS X and iOS is now versioned, instead of being stuck at v0.0.1
-* 2015-08-19: Windows: Upgrade to Visual C++ 2015 (the free Express Desktop edition works)
-* 2015-08-19: C++: Sockets have been extracted to https://github.com/jlnr/Sockets; RIP!
-* 2015-08-17: All: Use stb_image(_write) for image I/O instead of GDI+, FreeImage, UIImage/NSImage etc.
-* 2015-08-15: All: Use stb_vorbis for OGG decoding instead of libogg/libvorbis/libvorbisfile
-* 2015-07-26: Unix: Fix CMake build files
-* 2015-07-22: All: Add new `ifRetro`/`:retro` parameter to image constructors
-* 2015-07-15: Ruby: Fix mouse position getter/setter interaction
-
-## 0.9.2
-* 2015-05-24: Windows: Support for Ruby 2.2.x
-* 2015-05-24: All: Allow macro recording outside of Window::draw
-* 2015-05-23: All: Use new SDL_GetGlobalMouseState function if available
-
-## 0.9.1
-* 2015-05-17: Ruby: Fixes freeze-at-exit bug (thanks to RunnerPack for reporting this)
-* 2015-05-17: Ruby: Fixes one uninitialised variable that could affect text alignment
-* 2015-05-16: Ruby: Fixes backwards compatibility in Font#initialize
-
-## 0.9.0
-* 2015-05-16: All: New interface where almost everything is independent from Gosu::Window
-
 ## 0.8.7
 * 2015-01-17: All: Improve gamepad support by using the SDL_GameController API
 * 2015-01-17: Windows: Fix LoadError in Ruby 2.1.x x64 gem
