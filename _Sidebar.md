@@ -17,7 +17,6 @@
   * [[Window Main Loop]]
   * [[Supported Audio Formats]]
   * [[Hacking Gosu]]
-  * [[Change Log]]
 * Deployment
   * [[Ruby Packaging on OS X]]
   * [[Ruby Packaging on Windows]]
