@@ -45,7 +45,7 @@ You can follow these steps to install Ruby/Gosu anyway:
 6. Install Gosu with the following command:
 
    ```bash
-   sudo gem install gosu -- --with-cflags=-I/opt/SDL2/include --with-cppflags=-I/opt/SDL2/include --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
+   sudo gem install gosu -- --with-cflags=-I/opt/SDL2/include/SDL2 --with-cppflags=-I/opt/SDL2/include/SDL2 --with-ldflags=\"/opt/SDL2/lib/libSDL2.a /opt/SDL2/lib/libSDL2_ttf.a\"
    ```
 
 7. Optional: Run the example games to verify that everything works.
@@ -59,7 +59,7 @@ You can follow these steps to install Ruby/Gosu anyway:
 
 Congratulations, you should now be able to run Ruby/Gosu games!
 
-*Note:* One unresolved issue in Raspbian is that games started from a terminal will leak keystrokes into the terminal, and you might accidentally trigger commands while playing games ([#213](https://github.com/jlnr/gosu/issues/213)).
+*Note:* One unresolved issue in Raspbian is that games started from a terminal will leak keystrokes into the terminal, and you might accidentally trigger commands while playing games ([#213](https://github.com/gosu/gosu/issues/213)).
 You can use [this handy tool](https://github.com/inoremap/shut-term-keys) to prevent this from happening.
 
 *Note:* It is best to run all games in fullscreen mode on Raspbian, since windowed mode does not work as expected.
