@@ -1,6 +1,6 @@
 # Getting Started on Raspbian (Raspberry Pi)
 
-_Note: This guide only applies to the original Raspberry Pi and the Raspbian Linux distribution._
+_Note: This guide only applies to the original Raspberry Pi and the Raspbian Linux distribution. If you use a Raspberry Pi 2 or 3, please [enable OpenGL](http://www.geeks3d.com/20160209/raspberry-pi-new-version-of-raspbian-jessie-with-opengl-2-1-support/) and then follow the ‘normal’ instructions for Ubuntu/Debian here: [[Getting Started on Linux]]_
 
 In theory, Raspbian is 'just' another Linux distribution. However, its package manager is missing Gosu's (new) main dependency, SDL 2. There is a package called `libsdl2-dev` in the Debian Jessie repositories, but it comes without the `RPI` video driver and cannot be used to install Gosu.
 
