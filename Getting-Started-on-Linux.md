@@ -6,19 +6,19 @@ Please help us keep this information up-to-date! :)
 
 To install and use Gosu on Linux, you need the following packages (the names will be slightly different in every distribution):
 
-`libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`
+`libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev`
 
 ## Ubuntu (last tested on Yakkety Yak (16.10), with Gosu 0.11.2) / Linux Mint (last tested on Linux Mint 17.3)
 
 ```bash
 # Dependencies for both C++ and Ruby
 sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev \
-                     libgl1-mesa-dev libopenal-dev libsndfile-dev
+                     libgl1-mesa-dev libopenal-dev libsndfile-dev libmpg123-dev
 
 # To install Ruby itself - if you are using rvm or rbenv, please skip this step
 sudo apt-get install ruby-dev
 
-# If you are using a Ruby version manager (i.e. : rvm or rbenv)
+# If you are using a Ruby version manager (i.e. rvm or rbenv)
 gem install gosu
 # If you are using system Ruby, you will need "sudo" to install Ruby libraries (gems)
 sudo gem install gosu
