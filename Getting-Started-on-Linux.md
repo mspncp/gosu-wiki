@@ -6,7 +6,7 @@ Please help us keep this information up-to-date! :)
 
 To install and use Gosu on Linux, you need the following packages (the names will be slightly different in every distribution):
 
-`libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev`
+`libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev` (starting in 0.12.0)
 
 ## Ubuntu (last tested on Yakkety Yak (16.10), with Gosu 0.11.2) / Linux Mint (last tested on Linux Mint 17.3)
 
