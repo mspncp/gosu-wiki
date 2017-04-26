@@ -31,13 +31,13 @@ See [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=113
 
 Please see [this post on the Gosu forum](https://www.libgosu.org/cgi-bin/mwf/topic_show.pl?pid=8476#pid8476) if you run into trouble installing Gosu or anything else that uses OpenGL.
 
-## Manjaro Linux (last tested on 2014-09-02 with Gosu 0.8.3)
+## Arch Linux/Manjaro (last tested on 2016-04-26 with Gosu 0.12.0)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
-sudo pacman -S freeglut libegl openal pango sdl2_ttf libsndfile pkg-config
+sudo pacman -S openal pango sdl2 sdl2_ttf libsndfile pkg-config mpg123
 
-# To install Ruby 2.1.2
+# To install Ruby
 sudo pacman -S ruby
 ```
 
@@ -50,16 +50,6 @@ sudo dnf install --assumeyes mesa-libGL-devel openal-devel pango-devel SDL2_ttf-
 
 # To install Ruby
 sudo dnf install --assumeyes ruby-devel rubygems
-```
-
-## Arch Linux (last tested on 2014-12-09 with Gosu 0.8.x)
-
-```bash
-# Gosu's dependencies for both C++ and Ruby
-sudo pacman -S freeglut libegl openal pango sdl_ttf libsndfile pkg-config sdl2_ttf sdl2
-
-# To install Ruby
-sudo pacman -S ruby
 ```
 
 ## Gentoo Linux (last tested 2014-11-09 with Gosu 0.8.x)
