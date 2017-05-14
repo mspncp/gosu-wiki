@@ -130,7 +130,7 @@ To explain:
 
   * `Player#accelerate` makes use of the `offset_x`/`offset_y` functions, which are similar to the mathematical sin/cos functions. If something moved 100 pixels per frame at an angle of 30°, it would move by `offset_x(30, 100)` (=50) pixels horizontally, and by `offset_y(30, 100)` (=-86.6) pixels vertically each frame.
   * When loading BMP images files, Gosu replaces `#ff00ff` (fuchsia/magenta/magic pink) with transparent pixels.
-  * Note that `draw_rot` puts the *center* of the image at (x, y) - *not* the upper left corner as `Image#draw` does. See the [RDoc][] for the full list of arguments to `draw` and `draw_rot`.
+  * Note that `draw_rot` puts the *center* of the image at (x, y) - *not* the upper left corner as `Image#draw` does. See the [RDoc]() for the full list of arguments to `draw` and `draw_rot`.
   * The player is drawn at z=1, i.e. over the background which is drawn with z=0. We'll replace these magic numbers with something better later.
 
 #### 2.2 Using our Player class
@@ -181,7 +181,7 @@ Here we have introduced keyboard and gamepad input.
 
 Similar to `update()` and `draw()`, `Gosu::Window` provides two member functions `button_down(id)` and `button_up(id)` which can be overridden. The default implementation of `Gosu::Window#button_down` lets the user toggle between fullscreen and windowed mode with alt+enter (Windows, Linux) or cmd+F (macOS). Because we want to keep this default behaviour, we call `super` if the user has not pressed anything that interests us.
 
-In our implementation of `button_down`, we close the window when the user presses `Esc`. The list of button constants can be found in the [RDoc][].
+In our implementation of `button_down`, we close the window when the user presses `Esc`. The list of button constants can be found in the [RDoc](http://www.rubydoc.info/github/gosu/gosu/Gosu/Window#draw-instance_method).
 
 These two callbacks for pressed and released buttons are suitable for one-time events such as using an item. But they are not useful for actions that happen *while* a button is pressed — for example, moving the player. This is where the `Window#update` method comes into play, which calls `player.move()`, which in turn uses `Gosu.button_down?(id)`. This method will return `true` as long as a button is being held by the player.
 
@@ -335,7 +335,7 @@ end
 
 (Please download [beep.wav](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/beep.wav) and ensure that it can be found at `media/beep.wav`.)
 
-See the [RDoc](http://www.rubydoc.info/github/gosu/gosu/Gosu) for more powerful ways of playing back sounds.
+See the [RDoc](http://www.rubydoc.info/github/gosu/gosu/Gosu/Song) for more powerful ways of playing back sounds.
 
 That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
 
