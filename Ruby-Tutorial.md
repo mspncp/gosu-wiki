@@ -335,7 +335,7 @@ end
 
 (Please download [beep.wav](https://raw.githubusercontent.com/gosu/gosu-examples/master/examples/media/beep.wav) and ensure that it can be found at `media/beep.wav`.)
 
-See the [RDoc]: http://www.rubydoc.info/github/gosu/gosu/Gosu for more powerful ways of playing back sounds.
+See the [RDoc](http://www.rubydoc.info/github/gosu/gosu/Gosu) for more powerful ways of playing back sounds.
 
 That's it! Everything else is up to your imagination. If you want to see examples of other types of games being written in Ruby/Gosu, take a look at the great projects on the [Gosu Showcase board][boards.showcase].
 
