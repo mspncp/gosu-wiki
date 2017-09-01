@@ -148,13 +148,13 @@ class Tutorial < Gosu::Window
   end
 
   def update
-    if Gosu.button_down? Gosu::KbLeft or Gosu::button_down? Gosu::GpLeft
+    if Gosu.button_down? Gosu::KB_LEFT or Gosu::button_down? Gosu::GP_LEFT
       @player.turn_left
     end
-    if Gosu.button_down? Gosu::KbRight or Gosu::button_down? Gosu::GpRight
+    if Gosu.button_down? Gosu::KB_RIGHT or Gosu::button_down? Gosu::GP_RIGHT
       @player.turn_right
     end
-    if Gosu.button_down? Gosu::KbUp or Gosu::button_down? Gosu::GpButton0
+    if Gosu.button_down? Gosu::KB_UP or Gosu::button_down? Gosu::GP_BUTTON_0
       @player.accelerate
     end
     @player.move
@@ -166,7 +166,7 @@ class Tutorial < Gosu::Window
   end
 
   def button_down(id)
-    if id == Gosu::KbEscape
+    if id == Gosu::KB_ESCAPE
       close
     else
       super
