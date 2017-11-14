@@ -53,11 +53,12 @@ sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel pango-de
 sudo dnf install --assumeyes ruby-devel rubygems
 ```
 
-## Gentoo Linux (last tested 2014-11-09 with Gosu 0.8.x)
+## Gentoo Linux (last tested 2017-11-14 with Gosu 0.12.1)
 
 ```bash
-# Gosu's dependencies for both C++ and Ruby, ensure you have the 'opengl' USE Flag set globally or at least for media-libs/libsdl2.
-sudo emerge -av media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl2-ttf media-libs/libsndfile
+# Gosu's dependencies for both C++ and Ruby.
+# Ensure you have the 'opengl' USE flag set globally or at least for media-libs/libsdl2.
+sudo emerge -av media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl2-ttf media-libs/libsndfile media-sound/mpg123
 
 # To install Ruby
 sudo emerge -av dev-lang/ruby
@@ -98,6 +99,7 @@ cd ..
 ./create_deb_package.sh
 sudo dpkg -i libgosu-dev-0.10.7-Linux.deb
 ```
+
 On all other systems you can use this to install Gosu - but be aware, there is no uninstall target. Run it inside `build`, after running `make`.  Warning:  This puts the object files in a different spot on the system and can cause problems when building a Gosu-based project with the `-lgosu` option passed to g++.
 
 ```bash
