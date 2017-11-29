@@ -11,7 +11,7 @@ This depends on your operating system:
 
 There is both a [[Ruby Tutorial]] and a [[C++ Tutorial]].
 
-## Translations of the Ruby Tuturial
+## Translations of the Ruby Tutorial
 
 Beware: These translations are sometimes **outdated**. It is best to read them side-by-side with the English [[Ruby Tutorial]].
 
