@@ -8,7 +8,7 @@ To install and use Gosu on Linux, you need the following packages (the names wil
 
 `libsdl2-dev`, `libsdl2-ttf-dev`, `libpango1.0-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev` (starting in 0.12.0), `libgmp-dev`
 
-## Ubuntu (last tested on Yakkety Yak (16.10), with Gosu 0.11.2) / Linux Mint (last tested on Linux Mint 17.3)
+## Ubuntu (last tested on Ubuntu 18.04 with Gosu 0.13.3) / Linux Mint (last tested on Linux Mint 17.3) / elementaryOS
 
 ```bash
 # Dependencies for both C++ and Ruby
