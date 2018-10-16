@@ -58,7 +58,7 @@ sudo dnf install --assumeyes ruby-devel rubygems
 ```bash
 # Gosu's dependencies for both C++ and Ruby.
 # Ensure you have the 'opengl' USE flag set globally or at least for media-libs/libsdl2.
-sudo emerge -av media-libs/mesa media-libs/openal x11-libs/pango media-libs/sdl2-ttf media-libs/libsndfile media-sound/mpg123
+sudo emerge -av media-libs/mesa media-libs/openal x11-libs/pango media-libs/libsndfile media-sound/mpg123
 
 # To install Ruby
 sudo emerge -av dev-lang/ruby
