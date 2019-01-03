@@ -11,8 +11,8 @@ Gosu is made available to Ruby using [SWIG (Simplified Wrapper and Interface Gen
 
 ### The Rendering System
 
-Gosu does not use the Z-ordering provided by OpenGL, but instead serialises all rendering operations into a [`DrawOp`](https://github.com/gosu/gosu/blob/master/src/Graphics/DrawOp.hpp).
-These `DrawOp`s are then added to a [`DrawOpQueue`](https://github.com/gosu/gosu/blob/master/src/Graphics/DrawOpQueue.hpp) and sorted by their Z-coordinate right before being rendered (in `DrawOpQueue::performDrawOpsAndCode`).
+Gosu does not use the Z-ordering provided by OpenGL, but instead serialises all rendering operations into a [`DrawOp`](https://github.com/gosu/gosu/blob/master/src/DrawOp.hpp).
+These `DrawOp`s are then added to a [`DrawOpQueue`](https://github.com/gosu/gosu/blob/master/src/DrawOpQueue.hpp) and sorted by their Z-coordinate right before being rendered (in `DrawOpQueue::performDrawOpsAndCode`).
 
 ## Recommended Workflows
 
