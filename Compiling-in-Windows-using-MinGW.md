@@ -15,7 +15,7 @@ Next, you should download Gosu's source code. Go to the [trunk repository](https
 ### Getting some dependencies
 Before compiling you need to get some dependencies. The best way of handling these is creating a folder in the root of your hdd called `c:\lib`. This way, it will be easier to reach and reference the libraries.
 
-* **SDL** -- [Website](http://www.libsdl.org). Get the development version for mingw32. Currently the latest version can be downloaded [here](http://www.libsdl.org/release/SDL-devel-1.2.14-mingw32.tar.gz).
+* **SDL** -- [Website](http://www.libsdl.org). Get the development version for mingw32. Currently the latest version can be downloaded [here](http://www.libsdl.org/release/SDL-devel-2.0.9-mingw32.tar.gz).
 * **SDL_Mixer** -- [Website](http://www.libsdl.org/projects/SDL_mixer/). Get the binary for Win32, which includes both the headers and the library.
 * **FreeImage** -- [Website](http://freeimage.sourceforge.net/download.html). Get the binary distribution.
 * **OpenAL** -- [Website](http://connect.creativelabs.com/openal/Downloads/Forms/AllItems.aspx). Get the OpenAL SDK.
