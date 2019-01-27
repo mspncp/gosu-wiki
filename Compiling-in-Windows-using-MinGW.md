@@ -5,7 +5,7 @@ _**Warning: This guide was kindly donated a while ago, but even the authors have
 In this tutorial we will compile Gosu using MinGW, the set of open source GNU compilers for Windows. There are a few steps involved and it's still a work-in-progress, so feedback is greatly appreciated.
 
 ## Installing MinGW
-The first step is downloading and installing MinGW. The best way of doing this is using the new [Automated MinGW Installer](http://sourceforge.net/projects/mingw/files/Automated%20MinGW%20Installer/). 
+The first step is downloading and installing MinGW. The best way of doing this is using the latest version [MinGW Installer executable](http://sourceforge.net/projects/mingw/files/). 
 
 Once you've installed MinGW, you should add the `bin` folder within MinGW to the Windows `PATH`.
 
@@ -15,7 +15,7 @@ Next, you should download Gosu's source code. Go to the [trunk repository](https
 ### Getting some dependencies
 Before compiling you need to get some dependencies. The best way of handling these is creating a folder in the root of your hdd called `c:\lib`. This way, it will be easier to reach and reference the libraries.
 
-* **SDL** -- [Website](http://www.libsdl.org). Get the development version for mingw32. Currently the latest version can be downloaded [here](http://www.libsdl.org/release/SDL-devel-2.0.9-mingw32.tar.gz).
+* **SDL** -- [Website](http://www.libsdl.org). Get the development version for mingw32. Currently the latest version can be downloaded [here](http://www.libsdl.org/release/SDL2-2.0.9-win32-x64.zip).
 * **SDL_Mixer** -- [Website](http://www.libsdl.org/projects/SDL_mixer/). Get the binary for Win32, which includes both the headers and the library.
 * **FreeImage** -- [Website](http://freeimage.sourceforge.net/download.html). Get the binary distribution.
 * **OpenAL** -- [Website](http://connect.creativelabs.com/openal/Downloads/Forms/AllItems.aspx). Get the OpenAL SDK.
