@@ -1,5 +1,10 @@
 # Basic Concepts
 
+## Options Hash
+Hashes are special parameters that you can pass in as options into some modules in Gosu. They are found in the documentation as `options = {}`. A default hash value is always set for each option. To use a hash simply put the name of the option, followed by a colon then assign the new value.
+* For example in the [Image.from_text method](https://www.rubydoc.info/github/gosu/gosu/master/Gosu%2FImage%2Efrom_text) `.from_text(text, line_height, options = {})` the option to bold text is given as `:bold (bool) — default: false `. This can be passed in with `bold: true`. This method then becomes `.from_text("This text will be bold", 12,{bold: true})`.
+You can see more examples of Options hash in the topics below.
+
 ## Z Ordering
 
 All drawing operations in Gosu accept a floating-point value called "z". Things drawn with a higher z position will be drawn on top of those with a lower z position. If two things have the same z position, they will be drawn in the order the drawing functions have been called.
