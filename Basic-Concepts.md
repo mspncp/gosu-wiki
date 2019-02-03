@@ -1,7 +1,7 @@
 # Basic Concepts
 
 ## Options Hash
-Hashes are special parameters that you can pass in as options into some modules in Gosu. They are found in the documentation as `options = {}`. A default hash value is always set for each option. To use a hash simply put the name of the option, followed by a colon then assign the new value.
+Hashes are special parameters that you can pass in as options into some methods in Gosu. They are found in the documentation as `options = {}`. A default hash value is always set for each option. To use a hash simply put the name of the option, followed by a colon then assign the new value.
 * For example in the [Image.from_text method](https://www.rubydoc.info/github/gosu/gosu/master/Gosu%2FImage%2Efrom_text) `.from_text(text, line_height, options = {})` the option hash to bold text is given as `:bold (bool) — default: false `. This can be passed in with `bold: true`.
 
 This method then becomes `.from_text("This text will be bold", 12,{bold: true})`.
