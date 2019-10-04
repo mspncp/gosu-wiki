@@ -42,7 +42,7 @@ sudo pacman -S openal pango sdl2 sdl2_ttf libsndfile pkg-config mpg123
 sudo pacman -S ruby
 ```
 
-## Fedora (last tested on Fedora 25 with Gosu 0.10.8)
+## Fedora (last tested on Fedora 30 with Gosu 0.14.5)
 
 ```bash
 # Gosu's dependencies for both C++ and Ruby
