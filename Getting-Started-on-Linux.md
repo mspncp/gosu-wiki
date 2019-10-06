@@ -6,15 +6,14 @@ Please help us keep this information up-to-date! :)
 
 To install and use Gosu on Linux, you need the following packages (the names will be slightly different in every distribution):
 
-`libsdl2-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev` (starting in 0.12.0), `libgmp-dev`
+`libsdl2-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev`, `libgmp-dev`
 
 ## Ubuntu (last tested on Ubuntu 18.04 with Gosu 0.14.5) / Linux Mint (last tested on Linux Mint 17.3) / elementary OS
 
 ```bash
 # Dependencies for both C++ and Ruby
-sudo apt-get install build-essential libsdl2-dev libsdl2-ttf-dev libpango1.0-dev \
-                     libgl1-mesa-dev libopenal-dev libsndfile-dev libmpg123-dev \
-                     libgmp-dev
+sudo apt-get install build-essential libsdl2-dev libgl1-mesa-dev libopenal-dev \
+                     libsndfile-dev libmpg123-dev libgmp-dev
 
 # To install Ruby itself - if you are using rvm or rbenv, please skip this step
 sudo apt-get install ruby-dev
@@ -47,7 +46,7 @@ sudo pacman -S ruby
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo dnf groupinstall --assumeyes "Development Tools"
-sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel pango-devel SDL2_ttf-devel libsndfile-devel gcc-c++ redhat-rpm-config
+sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel libsndfile-devel gcc-c++ redhat-rpm-config
 
 # To install Ruby
 sudo dnf install --assumeyes ruby-devel rubygems
@@ -58,7 +57,7 @@ sudo dnf install --assumeyes ruby-devel rubygems
 ```bash
 # Gosu's dependencies for both C++ and Ruby.
 # Ensure you have the 'opengl' USE flag set globally or at least for media-libs/libsdl2.
-sudo emerge -av media-libs/mesa media-libs/openal x11-libs/pango media-libs/libsndfile media-sound/mpg123
+sudo emerge -av media-libs/mesa media-libs/openal media-libs/libsndfile media-sound/mpg123
 
 # To install Ruby
 sudo emerge -av dev-lang/ruby
@@ -72,7 +71,7 @@ sudo zypper install --type pattern devel_basis
 # Add the 'games' repository for libfreeimage-devel
 sudo zypper addrepo http://download.opensuse.org/repositories/games/openSUSE_12.1/ opensuse-games
 # Gosu's dependencies for both C++ and Ruby
-sudo zypper install libSDL2-devel libSDL2_ttf-devel pango-devel libsndfile-devel openal-soft-devel
+sudo zypper install libSDL2-devel libsndfile-devel openal-soft-devel
 
 # To install the Ruby headers
 sudo zypper install ruby-devel
