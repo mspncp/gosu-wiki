@@ -46,7 +46,7 @@ sudo pacman -S ruby
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo dnf groupinstall --assumeyes "Development Tools"
-sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel libsndfile-devel gcc-c++ redhat-rpm-config SDL-devel
+sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel libsndfile-devel gcc-c++ redhat-rpm-config SDL2-devel
 
 # To install Ruby
 sudo dnf install --assumeyes ruby-devel rubygems
