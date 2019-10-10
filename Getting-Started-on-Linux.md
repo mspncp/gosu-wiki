@@ -46,10 +46,13 @@ sudo pacman -S ruby
 ```bash
 # Gosu's dependencies for both C++ and Ruby
 sudo dnf groupinstall --assumeyes "Development Tools"
-sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel libsndfile-devel gcc-c++ redhat-rpm-config
+sudo dnf install --assumeyes mpg123-devel mesa-libGL-devel openal-devel libsndfile-devel gcc-c++ redhat-rpm-config SDL-devel
 
 # To install Ruby
 sudo dnf install --assumeyes ruby-devel rubygems
+
+# Install Gosu
+gem install gosu
 ```
 
 ## Gentoo Linux (last tested 2017-11-14 with Gosu 0.12.1)
