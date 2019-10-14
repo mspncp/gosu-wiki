@@ -6,14 +6,14 @@ Please help us keep this information up-to-date! :)
 
 To install and use Gosu on Linux, you need the following packages (the names will be slightly different in every distribution):
 
-`libsdl2-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev`, `libgmp-dev`
+`libsdl2-dev`, `libgl1-mesa-dev`, `libopenal-dev`, `libsndfile-dev`, `libmpg123-dev`, `libgmp-dev`, `libfontconfig1-dev`
 
 ## Ubuntu (last tested on Ubuntu 18.04 with Gosu 0.14.5) / Linux Mint (last tested on Linux Mint 17.3) / elementary OS
 
 ```bash
 # Dependencies for both C++ and Ruby
 sudo apt-get install build-essential libsdl2-dev libgl1-mesa-dev libopenal-dev \
-                     libsndfile-dev libmpg123-dev libgmp-dev
+                     libsndfile-dev libmpg123-dev libgmp-dev libfontconfig1-dev
 
 # To install Ruby itself - if you are using rvm or rbenv, please skip this step
 sudo apt-get install ruby-dev
@@ -22,7 +22,6 @@ sudo apt-get install ruby-dev
 gem install gosu
 # If you are using system Ruby, you will need "sudo" to install Ruby libraries (gems)
 sudo gem install gosu
-
 ```
 
 See [this forum thread](http://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1137) for another detailed guide.
